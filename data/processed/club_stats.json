@@ -17,7 +17,7 @@
     ],
     "suspectHoleShotsExcluded": 138,
     "phantomShotsExcluded": 3,
-    "annotatedShotsExcluded": 13
+    "annotatedShotsExcluded": 17
   },
   "clubs": [
     {
@@ -40,13 +40,13 @@
       "clubId": 892530974,
       "clubTypeId": 3,
       "shots": 117,
-      "distanceShots": 116,
-      "medianYds": 175,
-      "meanYds": 165,
+      "distanceShots": 115,
+      "medianYds": 176,
+      "meanYds": 166,
       "p25Yds": 148,
       "p75Yds": 198,
       "maxYds": 242,
-      "stdevYds": 48.7,
+      "stdevYds": 47.2,
       "lowConfidence": false,
       "dispersion": {
         "approachShots": 56,
@@ -105,6 +105,29 @@
       }
     },
     {
+      "club": "6 Iron",
+      "clubId": 892530980,
+      "clubTypeId": 15,
+      "shots": 44,
+      "distanceShots": 40,
+      "medianYds": 132,
+      "meanYds": 117,
+      "p25Yds": 70,
+      "p75Yds": 162,
+      "maxYds": 222,
+      "stdevYds": 53.0,
+      "lowConfidence": false,
+      "dispersion": {
+        "approachShots": 41,
+        "leftPct": 39,
+        "straightPct": 22,
+        "rightPct": 39,
+        "shortPct": 73,
+        "longPct": 27,
+        "medianLateralYds": 15.3
+      }
+    },
+    {
       "club": "8 Iron",
       "clubId": 892530982,
       "clubTypeId": 17,
@@ -125,29 +148,6 @@
         "shortPct": 65,
         "longPct": 35,
         "medianLateralYds": 11.8
-      }
-    },
-    {
-      "club": "6 Iron",
-      "clubId": 892530980,
-      "clubTypeId": 15,
-      "shots": 44,
-      "distanceShots": 42,
-      "medianYds": 121,
-      "meanYds": 115,
-      "p25Yds": 69,
-      "p75Yds": 160,
-      "maxYds": 222,
-      "stdevYds": 52.6,
-      "lowConfidence": false,
-      "dispersion": {
-        "approachShots": 43,
-        "leftPct": 42,
-        "straightPct": 21,
-        "rightPct": 37,
-        "shortPct": 74,
-        "longPct": 26,
-        "medianLateralYds": 15.3
       }
     },
     {
@@ -187,7 +187,7 @@
       "stdevYds": 34.3,
       "lowConfidence": false,
       "dispersion": {
-        "approachShots": 189,
+        "approachShots": 188,
         "leftPct": 25,
         "straightPct": 37,
         "rightPct": 38,

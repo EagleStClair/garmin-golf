@@ -150,7 +150,252 @@
     "emptyShotHoles": [],
     "note": "Score is authoritative. The sensor shot layer is imperfect: it can under-record (un-sensed short shots; penalties carry no position) or over-record (phantom/practice strokes). Treat shot counts as spatial detail, not stroke truth; discount suspectHoles for club/distance stats. Counts here EXCLUDE phantomShots (between-hole transit logged as strokes); those shots stay in `holes[].shots` flagged with phantom=true."
   },
-  "annotations": null,
+  "annotations": {
+    "narrative": "Riverside 9/17 Round Analysis\n\n# Overall\nFront 9 didn't feel spectacular, didn't feel bad just didn't feel I was tracking towards an excellent round likely due to the double bogey on 8.  With that said, zero penalties on Front 9 and limited damage to the one H8 with a double.\n\n- Driver was average. My fade/slice was definitely there, played with it pointing left often with most drives somewhere around 195-210 due to strong fade killing distance. I only had one hole where I got a hold of it proper and sent it straight 245+, I had to focus on turning over wrists to execute that.  Ended up bagging the driver for several holes on back nine where I felt less confident.\n\n- Long clubs -- honestly really good. Not my best, but misses were mainly straight so just some lost distance. My one penalty was on H12 where I simply sent my 5W too straight and it sailed way to far which ended up trees left.  However, I'm proud that even with the drop I was able to save bogey (a first for me). 9W is my favorite -- honestly the most reliable club I have where I always seems to shoot it very well. Directly resulted in my birdie on H18\n\n- Irons -- Really Good.  I think I am starting to really get used to the new irons. Largely true and straight.  I went with 10 yards over my distances registered in The Turn (meaning 7i at 150 instead of 140) and that seemed to work nicely.\n\n- Wedges - Meh, honestly I need a lot of work with these and so I tried to minimize their impact as much as possible here by switching to bump and runs whenever even remotely possible. Lots and lots of pitching wedge chip bumps and that honestly worked pretty well.  A real strength today was that switch.  \n\n- Putting - Excellent -- best I have ever putt with many 1 putts and 32 overall. The main contributor is my switch to trying to hit the back of the hole on 10' minus putts. Putting enough oomf on the ball is a big change for me, so if I miss often 4' passed but that is far better than dribbling in and often left short for me.\n\n\n# Hole Callouts\n\n## H5 - Par 3, traditionally gives me a ton of trouble.  I hit a beautiful 6i 161y onto the green. Not having to deal with bunkers and trees is a massive win for this hole and ended up par.\n\n## H8 - Honestly not even terribly mad at this one. This is just golf stinging me a bit on this and the number 1 handicap hole on the Course.  Hit my 5W as my safety club, but it went a bit right and bounced so hard off a branch deflected back and to the left of me only leaving me 30y.  A bit unlucky to be honest, if the shot was slightly to the left it would have missed the tree or even just a little different line would have sailed through the light leaves -- just stung a bit.  Followed up hitting 5W 170y but for some reason was a bit right again which left me under tree cover (think my general aim was off as it wasn't a fade or slice).  Nice punch with 6i which was safe and progressed me well 105y (no hero shot, took my medicine). Hit approach but came up a bit short, 2 putted for double.\n\n## H10 - One of two back to back Par 3s at a distance I truly struggle with at 165-170y.  Six iron off tee pushed right 128y (bad shot). Punched 37y back into fairway, Pitched up with a 2 butt for double.\n\n## H11 - Honestly had no good answer, hit 7i because was feeling shaky with 6i, nice distance at 142, but too far right.  Nice wedge, followed by 2 putt double.\n\n## H12 - Driver - hard fasde 180y to the right.  Took my 5W and had to point left for trees but thought I had room for natural fade -- ended up absolutely ripping it 210 straight and so unrecoverable. Took my drop, but very proud from here. Sent my 8i 140 just to back of green. Pitching Wedge bump and putted to save bogey (first not doubling after penalty) -- only penalty of day\n\n## H13 - H16\nWasn't feeling super confident after my start on back nine and heat starting to fatigue me. Hit best drive on 13 at 250 straight.  Tried playing most reliable clubs like 9W when I could to deal with fatigue. Played Solid bogey golf -- boring golf.\n\n## H17 - Hot and Tired\nPlayed my last driver and played with the fade, only because this has a good wide fairway, even with extreme left, ended right 197y under trees -- punched 6i out to middle (no hero, just taking medicine). Put a beautiful 71y shot on green with Approach Wedge. Good 8' putt sunk for Par\n\n## H18 - Fatigued and sick of driver -- knowing I have struggled with this hole, decided to go with 5W. Had a great straight 196y shot on fairway over hill, leaving 190y to pin. Pulled out the trusty 9W and hit a perfect shot 198y onto back of green straight in line with pin -- golf mates applauded me. Thought I was in line for eagle but getting closer to hole showed I had a 45' putt to finish.  Gave it my best and sent too far about 8' beyond hole -- sunk the putt for birdie",
+    "shots": [
+      {
+        "shotId": 10751640755,
+        "hole": 5,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "beautiful 6i 161y onto the green, ended up par"
+      },
+      {
+        "shotId": 10751640790,
+        "hole": 8,
+        "intent": "safety",
+        "lieQuality": null,
+        "evaluation": "good_decision_bad_execution",
+        "excludeFromStock": true,
+        "note": "5W as safety club, went right, deflected off branch back left, only 30y"
+      },
+      {
+        "shotId": 10751640786,
+        "hole": 8,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_poorly",
+        "excludeFromStock": false,
+        "note": "5W 170y but right again, left under tree cover, aim off"
+      },
+      {
+        "shotId": 10751640758,
+        "hole": 8,
+        "intent": "punch",
+        "lieQuality": null,
+        "evaluation": "recovery_success",
+        "excludeFromStock": true,
+        "note": "nice punch with 6i, safe, progressed 105y, took my medicine"
+      },
+      {
+        "shotId": 10751640753,
+        "hole": 8,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_poorly",
+        "excludeFromStock": false,
+        "note": "approach came up a bit short"
+      },
+      {
+        "shotId": 10751640808,
+        "hole": 10,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_poorly",
+        "excludeFromStock": false,
+        "note": "six iron off tee pushed right 128y, bad shot"
+      },
+      {
+        "shotId": 10751640739,
+        "hole": 10,
+        "intent": "punch",
+        "lieQuality": null,
+        "evaluation": "recovery_success",
+        "excludeFromStock": true,
+        "note": "punched 37y back into fairway"
+      },
+      {
+        "shotId": 10751640778,
+        "hole": 11,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_poorly",
+        "excludeFromStock": false,
+        "note": "hit 7i, nice distance 142 but too far right"
+      },
+      {
+        "shotId": 10751640807,
+        "hole": 11,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "nice wedge"
+      },
+      {
+        "shotId": 10751640770,
+        "hole": 12,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_poorly",
+        "excludeFromStock": false,
+        "note": "driver hard fade 180y to the right"
+      },
+      {
+        "shotId": 10751640809,
+        "hole": 12,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "good_decision_bad_execution",
+        "excludeFromStock": false,
+        "note": "5W ripped 210 straight into trees, unrecoverable, penalty"
+      },
+      {
+        "shotId": 10751640761,
+        "hole": 12,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "8i 140 just to back of green"
+      },
+      {
+        "shotId": 10751640803,
+        "hole": 12,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "pitching wedge bump, saved bogey after penalty"
+      },
+      {
+        "shotId": 10751640768,
+        "hole": 13,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "best drive on 13 at 250 straight"
+      },
+      {
+        "shotId": 10751640798,
+        "hole": 17,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "good_decision_bad_execution",
+        "excludeFromStock": false,
+        "note": "driver with fade, wide fairway, ended right 197y under trees"
+      },
+      {
+        "shotId": 10751640731,
+        "hole": 17,
+        "intent": "punch",
+        "lieQuality": null,
+        "evaluation": "recovery_success",
+        "excludeFromStock": true,
+        "note": "punched 6i out to middle, taking medicine"
+      },
+      {
+        "shotId": 10751640791,
+        "hole": 17,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "beautiful 71y shot on green with Approach Wedge"
+      },
+      {
+        "shotId": 10751640789,
+        "hole": 17,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "good 8' putt sunk for par"
+      },
+      {
+        "shotId": 10751640746,
+        "hole": 18,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "5W great straight 196y on fairway over hill"
+      },
+      {
+        "shotId": 10751640742,
+        "hole": 18,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "trusty 9W perfect shot 198y onto back of green in line with pin"
+      },
+      {
+        "shotId": 10751640725,
+        "hole": 18,
+        "intent": "normal",
+        "lieQuality": null,
+        "evaluation": "executed_well",
+        "excludeFromStock": false,
+        "note": "45' putt too far 8' beyond, sunk for birdie"
+      }
+    ],
+    "holes": [
+      {
+        "hole": 8,
+        "postTeeState": "recovery",
+        "doubleClass": "compounded",
+        "preventableEscalation": false,
+        "note": "unlucky branch deflection off safety 5W, then right again under trees, took medicine but came up short"
+      },
+      {
+        "hole": 10,
+        "postTeeState": null,
+        "doubleClass": "normal_execution",
+        "preventableEscalation": false,
+        "note": "par 3, pushed tee shot right, struggle distance 165-170y"
+      },
+      {
+        "hole": 11,
+        "postTeeState": null,
+        "doubleClass": "normal_execution",
+        "preventableEscalation": false,
+        "note": "par 3, tee shot too far right, then 2-putt"
+      },
+      {
+        "hole": 12,
+        "postTeeState": "compromised",
+        "doubleClass": null,
+        "preventableEscalation": null,
+        "note": "penalty but saved bogey, not a double"
+      },
+      {
+        "hole": 13,
+        "postTeeState": "clean",
+        "doubleClass": null,
+        "preventableEscalation": null,
+        "note": null
+      },
+      {
+        "hole": 17,
+        "postTeeState": "recovery",
+        "doubleClass": null,
+        "preventableEscalation": null,
+        "note": null
+      },
+      {
+        "hole": 18,
+        "postTeeState": "clean",
+        "doubleClass": null,
+        "preventableEscalation": null,
+        "note": null
+      }
+    ],
+    "unmatched": []
+  },
   "holes": [
     {
       "number": 1,
@@ -1105,7 +1350,13 @@
           "sgCategory": "longApproach",
           "strokesGained": 0.215,
           "confidence": "authoritative",
-          "resultCategory": "green"
+          "resultCategory": "green",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "beautiful 6i 161y onto the green, ended up par",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640726,
@@ -1791,7 +2042,13 @@
           "sgCategory": "offTee",
           "strokesGained": -0.87,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "safety",
+            "evaluation": "good_decision_bad_execution",
+            "note": "5W as safety club, went right, deflected off branch back left, only 30y",
+            "excludeFromStock": true
+          }
         },
         {
           "shotId": 10751640786,
@@ -1834,7 +2091,13 @@
           "sgCategory": "offTee",
           "strokesGained": -0.577,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_poorly",
+            "note": "5W 170y but right again, left under tree cover, aim off",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640758,
@@ -1877,7 +2140,13 @@
           "sgCategory": "longApproach",
           "strokesGained": -0.42,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "punch",
+            "evaluation": "recovery_success",
+            "note": "nice punch with 6i, safe, progressed 105y, took my medicine",
+            "excludeFromStock": true
+          }
         },
         {
           "shotId": 10751640753,
@@ -1920,7 +2189,13 @@
           "sgCategory": "midApproach",
           "strokesGained": -0.604,
           "confidence": "inferred",
-          "resultCategory": "short"
+          "resultCategory": "short",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_poorly",
+            "note": "approach came up a bit short",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640743,
@@ -2363,7 +2638,13 @@
           "sgCategory": "longApproach",
           "strokesGained": -0.908,
           "confidence": "inferred",
-          "resultCategory": "short-right"
+          "resultCategory": "short-right",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_poorly",
+            "note": "six iron off tee pushed right 128y, bad shot",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640739,
@@ -2406,7 +2687,13 @@
           "sgCategory": "midApproach",
           "strokesGained": -0.596,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "punch",
+            "evaluation": "recovery_success",
+            "note": "punched 37y back into fairway",
+            "excludeFromStock": true
+          }
         },
         {
           "shotId": 10751640745,
@@ -2563,7 +2850,13 @@
           "sgCategory": "longApproach",
           "strokesGained": -0.714,
           "confidence": "inferred",
-          "resultCategory": "short-right"
+          "resultCategory": "short-right",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_poorly",
+            "note": "hit 7i, nice distance 142 but too far right",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640807,
@@ -2606,7 +2899,13 @@
           "sgCategory": "inside50",
           "strokesGained": -0.355,
           "confidence": "authoritative",
-          "resultCategory": "green"
+          "resultCategory": "green",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "nice wedge",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640723,
@@ -2763,7 +3062,13 @@
           "sgCategory": "offTee",
           "strokesGained": -0.235,
           "confidence": "authoritative",
-          "resultCategory": "short-right"
+          "resultCategory": "short-right",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_poorly",
+            "note": "driver hard fade 180y to the right",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640809,
@@ -2806,7 +3111,13 @@
           "sgCategory": "longApproach",
           "strokesGained": -0.438,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "good_decision_bad_execution",
+            "note": "5W ripped 210 straight into trees, unrecoverable, penalty",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640761,
@@ -2849,7 +3160,13 @@
           "sgCategory": "midApproach",
           "strokesGained": -0.221,
           "confidence": "authoritative",
-          "resultCategory": "long"
+          "resultCategory": "long",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "8i 140 just to back of green",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640803,
@@ -2892,7 +3209,13 @@
           "sgCategory": "inside50",
           "strokesGained": -0.633,
           "confidence": "authoritative",
-          "resultCategory": "green"
+          "resultCategory": "green",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "pitching wedge bump, saved bogey after penalty",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640737,
@@ -3135,7 +3458,13 @@
           "sgCategory": "offTee",
           "strokesGained": 0.057,
           "confidence": "authoritative",
-          "resultCategory": "short-right"
+          "resultCategory": "short-right",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "best drive on 13 at 250 straight",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640799,
@@ -4150,7 +4479,13 @@
           "sgCategory": "offTee",
           "strokesGained": -0.526,
           "confidence": "authoritative",
-          "resultCategory": "short-right"
+          "resultCategory": "short-right",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "good_decision_bad_execution",
+            "note": "driver with fade, wide fairway, ended right 197y under trees",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640731,
@@ -4193,7 +4528,13 @@
           "sgCategory": "midApproach",
           "strokesGained": -0.626,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "punch",
+            "evaluation": "recovery_success",
+            "note": "punched 6i out to middle, taking medicine",
+            "excludeFromStock": true
+          }
         },
         {
           "shotId": 10751640791,
@@ -4236,7 +4577,13 @@
           "sgCategory": "midApproach",
           "strokesGained": -0.43,
           "confidence": "inferred",
-          "resultCategory": "short"
+          "resultCategory": "short",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "beautiful 71y shot on green with Approach Wedge",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640765,
@@ -4322,7 +4669,13 @@
           "sgCategory": "putting",
           "strokesGained": null,
           "confidence": "authoritative",
-          "resultCategory": "putt"
+          "resultCategory": "putt",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "good 8' putt sunk for par",
+            "excludeFromStock": false
+          }
         }
       ]
     },
@@ -4393,7 +4746,13 @@
           "sgCategory": "offTee",
           "strokesGained": -0.176,
           "confidence": "authoritative",
-          "resultCategory": "short-left"
+          "resultCategory": "short-left",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "5W great straight 196y on fairway over hill",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640742,
@@ -4436,7 +4795,13 @@
           "sgCategory": "longApproach",
           "strokesGained": -0.331,
           "confidence": "inferred",
-          "resultCategory": "long"
+          "resultCategory": "long",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "trusty 9W perfect shot 198y onto back of green in line with pin",
+            "excludeFromStock": false
+          }
         },
         {
           "shotId": 10751640805,
@@ -4522,7 +4887,13 @@
           "sgCategory": "putting",
           "strokesGained": null,
           "confidence": "authoritative",
-          "resultCategory": "putt"
+          "resultCategory": "putt",
+          "annotation": {
+            "intent": "normal",
+            "evaluation": "executed_well",
+            "note": "45' putt too far 8' beyond, sunk for birdie",
+            "excludeFromStock": false
+          }
         }
       ]
     }

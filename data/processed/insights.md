@@ -6,7 +6,7 @@ Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds on
   ceiling 30.2 → 26.8 · median 31.8 → 28.2 · floor 37.5 → 30.8 · gap 7.3 → 4.0
 
 ## What changed
-- [Miss pattern · High confidence] Short-right is your dominant mid-iron miss: across 377 6i–9i approaches, 77% finish short and 44% miss right. One more club and a start line adjustment attack both.
+- [Miss pattern · High confidence] Short-right is your dominant mid-iron miss: across 375 6i–9i approaches, 77% finish short and 44% miss right. One more club and a start line adjustment attack both.
 - [Reliability · Moderate confidence] Your 18-hole consistency is a strength: drift-adjusted, your round-to-round gap is ~4 strokes vs ~8 for a typical golfer at your level. Improvement for you means moving the whole cone down, not narrowing it.
 - [Scoring structure · High confidence] Bogey-or-better holes have risen from 67% to 78% over your last 10 rounds.
 - [Development · High confidence] Your scoring floor (bad-but-normal golf) has improved 7 strokes — blow-up rounds now land near +31 instead of +38.
@@ -21,5 +21,5 @@ Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds on
 - Bogey-or-better %: 67.2 → 77.8 (improving)
 
 ## What to focus on
-1. Approach distance + start line: take one more club and start it left of target on mid-irons.  _(77% of 377 mid-iron approaches finish short, 44% miss right; GIR is 23.3%.)_
+1. Approach distance + start line: take one more club and start it left of target on mid-irons.  _(77% of 375 mid-iron approaches finish short, 44% miss right; GIR is 23.3%.)_
 2. Biggest strokes leak right now: Inside 50.  _(-8.1 strokes per 18 vs scratch over your last 10 clean rounds — the worst of your five SG buckets.)_
