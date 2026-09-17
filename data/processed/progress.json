@@ -1,7 +1,7 @@
 {
-  "generatedFromRounds": 42,
+  "generatedFromRounds": 44,
   "since": "2026-05-01",
-  "thisRoundDate": "2026-09-11",
+  "thisRoundDate": "2026-09-17",
   "thisRoundClean": true,
   "baselines": {
     "scratch": {
@@ -19,12 +19,12 @@
       "label": "My average",
       "byCategory": {
         "offTee": -4.5,
-        "longApproach": -6.3,
-        "midApproach": -7.3,
-        "inside50": -7.2,
-        "putting": -3.2
+        "longApproach": -6.2,
+        "midApproach": -7.1,
+        "inside50": -7.4,
+        "putting": -3.1
       },
-      "sg0to100": -9.7
+      "sg0to100": -9.9
     },
     "target15": {
       "label": "Target 15",
@@ -40,115 +40,115 @@
     }
   },
   "scoring": {
-    "averageOverRating18": 30.0,
-    "potentialOverRating18": 27.5,
-    "bestOverRating18": 24.8,
+    "averageOverRating18": 29.6,
+    "potentialOverRating18": 26.6,
+    "bestOverRating18": 20.8,
     "garminHandicap": 23.6,
     "break90OverRating": 22,
-    "handicapIndexEst": 26.7
+    "handicapIndexEst": 25.8
   },
   "sg": {
     "thisRound": {
       "byCategory": {
-        "offTee": -5.1,
-        "longApproach": -5.6,
-        "midApproach": -8.8,
-        "inside50": -6.7,
-        "putting": -4.0
+        "offTee": -6.6,
+        "longApproach": -6.3,
+        "midApproach": -4.1,
+        "inside50": -12.6,
+        "putting": -0.2
       },
-      "total": -30.2,
-      "sg0to100": -11.3,
+      "total": -29.8,
+      "sg0to100": -15.6,
       "cleanRounds": 1
     },
     "last5": {
       "byCategory": {
-        "offTee": -4.7,
-        "longApproach": -6.0,
-        "midApproach": -8.3,
-        "inside50": -7.6,
-        "putting": -0.2
+        "offTee": -5.0,
+        "longApproach": -6.8,
+        "midApproach": -6.4,
+        "inside50": -9.7,
+        "putting": -1.0
       },
-      "total": -26.8,
-      "sg0to100": -10.1,
+      "total": -28.9,
+      "sg0to100": -12.7,
       "cleanRounds": 5
     },
     "last10": {
       "byCategory": {
-        "offTee": -5.0,
-        "longApproach": -6.4,
-        "midApproach": -7.3,
-        "inside50": -8.0,
-        "putting": -1.8
+        "offTee": -4.9,
+        "longApproach": -6.3,
+        "midApproach": -6.6,
+        "inside50": -8.1,
+        "putting": -2.0
       },
-      "total": -28.5,
-      "sg0to100": -11.1,
+      "total": -27.9,
+      "sg0to100": -11.0,
       "cleanRounds": 10
     },
     "last20": {
       "byCategory": {
-        "offTee": -4.5,
-        "longApproach": -5.8,
-        "midApproach": -7.1,
-        "inside50": -7.2,
-        "putting": -2.3
+        "offTee": -4.6,
+        "longApproach": -6.0,
+        "midApproach": -6.7,
+        "inside50": -7.8,
+        "putting": -2.5
       },
-      "total": -26.9,
-      "sg0to100": -9.9,
+      "total": -27.6,
+      "sg0to100": -10.6,
       "cleanRounds": 20
     },
     "allTime": {
       "byCategory": {
         "offTee": -4.5,
-        "longApproach": -6.3,
-        "midApproach": -7.3,
-        "inside50": -7.2,
-        "putting": -3.2
+        "longApproach": -6.2,
+        "midApproach": -7.1,
+        "inside50": -7.4,
+        "putting": -3.1
       },
-      "total": -28.5,
-      "sg0to100": -9.7,
-      "cleanRounds": 37
+      "total": -28.3,
+      "sg0to100": -9.9,
+      "cleanRounds": 39
     }
   },
   "authoritative": {
     "thisRound": {
-      "overRating18": 27.8,
-      "handicapDiff": 27.8,
-      "putts18": 35.0,
+      "overRating18": 20.8,
+      "handicapDiff": 20.8,
+      "putts18": 32.0,
       "threePutts18": 2.0,
       "penalties18": 1.0,
-      "doubles18": 7.0
+      "doubles18": 3.0
     },
     "last5": {
-      "overRating18": 31.0,
-      "handicapDiff": 29.9,
-      "putts18": 33.7,
-      "threePutts18": 1.7,
-      "penalties18": 1.7,
-      "doubles18": 5.1
+      "overRating18": 27.6,
+      "handicapDiff": 26.8,
+      "putts18": 33.8,
+      "threePutts18": 2.2,
+      "penalties18": 1.8,
+      "doubles18": 5.5
     },
     "last10": {
-      "overRating18": 28.4,
-      "handicapDiff": 28.0,
-      "putts18": 33.9,
-      "threePutts18": 1.5,
-      "penalties18": 1.2,
-      "doubles18": 5.1
+      "overRating18": 27.5,
+      "handicapDiff": 27.0,
+      "putts18": 34.0,
+      "threePutts18": 1.7,
+      "penalties18": 1.1,
+      "doubles18": 4.8
     },
     "last20": {
-      "overRating18": 28.4,
-      "handicapDiff": 27.7,
-      "putts18": 35.1,
-      "threePutts18": 2.2,
-      "penalties18": 2.0,
-      "doubles18": 5.6
+      "overRating18": 27.7,
+      "handicapDiff": 27.0,
+      "putts18": 35.2,
+      "threePutts18": 2.3,
+      "penalties18": 1.9,
+      "doubles18": 5.5
     },
     "allTime": {
-      "overRating18": 30.0,
-      "handicapDiff": 29.3,
-      "putts18": 36.2,
+      "overRating18": 29.6,
+      "handicapDiff": 28.9,
+      "putts18": 36.1,
       "threePutts18": 2.9,
-      "penalties18": 2.3,
-      "doubles18": 6.5
+      "penalties18": 2.2,
+      "doubles18": 6.4
     }
   },
   "putting": {
@@ -167,27 +167,27 @@
       },
       {
         "label": "6\u201310 ft",
-        "n": 1,
-        "avg": 3.0,
-        "makePct": 0
+        "n": 2,
+        "avg": 1.5,
+        "makePct": 50
       },
       {
         "label": "10\u201320 ft",
-        "n": 6,
-        "avg": 2.0,
-        "makePct": 0
+        "n": 5,
+        "avg": 1.8,
+        "makePct": 40
       },
       {
         "label": "20\u201340 ft",
-        "n": 5,
-        "avg": 1.8,
-        "makePct": 20
+        "n": 9,
+        "avg": 1.89,
+        "makePct": 22
       },
       {
         "label": "40+ ft",
-        "n": 1,
-        "avg": 3.0,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       }
     ],
     "last5": [
@@ -205,27 +205,27 @@
       },
       {
         "label": "6\u201310 ft",
-        "n": 2,
-        "avg": 2.5,
-        "makePct": 0
+        "n": 4,
+        "avg": 2.0,
+        "makePct": 25
       },
       {
         "label": "10\u201320 ft",
-        "n": 13,
+        "n": 17,
         "avg": 2.0,
-        "makePct": 8
+        "makePct": 12
       },
       {
         "label": "20\u201340 ft",
-        "n": 29,
-        "avg": 1.79,
-        "makePct": 28
+        "n": 32,
+        "avg": 1.88,
+        "makePct": 25
       },
       {
         "label": "40+ ft",
-        "n": 8,
+        "n": 7,
         "avg": 2.0,
-        "makePct": 25
+        "makePct": 29
       }
     ],
     "last10": [
@@ -237,8 +237,8 @@
       },
       {
         "label": "3\u20136 ft",
-        "n": 3,
-        "avg": 2.33,
+        "n": 4,
+        "avg": 2.25,
         "makePct": 0
       },
       {
@@ -249,21 +249,21 @@
       },
       {
         "label": "10\u201320 ft",
-        "n": 39,
-        "avg": 2.0,
-        "makePct": 10
+        "n": 32,
+        "avg": 1.97,
+        "makePct": 12
       },
       {
         "label": "20\u201340 ft",
-        "n": 60,
-        "avg": 1.88,
+        "n": 56,
+        "avg": 1.93,
         "makePct": 18
       },
       {
         "label": "40+ ft",
-        "n": 10,
+        "n": 11,
         "avg": 2.0,
-        "makePct": 20
+        "makePct": 18
       }
     ],
     "last20": [
@@ -282,26 +282,26 @@
       {
         "label": "6\u201310 ft",
         "n": 17,
-        "avg": 1.82,
-        "makePct": 24
+        "avg": 1.88,
+        "makePct": 18
       },
       {
         "label": "10\u201320 ft",
-        "n": 68,
-        "avg": 2.1,
-        "makePct": 9
+        "n": 72,
+        "avg": 2.08,
+        "makePct": 10
       },
       {
         "label": "20\u201340 ft",
-        "n": 117,
-        "avg": 1.96,
+        "n": 126,
+        "avg": 1.97,
         "makePct": 15
       },
       {
         "label": "40+ ft",
-        "n": 26,
-        "avg": 2.0,
-        "makePct": 19
+        "n": 22,
+        "avg": 2.05,
+        "makePct": 14
       }
     ],
     "allTime": [
@@ -313,31 +313,31 @@
       },
       {
         "label": "3\u20136 ft",
-        "n": 16,
-        "avg": 2.25,
+        "n": 17,
+        "avg": 2.24,
         "makePct": 6
       },
       {
         "label": "6\u201310 ft",
-        "n": 39,
-        "avg": 1.95,
-        "makePct": 18
+        "n": 41,
+        "avg": 1.93,
+        "makePct": 20
       },
       {
         "label": "10\u201320 ft",
-        "n": 127,
-        "avg": 2.05,
-        "makePct": 13
-      },
-      {
-        "label": "20\u201340 ft",
-        "n": 245,
+        "n": 134,
         "avg": 2.04,
         "makePct": 13
       },
       {
+        "label": "20\u201340 ft",
+        "n": 259,
+        "avg": 2.05,
+        "makePct": 13
+      },
+      {
         "label": "40+ ft",
-        "n": 59,
+        "n": 60,
         "avg": 2.17,
         "makePct": 12
       }
@@ -351,29 +351,29 @@
         "nObs": 18
       },
       "doubles18": {
-        "value": 7.0,
+        "value": 3.0,
         "nRounds": 1,
         "nObs": 18
       },
       "cleanSecondShotPct": {
-        "value": 100,
-        "nRounds": 1,
-        "nObs": 5
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "recoveryOneShotPct": {
-        "value": 100,
-        "nRounds": 1,
-        "nObs": 3
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "normalApproachGirPct": {
-        "value": 0,
-        "nRounds": 1,
-        "nObs": 21
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "upDownPct": {
-        "value": 0,
+        "value": 8,
         "nRounds": 1,
-        "nObs": 16
+        "nObs": 13
       },
       "make3to6Pct": {
         "value": 0,
@@ -381,26 +381,26 @@
         "nObs": 1
       },
       "make6to10Pct": {
-        "value": 0,
+        "value": 50,
         "nRounds": 1,
-        "nObs": 1
+        "nObs": 2
       },
       "threePutt30PlusPct": {
-        "value": 17,
+        "value": 11,
         "nRounds": 1,
-        "nObs": 6
+        "nObs": 9
       }
     },
     "last5": {
       "penalties18": {
-        "value": 1.7,
+        "value": 1.8,
         "nRounds": 5,
-        "nObs": 63
+        "nObs": 72
       },
       "doubles18": {
-        "value": 5.1,
+        "value": 5.5,
         "nRounds": 5,
-        "nObs": 63
+        "nObs": 72
       },
       "cleanSecondShotPct": {
         "value": 88,
@@ -418,9 +418,9 @@
         "nObs": 29
       },
       "upDownPct": {
-        "value": 8,
+        "value": 5,
         "nRounds": 5,
-        "nObs": 51
+        "nObs": 57
       },
       "make3to6Pct": {
         "value": 0,
@@ -428,26 +428,26 @@
         "nObs": 2
       },
       "make6to10Pct": {
-        "value": 0,
+        "value": 25,
         "nRounds": 5,
-        "nObs": 2
+        "nObs": 4
       },
       "threePutt30PlusPct": {
-        "value": 11,
+        "value": 15,
         "nRounds": 5,
-        "nObs": 37
+        "nObs": 39
       }
     },
     "last10": {
       "penalties18": {
-        "value": 1.2,
+        "value": 1.1,
         "nRounds": 10,
-        "nObs": 144
+        "nObs": 135
       },
       "doubles18": {
-        "value": 5.1,
+        "value": 4.8,
         "nRounds": 10,
-        "nObs": 144
+        "nObs": 135
       },
       "cleanSecondShotPct": {
         "value": 77,
@@ -465,14 +465,14 @@
         "nObs": 53
       },
       "upDownPct": {
-        "value": 7,
+        "value": 6,
         "nRounds": 10,
-        "nObs": 116
+        "nObs": 106
       },
       "make3to6Pct": {
         "value": 0,
         "nRounds": 10,
-        "nObs": 3
+        "nObs": 4
       },
       "make6to10Pct": {
         "value": 10,
@@ -480,21 +480,21 @@
         "nObs": 10
       },
       "threePutt30PlusPct": {
-        "value": 9,
+        "value": 12,
         "nRounds": 10,
-        "nObs": 70
+        "nObs": 67
       }
     },
     "last20": {
       "penalties18": {
-        "value": 2.0,
+        "value": 1.9,
         "nRounds": 20,
-        "nObs": 270
+        "nObs": 279
       },
       "doubles18": {
-        "value": 5.6,
+        "value": 5.5,
         "nRounds": 20,
-        "nObs": 270
+        "nObs": 279
       },
       "cleanSecondShotPct": {
         "value": 77,
@@ -512,9 +512,9 @@
         "nObs": 53
       },
       "upDownPct": {
-        "value": 8,
+        "value": 6,
         "nRounds": 20,
-        "nObs": 202
+        "nObs": 211
       },
       "make3to6Pct": {
         "value": 12,
@@ -522,26 +522,26 @@
         "nObs": 8
       },
       "make6to10Pct": {
-        "value": 24,
+        "value": 18,
         "nRounds": 20,
         "nObs": 17
       },
       "threePutt30PlusPct": {
-        "value": 12,
+        "value": 13,
         "nRounds": 20,
-        "nObs": 143
+        "nObs": 148
       }
     },
     "allTime": {
       "penalties18": {
-        "value": 2.3,
-        "nRounds": 42,
-        "nObs": 558
+        "value": 2.2,
+        "nRounds": 44,
+        "nObs": 585
       },
       "doubles18": {
-        "value": 6.5,
-        "nRounds": 42,
-        "nObs": 558
+        "value": 6.4,
+        "nRounds": 44,
+        "nObs": 585
       },
       "cleanSecondShotPct": {
         "value": 77,
@@ -560,23 +560,23 @@
       },
       "upDownPct": {
         "value": 8,
-        "nRounds": 42,
-        "nObs": 444
+        "nRounds": 44,
+        "nObs": 463
       },
       "make3to6Pct": {
         "value": 6,
-        "nRounds": 42,
-        "nObs": 16
+        "nRounds": 44,
+        "nObs": 17
       },
       "make6to10Pct": {
-        "value": 18,
-        "nRounds": 42,
-        "nObs": 39
+        "value": 20,
+        "nRounds": 44,
+        "nObs": 41
       },
       "threePutt30PlusPct": {
         "value": 18,
-        "nRounds": 42,
-        "nObs": 304
+        "nRounds": 44,
+        "nObs": 319
       }
     }
   },
@@ -645,20 +645,20 @@
         },
         {
           "q": "2026-Q3",
-          "rounds": 13,
-          "holes": 234,
-          "avgScore": 96.6,
-          "overRating18": 28.8,
-          "pen18": 2.5,
-          "dbl18": 7.3,
+          "rounds": 14,
+          "holes": 252,
+          "avgScore": 96.0,
+          "overRating18": 28.2,
+          "pen18": 2.4,
+          "dbl18": 7.0,
           "tp18": 1.9,
           "girPct": 17.0,
-          "fwPct": 52.0,
+          "fwPct": 51.0,
           "mix": {
-            "birdie": 0.9,
-            "par": 19.7,
-            "bogey": 38.9,
-            "double": 40.6
+            "birdie": 1.2,
+            "par": 19.4,
+            "bogey": 40.5,
+            "double": 38.9
           },
           "thin": false
         }
@@ -728,20 +728,20 @@
         },
         {
           "q": "2026-Q3",
-          "rounds": 12,
-          "holes": 108,
-          "avgScore": 37.0,
-          "overRating18": 14.3,
-          "pen18": 1.2,
-          "dbl18": 2.8,
-          "tp18": 2.3,
+          "rounds": 13,
+          "holes": 117,
+          "avgScore": 37.2,
+          "overRating18": 14.6,
+          "pen18": 1.1,
+          "dbl18": 2.9,
+          "tp18": 2.5,
           "girPct": 34.0,
-          "fwPct": 69.0,
+          "fwPct": 72.0,
           "mix": {
-            "birdie": 4.6,
-            "par": 30.6,
-            "bogey": 49.1,
-            "double": 15.7
+            "birdie": 4.3,
+            "par": 29.9,
+            "bogey": 49.6,
+            "double": 16.2
           },
           "thin": false
         }
@@ -811,20 +811,20 @@
         },
         {
           "q": "2026-Q3",
-          "rounds": 25,
-          "holes": 342,
-          "avgScore": 85.8,
-          "overRating18": 21.9,
-          "pen18": 2.1,
-          "dbl18": 5.9,
+          "rounds": 27,
+          "holes": 369,
+          "avgScore": 85.6,
+          "overRating18": 21.7,
+          "pen18": 2.0,
+          "dbl18": 5.7,
           "tp18": 2.1,
-          "girPct": 22.0,
-          "fwPct": 55.0,
+          "girPct": 23.0,
+          "fwPct": 54.0,
           "mix": {
-            "birdie": 2.0,
-            "par": 23.1,
-            "bogey": 42.1,
-            "double": 32.7
+            "birdie": 2.2,
+            "par": 22.8,
+            "bogey": 43.4,
+            "double": 31.7
           },
           "thin": false
         }
@@ -1628,6 +1628,44 @@
       "dbl18": 7.0,
       "tp18": 2.0,
       "putts18": 35.0,
+      "clean": true
+    },
+    {
+      "date": "2026-09-14",
+      "course": "Harvey Penick Golf Campus ~ Nine Hole",
+      "score": 39,
+      "holes": 9,
+      "overRating18": 18.4,
+      "per18": {
+        "offTee": -2.5,
+        "longApproach": -3.7,
+        "midApproach": -0.5,
+        "inside50": -6.0,
+        "putting": -5.5
+      },
+      "pen18": 0.0,
+      "dbl18": 4.0,
+      "tp18": 4.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2026-09-17",
+      "course": "Riverside Golf Course",
+      "score": 88,
+      "holes": 18,
+      "overRating18": 20.8,
+      "per18": {
+        "offTee": -6.6,
+        "longApproach": -6.3,
+        "midApproach": -4.1,
+        "inside50": -12.6,
+        "putting": -0.2
+      },
+      "pen18": 1.0,
+      "dbl18": 3.0,
+      "tp18": 2.0,
+      "putts18": 32.0,
       "clean": true
     }
   ]
