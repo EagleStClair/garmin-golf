@@ -105,6 +105,12 @@ it happened, and checks whether you did the work.
    capability flags.
 
 ## Phasing
+- **Phase B design goal — information architecture / busy-ness:** Colby (2026-09-18):
+  "The Turn is great, but the busy-ness is almost overwhelming." The app-shell redesign
+  is the moment to fix IA wholesale: progressive disclosure everywhere (headline → tap
+  → anatomy), one card per story, conditional surfacing via insight ranking rather than
+  standing lists. New features until then follow absorb-don't-add (see
+  docs/approach-ladder-spec.md placement rules for the pattern).
 - **A — multi-user before multi-tenant (pure refactor, no product risk):** parametrize
   the whole pipeline on a user root; extract every Colby-specific constant into
   per-user config (profile, clubs, courses, keys, publish target). Verification: two
