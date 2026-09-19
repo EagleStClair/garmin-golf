@@ -36,6 +36,14 @@ Split by what the work touches — NOT "multi-user first" vs "revisions first":
 | 7 | Development / Practice Plans | needs Colby's real practice-plan example | UI | generalizes focus-card adherence |
 | 8 | Diagnostician | TO SPEC, last | AI | iterative why-chain; agent CHOOSES deterministic queries, never computes (house rule); requires 1-3 as queryable primitives |
 
+## Branch discipline
+All roadmap jobs build on **`dev-analytics`** (created 2026-09-19; builders' worktrees
+stack on it). `main` stays production: daily syncs, update.sh, and deploys run from
+main only, and new-round data commits keep landing there. The branch NEVER commits
+data/processed regenerations — outputs are rebuilt at merge; rebase onto main
+periodically to pick up new rounds. If the direction is hated, delete the branch;
+main never felt it.
+
 ## Process rules for the crew
 - architect → builder → test-runner per .claude/agents; superpowers plugin skills slot
   into process (writing-plans / executing-plans, test-driven-development,
