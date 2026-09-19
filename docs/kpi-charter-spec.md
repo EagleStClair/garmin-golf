@@ -1,7 +1,14 @@
 # KPI Charter — tier-relative metrics with graduation
 
-*Status: approved 2026-09-18. Crew job #2, after the approach ladder
-(docs/approach-ladder-spec.md). The insight this encodes: first-class metrics are
+*Status: approved 2026-09-18; AMENDED 2026-09-19 to ENGINE-ONLY (Colby's sequencing
+catch — see roadmap.md): the charter is an information-architecture construct, so its
+presentation belongs to the UX Blueprint (roadmap job 2) and app shell v2, never the
+current site. This job ships: metric math, tier assignment, the graduation state
+machine, coach charter block, md export, and JSON shaped by the blueprint's Home/
+Journey screen contracts. The "Presentation" section below is DESIGN INTENT for the
+blueprint, not build scope; at most a one-line stage chip lands on the current site.
+Rename tiers to the stage names: Stabilize (25+) / Control (18-25) / Convert (10-18) /
+Optimize (5-10) / Refine (<5). The insight this encodes: first-class metrics are
 TIER-RELATIVE — penalties/doubles are the 25→18 separators, green zone/approach the
 18→12 separators, and a metric that is solved should stop shouting. The Turn should
 know which 3-4 KPIs matter for the player's current level, headline only those, and
