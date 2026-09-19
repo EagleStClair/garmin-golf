@@ -7,11 +7,11 @@ Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds on
 
 ## What changed
 - [Miss pattern · High confidence] Short-right is your dominant mid-iron miss: across 375 6i–9i approaches, 77% finish short and 44% miss right. One more club and a start line adjustment attack both.
+- [Approach ladder · High confidence] Your approach game falls off a cliff at 150 yards: 125–150y reaches the Green Zone 37% of the time (n=107) but 150–170y only 16% (n=82), leaving a median 32 yards. Lay up to the range that still works.
 - [Reliability · Moderate confidence] Your 18-hole consistency is a strength: drift-adjusted, your round-to-round gap is ~4 strokes vs ~8 for a typical golfer at your level. Improvement for you means moving the whole cone down, not narrowing it.
 - [Scoring structure · High confidence] Bogey-or-better holes have risen from 67% to 78% over your last 10 rounds.
+- [Approach ladder · Moderate confidence] 7 Iron from 160–170y is a reach swing: of 17 shots, 100% finish short and 76% finish right, and only 6% reach the Green Zone. One more club is the whole fix.
 - [Development · High confidence] Your scoring floor (bad-but-normal golf) has improved 7 strokes — blow-up rounds now land near +31 instead of +38.
-- [Scoring structure · High confidence] Penalties are down from 2.5 to 0.9 per 18 over your last 10 rounds — one of the cleanest floor-raisers there is.
-- [Scoring structure · High confidence] Doubles+ are down from 5.9 to 4.0 per 18 over your last 10 rounds — one of the cleanest floor-raisers there is.
 
 ## Floor drivers (last 10 vs previous 10)
 - Penalties /18: 2.5 → 0.9 (improving)

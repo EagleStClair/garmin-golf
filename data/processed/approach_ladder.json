@@ -1,0 +1,2321 @@
+{
+  "schema": 2,
+  "generatedFor": "2026-09-19",
+  "window": {
+    "days": 90,
+    "from": "2026-06-21",
+    "to": "2026-09-19",
+    "label": "last 3 mo"
+  },
+  "band": {
+    "minYds": 60,
+    "maxYds": 250,
+    "label": "60\u2013250y"
+  },
+  "scope": "60\u2013250y \u00b7 last 3 mo \u00b7 n=447",
+  "headline": {
+    "key": "greenZonePct",
+    "label": "Green Zone %",
+    "scope": "60\u2013170y \u00b7 last 3 mo",
+    "band": {
+      "minYds": 60,
+      "maxYds": 170,
+      "label": "60\u2013170y"
+    },
+    "zone": {
+      "pct": 33,
+      "n": 362
+    },
+    "ring10": {
+      "pct": 17,
+      "n": 362
+    },
+    "putterNext": {
+      "pct": 32,
+      "n": 351,
+      "diagnostic": true
+    },
+    "prev": {
+      "pct": 26,
+      "n": 254,
+      "label": "previous 3 mo"
+    },
+    "deltaPts": 8,
+    "verdict": "improving",
+    "payoffStrokes": {
+      "strokes": 2.96,
+      "n": 362
+    }
+  },
+  "ladderZone": {
+    "pct": 29,
+    "n": 447
+  },
+  "verdict": {
+    "text": "33% Green Zone \u2014 up 8 pts vs the previous 3 mo. Strongest 60\u2013150y at 37\u201343%; weakest 150\u2013250y at 6\u201316%.",
+    "gzPct": 33,
+    "n": 362,
+    "deltaPts": 8,
+    "direction": "up",
+    "solid": {
+      "label": "60\u2013150y",
+      "loYds": 60,
+      "hiYds": 150,
+      "minPct": 37,
+      "maxPct": 43,
+      "n": 280,
+      "bins": [
+        "60-80",
+        "80-100",
+        "100-125",
+        "125-150"
+      ]
+    },
+    "weak": {
+      "label": "150\u2013250y",
+      "loYds": 150,
+      "hiYds": 250,
+      "minPct": 6,
+      "maxPct": 16,
+      "n": 167,
+      "bins": [
+        "150-170",
+        "170-200",
+        "200-250"
+      ]
+    }
+  },
+  "bins": [
+    {
+      "key": "60-80",
+      "label": "60\u201380y",
+      "loYds": 60,
+      "hiYds": 80,
+      "zone": {
+        "pct": 43,
+        "n": 42
+      },
+      "medianLeaveYds": 17.7,
+      "payoffStrokes": {
+        "strokes": 2.76,
+        "n": 42
+      },
+      "provisional": false,
+      "miss": {
+        "n": 42,
+        "shortPct": 57,
+        "longPct": 43,
+        "leftPct": 31,
+        "rightPct": 26,
+        "straightPct": 43
+      },
+      "fromLie": [
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 42,
+            "n": 19
+          }
+        },
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 64,
+            "n": 14
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 14,
+            "n": 7
+          }
+        },
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 0,
+            "n": 1
+          }
+        },
+        {
+          "lie": "Bunker",
+          "zone": {
+            "pct": 0,
+            "n": 1
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "50\u00b0 GW",
+          "clubTypeId": 20,
+          "zone": {
+            "pct": 50,
+            "n": 18
+          },
+          "medianLeaveYds": 14.8,
+          "miss": {
+            "n": 18,
+            "shortPct": 61,
+            "longPct": 39,
+            "leftPct": 22,
+            "rightPct": 17,
+            "straightPct": 61
+          }
+        },
+        {
+          "club": "PW",
+          "clubTypeId": 19,
+          "zone": {
+            "pct": 38,
+            "n": 8
+          },
+          "medianLeaveYds": 20.4,
+          "miss": {
+            "n": 8,
+            "shortPct": 50,
+            "longPct": 50,
+            "leftPct": 62,
+            "rightPct": 0,
+            "straightPct": 38
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 16,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 36,
+        "n": 42
+      },
+      "ring15": {
+        "pct": 43,
+        "n": 42
+      },
+      "detail": [
+        {
+          "key": "60-70",
+          "label": "60\u201370y",
+          "loYds": 60,
+          "hiYds": 70,
+          "zone": {
+            "pct": 43,
+            "n": 21
+          },
+          "medianLeaveYds": 18.9,
+          "payoffStrokes": {
+            "strokes": 2.78,
+            "n": 21
+          },
+          "provisional": false,
+          "miss": {
+            "n": 21,
+            "shortPct": 62,
+            "longPct": 38,
+            "leftPct": 19,
+            "rightPct": 29,
+            "straightPct": 52
+          },
+          "fromLie": [
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 33,
+                "n": 9
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 71,
+                "n": 7
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 20,
+                "n": 5
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "50\u00b0 GW",
+              "clubTypeId": 20,
+              "zone": {
+                "pct": 58,
+                "n": 12
+              },
+              "medianLeaveYds": 9.6,
+              "miss": {
+                "n": 12,
+                "shortPct": 50,
+                "longPct": 50,
+                "leftPct": 8,
+                "rightPct": 17,
+                "straightPct": 75
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 9,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 33,
+            "n": 21
+          },
+          "ring15": {
+            "pct": 43,
+            "n": 21
+          }
+        },
+        {
+          "key": "70-80",
+          "label": "70\u201380y",
+          "loYds": 70,
+          "hiYds": 80,
+          "zone": {
+            "pct": 43,
+            "n": 21
+          },
+          "medianLeaveYds": 16.2,
+          "payoffStrokes": {
+            "strokes": 2.74,
+            "n": 21
+          },
+          "provisional": false,
+          "miss": {
+            "n": 21,
+            "shortPct": 52,
+            "longPct": 48,
+            "leftPct": 43,
+            "rightPct": 24,
+            "straightPct": 33
+          },
+          "fromLie": [
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 50,
+                "n": 10
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 57,
+                "n": 7
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            },
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 0,
+                "n": 1
+              }
+            },
+            {
+              "lie": "Bunker",
+              "zone": {
+                "pct": 0,
+                "n": 1
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 50,
+                "n": 6
+              },
+              "medianLeaveYds": 15.2,
+              "miss": {
+                "n": 6,
+                "shortPct": 33,
+                "longPct": 67,
+                "leftPct": 67,
+                "rightPct": 0,
+                "straightPct": 33
+              }
+            },
+            {
+              "club": "50\u00b0 GW",
+              "clubTypeId": 20,
+              "zone": {
+                "pct": 33,
+                "n": 6
+              },
+              "medianLeaveYds": 24.3,
+              "miss": {
+                "n": 6,
+                "shortPct": 83,
+                "longPct": 17,
+                "leftPct": 50,
+                "rightPct": 17,
+                "straightPct": 33
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 9,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 38,
+            "n": 21
+          },
+          "ring15": {
+            "pct": 43,
+            "n": 21
+          }
+        }
+      ]
+    },
+    {
+      "key": "80-100",
+      "label": "80\u2013100y",
+      "loYds": 80,
+      "hiYds": 100,
+      "zone": {
+        "pct": 37,
+        "n": 51
+      },
+      "medianLeaveYds": 18.7,
+      "payoffStrokes": {
+        "strokes": 2.93,
+        "n": 51
+      },
+      "provisional": false,
+      "miss": {
+        "n": 51,
+        "shortPct": 67,
+        "longPct": 33,
+        "leftPct": 22,
+        "rightPct": 43,
+        "straightPct": 35
+      },
+      "fromLie": [
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 44,
+            "n": 25
+          }
+        },
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 38,
+            "n": 21
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 0,
+            "n": 3
+          }
+        },
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 0,
+            "n": 2
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "PW",
+          "clubTypeId": 19,
+          "zone": {
+            "pct": 32,
+            "n": 28
+          },
+          "medianLeaveYds": 20.6,
+          "miss": {
+            "n": 28,
+            "shortPct": 68,
+            "longPct": 32,
+            "leftPct": 18,
+            "rightPct": 50,
+            "straightPct": 32
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 23,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 18,
+        "n": 51
+      },
+      "ring15": {
+        "pct": 31,
+        "n": 51
+      },
+      "detail": [
+        {
+          "key": "80-90",
+          "label": "80\u201390y",
+          "loYds": 80,
+          "hiYds": 90,
+          "zone": {
+            "pct": 38,
+            "n": 21
+          },
+          "medianLeaveYds": 18.7,
+          "payoffStrokes": {
+            "strokes": 2.91,
+            "n": 21
+          },
+          "provisional": false,
+          "miss": {
+            "n": 21,
+            "shortPct": 62,
+            "longPct": 38,
+            "leftPct": 29,
+            "rightPct": 33,
+            "straightPct": 38
+          },
+          "fromLie": [
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 36,
+                "n": 11
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 50,
+                "n": 8
+              }
+            },
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 36,
+                "n": 11
+              },
+              "medianLeaveYds": 22.7,
+              "miss": {
+                "n": 11,
+                "shortPct": 73,
+                "longPct": 27,
+                "leftPct": 18,
+                "rightPct": 36,
+                "straightPct": 45
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 10,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 24,
+            "n": 21
+          },
+          "ring15": {
+            "pct": 33,
+            "n": 21
+          }
+        },
+        {
+          "key": "90-100",
+          "label": "90\u2013100y",
+          "loYds": 90,
+          "hiYds": 100,
+          "zone": {
+            "pct": 37,
+            "n": 30
+          },
+          "medianLeaveYds": 18.9,
+          "payoffStrokes": {
+            "strokes": 2.95,
+            "n": 30
+          },
+          "provisional": false,
+          "miss": {
+            "n": 30,
+            "shortPct": 70,
+            "longPct": 30,
+            "leftPct": 17,
+            "rightPct": 50,
+            "straightPct": 33
+          },
+          "fromLie": [
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 41,
+                "n": 17
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 40,
+                "n": 10
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 3
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 29,
+                "n": 17
+              },
+              "medianLeaveYds": 20.5,
+              "miss": {
+                "n": 17,
+                "shortPct": 65,
+                "longPct": 35,
+                "leftPct": 18,
+                "rightPct": 59,
+                "straightPct": 24
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 13,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 13,
+            "n": 30
+          },
+          "ring15": {
+            "pct": 30,
+            "n": 30
+          }
+        }
+      ]
+    },
+    {
+      "key": "100-125",
+      "label": "100\u2013125y",
+      "loYds": 100,
+      "hiYds": 125,
+      "zone": {
+        "pct": 39,
+        "n": 80
+      },
+      "medianLeaveYds": 18.6,
+      "payoffStrokes": {
+        "strokes": 2.89,
+        "n": 80
+      },
+      "provisional": false,
+      "miss": {
+        "n": 80,
+        "shortPct": 60,
+        "longPct": 40,
+        "leftPct": 31,
+        "rightPct": 49,
+        "straightPct": 20
+      },
+      "fromLie": [
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 40,
+            "n": 30
+          }
+        },
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 38,
+            "n": 24
+          }
+        },
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 38,
+            "n": 21
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 40,
+            "n": 5
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "PW",
+          "clubTypeId": 19,
+          "zone": {
+            "pct": 37,
+            "n": 49
+          },
+          "medianLeaveYds": 22.3,
+          "miss": {
+            "n": 49,
+            "shortPct": 67,
+            "longPct": 33,
+            "leftPct": 35,
+            "rightPct": 51,
+            "straightPct": 14
+          }
+        },
+        {
+          "club": "9 Iron",
+          "clubTypeId": 18,
+          "zone": {
+            "pct": 42,
+            "n": 19
+          },
+          "medianLeaveYds": 17.1,
+          "miss": {
+            "n": 19,
+            "shortPct": 58,
+            "longPct": 42,
+            "leftPct": 21,
+            "rightPct": 47,
+            "straightPct": 32
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 12,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 14,
+        "n": 80
+      },
+      "ring15": {
+        "pct": 38,
+        "n": 80
+      },
+      "detail": [
+        {
+          "key": "100-110",
+          "label": "100\u2013110y",
+          "loYds": 100,
+          "hiYds": 110,
+          "zone": {
+            "pct": 48,
+            "n": 23
+          },
+          "medianLeaveYds": 16.9,
+          "payoffStrokes": {
+            "strokes": 2.86,
+            "n": 23
+          },
+          "provisional": false,
+          "miss": {
+            "n": 23,
+            "shortPct": 65,
+            "longPct": 35,
+            "leftPct": 43,
+            "rightPct": 26,
+            "straightPct": 30
+          },
+          "fromLie": [
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 30,
+                "n": 10
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 33,
+                "n": 6
+              }
+            },
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 100,
+                "n": 5
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 50,
+                "n": 2
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 47,
+                "n": 19
+              },
+              "medianLeaveYds": 24.7,
+              "miss": {
+                "n": 19,
+                "shortPct": 68,
+                "longPct": 32,
+                "leftPct": 47,
+                "rightPct": 26,
+                "straightPct": 26
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 4,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 22,
+            "n": 23
+          },
+          "ring15": {
+            "pct": 48,
+            "n": 23
+          }
+        },
+        {
+          "key": "110-120",
+          "label": "110\u2013120y",
+          "loYds": 110,
+          "hiYds": 120,
+          "zone": {
+            "pct": 34,
+            "n": 38
+          },
+          "medianLeaveYds": 22.0,
+          "payoffStrokes": {
+            "strokes": 2.97,
+            "n": 38
+          },
+          "provisional": false,
+          "miss": {
+            "n": 38,
+            "shortPct": 55,
+            "longPct": 45,
+            "leftPct": 21,
+            "rightPct": 63,
+            "straightPct": 16
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 23,
+                "n": 13
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 50,
+                "n": 12
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 30,
+                "n": 10
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 33,
+                "n": 3
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 32,
+                "n": 22
+              },
+              "medianLeaveYds": 22.6,
+              "miss": {
+                "n": 22,
+                "shortPct": 68,
+                "longPct": 32,
+                "leftPct": 27,
+                "rightPct": 64,
+                "straightPct": 9
+              }
+            },
+            {
+              "club": "9 Iron",
+              "clubTypeId": 18,
+              "zone": {
+                "pct": 30,
+                "n": 10
+              },
+              "medianLeaveYds": 20.8,
+              "miss": {
+                "n": 10,
+                "shortPct": 40,
+                "longPct": 60,
+                "leftPct": 20,
+                "rightPct": 60,
+                "straightPct": 20
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 6,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 11,
+            "n": 38
+          },
+          "ring15": {
+            "pct": 32,
+            "n": 38
+          }
+        },
+        {
+          "key": "120-130",
+          "label": "120\u2013130y",
+          "loYds": 120,
+          "hiYds": 130,
+          "zone": {
+            "pct": 32,
+            "n": 38
+          },
+          "medianLeaveYds": 19.5,
+          "payoffStrokes": {
+            "strokes": 2.87,
+            "n": 38
+          },
+          "provisional": false,
+          "miss": {
+            "n": 38,
+            "shortPct": 71,
+            "longPct": 29,
+            "leftPct": 29,
+            "rightPct": 42,
+            "straightPct": 29
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 32,
+                "n": 22
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 14,
+                "n": 7
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 57,
+                "n": 7
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "9 Iron",
+              "clubTypeId": 18,
+              "zone": {
+                "pct": 43,
+                "n": 14
+              },
+              "medianLeaveYds": 18.0,
+              "miss": {
+                "n": 14,
+                "shortPct": 71,
+                "longPct": 29,
+                "leftPct": 36,
+                "rightPct": 21,
+                "straightPct": 43
+              }
+            },
+            {
+              "club": "PW",
+              "clubTypeId": 19,
+              "zone": {
+                "pct": 18,
+                "n": 11
+              },
+              "medianLeaveYds": 19.3,
+              "miss": {
+                "n": 11,
+                "shortPct": 64,
+                "longPct": 36,
+                "leftPct": 18,
+                "rightPct": 73,
+                "straightPct": 9
+              }
+            },
+            {
+              "club": "8 Iron",
+              "clubTypeId": 17,
+              "zone": {
+                "pct": 43,
+                "n": 7
+              },
+              "medianLeaveYds": 16.4,
+              "miss": {
+                "n": 7,
+                "shortPct": 86,
+                "longPct": 14,
+                "leftPct": 29,
+                "rightPct": 43,
+                "straightPct": 29
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 6,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 8,
+            "n": 38
+          },
+          "ring15": {
+            "pct": 32,
+            "n": 38
+          }
+        }
+      ]
+    },
+    {
+      "key": "125-150",
+      "label": "125\u2013150y",
+      "loYds": 125,
+      "hiYds": 150,
+      "zone": {
+        "pct": 37,
+        "n": 107
+      },
+      "medianLeaveYds": 19.7,
+      "payoffStrokes": {
+        "strokes": 2.9,
+        "n": 107
+      },
+      "provisional": false,
+      "miss": {
+        "n": 107,
+        "shortPct": 68,
+        "longPct": 32,
+        "leftPct": 28,
+        "rightPct": 45,
+        "straightPct": 27
+      },
+      "fromLie": [
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 48,
+            "n": 60
+          }
+        },
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 18,
+            "n": 22
+          }
+        },
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 35,
+            "n": 20
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 0,
+            "n": 5
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "8 Iron",
+          "clubTypeId": 17,
+          "zone": {
+            "pct": 43,
+            "n": 53
+          },
+          "medianLeaveYds": 18.2,
+          "miss": {
+            "n": 53,
+            "shortPct": 57,
+            "longPct": 43,
+            "leftPct": 32,
+            "rightPct": 43,
+            "straightPct": 25
+          }
+        },
+        {
+          "club": "9 Iron",
+          "clubTypeId": 18,
+          "zone": {
+            "pct": 46,
+            "n": 28
+          },
+          "medianLeaveYds": 17.8,
+          "miss": {
+            "n": 28,
+            "shortPct": 71,
+            "longPct": 29,
+            "leftPct": 32,
+            "rightPct": 32,
+            "straightPct": 36
+          }
+        },
+        {
+          "club": "7 Iron",
+          "clubTypeId": 16,
+          "zone": {
+            "pct": 33,
+            "n": 9
+          },
+          "medianLeaveYds": 20.2,
+          "miss": {
+            "n": 9,
+            "shortPct": 78,
+            "longPct": 22,
+            "leftPct": 11,
+            "rightPct": 78,
+            "straightPct": 11
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 17,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 18,
+        "n": 107
+      },
+      "ring15": {
+        "pct": 36,
+        "n": 107
+      },
+      "detail": [
+        {
+          "key": "130-140",
+          "label": "130\u2013140y",
+          "loYds": 130,
+          "hiYds": 140,
+          "zone": {
+            "pct": 43,
+            "n": 37
+          },
+          "medianLeaveYds": 18.2,
+          "payoffStrokes": {
+            "strokes": 2.84,
+            "n": 37
+          },
+          "provisional": false,
+          "miss": {
+            "n": 37,
+            "shortPct": 62,
+            "longPct": 38,
+            "leftPct": 24,
+            "rightPct": 43,
+            "straightPct": 32
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 50,
+                "n": 18
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 50,
+                "n": 10
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 22,
+                "n": 9
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "8 Iron",
+              "clubTypeId": 17,
+              "zone": {
+                "pct": 48,
+                "n": 23
+              },
+              "medianLeaveYds": 16.6,
+              "miss": {
+                "n": 23,
+                "shortPct": 57,
+                "longPct": 43,
+                "leftPct": 22,
+                "rightPct": 48,
+                "straightPct": 30
+              }
+            },
+            {
+              "club": "9 Iron",
+              "clubTypeId": 18,
+              "zone": {
+                "pct": 45,
+                "n": 11
+              },
+              "medianLeaveYds": 18.9,
+              "miss": {
+                "n": 11,
+                "shortPct": 64,
+                "longPct": 36,
+                "leftPct": 27,
+                "rightPct": 27,
+                "straightPct": 45
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 3,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 30,
+            "n": 37
+          },
+          "ring15": {
+            "pct": 41,
+            "n": 37
+          }
+        },
+        {
+          "key": "140-150",
+          "label": "140\u2013150y",
+          "loYds": 140,
+          "hiYds": 150,
+          "zone": {
+            "pct": 37,
+            "n": 51
+          },
+          "medianLeaveYds": 20.7,
+          "payoffStrokes": {
+            "strokes": 2.93,
+            "n": 51
+          },
+          "provisional": false,
+          "miss": {
+            "n": 51,
+            "shortPct": 69,
+            "longPct": 31,
+            "leftPct": 33,
+            "rightPct": 49,
+            "straightPct": 18
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 53,
+                "n": 32
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 12,
+                "n": 8
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 12,
+                "n": 8
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 3
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "8 Iron",
+              "clubTypeId": 17,
+              "zone": {
+                "pct": 40,
+                "n": 25
+              },
+              "medianLeaveYds": 20.7,
+              "miss": {
+                "n": 25,
+                "shortPct": 48,
+                "longPct": 52,
+                "leftPct": 44,
+                "rightPct": 36,
+                "straightPct": 20
+              }
+            },
+            {
+              "club": "9 Iron",
+              "clubTypeId": 18,
+              "zone": {
+                "pct": 56,
+                "n": 9
+              },
+              "medianLeaveYds": 14.7,
+              "miss": {
+                "n": 9,
+                "shortPct": 89,
+                "longPct": 11,
+                "leftPct": 33,
+                "rightPct": 56,
+                "straightPct": 11
+              }
+            },
+            {
+              "club": "7 Iron",
+              "clubTypeId": 16,
+              "zone": {
+                "pct": 38,
+                "n": 8
+              },
+              "medianLeaveYds": 18.2,
+              "miss": {
+                "n": 8,
+                "shortPct": 75,
+                "longPct": 25,
+                "leftPct": 12,
+                "rightPct": 75,
+                "straightPct": 12
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 9,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 14,
+            "n": 51
+          },
+          "ring15": {
+            "pct": 35,
+            "n": 51
+          }
+        }
+      ]
+    },
+    {
+      "key": "150-170",
+      "label": "150\u2013170y",
+      "loYds": 150,
+      "hiYds": 170,
+      "zone": {
+        "pct": 16,
+        "n": 82
+      },
+      "medianLeaveYds": 31.9,
+      "payoffStrokes": {
+        "strokes": 3.2,
+        "n": 82
+      },
+      "provisional": false,
+      "miss": {
+        "n": 82,
+        "shortPct": 89,
+        "longPct": 11,
+        "leftPct": 32,
+        "rightPct": 49,
+        "straightPct": 20
+      },
+      "fromLie": [
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 19,
+            "n": 48
+          }
+        },
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 20,
+            "n": 15
+          }
+        },
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 7,
+            "n": 14
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 0,
+            "n": 5
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "7 Iron",
+          "clubTypeId": 16,
+          "zone": {
+            "pct": 16,
+            "n": 38
+          },
+          "medianLeaveYds": 34.8,
+          "miss": {
+            "n": 38,
+            "shortPct": 95,
+            "longPct": 5,
+            "leftPct": 21,
+            "rightPct": 58,
+            "straightPct": 21
+          }
+        },
+        {
+          "club": "6 Iron",
+          "clubTypeId": 15,
+          "zone": {
+            "pct": 27,
+            "n": 11
+          },
+          "medianLeaveYds": 21.2,
+          "miss": {
+            "n": 11,
+            "shortPct": 64,
+            "longPct": 36,
+            "leftPct": 55,
+            "rightPct": 9,
+            "straightPct": 36
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 33,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 9,
+        "n": 82
+      },
+      "ring15": {
+        "pct": 16,
+        "n": 82
+      },
+      "detail": [
+        {
+          "key": "150-160",
+          "label": "150\u2013160y",
+          "loYds": 150,
+          "hiYds": 160,
+          "zone": {
+            "pct": 21,
+            "n": 42
+          },
+          "medianLeaveYds": 28.5,
+          "payoffStrokes": {
+            "strokes": 3.1,
+            "n": 42
+          },
+          "provisional": false,
+          "miss": {
+            "n": 42,
+            "shortPct": 88,
+            "longPct": 12,
+            "leftPct": 31,
+            "rightPct": 43,
+            "straightPct": 26
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 30,
+                "n": 23
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 17,
+                "n": 12
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 0,
+                "n": 5
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "7 Iron",
+              "clubTypeId": 16,
+              "zone": {
+                "pct": 24,
+                "n": 21
+              },
+              "medianLeaveYds": 32.1,
+              "miss": {
+                "n": 21,
+                "shortPct": 90,
+                "longPct": 10,
+                "leftPct": 29,
+                "rightPct": 43,
+                "straightPct": 29
+              }
+            },
+            {
+              "club": "6 Iron",
+              "clubTypeId": 15,
+              "zone": {
+                "pct": 33,
+                "n": 6
+              },
+              "medianLeaveYds": 18.2,
+              "miss": {
+                "n": 6,
+                "shortPct": 67,
+                "longPct": 33,
+                "leftPct": 33,
+                "rightPct": 17,
+                "straightPct": 50
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 15,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 12,
+            "n": 42
+          },
+          "ring15": {
+            "pct": 21,
+            "n": 42
+          }
+        },
+        {
+          "key": "160-170",
+          "label": "160\u2013170y",
+          "loYds": 160,
+          "hiYds": 170,
+          "zone": {
+            "pct": 10,
+            "n": 40
+          },
+          "medianLeaveYds": 35.5,
+          "payoffStrokes": {
+            "strokes": 3.3,
+            "n": 40
+          },
+          "provisional": false,
+          "miss": {
+            "n": 40,
+            "shortPct": 90,
+            "longPct": 10,
+            "leftPct": 32,
+            "rightPct": 55,
+            "straightPct": 12
+          },
+          "fromLie": [
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 8,
+                "n": 25
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 11,
+                "n": 9
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 33,
+                "n": 3
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 3
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "7 Iron",
+              "clubTypeId": 16,
+              "zone": {
+                "pct": 6,
+                "n": 17
+              },
+              "medianLeaveYds": 41.3,
+              "miss": {
+                "n": 17,
+                "shortPct": 100,
+                "longPct": 0,
+                "leftPct": 12,
+                "rightPct": 76,
+                "straightPct": 12
+              }
+            },
+            {
+              "club": "6 Iron",
+              "clubTypeId": 15,
+              "zone": {
+                "pct": 20,
+                "n": 5
+              },
+              "medianLeaveYds": 32.5,
+              "miss": {
+                "n": 5,
+                "shortPct": 60,
+                "longPct": 40,
+                "leftPct": 80,
+                "rightPct": 0,
+                "straightPct": 20
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 18,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 5,
+            "n": 40
+          },
+          "ring15": {
+            "pct": 10,
+            "n": 40
+          }
+        }
+      ]
+    },
+    {
+      "key": "170-200",
+      "label": "170\u2013200y",
+      "loYds": 170,
+      "hiYds": 200,
+      "zone": {
+        "pct": 10,
+        "n": 51
+      },
+      "medianLeaveYds": 48.0,
+      "payoffStrokes": {
+        "strokes": 3.31,
+        "n": 51
+      },
+      "provisional": false,
+      "miss": {
+        "n": 51,
+        "shortPct": 96,
+        "longPct": 4,
+        "leftPct": 24,
+        "rightPct": 55,
+        "straightPct": 22
+      },
+      "fromLie": [
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 12,
+            "n": 17
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 0,
+            "n": 12
+          }
+        },
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 8,
+            "n": 12
+          }
+        },
+        {
+          "lie": "TeeBox",
+          "zone": {
+            "pct": 25,
+            "n": 8
+          }
+        },
+        {
+          "lie": "Bunker",
+          "zone": {
+            "pct": 0,
+            "n": 2
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "7 Iron",
+          "clubTypeId": 16,
+          "zone": {
+            "pct": 0,
+            "n": 12
+          },
+          "medianLeaveYds": 56.9,
+          "miss": {
+            "n": 12,
+            "shortPct": 100,
+            "longPct": 0,
+            "leftPct": 17,
+            "rightPct": 58,
+            "straightPct": 25
+          }
+        },
+        {
+          "club": "4 Hybrid",
+          "clubTypeId": 7,
+          "zone": {
+            "pct": 17,
+            "n": 12
+          },
+          "medianLeaveYds": 30.9,
+          "miss": {
+            "n": 12,
+            "shortPct": 100,
+            "longPct": 0,
+            "leftPct": 8,
+            "rightPct": 50,
+            "straightPct": 42
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 27,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 2,
+        "n": 51
+      },
+      "ring15": {
+        "pct": 10,
+        "n": 51
+      },
+      "detail": [
+        {
+          "key": "170-180",
+          "label": "170\u2013180y",
+          "loYds": 170,
+          "hiYds": 180,
+          "zone": {
+            "pct": 14,
+            "n": 22
+          },
+          "medianLeaveYds": 43.2,
+          "payoffStrokes": {
+            "strokes": 3.27,
+            "n": 22
+          },
+          "provisional": false,
+          "miss": {
+            "n": 22,
+            "shortPct": 95,
+            "longPct": 5,
+            "leftPct": 27,
+            "rightPct": 45,
+            "straightPct": 27
+          },
+          "fromLie": [
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 7
+              }
+            },
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 33,
+                "n": 6
+              }
+            },
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 20,
+                "n": 5
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 0,
+                "n": 3
+              }
+            },
+            {
+              "lie": "Bunker",
+              "zone": {
+                "pct": 0,
+                "n": 1
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "4 Hybrid",
+              "clubTypeId": 7,
+              "zone": {
+                "pct": 40,
+                "n": 5
+              },
+              "medianLeaveYds": 21.5,
+              "miss": {
+                "n": 5,
+                "shortPct": 100,
+                "longPct": 0,
+                "leftPct": 0,
+                "rightPct": 20,
+                "straightPct": 80
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 17,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 0,
+            "n": 22
+          },
+          "ring15": {
+            "pct": 14,
+            "n": 22
+          }
+        },
+        {
+          "key": "180-190",
+          "label": "180\u2013190y",
+          "loYds": 180,
+          "hiYds": 190,
+          "zone": {
+            "pct": 12,
+            "n": 16
+          },
+          "medianLeaveYds": 51.5,
+          "payoffStrokes": {
+            "strokes": 3.28,
+            "n": 16
+          },
+          "provisional": false,
+          "miss": {
+            "n": 16,
+            "shortPct": 94,
+            "longPct": 6,
+            "leftPct": 31,
+            "rightPct": 50,
+            "straightPct": 19
+          },
+          "fromLie": [
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 17,
+                "n": 6
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 20,
+                "n": 5
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 3
+              }
+            },
+            {
+              "lie": "TeeBox",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            }
+          ],
+          "clubs": [],
+          "clubsBelowMin": {
+            "shots": 16,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 6,
+            "n": 16
+          },
+          "ring15": {
+            "pct": 12,
+            "n": 16
+          }
+        },
+        {
+          "key": "190-200",
+          "label": "190\u2013200y",
+          "loYds": 190,
+          "hiYds": 200,
+          "zone": {
+            "pct": 0,
+            "n": 13
+          },
+          "medianLeaveYds": 60.2,
+          "payoffStrokes": {
+            "strokes": 3.41,
+            "n": 13
+          },
+          "provisional": false,
+          "miss": {
+            "n": 13,
+            "shortPct": 100,
+            "longPct": 0,
+            "leftPct": 8,
+            "rightPct": 77,
+            "straightPct": 15
+          },
+          "fromLie": [
+            {
+              "lie": "Fairway",
+              "zone": {
+                "pct": 0,
+                "n": 6
+              }
+            },
+            {
+              "lie": "Rough",
+              "zone": {
+                "pct": 0,
+                "n": 4
+              }
+            },
+            {
+              "lie": "Unknown",
+              "zone": {
+                "pct": 0,
+                "n": 2
+              }
+            },
+            {
+              "lie": "Bunker",
+              "zone": {
+                "pct": 0,
+                "n": 1
+              }
+            }
+          ],
+          "clubs": [
+            {
+              "club": "4 Hybrid",
+              "clubTypeId": 7,
+              "zone": {
+                "pct": 0,
+                "n": 5
+              },
+              "medianLeaveYds": 53.0,
+              "miss": {
+                "n": 5,
+                "shortPct": 100,
+                "longPct": 0,
+                "leftPct": 0,
+                "rightPct": 80,
+                "straightPct": 20
+              }
+            }
+          ],
+          "clubsBelowMin": {
+            "shots": 8,
+            "minN": 5
+          },
+          "ring10": {
+            "pct": 0,
+            "n": 13
+          },
+          "ring15": {
+            "pct": 0,
+            "n": 13
+          }
+        }
+      ]
+    },
+    {
+      "key": "200-250",
+      "label": "200\u2013250y",
+      "loYds": 200,
+      "hiYds": 250,
+      "zone": {
+        "pct": 6,
+        "n": 34
+      },
+      "medianLeaveYds": 66.0,
+      "payoffStrokes": {
+        "strokes": 3.32,
+        "n": 34
+      },
+      "provisional": false,
+      "miss": {
+        "n": 34,
+        "shortPct": 88,
+        "longPct": 12,
+        "leftPct": 35,
+        "rightPct": 50,
+        "straightPct": 15
+      },
+      "fromLie": [
+        {
+          "lie": "Rough",
+          "zone": {
+            "pct": 7,
+            "n": 15
+          }
+        },
+        {
+          "lie": "Unknown",
+          "zone": {
+            "pct": 9,
+            "n": 11
+          }
+        },
+        {
+          "lie": "Fairway",
+          "zone": {
+            "pct": 0,
+            "n": 8
+          }
+        }
+      ],
+      "clubs": [
+        {
+          "club": "5 Wood",
+          "clubTypeId": 3,
+          "zone": {
+            "pct": 11,
+            "n": 19
+          },
+          "medianLeaveYds": 48.9,
+          "miss": {
+            "n": 19,
+            "shortPct": 79,
+            "longPct": 21,
+            "leftPct": 37,
+            "rightPct": 47,
+            "straightPct": 16
+          }
+        },
+        {
+          "club": "7 Iron",
+          "clubTypeId": 16,
+          "zone": {
+            "pct": 0,
+            "n": 6
+          },
+          "medianLeaveYds": 87.2,
+          "miss": {
+            "n": 6,
+            "shortPct": 100,
+            "longPct": 0,
+            "leftPct": 33,
+            "rightPct": 67,
+            "straightPct": 0
+          }
+        }
+      ],
+      "clubsBelowMin": {
+        "shots": 9,
+        "minN": 5
+      },
+      "ring10": {
+        "pct": 6,
+        "n": 34
+      },
+      "ring15": {
+        "pct": 6,
+        "n": 34
+      },
+      "detail": []
+    }
+  ],
+  "payoffAnchors": {
+    "basis": "average strokes to hole out after an approach in the band, by where it left the ball; strokes counted from the authoritative scorecard, never from shot rows",
+    "classes": [
+      {
+        "key": "greenPutted",
+        "label": "On the green, putting",
+        "strokes": 2.24,
+        "n": 87,
+        "provisional": false
+      },
+      {
+        "key": "fringePutted",
+        "label": "Fringe or apron, putting",
+        "strokes": 2.63,
+        "n": 30,
+        "provisional": false
+      },
+      {
+        "key": "chipped",
+        "label": "Inside 15 yards, chipping",
+        "strokes": 2.6,
+        "n": 15,
+        "provisional": false
+      },
+      {
+        "key": "pitch",
+        "label": "15-25 yards out",
+        "strokes": 2.99,
+        "n": 76,
+        "provisional": false
+      },
+      {
+        "key": "long",
+        "label": "25+ yards out",
+        "strokes": 3.44,
+        "n": 154,
+        "provisional": false
+      }
+    ],
+    "excludedOverRecorded": 0,
+    "legend": "Miss the zone and it costs you: on the green, putting 2.24 strokes to hole out \u00b7 fringe or apron, putting 2.63 \u00b7 inside 15 yards, chipping 2.60 \u00b7 15-25 yards out 2.99 \u00b7 25+ yards out 3.44"
+  },
+  "coverage": {
+    "rounds": 30,
+    "holes": 405,
+    "holesWithPin": 405,
+    "holesWithoutPin": 0,
+    "pinCoverage": {
+      "pct": 100,
+      "n": 405
+    },
+    "eligible": 509,
+    "excludedTeeBoxArtifact": 16,
+    "excludedLayup": 20,
+    "excludedTeeShot": 26,
+    "approaches": 447,
+    "leaveMeasured": {
+      "pct": 100,
+      "n": 447
+    },
+    "clubAttributed": {
+      "pct": 81,
+      "n": 447
+    },
+    "nextShotKnown": {
+      "pct": 96,
+      "n": 447
+    },
+    "note": "Holes without pin coordinates carry no shot data at all, so they contribute no approaches \u2014 they are counted here so the shrunken denominator stays visible. Approaches recorded as finishing on a tee box are next-tee GPS artifacts (shot_flags does not catch them) and are excluded; layups and tee shots on par 4s and 5s are excluded because they were never attempting the green. Every count is shown so each drop stays visible.",
+    "scopeChip": "real pins \u00b7 100% of holes \u00b7 n=447 \u00b7 30 rounds"
+  },
+  "config": {
+    "windowDays": 90,
+    "bandYds": [
+      60,
+      250
+    ],
+    "displayBinEdges": [
+      60,
+      80,
+      100,
+      125,
+      150,
+      170,
+      200,
+      250
+    ],
+    "detailBinWidthYds": 10,
+    "zoneRadiusYds": 15,
+    "ringYds": [
+      10,
+      15
+    ],
+    "leaveClassEdgesYds": [
+      15,
+      25
+    ],
+    "excludeEndLie": [
+      "TeeBox"
+    ],
+    "minClubRowN": 5,
+    "minBinN": 8,
+    "minAnchorN": 8,
+    "headlineBandYds": [
+      60,
+      170
+    ],
+    "detailMaxYds": 200,
+    "excludeShotTypes": [
+      "LAYUP"
+    ],
+    "excludeTeeShotsAbovePar": 3
+  },
+  "note": "Green Zone means the approach finished on the green, or inside 15 yards of the pin, or in the hole \u2014 a geometric, pin-centred measure. It is not Garmin's green-in-regulation stat, which is unchanged and reported separately. Green Zone % is a RATE, so it uses every round in the window, 9- and 18-hole alike; only scoring-level metrics are restricted to 18-hole regulation rounds.",
+  "findings": [
+    {
+      "cat": "Approach ladder",
+      "key": "reach-swing",
+      "binKey": "90-100",
+      "club": "PW",
+      "n": 17,
+      "magnitude": 0.067,
+      "weight": 1.15,
+      "text": "PW from 90\u2013100y is a reach swing: of 17 shots, 65% finish short and 59% finish right, and only 29% reach the Green Zone. One more club is the whole fix."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "reach-swing",
+      "binKey": "110-120",
+      "club": "PW",
+      "n": 22,
+      "magnitude": 0.2,
+      "weight": 1.15,
+      "text": "PW from 110\u2013120y is a reach swing: of 22 shots, 68% finish short and 64% finish right, and only 32% reach the Green Zone. One more club is the whole fix."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "reach-swing",
+      "binKey": "140-150",
+      "club": "9 Iron",
+      "n": 9,
+      "magnitude": 0.417,
+      "weight": 1.15,
+      "text": "9 Iron from 140\u2013150y is a reach swing: of 9 shots, 89% finish short and 56% finish right, and only 56% reach the Green Zone. One more club is the whole fix."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "reach-swing",
+      "binKey": "140-150",
+      "club": "7 Iron",
+      "n": 8,
+      "magnitude": 0.5,
+      "weight": 1.15,
+      "text": "7 Iron from 140\u2013150y is a reach swing: of 8 shots, 75% finish short and 75% finish right, and only 38% reach the Green Zone. One more club is the whole fix."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "reach-swing",
+      "binKey": "160-170",
+      "club": "7 Iron",
+      "n": 17,
+      "magnitude": 0.933,
+      "weight": 1.15,
+      "text": "7 Iron from 160\u2013170y is a reach swing: of 17 shots, 100% finish short and 76% finish right, and only 6% reach the Green Zone. One more club is the whole fix."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "cliff",
+      "binKey": "150-170",
+      "club": null,
+      "n": 82,
+      "magnitude": 0.84,
+      "weight": 1.2,
+      "text": "Your approach game falls off a cliff at 150 yards: 125\u2013150y reaches the Green Zone 37% of the time (n=107) but 150\u2013170y only 16% (n=82), leaving a median 32 yards. Lay up to the range that still works."
+    },
+    {
+      "cat": "Approach ladder",
+      "key": "best-window",
+      "binKey": "100-110",
+      "club": null,
+      "n": 23,
+      "magnitude": 0.6,
+      "weight": 1.0,
+      "text": "100\u2013110y is your best window: 48% of 23 approaches reach the Green Zone, against 33% across the whole 60\u2013170y band. Worth leaving yourself that number off the tee."
+    }
+  ]
+}
