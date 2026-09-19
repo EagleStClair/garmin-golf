@@ -256,6 +256,17 @@ def _rate(rows: list, pred) -> dict:
     return stat(sum(1 for v in known if v), len(known))
 
 
+def _delta_pts(cur_rows: list, prev_rows: list, pred) -> int | None:
+    """Point change between two windows, rounded ONCE from the exact rates —
+    round(cur) - round(prev) can misstate the move by a point, and the verdict
+    sentence quotes this number."""
+    def exact(rows):
+        known = [v for v in (pred(r) for r in rows) if v is not None]
+        return 100 * sum(1 for v in known if v) / len(known) if known else None
+    cur, prev = exact(cur_rows), exact(prev_rows)
+    return round(cur - prev) if cur is not None and prev is not None else None
+
+
 def _miss(rows: list) -> dict:
     """Short/long and left/right/straight shares for a slice, each over the rows that
     carry the reading."""
@@ -576,9 +587,7 @@ def build_doc(con, cfg: dict, as_of: date) -> dict:
 
     zone = _rate(head_rows, lambda r: r["zone"])
     prev_zone = _rate(prev_rows, lambda r: r["zone"])
-    # Rounded-then-subtracted, as shipped in v1: both operands are already whole points.
-    delta = (zone["pct"] - prev_zone["pct"]
-             if zone["pct"] is not None and prev_zone["pct"] is not None else None)
+    delta = _delta_pts(head_rows, prev_rows, lambda r: r["zone"])
     ring0 = f"ring{int(cfg['ringYds'][0])}"
     headline = {
         "key": "greenZonePct", "label": "Green Zone %",

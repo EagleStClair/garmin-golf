@@ -502,3 +502,14 @@ def test_preserved_findings_reproduce_in_shape():
     best = next(f for f in doc["findings"] if f["key"] == "best-window")
     assert best["binKey"] == "100-110"           # 100y is still his best window
     assert all(0 < f["magnitude"] for f in doc["findings"])
+
+
+def test_delta_pts_rounds_once_from_exact_rates():
+    # The crew's own catch on v1.1: 33.6% vs 25.4% is a true move of +8.2 -> +8,
+    # but round-then-subtract reads 34 - 25 = +9. Delta must round ONCE.
+    from src.ladder import _delta_pts
+    cur = [{"zone": True}] * 42 + [{"zone": False}] * 83      # 33.6%
+    prev = [{"zone": True}] * 32 + [{"zone": False}] * 94     # 25.4%
+    assert _delta_pts(cur, prev, lambda r: r["zone"]) == 8
+    assert _delta_pts(cur, [], lambda r: r["zone"]) is None
+    assert _delta_pts([{"zone": None}], prev, lambda r: r["zone"]) is None
