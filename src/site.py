@@ -309,11 +309,29 @@ TEMPLATE = r"""<!doctype html>
   table.dtab td,table.dtab th{white-space:nowrap;padding:6px 0 6px 18px;text-align:right;border-top:1px solid var(--line)}
   table.dtab th{border-top:0;font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
   table.dtab td:first-child,table.dtab th:first-child{text-align:left;padding-left:0;font-weight:600}
-  /* Approach Ladder: flex DOM, deliberately NOT an SVG chart — the cone scales off
-     svg.parentNode.clientWidth, which collapses under ~500px in headless Chrome. A
-     flex strip never measures anything, so it renders the same at any width. Cell
-     width is proportional to the bin's yardage span, so the strip is honest. */
-  .ladstrip{display:flex;gap:4px;min-width:420px}
+  /* Approach Ladder: the TABLE is the primary layout — every number readable with no
+     interaction. The heat ramp moved into the Zone% cell, on an inner pill rather than
+     the td, because a td background fights the row border and cannot take a radius.
+     The flex strip survives only as the 10-yard detail inside a bin's anatomy: flex DOM
+     and deliberately NOT an SVG chart, since the cone scales off
+     svg.parentNode.clientWidth, which collapses under ~500px in headless Chrome. A flex
+     strip never measures anything, so it renders the same at any width. */
+  .ladverdict{font-size:14px;line-height:1.45;font-weight:600;margin:0 0 8px}
+  .ladchip{display:inline-block;font-size:10.5px;color:var(--muted);background:#eef1ee;
+    border-radius:4px;padding:2px 8px;margin:0 0 10px;letter-spacing:.02em}
+  #ladtab table.dtab{width:100%}
+  #ladtab tbody tr{cursor:pointer}
+  #ladtab tbody tr.on td{background:#eef2ec}
+  #ladtab tbody tr.on td:first-child{color:var(--accent)}
+  .ladcaret{color:var(--muted);font-size:10px;margin-left:6px}
+  /* Three readings that must never collapse into each other: a rated bin (0% included —
+     a confident zero is a finding, not missing data), too few shots to rate, and no
+     shots at all. Tinted pill / grey pill / outline. */
+  .zpill{display:inline-block;min-width:54px;padding:2px 9px;border-radius:10px;
+    font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
+  .zpill.thin{background:#ecefe9;color:var(--muted);font-weight:600;font-size:11px}
+  .zpill.none{background:transparent;border:1px dashed var(--line);color:var(--muted);
+    font-weight:400;font-size:11px}
   .ladcell{border-radius:6px;padding:8px 3px;text-align:center;cursor:pointer;
     border:1px solid transparent}
   .ladcell.on{border-color:var(--accent)}
@@ -322,6 +340,8 @@ TEMPLATE = r"""<!doctype html>
   .ladcell .ln{font-size:9.5px;color:var(--muted)}
   .ladcell.thin{background:#ecefe9}
   .ladcell.thin .lv{font-size:10.5px;font-weight:600;color:var(--muted)}
+  .ladcell.none{border-color:var(--line);border-style:dashed}
+  .ladcell.none .lv{font-size:10.5px;font-weight:400;color:var(--muted)}
   .laddet{display:flex;gap:3px;min-width:260px;margin:10px 0 4px}
   .laddet .ladcell{padding:6px 2px}
   .laddet .ladcell .lv{font-size:13px}
@@ -512,7 +532,9 @@ TEMPLATE = r"""<!doctype html>
       <div class="mixlegend"><span><i class="cl-ceil"></i>ceiling (best 20%)</span><span><i class="cl-med"></i>median</span><span><i class="cl-floor"></i>floor (worst 20%)</span><span><i class="cl-dot"></i>rounds</span><span><i class="cl-tgt"></i>target path (modeled)</span></div>
       <div class="foot" id="conefoot" style="margin-top:4px">Improvement moves the cone down. Mastery narrows it. Dashed = forming estimate (under 16 rounds); solid = full evidence. 18-hole regulation rounds only — 9-hole rounds still feed the rate trends below, but not the scoring cone. Target cones on the right are modeled from real population data (Arccos scoring distributions by index — a golfer's typical round runs ~4–6 over their index, and spread narrows with skill), not measurements of you.</div></div>
     <div class="card" id="ladcard"><h2>Approach Ladder<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)" id="ladscope"></span></h2>
-      <div id="ladstrip" style="overflow-x:auto"></div>
+      <div class="ladverdict" id="ladverdict"></div>
+      <div id="ladchip"></div>
+      <div id="ladtab" style="overflow-x:auto"></div>
       <div class="foot" id="ladlegend" style="margin-top:6px"></div>
       <div id="ladanat"></div>
       <div class="foot" id="ladnote" style="margin-top:6px"></div></div>
@@ -1147,42 +1169,74 @@ function renderInsights(){
     `<div class="pri"><span class="n">${i+1}</span><div><b>${x.text}</b>`+
     `<div class="ev">${x.evidence}</div></div></div>`).join('');
 }
-/* ---- Approach Ladder (heat strip -> bin anatomy) ---- */
+/* ---- Approach Ladder (table -> bin anatomy) ---- */
 const LAD_RAMP=['#f1d3d0','#f6e1cd','#edefdf','#d7e7d3','#bddfc2'];   /* bad -> good */
 function ladColor(p){
   const t=Math.max(0,Math.min(0.999,(p-10)/35));   /* anchored on the observed range */
   return LAD_RAMP[Math.floor(t*LAD_RAMP.length)];
 }
+/* A bin reads one of exactly three ways. 0% with enough shots behind it is a RATED
+   bin at the red end of the ramp — a real, confident zero — and must never be styled
+   like "too few to rate" or like a bin nobody has played. */
+function ladState(b){
+  if(b.zone.n===0)return 'none';
+  return (b.provisional||b.zone.pct==null)?'thin':'rate';
+}
 function ladCell(b,cls){
-  const thin=b.provisional||b.zone.pct==null;
-  const bg=thin?'':`background:${ladColor(b.zone.pct)}`;
-  const val=thin?'too few<br>to rate':b.zone.pct+'%';
-  return `<div class="ladcell${thin?' thin':''} ${cls||''}" data-bin="${b.key}" `+
+  const st=ladState(b);
+  const bg=st==='rate'?`background:${ladColor(b.zone.pct)}`:'';
+  const val=st==='rate'?b.zone.pct+'%':st==='thin'?'too few<br>to rate':'no<br>shots';
+  return `<div class="ladcell${st==='rate'?'':' '+st} ${cls||''}" data-bin="${b.key}" `+
     `style="flex:${b.hiYds-b.loYds};${bg}">`+
     `<div class="lb">${b.label}</div><div class="lv">${val}</div>`+
     `<div class="ln">n=${b.zone.n}</div></div>`;
 }
+function ladPill(b){
+  const st=ladState(b);
+  if(st==='rate')return `<span class="zpill" style="background:${ladColor(b.zone.pct)}">`+
+    `${b.zone.pct}%</span>`;
+  return `<span class="zpill ${st}">${st==='thin'?'too few to rate':'no shots'}</span>`;
+}
 let ladOpen=null;
+/* The verdict sentence is computed in src/ladder.py and printed VERBATIM — the same
+   string the markdown export leads with. Never re-templated here. */
+function renderLadVerdict(L){
+  document.getElementById('ladverdict').textContent=L.verdict.text;
+}
+function renderLadChip(L){
+  document.getElementById('ladchip').innerHTML=
+    `<span class="ladchip">${L.coverage.scopeChip}</span>`;
+}
+function renderLadTable(L){
+  const host=document.getElementById('ladtab');
+  host.innerHTML=`<table class="dtab"><thead><tr><th>Bin</th><th>Green Zone %</th>`+
+    `<th>n</th><th>Median leave</th></tr></thead><tbody>`+
+    L.bins.map(b=>{
+      const on=b.key===ladOpen;
+      const leave=b.medianLeaveYds==null?'—':b.medianLeaveYds.toFixed(1)+'y';
+      return `<tr class="ladrow${on?' on':''}" data-bin="${b.key}"><td>${b.label}`+
+        `<span class="ladcaret">${on?'▾':'▸'}</span></td>`+
+        `<td>${ladPill(b)}</td><td>${b.zone.n}</td><td>${leave}</td></tr>`;
+    }).join('')+`</tbody></table>`;
+  host.onclick=e=>{const r=e.target.closest('tr.ladrow'); if(!r)return;
+    ladOpen=ladOpen===r.dataset.bin?null:r.dataset.bin;
+    renderLadTable(L); renderLadAnat();};
+}
 function renderLadder(){
-  const L=DATA.ladder, host=document.getElementById('ladstrip'); if(!host)return;
+  const L=DATA.ladder, host=document.getElementById('ladtab'); if(!host)return;
   const card=document.getElementById('ladcard');
   if(!L){card.style.display='none';return;}
   card.style.display='';
   document.getElementById('ladscope').textContent=L.scope;
   document.getElementById('ladlegend').textContent=L.payoffAnchors.legend;
   document.getElementById('ladnote').textContent=L.note;
-  host.innerHTML=`<div class="ladstrip">${L.bins.map(b=>ladCell(b)).join('')}</div>`;
-  host.onclick=e=>{const c=e.target.closest('.ladcell'); if(!c)return;
-    ladOpen=ladOpen===c.dataset.bin?null:c.dataset.bin;
-    host.querySelectorAll('.ladcell').forEach(x=>
-      x.classList.toggle('on',x.dataset.bin===ladOpen));
-    renderLadAnat();};
+  renderLadVerdict(L); renderLadChip(L); renderLadTable(L);
   renderLadAnat();
 }
 function renderLadAnat(){
   const el=document.getElementById('ladanat'), L=DATA.ladder;
   const b=ladOpen&&L.bins.find(x=>x.key===ladOpen);
-  if(!b){el.innerHTML=`<div class="foot" style="margin-top:8px">Tap a bin for its `+
+  if(!b){el.innerHTML=`<div class="foot" style="margin-top:8px">Tap a row for its `+
     `anatomy — 10-yard detail, median leave, miss pattern, lies and clubs.</div>`;return;}
   const m=b.miss, pay=b.payoffStrokes;
   const row=(l,v)=>`<tr><td>${l}</td><td>${v}</td></tr>`;
@@ -1192,9 +1246,9 @@ function renderLadAnat(){
     `<span class="ln" style="color:var(--muted)">n=${c.zone.n}</span></td>`+
     `<td>${c.medianLeaveYds==null?'—':c.medianLeaveYds.toFixed(1)+'y'}</td>`+
     `<td>${pc(c.miss.shortPct)} short · ${pc(c.miss.rightPct)} right</td></tr>`).join('');
-  el.innerHTML=
-    `<div style="overflow-x:auto"><div class="laddet">`+
-      b.detail.map(d=>ladCell(d)).join('')+`</div></div>`+
+  const det=b.detail.length?`<div style="overflow-x:auto"><div class="laddet">`+
+    b.detail.map(d=>ladCell(d)).join('')+`</div></div>`:'';
+  el.innerHTML=det+
     `<table class="dtab" style="margin-top:6px"><tbody>`+
       row('Green Zone',`${pc(b.zone.pct)} <span style="color:var(--muted)">n=${b.zone.n}</span>`)+
       row('Inside 10 yards',`${pc(b.ring10.pct)} <span style="color:var(--muted)">n=${b.ring10.n}</span>`)+

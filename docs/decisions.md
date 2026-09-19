@@ -104,3 +104,25 @@ Short ADR-style log of choices that aren't obvious from the code.
     Ladder tunables (window, bin edges, radii, coverage floors) live in
     `config/analysis.json` as SHARED analytics definition — per vNext2, tenant config
     selects targets, not math, so this block must not fork per user.
+
+    **v1.1 amendment (2026-09-19).** The displayed band extends to 250y (bins 170-200 and
+    200-250) because long approaches and par-5 seconds are part of the approach story and
+    their very low Green Zone rate IS the insight. The priority metric, its trend and the
+    payoff anchors stay PINNED to 60-170y (`headlineBandYds`): extending the display must
+    not silently re-base a shipped metric, and a leave-class price has to be estimated on
+    a population whose leaves look like the ones it prices — median leaves of 48-66y past
+    170y would corrupt the `long` class the short bins are read against. Moving the
+    headline itself is an owner decision and a separate ADR. The table, not the heat
+    strip, is now the primary layout: the ramp moved into the Zone% cell so the numbers
+    are readable with no interaction, and the strip survives only as the 10-yard detail
+    inside a bin's anatomy. The POPULATION now also excludes layups and tee shots on par
+    4s and 5s, amending the pure-geometry rule above: 44 of the 129 strokes in 170-250
+    (34%) were never attempting the green (20 layups, 24 par-4/5 tee shots), and counting
+    a successful layup as a Green Zone miss reads the right play as a failure. A par-3
+    tee shot IS an approach and stays in; `end_lie='TeeBox'` remains the separate GPS
+    artifact rule. The exclusion is uniform across the whole 60-250 band rather than
+    split — it costs exactly one shot inside 60-170, so there is no discontinuity to
+    justify carrying two rules — and each reason is counted in the coverage badge.
+    Rejected in the same pass: mean/average columns (skew-poisoned; median only is the
+    house rule) and a last-N-round window toggle (busy-ness — 90 days with the rounds
+    count visible in the trust chip; revisit in app shell v2).

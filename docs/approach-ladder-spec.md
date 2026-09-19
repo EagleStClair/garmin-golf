@@ -69,11 +69,35 @@ analytics; explicitly do NOT adopt his weaknesses.
    moves INTO the table). Numbers visible without interaction, like Steve's. Only the
    deep anatomy (miss directions, per-club rows, from-lie mix) stays behind
    tap/expand per row.
-5. **Explicitly not adopted** (document, don't build): mean/avg columns (skew-poisoned
-   — median only, house rule); last-N round window toggle (busy-ness; revisit in app
-   shell v2 — we keep 90 days with rounds count visible).
+5. **Explicitly not adopted** — see "Not adopted" below.
 Gate: v1 gate plus the verdict line present in both card and md export, and the
 summary table rendering with visible numbers (no interaction required to read Zone%).
+
+### What the 170-250 band is made of
+Long approaches and par-5 seconds, and very little else once the population rule is
+applied: of the 129 in-band strokes in the build window, 44 (34%) were never attempting
+the green — 20 layups and 24 tee shots on par 4s and 5s — and are excluded. A par-3 tee
+shot is a genuine approach and stays in. The same exclusion runs across the whole 60-250
+band rather than only above 170 (it costs exactly one shot inside 60-170, so a split
+predicate would buy nothing). What is left is 170-200 at 9.8% (n=51, median leave 48.0y)
+and 200-250 at 5.9% (n=34, median leave 66.0y) — both well clear of `minBinN`, so neither
+is provisional, and the rate is the point rather than a coverage problem.
+
+The headline metric, its trend and the payoff anchors stay pinned to 60-170y
+(`headlineBandYds`) while the table runs to 250y; `ladderZone` publishes the rate across
+everything the table shows, and the verdict line splits strong from weak against THAT
+rate so the comparison never straddles two populations.
+
+### Not adopted (decided 2026-09-19)
+Both were on the table in the v1.1 pass and were deliberately left out. Reopening either
+needs a reason that isn't "it would be easy".
+- **Mean / average columns beside the medians.** Skew-poisoned: one shanked approach
+  drags a bin's mean leave far past anything he actually hits. Median only is the house
+  rule, and two central-tendency columns invite the reader to pick the flattering one.
+- **A last-N-rounds window toggle.** Busy-ness for a card that already carries a
+  scope suffix, an n badge and a trust chip. The 90-day window stays, with the rounds
+  count visible in the chip so the sample behind it is never hidden. Revisit in app
+  shell v2, where a global window control could serve every card at once.
 
 ## Architecture rules
 - Derived layer only (SQL view derived.approach_ladder or insights.py compute —

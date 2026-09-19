@@ -1,7 +1,7 @@
 """Approach Ladder & Green Zone — how good is the approach game, by yardage.
 
-Deterministic (no LLM). One row per approach in the window (any real stroke whose
-distance-to-pin falls in the band — geometry, not Garmin's shot_type label), binned by
+Deterministic (no LLM). One row per approach in the window (a real stroke whose
+distance-to-pin falls in the band and that was actually aimed at the green), binned by
 yardage and scored against the Green Zone:
 
     Green Zone = the approach finished on the green, OR inside the zone radius of the
@@ -10,10 +10,16 @@ yardage and scored against the Green Zone:
 Geometric and pin-centred. This is NOT Garmin's green-in-regulation stat — that one is
 unchanged everywhere it already appears and is reported separately (ADR #19).
 
+Two bands, deliberately: `bandYds` is what the table DISPLAYS (60-250y), while
+`headlineBandYds` (60-170y) is what the priority metric, its trend and the payoff
+anchors are computed on. Extending the display must never re-base a shipped metric, and
+the leave-class prices the short bins are read against cannot be estimated on a
+population whose median leave is 48-66 yards.
+
 Row-level facts come from `derived.shot_play` (threshold-free by design); every cut —
-window, band, bin edges, zone radius, rings, leave classes, coverage floors — lives in
-config/analysis.json -> approachLadder and is read once, here, then passed down as a
-`cfg` dict. Nothing re-reads config inside a helper.
+window, bands, bin edges, zone radius, rings, leave classes, exclusions, coverage
+floors — lives in config/analysis.json -> approachLadder and is read once, here, then
+passed down as a `cfg` dict. Nothing re-reads config inside a helper.
 
     python -m src.ladder
 
@@ -33,7 +39,7 @@ from .constants import LEAVE_CLASS_LABELS, LEAVE_CLASSES, PUTTER_CLUB_TYPE_ID
 OUT_JSON = Path("data/processed/approach_ladder.json")
 OUT_MD = Path("data/processed/approach_ladder.md")
 
-SCHEMA = 1
+SCHEMA = 2
 FLAT_BAND_PTS = 2         # |delta| at or below this reads as flat, not a real move
 
 
@@ -65,6 +71,24 @@ def detail_bin(to_pin_yds: float | None, width: int, band: list) -> str | None:
     lo = band[0] + int((to_pin_yds - band[0]) // width) * width
     lo = min(lo, band[1] - width)          # the closing edge belongs to the last bin
     return f"{lo}-{lo + width}"
+
+
+def exclusion(end_lie: str | None, start_lie: str | None, par: int | None,
+              shot_type: str | None, cfg: dict) -> str | None:
+    """Why an in-band stroke is not an approach, or None when it counts.
+
+    Three reasons, in the order they are counted. A tee-box FINISH is a next-tee GPS
+    artifact `shot_flags` does not catch. A layup and a tee shot on a par above 3 were
+    never attempting the green, so scoring them against the Green Zone reads the right
+    play as a failure (ADR #19 v1.1) — a par-3 tee shot IS an approach and stays in.
+    Start lie and end lie are separate rules here and must not be conflated."""
+    if end_lie in set(cfg["excludeEndLie"]):
+        return "teeBoxArtifact"
+    if shot_type in set(cfg["excludeShotTypes"]):
+        return "layup"
+    if start_lie == "TeeBox" and par is not None and par > cfg["excludeTeeShotsAbovePar"]:
+        return "teeShot"
+    return None
 
 
 def in_zone(end_lie: str | None, leave_yds: float | None, holed: bool,
@@ -127,6 +151,13 @@ def window_label(days: int) -> str:
     return f"last {days} days"
 
 
+def _detail_band(cfg: dict) -> list:
+    """The 10-yard grid runs from the band floor to detailMaxYds, not to the top of the
+    display band: past 200y the grid is thinner than it is informative, so those display
+    bins carry no detail at all."""
+    return [cfg["bandYds"][0], cfg["detailMaxYds"]]
+
+
 def scope_label(band: list, days: int) -> str:
     return f"{band[0]}–{band[1]}y · {window_label(days)}"
 
@@ -137,14 +168,20 @@ def scope_suffix(band: list, days: int, n: int) -> str:
 
 # ---------------------------------------------------------------------------- dataset
 
+# shot_play is threshold-free and deliberately does not project Garmin's own
+# shot_type; the layup exclusion needs it, so it is joined back from canon here rather
+# than widening the view (the view serves more than this feature).
 _ROW_SQL = """
-SELECT shot_id, round_id, round_date, hole_number, par, play_order,
-       club_id, club_type_id, club_name, start_lie, end_lie,
-       to_pin_yds, leave_yds, miss_range, miss_side,
-       next_club_type_id, hole_strokes, hole_putts, strokes_to_finish, holed
-FROM derived.shot_play
-WHERE round_date >= ? AND round_date <= ? AND to_pin_yds IS NOT NULL
-ORDER BY round_date, hole_number, play_order"""
+SELECT sp.shot_id, sp.round_id, sp.round_date, sp.hole_number, sp.par, sp.play_order,
+       sp.club_id, sp.club_type_id, sp.club_name, sp.start_lie, sp.end_lie,
+       sp.to_pin_yds, sp.leave_yds, sp.miss_range, sp.miss_side,
+       sp.next_club_type_id, sp.hole_strokes, sp.hole_putts, sp.strokes_to_finish,
+       sp.holed, s.shot_type
+FROM derived.shot_play sp JOIN canon.shot s USING (shot_id)
+WHERE sp.round_date >= ? AND sp.round_date <= ? AND sp.to_pin_yds IS NOT NULL
+ORDER BY sp.round_date, sp.hole_number, sp.play_order"""
+
+TO_PIN_COL = 11          # _ROW_SQL ordinal of to_pin_yds, for the pre-_row band filter
 
 
 def _club_name(name: str | None) -> str | None:
@@ -159,17 +196,18 @@ def _row(r: tuple, cfg: dict) -> dict:
     """One approach, with every config cut already applied to it."""
     (shot_id, round_id, round_date, hole, par, play_order, club_id, club_type_id,
      club_name, start_lie, end_lie, to_pin, leave, miss_range, miss_side,
-     next_club_type_id, hole_strokes, hole_putts, stf, holed) = r
+     next_club_type_id, hole_strokes, hole_putts, stf, holed, shot_type) = r
     holed = bool(holed)
     pn = putter_next(next_club_type_id)
     return {
         "shotId": shot_id, "roundId": round_id, "date": str(round_date), "hole": hole,
         "par": par, "playOrder": play_order, "club": _club_name(club_name),
         "clubTypeId": club_type_id, "startLie": start_lie, "endLie": end_lie,
+        "shotType": shot_type,
         "toPin": to_pin, "leave": leave, "missRange": miss_range, "missSide": miss_side,
         "nextClubTypeId": next_club_type_id, "strokesToFinish": stf, "holed": holed,
         "displayBin": display_bin(to_pin, cfg["displayBinEdges"]),
-        "detailBin": detail_bin(to_pin, cfg["detailBinWidthYds"], cfg["bandYds"]),
+        "detailBin": detail_bin(to_pin, cfg["detailBinWidthYds"], _detail_band(cfg)),
         "zone": in_zone(end_lie, leave, holed, cfg["zoneRadiusYds"]),
         "rings": {f"ring{int(r_)}": in_ring(leave, r_) for r_ in cfg["ringYds"]},
         "putterNext": pn,
@@ -180,17 +218,25 @@ def _row(r: tuple, cfg: dict) -> dict:
 def load_rows(con, cfg: dict, as_of: date, days: int | None = None) -> dict:
     """The windowed, band-filtered, artifact-excluded approach population.
 
-    The band filter and the end-lie exclusion live here rather than in the view: the
-    view stays threshold-free, and keeping `end_lie` on the row makes the drop
-    auditable — excluded approaches are counted, not quietly missing."""
+    The band filter and the exclusions live here rather than in the view: the view
+    stays threshold-free, and keeping the lies, the par and the shot type on the row
+    makes each drop auditable — excluded strokes are counted by reason, not quietly
+    missing. One rule across the whole band: the split predicate the 170-250 extension
+    seemed to want costs exactly one shot inside 60-170, which is no discontinuity."""
     days = cfg["windowDays"] if days is None else days
     start = as_of - timedelta(days=days)
     rows = con.execute(_ROW_SQL, [start, as_of]).fetchall()
     band = cfg["bandYds"]
-    eligible = [_row(r, cfg) for r in rows if in_band(r[11], band)]
-    excluded = [r for r in eligible if r["endLie"] in set(cfg["excludeEndLie"])]
-    kept = [r for r in eligible if r["endLie"] not in set(cfg["excludeEndLie"])]
-    return {"rows": kept, "eligible": len(eligible), "excluded": len(excluded),
+    eligible = [_row(r, cfg) for r in rows if in_band(r[TO_PIN_COL], band)]
+    excluded = {"teeBoxArtifact": 0, "layup": 0, "teeShot": 0}
+    kept = []
+    for r in eligible:
+        why = exclusion(r["endLie"], r["startLie"], r["par"], r["shotType"], cfg)
+        if why:
+            excluded[why] += 1
+        else:
+            kept.append(r)
+    return {"rows": kept, "eligible": len(eligible), "excluded": excluded,
             "from": start.isoformat(), "to": as_of.isoformat(), "days": days}
 
 
@@ -313,10 +359,11 @@ def _bin_doc(key: str, lo: float, hi: float, rows: list, cfg: dict, amap: dict,
 
 
 def _detail_bins(rows: list, cfg: dict, amap: dict) -> list:
-    """The 10-yard grid across the whole band. It is a BAND grid, not a per-display-bin
+    """The 10-yard grid across the detail band. It is a BAND grid, not a per-display-bin
     one: a display edge like 125 falls mid-grid, so each detail bin is filed under the
-    display bin its lower edge sits in and keeps its own (grid-aligned) rows."""
-    width, (lo0, hi0) = cfg["detailBinWidthYds"], cfg["bandYds"]
+    display bin its lower edge sits in and keeps its own (grid-aligned) rows. Display
+    bins above detailMaxYds simply find no grid bins and carry an empty detail list."""
+    width, (lo0, hi0) = cfg["detailBinWidthYds"], _detail_band(cfg)
     out, edge = [], lo0
     while edge < hi0:
         key = f"{edge:g}-{edge + width:g}"
@@ -334,16 +381,95 @@ def _verdict(delta: float | None) -> str:
     return "improving" if delta > 0 else "slipping"
 
 
+def trust_chip(coverage: dict) -> str:
+    """The data-honesty label the card wears: what these numbers are actually made of.
+    Published as a string so the card renders it and never re-assembles it in JS."""
+    # Pin-centred rings need real pin coordinates. A connector that has none would
+    # return "green-hit only · no pin data" here instead (vNext2 capability flags).
+    source = "real pins"
+    return (f"{source} · {coverage['pinCoverage']['pct']}% of holes · "
+            f"n={coverage['approaches']} · {coverage['rounds']} rounds")
+
+
+def _run_doc(run: list) -> dict:
+    """A contiguous stretch of display bins, described by its outer edges."""
+    pcts = [b["zone"]["pct"] for b in run]
+    return {"label": f"{run[0]['loYds']:g}–{run[-1]['hiYds']:g}y",
+            "loYds": run[0]["loYds"], "hiYds": run[-1]["hiYds"],
+            "minPct": min(pcts), "maxPct": max(pcts),
+            "n": sum(b["zone"]["n"] for b in run), "bins": [b["key"] for b in run]}
+
+
+def _longest_run(bins: list, kinds: list, want: str) -> list:
+    """The longest contiguous run of one kind, in display order. An unrated or
+    provisional bin BREAKS contiguity — a range with a hole in the evidence is not a
+    range. Ties go to the lower-yardage run, which is the one he plays more often."""
+    best, cur = [], []
+    for b, kind in zip(bins, kinds):
+        cur = cur + [b] if kind == want else []
+        if len(cur) > len(best):
+            best = cur
+    return best
+
+
+def _range_text(run_doc: dict) -> str:
+    """A run's percentage range, collapsed to one number when it is a single bin."""
+    lo, hi = run_doc["minPct"], run_doc["maxPct"]
+    return f"{lo}%" if lo == hi else f"{lo}–{hi}%"
+
+
+def verdict_line(headline: dict, bins: list, ladder_zone: dict, days: int) -> dict:
+    """The reading, before any table: rate, trend, and the stretches that hold and fail.
+
+    A computed template, never an LLM and never re-templated in JS — `text` is the
+    single source of truth that the card and the markdown export both print verbatim."""
+    gz, n, delta = headline["zone"]["pct"], headline["zone"]["n"], headline["deltaPts"]
+    if gz is None:
+        return {"text": f"Not enough measured approaches in the {window_label(days)} to "
+                        f"rate the approach game (n={n}).",
+                "gzPct": None, "n": n, "deltaPts": None, "direction": "unknown",
+                "solid": None, "weak": None}
+    moved = _verdict(delta)
+    direction = {"improving": "up", "slipping": "down"}.get(moved, moved)
+    if direction == "unknown":
+        trend = "no comparable previous window"
+    elif direction == "flat":
+        trend = f"flat vs the {headline['prev']['label']}"
+    else:
+        trend = f"{direction} {abs(delta)} pts vs the {headline['prev']['label']}"
+
+    # Solid vs weak splits on the LADDER rate, not the headline one: the table now runs
+    # past the headline band, so the comparison has to stay inside a single scope.
+    pivot = ladder_zone["pct"]
+    kinds = [None if b["provisional"] or b["zone"]["pct"] is None
+             else ("solid" if b["zone"]["pct"] >= pivot else "weak") for b in bins]
+    runs = [(word, _run_doc(run))
+            for word, run in (("Strongest", _longest_run(bins, kinds, "solid")),
+                              ("Weakest", _longest_run(bins, kinds, "weak"))) if run]
+    rated = [k for k in kinds if k]
+    base = {"gzPct": gz, "n": n, "deltaPts": delta, "direction": direction}
+    if len(rated) < 2 or not runs:
+        return {"text": f"{gz}% Green Zone — {trend}. Too few rated bins to call a "
+                        "strong or weak range yet.", **base, "solid": None, "weak": None}
+    clauses = "; ".join(f"{word if i == 0 else word.lower()} {d['label']} "
+                        f"at {_range_text(d)}" for i, (word, d) in enumerate(runs))
+    by_word = {word: d for word, d in runs}
+    return {"text": f"{gz}% Green Zone — {trend}. {clauses}.", **base,
+            "solid": by_word.get("Strongest"), "weak": by_word.get("Weakest")}
+
+
 def _coverage(con, cfg: dict, win: dict, rows: list) -> dict:
     n_rounds, holes, with_pin = con.execute("""
         SELECT count(DISTINCT round_id), count(*), count(*) FILTER (WHERE has_pin)
         FROM derived.hole_pin_coverage WHERE round_date >= ? AND round_date <= ?""",
         [win["from"], win["to"]]).fetchone()
-    n = len(rows)
-    return {
+    n, dropped = len(rows), win["excluded"]
+    cov = {
         "rounds": n_rounds, "holes": holes, "holesWithPin": with_pin,
         "holesWithoutPin": holes - with_pin, "pinCoverage": stat(with_pin, holes),
-        "eligible": win["eligible"], "excludedTeeBoxArtifact": win["excluded"],
+        "eligible": win["eligible"],
+        "excludedTeeBoxArtifact": dropped["teeBoxArtifact"],
+        "excludedLayup": dropped["layup"], "excludedTeeShot": dropped["teeShot"],
         "approaches": n,
         "leaveMeasured": stat(sum(1 for r in rows if r["leave"] is not None), n),
         "clubAttributed": stat(sum(1 for r in rows if r["club"]), n),
@@ -352,16 +478,23 @@ def _coverage(con, cfg: dict, win: dict, rows: list) -> dict:
                 "contribute no approaches — they are counted here so the shrunken "
                 "denominator stays visible. Approaches recorded as finishing on a tee "
                 "box are next-tee GPS artifacts (shot_flags does not catch them) and are "
-                "excluded; the count is shown so the drop is visible.",
+                "excluded; layups and tee shots on par 4s and 5s are excluded because "
+                "they were never attempting the green. Every count is shown so each drop "
+                "stays visible.",
     }
+    cov["scopeChip"] = trust_chip(cov)
+    return cov
 
 
 def candidate_findings(doc: dict, cfg: dict) -> list:
     """Bin-level findings offered to the insight ranker. Candidates, never a standing
     list — insights.py scores them against everything else and only the winners show."""
     out, band_zone = [], (doc["headline"]["zone"]["pct"] or 0)
-    bins = doc["bins"]
-    detail = [d for b in bins for d in b["detail"]]
+    bins, head_band = doc["bins"], doc["headline"]["band"]
+    # Reach-swing and best-window read against the HEADLINE band's rate, so they only
+    # scan detail bins inside it. Past its top edge every club is a reach swing and the
+    # pattern stops meaning anything — those candidates would displace real findings.
+    detail = [d for b in bins for d in b["detail"] if d["hiYds"] <= head_band["maxYds"]]
 
     # 1. Reach swing — a club pushed past its stock max leaks short AND right together.
     for d in detail:
@@ -381,6 +514,8 @@ def candidate_findings(doc: dict, cfg: dict) -> list:
                             f"is the whole fix."})
 
     # 2. The cliff — where the ladder stops holding, at display resolution.
+    # The cliff still scans every DISPLAYED bin — it breaks after the first real drop,
+    # which is still 150-170, and the long bins are legitimate evidence for it.
     rated = [b for b in bins if not b["provisional"] and b["zone"]["pct"] is not None]
     for lower, upper in zip(rated, rated[1:]):
         drop = lower["zone"]["pct"] - upper["zone"]["pct"]
@@ -410,7 +545,7 @@ def candidate_findings(doc: dict, cfg: dict) -> list:
                 "weight": 1.0,
                 "text": f"{best['label']} is your best window: {best['zone']['pct']}% of "
                         f"{best['zone']['n']} approaches reach the Green Zone, against "
-                        f"{band_zone}% across the whole {doc['band']['label']} band. "
+                        f"{band_zone}% across the whole {head_band['label']} band. "
                         f"Worth leaving yourself that number off the tee."})
     return out
 
@@ -420,7 +555,14 @@ def build_doc(con, cfg: dict, as_of: date) -> dict:
     rows = win["rows"]
     prev = load_rows(con, cfg, as_of - timedelta(days=cfg["windowDays"]))
     band, days = cfg["bandYds"], cfg["windowDays"]
-    anchors = payoff_anchors(rows, cfg)
+    # The priority metric, its trend and the payoff anchors are pinned to the headline
+    # band. The table may run past it; a shipped metric must not silently re-base, and
+    # a leave-class price has to be estimated where the leaves look like the ones it
+    # is used to price (a 200y+ leave is 48-66 yards and would poison "long").
+    head_band = cfg["headlineBandYds"]
+    head_rows = [r for r in rows if in_band(r["toPin"], head_band)]
+    prev_rows = [r for r in prev["rows"] if in_band(r["toPin"], head_band)]
+    anchors = payoff_anchors(head_rows, cfg)
     amap = _anchor_map(anchors)
     edges = cfg["displayBinEdges"]
 
@@ -432,19 +574,24 @@ def build_doc(con, cfg: dict, as_of: date) -> dict:
         bins.append(_bin_doc(key, lo, hi, rs, cfg, amap,
                              detail=[d for d in detail if lo <= d["loYds"] < hi]))
 
-    zone = _rate(rows, lambda r: r["zone"])
-    prev_zone = _rate(prev["rows"], lambda r: r["zone"])
+    zone = _rate(head_rows, lambda r: r["zone"])
+    prev_zone = _rate(prev_rows, lambda r: r["zone"])
+    # Rounded-then-subtracted, as shipped in v1: both operands are already whole points.
     delta = (zone["pct"] - prev_zone["pct"]
              if zone["pct"] is not None and prev_zone["pct"] is not None else None)
     ring0 = f"ring{int(cfg['ringYds'][0])}"
     headline = {
-        "key": "greenZonePct", "label": "Green Zone %", "scope": scope_label(band, days),
-        "zone": zone, ring0: _rate(rows, lambda r: r["rings"][ring0]),
-        "putterNext": {**_rate(rows, lambda r: r["putterNext"]), "diagnostic": True},
+        "key": "greenZonePct", "label": "Green Zone %",
+        "scope": scope_label(head_band, days),
+        "band": {"minYds": head_band[0], "maxYds": head_band[1],
+                 "label": f"{head_band[0]}–{head_band[1]}y"},
+        "zone": zone, ring0: _rate(head_rows, lambda r: r["rings"][ring0]),
+        "putterNext": {**_rate(head_rows, lambda r: r["putterNext"]), "diagnostic": True},
         "prev": {**prev_zone, "label": f"previous {window_label(days).replace('last ', '')}"},
         "deltaPts": delta, "verdict": _verdict(delta),
-        "payoffStrokes": _payoff(rows, amap, cfg["minBinN"]),
+        "payoffStrokes": _payoff(head_rows, amap, cfg["minBinN"]),
     }
+    ladder_zone = _rate(rows, lambda r: r["zone"])
 
     doc = {
         "schema": SCHEMA,
@@ -454,6 +601,10 @@ def build_doc(con, cfg: dict, as_of: date) -> dict:
         "band": {"minYds": band[0], "maxYds": band[1], "label": f"{band[0]}–{band[1]}y"},
         "scope": scope_suffix(band, days, len(rows)),
         "headline": headline,
+        # The rate across everything the TABLE shows — the scope the verdict line
+        # splits strong from weak on, so the comparison never crosses two populations.
+        "ladderZone": ladder_zone,
+        "verdict": verdict_line(headline, bins, ladder_zone, days),
         "bins": bins,
         "payoffAnchors": anchors,
         "coverage": _coverage(con, cfg, win, rows),
@@ -479,8 +630,14 @@ def render_markdown(doc: dict) -> str:
     trend = ("no comparable previous window" if d is None else
              f"{d:+d} pts vs the {h['prev']['label']} ({h['prev']['pct']}%, "
              f"n={h['prev']['n']}) — {h['verdict']}")
+    # The headline is scoped to ITS band, never to the (wider) table scope — printing a
+    # 60-170 number under a 60-250 label is the one mistake this export must not make.
+    head_scope = scope_suffix([h["band"]["minYds"], h["band"]["maxYds"]],
+                              doc["window"]["days"], h["zone"]["n"])
     lines = [
-        f"Green Zone % — {doc['scope']}: {h['zone']['pct']}% ({trend}).",
+        doc["verdict"]["text"],
+        f"Green Zone % — {head_scope}: {h['zone']['pct']}% ({trend}). The table below "
+        f"runs {doc['band']['label']}.",
         "Green Zone = finished on the green, inside "
         f"{doc['config']['zoneRadiusYds']:g} yards of the pin, or holed. NOT Garmin's "
         "green-in-regulation stat.",
@@ -493,9 +650,12 @@ def render_markdown(doc: dict) -> str:
             else f"{b['zone']['pct']}%"
         leave = f"{b['medianLeaveYds']:.1f}y" if b["medianLeaveYds"] is not None else "—"
         lines.append(f"| {b['label']} | {pct} | {b['zone']['n']} | {leave} |")
-    lines += ["", doc["payoffAnchors"]["legend"] + ".",
-              f"Coverage: {cov['approaches']} approaches over {cov['rounds']} rounds; "
-              f"{cov['excludedTeeBoxArtifact']} dropped as next-tee GPS artifacts; "
+    lines += ["", doc["payoffAnchors"]["legend"] + " (priced on "
+              f"{doc['headline']['band']['label']}).",
+              f"Coverage: {cov['scopeChip']}; "
+              f"{cov['excludedTeeBoxArtifact']} dropped as next-tee GPS artifacts, "
+              f"{cov['excludedLayup']} layups and {cov['excludedTeeShot']} par-4/5 tee "
+              f"shots dropped as strokes never attempting the green; "
               f"club named on {cov['clubAttributed']['pct']}%; pin coordinates on "
               f"{cov['pinCoverage']['pct']}% of {cov['holes']} holes."]
     return "\n".join(lines) + "\n"
@@ -506,11 +666,13 @@ def round_samples(con, round_id: int, cfg: dict | None = None) -> dict:
     season strip, so a coach read anchors to real shots or says the bin went untested.
     No window filter: the round is the scope."""
     cfg = cfg or _ladder_cfg()
-    rows = con.execute(_ROW_SQL.replace("WHERE round_date >= ? AND round_date <= ?",
-                                        "WHERE round_id = ?"), [round_id]).fetchall()
+    rows = con.execute(
+        _ROW_SQL.replace("WHERE sp.round_date >= ? AND sp.round_date <= ?",
+                         "WHERE sp.round_id = ?"), [round_id]).fetchall()
     band, edges = cfg["bandYds"], cfg["displayBinEdges"]
-    kept = [_row(r, cfg) for r in rows
-            if in_band(r[11], band) and r[10] not in set(cfg["excludeEndLie"])]
+    eligible = [_row(r, cfg) for r in rows if in_band(r[TO_PIN_COL], band)]
+    kept = [r for r in eligible
+            if exclusion(r["endLie"], r["startLie"], r["par"], r["shotType"], cfg) is None]
     bins = {f"{lo:g}-{hi:g}": [] for lo, hi in zip(edges, edges[1:])}
     for r in kept:
         if r["displayBin"] in bins:
