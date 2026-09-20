@@ -81,3 +81,12 @@ Colby's construct, arrived at via ESC: hole-level expectation adapted to level �
 - Home (stage banner + focus areas + latest-round pulse) — next up, or Progress.
 - Progress/Growth consolidation layout.
 - Rounds, Sequences drill, SG drill, Clubs drill; Practice placeholder content.
+
+## Learn layer (locked 2026-09-19)
+Help/explainers are a first-class product surface, seeded from docs/philosophy.md
+(the canon; article seeds listed there). Two surfaces: (1) CONTEXTUAL learn links —
+every construct's one-line explainer (e.g. the Green Zone definition under a chart)
+is tappable and opens its article; (2) a Learn index (web; doubles as the public
+blog when multi-tenant arrives). No new nav tab — Learn hangs off the header/profile
+and the contextual links. The writer agent (.claude/agents/writer.md) produces
+articles; philosophy.md changes are product decisions, not copy edits.

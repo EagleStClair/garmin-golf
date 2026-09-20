@@ -70,3 +70,10 @@ main never felt it.
   Phase B busy-ness goal, now with the six-screen answer · §9 thesis = vnext2
   positioning section.
 - CGPT §3/§5 sequences and §6 diagnostician are the NEW work (jobs 3 and 8).
+
+## Content track (added 2026-09-19)
+`docs/philosophy.md` is the product canon (thesis, lineage, SG-in-plain-words, Green
+Zone rationale, personal par, stages, honesty rules) and the seed corpus for a Learn/
+help layer → eventually the public blog. The `writer` agent authors articles into
+docs/articles/ from that canon; contextual learn links ship with app shell v2 (see
+ux-blueprint/decisions.md). Articles can be written any time — no build dependency.
