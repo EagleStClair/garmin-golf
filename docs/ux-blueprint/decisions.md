@@ -90,3 +90,24 @@ is tappable and opens its article; (2) a Learn index (web; doubles as the public
 blog when multi-tenant arrives). No new nav tab — Learn hangs off the header/profile
 and the contextual links. The writer agent (.claude/agents/writer.md) produces
 articles; philosophy.md changes are product decisions, not copy edits.
+
+## Home screen (locked 2026-09-19 after mock iteration)
+- Adaptive order: round pulse takes slot 1 for a window after a round (window is a
+  SETTING, default ~48h — two-way door), then recedes below focus areas.
+- Pulse card: big score + budget verdict ("beat your break-90 budget by 1") + 18-hole
+  strip in scorecard notation (circle birdies, square bogeys, double-square doubles+,
+  color + outline) + coach one-liner. Whole card opens the round.
+- Level card: "Level: Control · N of 5 checkpoints cleared" + stage rail + an explicit
+  "To reach <next level>" line naming the remaining checkpoints and the clearing rule.
+  VOCAB: level/checkpoints/banked rounds/clears — never "skills", never "graduate" in
+  UI copy.
+- Focus items (active 3, charter order): title + SG price → evidence → "Do:" line with
+  the mechanism target → progress bar → "N of 8 rounds banked". Early promotion is
+  framed aspirationally ("promoted early — Convert-level work you're ready for" —
+  Colby: "exactly the right framing"). Every item deep-links to its domain drill.
+- Target/SG roles: SG prices the focus; the target is a stage-config mechanism metric
+  (curated + cited); clearing requires metric held for the bank window AND the SG
+  category confirming — metric-up-SG-flat is a flag, not a clear.
+- Checkpoint ledger geography: Home = active 3 only; PROGRESS owns the full ledger
+  (cleared/holding watchlist, active, upcoming next level); each My Game drill echoes
+  its own related checkpoint bank.
