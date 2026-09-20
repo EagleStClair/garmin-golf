@@ -62,6 +62,21 @@ mechanism layer, and every construct reconciles to it:
    {bins, verdict, defaultBand, insight, missByBand, scatterShots, coverage} from the
    per-tenant pipeline run.
 
+## Personal par / stroke budget (concept locked 2026-09-19; spec later with Rounds)
+Colby's construct, arrived at via ESC: hole-level expectation adapted to level —
+"at bogey golf a par 4 gives me 3 shots to the green; 5 is target hit."
+- Personal par per hole = blend of the player's own course-ledger distribution (where
+  history exists) with handicap stroke-index allocation (where it doesn't); stage-aware;
+  deterministic. Watching a hole's personal par drop (H15: 6 → 5) IS progression.
+- Budget view denominated in STROKES-OVER, not required putts (putt-debt framing
+  implies putting must compensate → wrong prescription; contain, don't compensate).
+  Target score = budget; rounds show burn vs budget; the putts version survives as
+  post-round autopsy copy.
+- Makes the coach's "play H5/H7 as bogey holes" prose structural: per-hole plans
+  differ by stage (Colby Control: budget 5, layup; Steve Convert: budget 4.5, attack).
+- Surfaces: Rounds (personal-par column, budget burn), course-strategy/pre-round view,
+  Home round pulse ("beat your budget by 3"). All SG-priced per the backbone principle.
+
 ## Open (next screens to design)
 - Home (stage banner + focus areas + latest-round pulse) — next up, or Progress.
 - Progress/Growth consolidation layout.
