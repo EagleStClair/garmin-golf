@@ -111,3 +111,38 @@ articles; philosophy.md changes are product decisions, not copy edits.
 - Checkpoint ledger geography: Home = active 3 only; PROGRESS owns the full ledger
   (cleared/holding watchlist, active, upcoming next level); each My Game drill echoes
   its own related checkpoint bank.
+
+## Progress screen (LOCKED 2026-09-19 after mock iteration)
+Narrative scroll — past → present → earned → future; the page ENDS forward-looking:
+1. WHERE I AM — journey card. Position in a level = where the rating-leveled index
+   sits in the level's band (Colby 21.7 → "entering" Control at ~13%), NEVER
+   checkpoint count (checkpoints are levers, the index is the ruler). Handicap
+   ranges labeled on every level (25+/18–25/10–18/5–10/<5). Copy: "levels are
+   seasons, not sprints."
+2. HOW FAR I'VE COME — (a) scoring-by-quarter chart with scope chips (18-hole ·
+   vs rating · 9-hole; three real series), milestones as NUMBERED PINS above the
+   plot with a legend list below the chart (inline flag text collides and never
+   scales — banned); (b) consistency capsules: p20/p50/p80 of vs-rating per era as
+   rounded vertical capsules with median dot, all three values labeled, n per era.
+   Travel down = better; shorter = steadier. REPLACES the performance cone
+   (retired: "nice in theory, less useful in practice"). Capsule = middle 60% by
+   definition; outliers live outside it.
+3. WHAT I'M SOLVING NOW — PRIMARY FOCUS card (forest edge, big "15% → 25%", SG
+   price, its OWN evidence format) above "Development checkpoints · active" (the
+   section is never called "ledger"). Primary is chosen by DEVELOPMENTAL LEVERAGE,
+   not proximity-to-failing — the diagnostician's slot; until it exists the stages
+   engine uses largest SG-priced gap. Active rows lead with STATE (7/8 passed ·
+   ON TRACK / WORK TO DO status chips) with pass/fail dots as evidence. EVIDENCE
+   FORMAT MATCHES THE MEASUREMENT: round-based metrics get round dots, window-based
+   metrics (Green Zone) get a window trend (12% ── 14% ── 15%) — never force the
+   8-square metaphor.
+4. WHAT I'VE ESTABLISHED — holding card on TINTED ground (state-zone separation),
+   level badges (STABILIZE/CONTROL solid-vs-chip/CONVERT outlined) on every
+   checkpoint row everywhere; re-entry rule printed with it: sustained break only
+   (4 straight failing rounds), one bad hole never reopens a cleared checkpoint.
+5. WHAT'S COMING NEXT — "Coming in Convert · Tracked now — becomes a focus in
+   Convert", chevroned and tappable. NEVER "locked": tracked-not-locked per the
+   attention principle (philosophy.md "Attention is the product").
+Engine contract notes for job 3 (stages): banked = passes within the last-8 window,
+rendered as visible ticks (not an opaque streak counter); level position from
+leveled index; per-metric evidence format declared in the checkpoint config.

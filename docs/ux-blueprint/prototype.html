@@ -133,6 +133,57 @@ svg text{font-family:Archivo,sans-serif;fill:var(--muted)}
 .bank{font-size:11.5px;color:var(--muted);margin-top:4px}
 .nextlvl{font-size:12px;color:var(--muted);margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
 .nextlvl b{color:var(--ink);font-weight:650}
+/* progress screen */
+.jstep{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.jstep:first-of-type{border-top:0;padding-top:2px}
+.jdot{width:22px;height:22px;border-radius:99px;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;margin-top:1px;background:var(--track);color:var(--dim)}
+.jstep.done .jdot{background:var(--bar);color:var(--card)}
+.jstep.cur .jdot{background:var(--forest);color:var(--focus-ink)}
+.jname{font-size:14.5px;font-weight:700}
+.jstep.dim .jname{color:var(--dim);font-weight:600}
+.jsub{font-size:12px;color:var(--muted);margin-top:1px}
+.jbar{height:5px;background:var(--track);border-radius:99px;margin-top:7px;overflow:hidden;max-width:220px}
+.jbar span{display:block;height:100%;background:var(--bar)}
+.lrow{display:grid;grid-template-columns:1fr 74px;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.lrow:first-of-type{border-top:0}
+.lname{font-size:13.5px;font-weight:650}
+.lsub{font-size:11.5px;color:var(--muted);margin-top:2px}
+.lhold .lname{color:var(--muted)}
+.lhold .ok{color:var(--forest);font-weight:700}
+.ldim{opacity:.55}
+.ticks{display:flex;gap:3px}
+.tick{width:14px;height:14px;border-radius:3px;display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700}
+.tick.p{background:var(--chip);color:var(--forest);border:1px solid var(--line)}
+.tick.f{background:var(--red);color:var(--card)}
+.tick.na{background:var(--track);color:var(--dim)}
+.tickcap{font-size:10px;color:var(--dim);margin-top:3px;text-align:right}
+.jrange{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:6px}
+.rule{font-size:11.5px;color:var(--muted);margin-top:10px;padding-top:9px;border-top:1px solid var(--line)}
+.lvl{font-size:9.5px;font-weight:700;letter-spacing:.04em;border-radius:4px;padding:1.5px 6px;
+  margin-left:7px;vertical-align:1.5px}
+.lvl.ctl{background:var(--forest);color:var(--focus-ink)}
+.lvl.stb{background:var(--chip);color:var(--forest);border:1px solid var(--line)}
+.lvl.cvt{background:none;color:var(--dim);border:1px solid var(--line)}
+.pf{border-left:3px solid var(--forest)}
+.pftag{font-size:10.5px;font-weight:700;color:var(--forest);letter-spacing:.05em;margin-bottom:6px}
+.pfnum{font-size:26px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.pfnum .arr{color:var(--dim);font-weight:500;font-size:20px;margin:0 4px}
+.pfnum .to{color:var(--forest)}
+.trendmini{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:6px}
+.trendmini b{color:var(--ink);font-weight:650}
+.status{font-size:11px;font-weight:700;border-radius:4px;padding:2px 7px;letter-spacing:.03em}
+.status.ok{background:var(--chip);color:var(--forest);border:1px solid var(--line)}
+.status.warn{background:none;color:var(--red);border:1px solid var(--red)}
+.dotstr{letter-spacing:2px;font-size:11px}
+.dotstr .p{color:var(--bar)}.dotstr .f{color:var(--red)}
+.flaglist{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.flaglist div{font-size:12px;color:var(--muted)}
+.flaglist b{color:var(--ink);font-weight:650}
+.fpin{display:inline-flex;width:15px;height:15px;border-radius:99px;background:var(--forest);
+  color:var(--focus-ink);font-size:9.5px;font-weight:700;align-items:center;justify-content:center;
+  margin-right:7px;vertical-align:-2px}
 .rail{display:flex;align-items:center;gap:4px;margin:12px 0 6px}
 .rseg{flex:1;height:5px;border-radius:99px;background:var(--track)}
 .rseg.done{background:var(--bar)}
@@ -230,6 +281,116 @@ svg text{font-family:Archivo,sans-serif;fill:var(--muted)}
   </main>
   </div>
 
+  <div class="scr" id="scr-prog">
+  <header>
+    <div class="row"><h1>Progress</h1><span class="stage">est. index 26.5</span></div>
+    <div class="sub">Your golf journey — the level, the climb, and the receipts.</div>
+  </header>
+  <main>
+    <div class="sect">WHERE I AM</div>
+    <div class="card">
+      <h3>The journey</h3>
+      <div class="h3sub">your position = where your leveled index sits in the band — checkpoints
+        are the levers that move it. Levels are seasons, not sprints.</div>
+      <div class="jstep done"><span class="jdot">✓</span><div>
+        <div class="jname">Stabilize<span class="jrange">25+</span></div>
+        <div class="jsub">Cleared July '26 — triples contained, tee ball playable</div>
+      </div></div>
+      <div class="jstep cur"><span class="jdot">2</span><div>
+        <div class="jname">Control<span class="jrange">18–25</span> <span style="font-weight:500;color:var(--muted);font-size:12px">· you are here</span></div>
+        <div class="jsub">Index 21.7 — entering the band. Working levers: doubles containment, penalties.</div>
+        <div class="jbar"><span style="width:13%"></span></div>
+      </div></div>
+      <div class="jstep dim"><span class="jdot">3</span><div>
+        <div class="jname">Convert<span class="jrange">10–18</span></div>
+        <div class="jsub">Opens: bogey-to-par conversion, par-3 scoring, Green Zone 40%+</div>
+      </div></div>
+      <div class="jstep dim"><span class="jdot">4</span><div>
+        <div class="jname">Optimize<span class="jrange">5–10</span></div><div class="jsub">Proximity, scrambling efficiency, putting conversion</div>
+      </div></div>
+      <div class="jstep dim"><span class="jdot">5</span><div>
+        <div class="jname">Refine<span class="jrange">under 5</span></div><div class="jsub">The margins</div>
+      </div></div>
+    </div>
+
+    <div class="sect">HOW FAR I'VE COME</div>
+    <div class="card">
+      <h3>Scoring by quarter</h3>
+      <div class="chips" id="qchips">
+        <button data-k="s18" class="on">18-hole score</button>
+        <button data-k="diff">vs rating</button>
+        <button data-k="s9">9-hole</button>
+      </div>
+      <div id="qchart"></div>
+      <div class="flaglist" id="qflags"></div>
+    </div>
+    <div class="card">
+      <h3>Consistency capsules</h3>
+      <div class="h3sub">the middle 60% of your rounds, vs rating · travel down = better golf ·
+        a shorter capsule = steadier golf</div>
+      <div id="capsules"></div>
+      <div style="font-size:13.5px;margin-top:6px">Typical fell <b>+37.5 → +27.8</b>, and the capsule
+        shrank <b>12.0 → 4.0</b>. <span style="color:var(--forest);font-weight:600">You got steady in
+        spring, then better without losing the steadiness.</span></div>
+    </div>
+
+    <div class="sect">WHAT I'M SOLVING NOW</div>
+    <div class="card pf">
+      <div class="pftag">PRIMARY FOCUS</div>
+      <div class="lname">Green Zone from 150y+<span class="lvl cvt">CONVERT</span></div>
+      <div class="pfnum">15%<span class="arr">→</span><span class="to">25%</span></div>
+      <div class="lsub">Your largest development constraint — ≈2.4 strokes/round. Chosen by
+        leverage, not urgency.</div>
+      <div class="trendmini">3-month windows: 12% ── 14% ── <b>15%</b> · climbing</div>
+    </div>
+    <div class="card">
+      <h3>Development checkpoints · active</h3>
+      <div class="lrow"><div>
+        <div class="lname">Penalties ≤1.2/18<span class="lvl ctl">CONTROL</span></div>
+        <div class="lsub"><b>7 / 8 passed</b> <span class="dotstr"><span class="p">●●●</span><span class="f">✗</span><span class="p">●●●●</span></span></div></div>
+        <span class="status ok">ON TRACK</span>
+      </div>
+      <div class="lrow"><div>
+        <div class="lname">Doubles+ ≤3.0/18<span class="lvl ctl">CONTROL</span></div>
+        <div class="lsub"><b>4 / 8 passed</b> <span class="dotstr"><span class="f">✗</span><span class="p">●●</span><span class="f">✗</span><span class="p">●</span><span class="f">✗✗</span><span class="p">●</span></span></div></div>
+        <span class="status warn">WORK TO DO</span>
+      </div>
+    </div>
+
+    <div class="sect">WHAT I'VE ESTABLISHED</div>
+    <div class="card" style="background:var(--chip)">
+      <h3>Holding · 2 <span style="color:var(--forest)">✓</span></h3>
+      <div class="h3sub">cleared and quietly watched — these stay earned</div>
+      <div class="lrow lhold"><div>
+        <div class="lname">Triples+ contained<span class="lvl stb">STABILIZE</span></div>
+        <div class="lsub">Cleared May '26 · 14 rounds clean since</div></div>
+        <span class="lsub" style="text-align:right">holding</span>
+      </div>
+      <div class="lrow lhold"><div>
+        <div class="lname">Tee ball playable<span class="lvl stb">STABILIZE</span></div>
+        <div class="lsub">Cleared July '26 · 9 rounds clean since</div></div>
+        <span class="lsub" style="text-align:right">holding</span>
+      </div>
+      <div class="rule" style="border-top-color:var(--barlite)">Comes back ONLY on a sustained break —
+        failing its target in 4 straight rounds. One triple never reopens it.</div>
+    </div>
+
+    <div class="sect">WHAT'S COMING NEXT</div>
+    <div class="card">
+      <h3 style="color:var(--muted)">Coming in Convert <span style="font-weight:500;font-size:11.5px">· showing 2 of 6</span></h3>
+      <div class="lrow ldim"><div>
+        <div class="lname">Bogey-to-par conversion<span class="lvl cvt">CONVERT</span></div>
+        <div class="lsub">Tracked now · becomes a focus in Convert</div></div><span class="chev">›</span>
+      </div>
+      <div class="lrow ldim"><div>
+        <div class="lname">Par-3 scoring<span class="lvl cvt">CONVERT</span></div>
+        <div class="lsub">Tracked now · becomes a focus in Convert</div></div><span class="chev">›</span>
+      </div>
+    </div>
+
+  </main>
+  </div>
+
   <div class="scr" id="scr-game">
   <header>
     <div class="row"><h1>My Game</h1><span class="stage">Control · 18–25 stage</span></div>
@@ -256,7 +417,7 @@ svg text{font-family:Archivo,sans-serif;fill:var(--muted)}
 
   <nav><div class="in">
     <a href="#" class="on" id="nav-home" onclick="showScr('home');return false"><i>⌂</i>Home</a>
-    <a href="#"><i>◔</i>Progress</a>
+    <a href="#" id="nav-prog" onclick="showScr('prog');return false"><i>◔</i>Progress</a>
     <a href="#" id="nav-game" onclick="showScr('game');return false"><i>◎</i>My Game</a>
     <a href="#"><i>≣</i>Rounds</a>
     <a href="#"><i>⚑</i>Practice<small>soon</small></a>
@@ -408,12 +569,66 @@ const HOLES=[1,0,1,1,0,1,1,2,1,2,2,1,1,1,1,1,0,-1];
 document.getElementById('holestrip').innerHTML=HOLES.map((v,i)=>
   `<span class="hcell ${v<0?'bird':v===0?'par':v>=2?'dbl':'bog'}"><span>${i+1}</span></span>`).join('');
 function showScr(k){
-  document.getElementById('scr-home').classList.toggle('on',k==='home');
-  document.getElementById('scr-game').classList.toggle('on',k==='game');
-  document.getElementById('nav-home').classList.toggle('on',k==='home');
-  document.getElementById('nav-game').classList.toggle('on',k==='game');
+  ['home','prog','game'].forEach(s=>{
+    document.getElementById('scr-'+s).classList.toggle('on',s===k);
+    const n=document.getElementById('nav-'+s); if(n)n.classList.toggle('on',s===k);
+  });
   window.scrollTo(0,0);
 }
+/* quarterly scoring chart — three real series, scope chips, staggered flags */
+const QSETS={
+  s18:{label:"18-hole scoring average",vals:[["Q4 '25",107.0,4],["Q1 '26",104.3,3],["Q2 '26",99.2,11],["Q3 '26",96.0,14]],grid:[110,100,90],fmt:v=>v},
+  diff:{label:"average vs rating · 18-hole",vals:[["Q4 '25",38.0,3],["Q1 '26",34.0,2],["Q2 '26",32.2,10],["Q3 '26",28.2,14]],grid:[38,33,28],fmt:v=>"+"+v},
+  s9:{label:"9-hole scoring average",vals:[["Q4 '25",49.0,1],["Q1 '26",42.0,2],["Q2 '26",39.7,12],["Q3 '26",37.2,13]],grid:[48,42,36],fmt:v=>v}
+};
+const QFLAGS=[[1.55,"first 92","May 15",0],[2.30,"Stabilize cleared","Jul",1],[2.94,"broke 90 · 88","Sep 17",0]];
+function drawQ(key){
+  const D=QSETS[key],Q=D.vals;
+  const vMax=Math.max(...D.grid)+3,vMin=Math.min(...D.grid)-3;
+  const W=384,H=186,x0=34,x1=368,yTop=26,yBot=136;
+  const X=i=>x0+(x1-x0)*i/(Q.length-1), Y=v=>yTop+(yBot-yTop)*(vMax-v)/(vMax-vMin);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${D.label}">`;
+  D.grid.forEach(v=>{s+=`<line x1="${x0}" y1="${Y(v)}" x2="${x1}" y2="${Y(v)}" stroke="var(--line)"/>`
+    +`<text x="${x0-5}" y="${Y(v)+3}" text-anchor="end" class="xn">${D.fmt(v)}</text>`;});
+  s+=`<polyline fill="none" stroke="var(--bar)" stroke-width="2.2" points="${Q.map((q,i)=>X(i)+','+Y(q[1])).join(' ')}"/>`;
+  Q.forEach((q,i)=>{s+=`<circle cx="${X(i)}" cy="${Y(q[1])}" r="3.4" fill="var(--forest)"/>`
+    +`<text x="${X(i)}" y="${Y(q[1])-8}" text-anchor="middle" class="vlab">${D.fmt(q[1])}</text>`
+    +`<text x="${X(i)}" y="${yBot+16}" text-anchor="middle" class="xlab">${q[0]}</text>`
+    +`<text x="${X(i)}" y="${yBot+29}" text-anchor="middle" class="xn">(${q[2]})</text>`;});
+  // milestone pins: numbered dots at the timeline position; labels live in the list below
+  QFLAGS.forEach(([fx,lab,when],n)=>{const x=x0+(x1-x0)*fx/(Q.length-1);
+    s+=`<line x1="${x}" y1="${yTop-4}" x2="${x}" y2="${yBot}" stroke="var(--line)" stroke-dasharray="2 4"/>`
+      +`<circle cx="${x}" cy="${yTop-11}" r="7.5" fill="var(--forest)"/>`
+      +`<text x="${x}" y="${yTop-7.8}" text-anchor="middle" style="fill:var(--focus-ink);font-size:9.5px;font-weight:700">${n+1}</text>`;});
+  s+='</svg>';
+  document.getElementById('qchart').innerHTML=s;
+  document.getElementById('qflags').innerHTML=QFLAGS.map(([,lab,when],n)=>
+    `<div><span class="fpin">${n+1}</span><b>${lab}</b> — ${when}</div>`).join('');
+}
+/* consistency capsules — p20/p50/p80 vs rating per era (real data) */
+(function(){
+  const E=[["Oct–Mar",5,30.1,37.5,42.1],["Apr–Jun",10,31.0,31.8,33.4],["Jul–Sep",14,26.4,27.8,30.4]];
+  const W=384,H=210,x0=64,step=112,yTop=16,yBot=158,vMax=44,vMin=24;
+  const Y=v=>yTop+(yBot-yTop)*(vMax-v)/(vMax-vMin);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Consistency capsules by era">`;
+  [40,32,24].forEach(v=>{s+=`<line x1="30" y1="${Y(v)}" x2="${W-8}" y2="${Y(v)}" stroke="var(--line)"/>`
+    +`<text x="25" y="${Y(v)+3}" text-anchor="end" class="xn">+${v}</text>`;});
+  E.forEach(([era,n,good,med,bad],i)=>{const x=x0+i*step;
+    s+=`<line x1="${x}" y1="${Y(bad)}" x2="${x}" y2="${Y(good)}" stroke="var(--barlite)"
+         stroke-width="12" stroke-linecap="round"/>`
+      +`<circle cx="${x}" cy="${Y(med)}" r="5.5" fill="var(--forest)"/>`
+      +`<text x="${x+13}" y="${Y(bad)+3}" class="xn">+${bad}</text>`
+      +`<text x="${x+13}" y="${Y(med)+4}" class="vlab">+${med}</text>`
+      +`<text x="${x+13}" y="${Y(good)+3}" class="xn">+${good}</text>`
+      +`<text x="${x}" y="${yBot+22}" text-anchor="middle" class="xlab">${era}</text>`
+      +`<text x="${x}" y="${yBot+35}" text-anchor="middle" class="xn">(${n})</text>`;});
+  s+='</svg>';
+  document.getElementById('capsules').innerHTML=s;
+})();
+document.querySelectorAll('#qchips button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#qchips button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');drawQ(b.dataset.k);});
+drawQ('s18');
 const drill=document.getElementById('drill'),deck=document.getElementById('deck');
 function openDrill(){drill.classList.add('open');deck.scrollLeft=0}
 function closeDrill(){drill.classList.remove('open')}
