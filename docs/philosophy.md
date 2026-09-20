@@ -83,6 +83,16 @@ SG receipt. A graduated metric that regresses comes back. Nothing shouts forever
 nothing is ignored forever. Your dashboard and your friend's dashboard should not
 look the same, because your golf is not the same.
 
+## Attention is the product (knows more than it shows)
+
+The Turn tracks far more about your golf than it chooses to put in front of you.
+Nothing is locked and nothing is hidden — tap into anything and the data is there —
+but the product's job is to say: "yes, we're watching this; no, it doesn't deserve
+your attention yet." A future-level checkpoint reads "tracked now — becomes a focus
+at Convert," never "locked." The primary focus is chosen by DEVELOPMENTAL LEVERAGE —
+whichever constraint the analysis believes buys the most strokes — not by whichever
+metric is closest to failing. One thing is primary; everything else is one tap away.
+
 ## The honesty rules (why the numbers can be trusted)
 
 1. The scorecard is truth; sensors are witnesses, not judges.
