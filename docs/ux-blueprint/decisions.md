@@ -163,3 +163,18 @@ leveled index; per-metric evidence format declared in the checkpoint config.
 - First input surface to build: mobile post-round annotation form (closes the daily
   loop in-product; replaces the Telegram flow). Agent Q&A is backend-first work
   (context-assembly lambda + per-tenant conversation files) — UI is trivial.
+
+## Pressure test: "could Arccos be built on this?" (2026-09-19, wrap-up)
+Arccos decomposes into (A) a live on-course loop (sensor shot detection, live
+rangefinder, pre-shot caddie advice) and (B) a post-round analytics warehouse.
+Our architecture rebuilds (B) cleanly — validation that the leading analytics
+app's ANALYTICS are read-heavy — and fails (A) by design. Verdict: acceptable and
+deliberate: (A) is hardware-coupled, off-thesis (we don't compete on measurement),
+and Garmin's device already provides the live loop's output via the connector.
+- HEDGE LOCKED — the "course pack": on-course strategy features (personal par
+  budget burn, per-hole plans, club table) are served as a PRECOMPUTED compact
+  per-course JSON export, cached offline by the PWA, computed against LOCALLY on
+  the phone. Precompute-heavy, on-device-light, zero server realtime. Guaranteed
+  now as an export contract so it never has to be retrofitted.
+- OUT OF SCOPE, permanently declared: live multiplayer scorecards / shared mutable
+  in-round state. Different product, different physics.
