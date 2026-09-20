@@ -146,3 +146,20 @@ Narrative scroll — past → present → earned → future; the page ENDS forwa
 Engine contract notes for job 3 (stages): banked = passes within the last-8 window,
 rendered as visible ticks (not an opaque streak counter); level position from
 leveled index; per-metric evidence format declared in the checkpoint config.
+
+## Shell stack + input model (locked 2026-09-19 wrap-up)
+- Every input is a DISCRETE WRITE THAT TRIGGERS REGENERATION, never live mutable
+  state: annotation form → lambda → narrative file in tenant prefix → regenerate;
+  future "ask The Turn" → lambda assembling deterministic context blocks → LLM
+  narrates (coach discipline); settings = file writes. No realtime shared state
+  anywhere in the design.
+- Shell = VANILLA ES modules + the prototype's component CSS, per-screen JSON
+  contracts, no framework, no build toolchain by default (phone-first weight, ethos,
+  Capacitor-safe). Prototype is the proof: all interaction patterns run in ~200
+  lines of vanilla JS.
+- Sanctioned escape hatch (pre-approved, no relitigating): PREACT, adopted
+  surgically per-surface if genuine state pain emerges (likeliest: Rounds explorer
+  with maps). Never React-by-reflex.
+- First input surface to build: mobile post-round annotation form (closes the daily
+  loop in-product; replaces the Telegram flow). Agent Q&A is backend-first work
+  (context-assembly lambda + per-tenant conversation files) — UI is trivial.
