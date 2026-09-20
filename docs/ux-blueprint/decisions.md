@@ -29,6 +29,26 @@ Live mock: the "My Game Concept" artifact (session-published; iterated in place)
   tabular-nums / both themes deliberately designed. Data text >= ~11px — small chart
   type reads as mid on phones.
 
+## SG backbone principle (locked 2026-09-19, Colby reading Every Shot Counts)
+Strokes Gained is the interpreted SOURCE OF TRUTH; The Turn's constructs are its
+mechanism layer, and every construct reconciles to it:
+- Every My Game domain card carries its SG/round in the verdict line — the card stack
+  visibly sums to the score. The SG drill = the full accounting view (5-bucket
+  decomposition, trends, cross-category scatters).
+- Home focus areas are PRICED IN STROKES from SG ("Approach 150+ ≈ 2.4 strokes/round")
+  — SG is the common currency that makes priorities comparable.
+- Graduation: stack metrics remain the trigger; the SG category move is the validator
+  and is cited in the graduation evidence. Metric improves but SG doesn't move = flag,
+  not graduation.
+- Reliability guardrail stands: SG governs at category level over windows (off-tee /
+  approach reliable; putting / inside-50 directional) — mechanism constructs are the
+  noise-robust proxies that explain it. Payoff anchors are recognized as a personal
+  expected-strokes function; awful shots = shot-value math; benchmark gaps are
+  SG-denominated (Broadie Table 4).
+- Positioning: same Broadie foundation as everyone; The Turn differentiates by saying
+  what the SG means and what to do next (sequences, strategy, decisions — all priced
+  in strokes as they arrive).
+
 ## Generalization requirements (multi-tenant correctness, locked 2026-09-19)
 1. Bin edges are SHARED config for all players (never per-tenant — do-not-list rule);
    what personalizes is computed: default band chip = the player's own worst band
