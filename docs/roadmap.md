@@ -39,9 +39,8 @@ data.
 | 2 | **UX Blueprint** | evolves FROM the work | UI | **INTERACTIVE — NOT a crew handoff.** Colby + Claude working sessions: brainstorm-first (superpowers:brainstorming), then a SERIES of clickable HTML mocks of the six screens fed by REAL exported data, iterated screen by screen (frontend-design plugin governs the visual pass). Deliverables when done: per-screen data contracts, component inventory, locked visual language → docs/ux-blueprint/. Gate: Colby approves each screen. |
 | 3 | Stages engine (KPI charter) | kpi-charter-spec.md (amended: engine-only) | analytics | math + tier assignment + graduation state machine + JSON per blueprint contract + coach charter block + md. NO site presentation (at most a one-line stage chip on the current site). Stage names: Stabilize/Control/Convert/Optimize/Refine. |
 | 4 | Shot Sequence Engine | TO SPEC | analytics | engine-only, same pattern; two-shot transitions; mistake amplification + opportunity conversion; lateral-vs-aggressive classifier = geometry heuristic calibrated on annotation ground truth; transition tables per hole archetype; screen-3 contract from the blueprint |
-| 5 | Multi-user Phase A | vnext2 brief §A | platform | path parametrization; cheap; parallel-capable; Steve's fork = test case |
-| 6 | AWS foundation | vnext2 brief | platform | S3 tenant contract, generate + annotation-form lambdas, auth choice |
-| 7 | App shell v2 | the approved blueprint | UI | pure assembly: implement approved screens against contracts already fed by live engines |
+| 5+6 | **Bootstrap the_turn** (replaces Phase A + AWS foundation) | the-turn-bootstrap-spec.md ✅ | platform | NEW REPO, decided 2026-09-19: migration-not-rewrite; port engines verbatim → tenant-root parametrization → PARITY GATE vs garmin-golf outputs → infra skeleton. After bootstrap: garmin-golf is feature-frozen (fixes only), all later jobs run in the_turn |
+| 7 | App shell v2 | the approved blueprint | UI | in the_turn; pure assembly: implement approved screens against contracts already fed by live engines |
 | 8 | Development / Practice Plans | needs Colby's real practice-plan example | UI | generalizes focus-card adherence |
 | 9 | Diagnostician | TO SPEC, last | AI | iterative why-chain; agent CHOOSES deterministic queries, never computes (house rule); requires 1/3/4 as queryable primitives |
 
