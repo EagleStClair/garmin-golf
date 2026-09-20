@@ -178,3 +178,15 @@ and Garmin's device already provides the live loop's output via the connector.
   now as an export contract so it never has to be retrofitted.
 - OUT OF SCOPE, permanently declared: live multiplayer scorecards / shared mutable
   in-round state. Different product, different physics.
+
+## Addendum (same night): in-app logging stays OPEN — the sovereignty connector
+Do not read the realtime out-of-scope as closing the door on FIRST-PARTY score/shot
+entry in the app. Data acquisition is the product's Achilles heel (Garmin/Arccos
+gatekeep their data); manual entry is the one connector nobody can revoke — the
+Broadie/Golfmetrics origin story was literally yardage-book transcription. Path:
+post-round score entry = the existing input model (form → raw file in tenant inbox
+→ regenerate; canon already ingests hole-level sources). Hole-by-hole during play =
+course-pack pattern (local phone state, one file submitted at round's end). Only
+live shot-plotting on maps would warrant a richer client — and that may live on its
+own stack later without touching the analytics architecture; the connector contract
+(data arrives as files in the tenant inbox) is the firewall.
