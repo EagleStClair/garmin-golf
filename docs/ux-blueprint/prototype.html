@@ -1,0 +1,424 @@
+<title>The Turn Concept</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@450;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#F3F3F0; --card:#FFFFFF; --line:#E4E5E0; --ink:#1B1D1A; --muted:#6F746C;
+  --forest:#1F4A36; --bar:#3E7C5B; --barlite:#B9CDBF; --track:#E8E9E4; --chip:#EDF2EE;
+  --dim:#A9ADA5; --red:#C4553F; --focus-ink:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#131512; --card:#1B1E1A; --line:#2A2E29; --ink:#EDEEE9; --muted:#9BA096;
+    --forest:#86C1A1; --bar:#63A583; --barlite:#3B4A40; --track:#262A25; --chip:#213026;
+    --dim:#565B53; --red:#D57A63; --focus-ink:#12140F;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#131512; --card:#1B1E1A; --line:#2A2E29; --ink:#EDEEE9; --muted:#9BA096;
+  --forest:#86C1A1; --bar:#63A583; --barlite:#3B4A40; --track:#262A25; --chip:#213026;
+  --dim:#565B53; --red:#D57A63; --focus-ink:#12140F;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ground);color:var(--ink);
+  font:450 15px/1.45 Archivo,-apple-system,"Segoe UI",sans-serif}
+.phone{max-width:412px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column;
+  background:var(--ground);position:relative}
+.note{font-size:11.5px;color:var(--muted);text-align:center;padding:10px 16px 0}
+header{position:sticky;top:0;background:var(--ground);padding:14px 16px 10px;z-index:5}
+header .row{display:flex;align-items:baseline;justify-content:space-between}
+h1{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.stage{font-size:12px;font-weight:600;color:var(--forest);background:var(--chip);
+  border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+header .sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+main{flex:1;padding:4px 12px 84px;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px}
+.card.tap{cursor:pointer}
+.dhead{display:flex;align-items:center;gap:8px}
+.dname{font-size:16px;font-weight:700}
+.focus{font-size:10.5px;font-weight:700;color:var(--focus-ink);background:var(--forest);
+  border-radius:4px;padding:2px 6px;letter-spacing:.04em}
+.chev{margin-left:auto;color:var(--dim);font-size:18px;line-height:1}
+.verdict{font-size:14.5px;margin:8px 0 12px}
+.verdict b{font-weight:700}
+.up{color:var(--forest);font-weight:600}
+.ladder{display:flex;flex-direction:column;gap:7px;font-variant-numeric:tabular-nums}
+.rung{display:grid;grid-template-columns:66px 1fr 84px;gap:10px;align-items:center}
+.rlab{font-size:13px;color:var(--muted);text-align:right}
+.tr{height:15px;background:var(--track);border-radius:3px;position:relative;overflow:hidden}
+.fl{position:absolute;inset:0 auto 0 0;background:var(--bar);border-radius:3px 4px 4px 3px}
+.rval{font-size:13.5px}.rval b{font-weight:650}.rval span{color:var(--muted);font-size:12.5px}
+.badges{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.bd{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:2px 8px}
+.ghost{display:flex;align-items:center;gap:8px;padding:13px 14px}
+.ghost .dname{font-weight:600;font-size:15px}
+.ghost .g2{font-size:12px;color:var(--dim);margin-left:auto}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:10}
+nav .in{max-width:412px;margin:0 auto;background:var(--card);border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(5,1fr);padding:8px 4px calc(10px + env(safe-area-inset-bottom))}
+nav a{text-align:center;font-size:10.5px;color:var(--muted);text-decoration:none;font-weight:600}
+nav a.on{color:var(--forest)}
+nav a i{display:block;font-size:17px;font-style:normal;margin-bottom:1px}
+nav a small{display:block;font-size:8.5px;color:var(--dim);font-weight:500}
+#drill{position:fixed;inset:0;background:var(--ground);z-index:20;display:none;flex-direction:column}
+#drill.open{display:flex}
+.dbar{display:flex;align-items:center;padding:12px 16px 6px;max-width:412px;margin:0 auto;width:100%}
+.back{background:none;border:0;color:var(--forest);font:600 14px Archivo,sans-serif;cursor:pointer;padding:4px 8px 4px 0}
+.dots{margin-left:auto;display:flex;gap:5px}
+.dot{width:6px;height:6px;border-radius:999px;background:var(--dim);opacity:.45}
+.dot.on{opacity:1;background:var(--forest)}
+.deck{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.deck::-webkit-scrollbar{display:none}
+.panel{min-width:100%;scroll-snap-align:start;overflow-y:auto;padding:6px 12px 30px}
+.panel .in{max-width:412px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+h2{font-size:19px;font-weight:700}
+h3{font-size:13.5px;font-weight:700;margin-bottom:2px}
+.h3sub{font-size:12px;color:var(--muted);margin-bottom:10px}
+.ph{font-size:12.5px;color:var(--muted)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-bottom:8px;flex-wrap:wrap}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px;font-style:normal}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:Archivo,sans-serif;fill:var(--muted)}
+.vlab{font-size:12px;font-weight:650;fill:var(--ink)}
+.vlab2{font-size:11px;fill:var(--muted)}
+.xlab{font-size:11px}
+.xn{font-size:10.5px;fill:var(--dim)}
+.chips{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.chips button{font:600 12.5px Archivo,sans-serif;color:var(--muted);background:none;
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chips button.on{background:var(--forest);color:var(--focus-ink);border-color:var(--forest)}
+.missrow{display:grid;grid-template-columns:98px 1fr 70px;gap:10px;align-items:center;
+  font-variant-numeric:tabular-nums;margin-bottom:7px}
+.mlab{font-size:13.5px}
+.mtr{height:13px;background:var(--track);border-radius:3px;position:relative;overflow:hidden}
+.mfl{position:absolute;inset:0 auto 0 0;background:var(--red);border-radius:3px}
+.mval{font-size:13.5px}.mval b{font-weight:650}.mval span{color:var(--muted);font-size:12px}
+.insight{background:var(--chip);border:1px solid var(--line);border-left:3px solid var(--forest);
+  border-radius:8px;padding:12px 14px}
+.insight .tag{font-size:10.5px;font-weight:700;color:var(--forest);letter-spacing:.05em;margin-bottom:4px}
+.insight p{font-size:13.5px;line-height:1.5}
+.pay{font-size:13px;color:var(--muted);line-height:1.5}
+.pay b{color:var(--ink);font-weight:650}
+.hint{text-align:center;font-size:12px;color:var(--dim);padding:6px 0 2px}
+.empty{border:1px dashed var(--line);border-radius:8px;padding:28px 16px;text-align:center;color:var(--muted);font-size:13.5px}
+.fine{font-size:11.5px;color:var(--dim);margin-top:8px}
+/* home */
+.scr{display:none}.scr.on{display:block}
+.pulse{border-left:3px solid var(--forest)}
+.pulse .top{display:flex;align-items:baseline;gap:10px}
+.pulse .score{font-size:34px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pulse .meta{font-size:12.5px;color:var(--muted)}
+.pulse .vline{font-size:14px;margin-top:6px}
+.pulse .coach{font-size:13px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.pulse .coach b{color:var(--ink)}
+.adapt{font-size:10.5px;color:var(--dim);margin-top:8px}
+.holes{display:grid;grid-template-columns:repeat(18,1fr);gap:3px;margin-top:10px}
+.hcell{height:26px;border-radius:3px;background:var(--track);display:flex;
+  align-items:center;justify-content:center}
+.hcell.par{background:var(--barlite)}
+.hcell.bird{background:var(--bar)}
+.hcell.dbl{background:var(--red)}
+/* scorecard notation drawn around the NUMBER: circle = birdie, square = bogey,
+   double square = double+; digits always contrast their fill */
+.hcell span{width:16px;height:16px;display:flex;align-items:center;justify-content:center;
+  font-size:9.5px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.hcell.par span{color:var(--ink)}
+.hcell.bog span{border:1.2px solid var(--muted);border-radius:2px;color:var(--ink)}
+.hcell.bird span{border:1.4px solid var(--card);border-radius:99px;color:var(--card);font-weight:700}
+.hcell.dbl span{border:1.2px solid var(--card);border-radius:2px;color:var(--card);
+  outline:1.2px solid var(--card);outline-offset:1.5px}
+.hkey{display:flex;gap:12px;font-size:10.5px;color:var(--dim);margin-top:6px}
+.hkey i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;font-style:normal}
+.tgt{font-size:12px;color:var(--ink);margin-top:6px}
+.tgt b{font-weight:650}
+.bank{font-size:11.5px;color:var(--muted);margin-top:4px}
+.nextlvl{font-size:12px;color:var(--muted);margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+.nextlvl b{color:var(--ink);font-weight:650}
+.rail{display:flex;align-items:center;gap:4px;margin:12px 0 6px}
+.rseg{flex:1;height:5px;border-radius:99px;background:var(--track)}
+.rseg.done{background:var(--bar)}
+.rseg.cur{background:linear-gradient(90deg,var(--bar) 55%,var(--track) 55%)}
+.rnames{display:flex;justify-content:space-between;font-size:10.5px;color:var(--dim)}
+.rnames b{color:var(--forest);font-weight:700}
+.stagehead{display:flex;justify-content:space-between;align-items:baseline}
+.stagehead .big{font-size:17px;font-weight:700}
+.stagehead .est{font-size:12px;color:var(--muted)}
+.fitem{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.fitem:first-of-type{border-top:0}
+.fnum{width:22px;height:22px;border-radius:99px;background:var(--chip);color:var(--forest);
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ftitle{font-size:14.5px;font-weight:650}
+.ftitle .price{color:var(--red);font-weight:700}
+.fev{font-size:12.5px;color:var(--muted);margin-top:2px}
+.gradbar{height:5px;background:var(--track);border-radius:99px;margin-top:7px;overflow:hidden}
+.gradbar span{display:block;height:100%;background:var(--bar);border-radius:99px}
+.gradnote{font-size:11.5px;color:var(--forest);font-weight:600;margin-top:4px}
+.imps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.imp{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 11px}
+.imp .k{font-size:12px;color:var(--muted)}
+.imp .v{font-size:17px;font-weight:700;color:var(--forest);margin-top:2px;font-variant-numeric:tabular-nums}
+.imp .s{font-size:10.5px;color:var(--dim);margin-top:2px}
+.sect{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.03em;margin:4px 2px 0}
+@media (prefers-reduced-motion: no-preference){ .deck{scroll-behavior:smooth} }
+</style>
+
+<div class="phone">
+  <p class="note">Concept mock · data is real, as of Sep 19</p>
+
+  <div class="scr on" id="scr-home">
+  <header>
+    <div class="row"><h1>The Turn</h1><span class="stage">Control · 18–25</span></div>
+    <div class="sub">Morning, Colby. You're on the right track.</div>
+  </header>
+  <main>
+    <div class="card pulse tap">
+      <div class="top"><span class="score">88</span>
+        <span class="meta">Riverside · Sep 17 · <b>best round tracked</b></span>
+        <span class="chev">›</span></div>
+      <div class="vline"><span class="up">Beat your break-90 budget by 1</span> — +20.8 vs rating against a +22 budget.</div>
+      <div class="holes" id="holestrip"></div>
+      <div class="hkey"><span><i style="background:var(--bar)"></i>birdie</span>
+        <span><i style="background:var(--barlite)"></i>par</span>
+        <span><i style="background:var(--track)"></i>bogey</span>
+        <span><i style="background:var(--red)"></i>double+</span></div>
+      <div class="coach"><b>Coach:</b> floor raised, damage contained — 3 doubles, all
+        missed-green-no-up-and-down. H15 and H16 finally taken for bogey. <span style="color:var(--forest);font-weight:600">Read report ›</span></div>
+      <div class="adapt">recent round shown first for 48h · setting · opens the full round</div>
+    </div>
+
+    <div class="card">
+      <div class="stagehead"><span class="big">Level: Control</span><span class="est">3 of 5 checkpoints cleared</span></div>
+      <div class="rail">
+        <span class="rseg done"></span><span class="rseg cur"></span><span class="rseg"></span>
+        <span class="rseg"></span><span class="rseg"></span>
+      </div>
+      <div class="rnames"><span>Stabilize</span><b>Control</b><span>Convert</span><span>Optimize</span><span>Refine</span></div>
+      <div class="nextlvl"><b>To reach Convert:</b> clear your last two checkpoints —
+        double containment and penalties. Each clears by holding its target for 8 rounds.</div>
+    </div>
+
+    <div class="sect">YOUR FOCUS RIGHT NOW</div>
+    <div class="card">
+      <div class="fitem tap" onclick="showScr('game');openDrill()"><span class="fnum">1</span><div>
+        <div class="ftitle">Approach 150y+ <span class="price">· ≈2.4 strokes/rd</span><span class="chev" style="float:right">›</span></div>
+        <div class="fev">15% Green Zone from 150+; 93% of misses finish short, 53% short-right.</div>
+        <div class="tgt"><b>Do:</b> one more club, favor the left half — target <b>25% Green Zone</b> from 150+.</div>
+        <div class="gradbar"><span style="width:4%"></span></div>
+        <div class="bank">0 of 8 rounds banked · promoted early — this is Convert-level work you're ready for</div>
+      </div></div>
+      <div class="fitem"><span class="fnum">2</span><div>
+        <div class="ftitle">Double containment <span class="price">· ≈3 strokes/rd</span><span class="chev" style="float:right">›</span></div>
+        <div class="fev">4.8 doubles+/18 this season; on 9/17 all three came from missed green, no up-and-down.</div>
+        <div class="tgt"><b>Do:</b> when the green is missed, get down in 3 — target <b>≤3.0 doubles+/18</b>.</div>
+        <div class="gradbar"><span style="width:25%"></span></div>
+        <div class="bank">2 of 8 rounds banked</div>
+      </div></div>
+      <div class="fitem"><span class="fnum">3</span><div>
+        <div class="ftitle">Penalties <span style="color:var(--forest);font-weight:650">· nearly cleared</span><span class="chev" style="float:right">›</span></div>
+        <div class="fev">Held ≤1.2/18 in 7 of the last 8 rounds.</div>
+        <div class="tgt"><b>Do:</b> keep the tee ball dry on trouble holes — target <b>≤1.2 penalties/18</b>.</div>
+        <div class="gradbar"><span style="width:87%"></span></div>
+        <div class="bank">7 of 8 rounds banked · one more clean round clears this checkpoint — Green Zone % takes its slot</div>
+      </div></div>
+    </div>
+
+    <div class="sect">WHAT'S IMPROVING</div>
+    <div class="imps">
+      <div class="imp"><div class="k">Green Zone</div><div class="v">+8 pts</div><div class="s">vs prior 3 mo</div></div>
+      <div class="imp"><div class="k">Penalties</div><div class="v">↓ 43%</div><div class="s">2.1 → 1.2 /18</div></div>
+      <div class="imp"><div class="k">3-putts</div><div class="v">↓ 27%</div><div class="s">2.2 → 1.6 /18</div></div>
+    </div>
+  </main>
+  </div>
+
+  <div class="scr" id="scr-game">
+  <header>
+    <div class="row"><h1>My Game</h1><span class="stage">Control · 18–25 stage</span></div>
+    <div class="sub">Ordered by what matters at your stage — swipe between areas once inside.</div>
+  </header>
+  <main>
+    <div class="card tap" onclick="openDrill()" role="button" tabindex="0" aria-label="Open Approach"
+         onkeydown="if(event.key==='Enter')openDrill()">
+      <div class="dhead"><span class="dname">Approach</span><span class="focus">FOCUS</span><span class="chev">›</span></div>
+      <div class="verdict"><b>33% Green Zone</b> — <span class="up">up 8 pts</span> vs the previous 3 mo.
+        Strongest 60–150y; the cliff starts at 150.</div>
+      <div class="ladder" id="mini"></div>
+      <div class="badges"><span class="bd">534 approaches · 30 rounds</span><span class="bd">real pins · 100% of holes</span></div>
+    </div>
+
+    <div class="card ghost"><span class="dname">Off the Tee</span><span class="g2">next in your stage</span><span class="chev">›</span></div>
+    <div class="card ghost"><span class="dname">Short Game</span><span class="chev">›</span></div>
+    <div class="card ghost"><span class="dname">Putting</span><span class="chev">›</span></div>
+    <div class="card ghost"><span class="dname">Sequences</span><span class="chev">›</span></div>
+    <div class="card ghost"><span class="dname">Strokes Gained</span><span class="chev">›</span></div>
+    <div class="card ghost"><span class="dname">Clubs</span><span class="chev">›</span></div>
+  </main>
+  </div>
+
+  <nav><div class="in">
+    <a href="#" class="on" id="nav-home" onclick="showScr('home');return false"><i>⌂</i>Home</a>
+    <a href="#"><i>◔</i>Progress</a>
+    <a href="#" id="nav-game" onclick="showScr('game');return false"><i>◎</i>My Game</a>
+    <a href="#"><i>≣</i>Rounds</a>
+    <a href="#"><i>⚑</i>Practice<small>soon</small></a>
+  </div></nav>
+</div>
+
+<div id="drill" aria-modal="true" role="dialog">
+  <div class="dbar">
+    <button class="back" onclick="closeDrill()">‹ My Game</button>
+    <div class="dots"><span class="dot on" id="d0"></span><span class="dot" id="d1"></span></div>
+  </div>
+  <div class="deck" id="deck">
+    <section class="panel"><div class="in">
+      <h2>Approach</h2>
+      <div class="ph">Green Zone = on the green, inside 15 yards of the pin, or holed. Not Garmin GIR.</div>
+
+      <div class="card">
+        <h3>Green Zone performance</h3>
+        <div class="h3sub">share of approaches finishing on the green or within 15 yards</div>
+        <div class="legend"><span><i style="background:var(--bar)"></i>Green Zone</span>
+          <span><i style="background:var(--barlite)"></i>On the green</span></div>
+        <div id="gzchart"></div>
+      </div>
+
+      <div class="card">
+        <h3>Where you miss</h3>
+        <div class="chips" id="bandchips">
+          <button data-lo="60" data-hi="100">60–100</button>
+          <button data-lo="100" data-hi="150">100–150</button>
+          <button data-lo="150" data-hi="999" class="on">150+</button>
+          <button data-lo="60" data-hi="999">All</button>
+        </div>
+        <div class="h3sub" id="misssub"></div>
+        <div id="missrows"></div>
+        <div id="scat"></div>
+        <div class="legend" style="margin:8px 0 0">
+          <span><i style="background:var(--bar);border-radius:99px"></i>On green</span>
+          <span><i style="border:1.5px solid var(--bar);border-radius:99px;background:none"></i>Inside 15y</span>
+          <span><i style="background:var(--red);border-radius:99px"></i>Short miss</span>
+          <span><i style="background:var(--dim);border-radius:99px"></i>Long miss</span>
+        </div>
+        <div class="fine">Every dot is a real shot: distance from the pin is exact; direction is placed by its recorded miss class.</div>
+      </div>
+
+      <div class="insight">
+        <div class="tag">KEY INSIGHT</div>
+        <p>From 150 yards out your Green Zone rate falls to <b>15%</b>, and <b>93% of misses finish short</b> —
+        53% short-right. One more club, favoring the left half, attacks your single biggest gap.</p>
+      </div>
+
+      <div class="card"><div class="pay"><b>Miss the zone and it costs you:</b> on the green you putt out in
+        2.24 strokes · fringe, putting 2.63 · inside 15y, chipping 2.60 · 15–25y out 2.99 · 25y+ out <b>3.44</b>.</div></div>
+      <div class="hint">swipe ‹ › between areas</div>
+    </div></section>
+
+    <section class="panel"><div class="in">
+      <h2>Off the Tee</h2>
+      <div class="ph">Sibling swipe demo — this domain ships with the sequences job.</div>
+      <div class="empty">Playable-drive rate, miss shape and penalty exposure land here.<br>
+        Swipe back for Approach.</div>
+    </div></section>
+  </div>
+</div>
+
+<script>
+const BINS=[["60–80",43,39,46],["80–100",40,24,55],["100–125",35,20,93],["125–150",35,27,117],
+["150–170",15,13,85],["170–200",9,4,68],["200–250",3,1,69]];
+const SHOTS=[[143,106.7,"r","s",0,0],[107,11.5,"r","s",0,1],[187,111.1,"r","s",0,0],[111,17.0,"l","s",0,0],[98,12.7,"s","l",1,1],[217,50.0,"l","s",0,0],[151,79.9,"r","s",0,0],[80,0.0,"s","s",1,1],[149,19.4,"l","s",0,0],[202,66.4,"r","s",0,0],[66,21.0,"r","s",0,0],[126,36.2,"l","s",0,0],[208,69.4,"r","s",0,0],[69,20.5,"r","s",0,0],[93,10.5,"l","l",1,1],[189,8.6,"s","s",1,1],[169,21.3,"l","l",0,0],[121,7.2,"r","s",0,1],[148,65.7,"l","s",0,0],[66,15.6,"r","l",1,1],[248,94.9,"l","s",0,0],[95,19.0,"l","l",0,0],[93,8.1,"s","s",1,1],[124,24.6,"r","l",0,0],[198,53.1,"r","s",0,0],[248,97.7,"r","s",0,0],[98,17.4,"r","s",0,0],[145,30.8,"l","l",0,0],[144,7.7,"s","l",1,1],[121,10.3,"r","s",1,1],[153,15.6,"r","s",0,0],[128,58.3,"s","s",0,0],[153,80.8,"l","s",0,0],[81,18.7,"l","l",0,0],[136,124.7,"s","s",0,0],[125,14.2,"l","s",0,1],[149,20.7,"l","l",0,0],[145,45.3,"r","s",0,0],[193,174.1,"l","s",0,0],[174,150.5,"s","s",0,0],[151,15.0,"r","s",1,1],[153,31.2,"r","s",0,0],[213,84.1,"r","s",0,0],[84,15.7,"r","s",1,1],[103,13.7,"r","s",0,1],[207,168.2,"l","s",0,0],[169,31.1,"r","s",0,0],[141,26.9,"s","s",0,0],[159,46.2,"r","s",0,0],[183,95.4,"l","s",0,0],[95,13.6,"r","s",0,1],[75,19.0,"l","l",0,0],[130,19.7,"l","l",0,0],[192,78.2,"r","s",0,0],[78,8.5,"r","l",0,1],[137,25.8,"l","l",0,0],[161,35.3,"l","s",0,0],[140,13.7,"r","s",1,1],[233,96.9,"l","s",0,0],[97,35.4,"r","s",0,0],[232,81.1,"r","s",0,0],[81,39.5,"l","s",0,0],[131,25.2,"r","s",0,0],[118,14.4,"s","l",0,1],[142,28.6,"l","l",0,0],[112,28.5,"l","l",0,0],[105,9.5,"s","l",1,1],[115,32.8,"r","s",0,0],[154,31.5,"l","l",0,0],[118,14.1,"r","s",1,1],[140,124.6,"s","s",0,0],[125,24.3,"r","l",0,0],[238,128.1,"r","s",0,0],[128,14.5,"r","s",0,1],[233,140.9,"r","s",0,0],[141,22.9,"r","s",0,0],[188,71.2,"r","s",0,0],[71,8.7,"l","s",1,1],[158,74.6,"l","s",0,0],[75,17.9,"s","s",0,0],[120,8.2,"r","l",1,1],[142,132.1,"r","s",0,0],[132,3.2,"s","s",1,1],[188,52.1,"l","s",0,0],[161,42.5,"r","s",0,0],[186,38.2,"r","s",0,0],[141,4.6,"s","s",1,1],[128,19.3,"s","s",0,0],[226,35.0,"l","l",0,0],[98,14.9,"s","l",0,1],[96,36.1,"r","s",0,0],[127,12.4,"s","s",0,1],[155,158.7,"l","s",0,0],[159,94.5,"l","s",0,0],[95,14.7,"r","l",0,1],[170,30.0,"r","s",0,0],[145,142.0,"s","s",0,0],[142,53.0,"r","s",0,0],[145,15.1,"r","s",0,0],[132,123.2,"r","s",0,0],[123,101.0,"l","s",0,0],[101,11.2,"l","s",0,1],[152,154.4,"s","s",0,0],[154,21.2,"s","s",0,0],[177,11.9,"s","s",1,1],[136,9.7,"s","s",0,1],[116,122.3,"r","s",0,0],[122,115.0,"r","s",0,0],[114,35.4,"r","s",0,0],[152,5.0,"s","s",1,1],[68,18.9,"r","s",0,0],[143,37.5,"l","l",0,0],[136,24.1,"r","l",0,0],[125,81.8,"r","s",0,0],[82,22.7,"r","s",0,0],[139,25.8,"r","s",0,0],[193,25.5,"r","s",0,0],[137,129.0,"l","s",0,0],[131,4.6,"s","l",1,1],[122,18.8,"r","s",0,0],[157,14.3,"s","s",1,1],[173,48.8,"r","s",0,0],[149,2.3,"s","l",1,1],[111,17.5,"r","l",0,0],[238,79.0,"r","s",0,0],[79,17.5,"r","l",0,0],[168,96.8,"s","s",0,0],[98,20.7,"r","l",0,0],[177,56.3,"r","s",0,0],[212,48.9,"r","s",0,0],[175,45.5,"r","s",0,0],[176,42.2,"r","s",0,0],[170,28.0,"r","s",0,0],[165,31.3,"l","s",0,0],[95,19.0,"l","s",0,0],[208,93.0,"r","s",0,0],[93,40.3,"r","l",0,0],[241,94.1,"l","s",0,0],[93,30.8,"r","s",0,0],[96,62.8,"s","s",0,0],[63,21.0,"r","s",0,0],[170,51.0,"r","s",0,0],[60,12.0,"r","s",0,1],[205,100.1,"r","s",0,0],[98,41.1,"r","s",0,0],[173,35.9,"l","s",0,0],[151,26.0,"r","s",0,0],[118,107.6,"s","s",0,0],[111,115.5,"r","s",0,0],[116,26.3,"r","s",0,0],[81,8.9,"r","l",1,1],[167,28.9,"r","s",0,0],[122,17.1,"s","s",0,0],[174,127.3,"l","s",0,0],[127,66.5,"l","s",0,0],[67,21.7,"s","s",0,0],[197,82.2,"r","s",0,0],[82,27.1,"l","s",0,0],[168,53.7,"l","s",0,0],[160,66.1,"r","s",0,0],[66,23.5,"s","s",0,0],[226,47.7,"r","s",0,0],[241,57.0,"r","s",0,0],[180,140.3,"l","s",0,0],[140,25.1,"r","s",0,0],[168,34.7,"l","l",0,0],[82,13.4,"s","s",0,1],[181,33.9,"r","s",0,0],[145,16.0,"r","l",1,1],[141,14.1,"l","s",1,1],[121,17.8,"r","s",0,0],[140,16.6,"r","s",0,0],[109,30.2,"l","l",0,0],[233,97.7,"l","s",0,0],[98,18.6,"l","l",0,0],[117,33.2,"r","s",0,0],[148,12.9,"s","l",0,1],[128,49.7,"r","s",0,0],[145,14.7,"r","l",1,1],[146,13.7,"r","l",1,1],[125,24.5,"s","l",0,0],[142,9.3,"l","s",1,1],[117,6.5,"r","l",1,1],[124,14.2,"l","l",1,1],[121,120.4,"s","s",0,0],[120,15.3,"r","s",0,0],[166,41.3,"r","s",0,0],[153,89.1,"l","s",0,0],[89,56.2,"s","s",0,0],[78,23.9,"l","s",0,0],[217,61.9,"s","s",0,0],[62,11.7,"s","l",1,1],[160,27.2,"l","s",0,0],[129,20.3,"l","l",0,0],[121,29.3,"r","s",0,0],[244,210.5,"l","s",0,0],[211,99.5,"l","s",0,0],[100,17.2,"l","l",1,1],[131,43.1,"l","l",0,0],[237,236.7,"l","s",0,0],[237,149.6,"r","s",0,0],[150,43.1,"l","s",0,0],[207,178.8,"s","s",0,0],[179,154.6,"l","s",0,0],[155,11.8,"s","s",1,1],[165,44.6,"r","s",0,0],[164,12.8,"r","s",0,1],[185,159.6,"l","s",0,0],[160,34.4,"s","s",0,0],[97,18.1,"s","s",0,0],[139,13.2,"r","l",0,1],[144,45.3,"l","s",0,0],[79,15.9,"l","l",0,0],[102,92.6,"l","s",0,0],[93,6.5,"s","s",1,1],[211,9.2,"s","s",1,1],[118,23.0,"r","l",0,0],[156,28.5,"r","s",0,0],[83,7.6,"l","l",0,1],[103,13.6,"l","l",1,1],[144,67.8,"l","s",0,0],[68,6.5,"s","l",1,1],[183,50.9,"r","s",0,0],[196,119.3,"s","s",0,0],[119,10.6,"s","s",1,1],[210,117.0,"l","s",0,0],[117,33.7,"r","s",0,0],[85,23.8,"l","l",0,0],[242,53.2,"l","s",0,0],[169,54.5,"r","s",0,0],[191,41.3,"r","s",0,0],[167,61.6,"r","s",0,0],[62,20.6,"r","l",0,0],[129,19.6,"s","s",0,0],[205,43.9,"r","s",0,0],[109,4.3,"s","l",1,1],[241,95.9,"r","s",0,0],[96,27.6,"s","s",0,0],[65,4.5,"s","s",1,1],[95,6.6,"s","s",1,1],[161,31.6,"l","s",0,0],[75,0.1,"s","l",1,1],[244,116.5,"r","s",0,0],[117,13.5,"l","l",0,1],[225,83.1,"s","s",0,0],[83,23.2,"r","l",0,0],[123,12.4,"r","l",0,1],[92,12.9,"s","l",1,1],[94,15.1,"r","s",1,1],[196,68.4,"r","s",0,0],[69,6.8,"r","l",1,1],[187,39.6,"r","s",0,0],[124,22.3,"r","s",0,0],[206,5.2,"s","l",0,1],[148,39.5,"r","s",0,0],[85,21.3,"s","l",0,0],[152,40.9,"r","s",0,0],[162,146.3,"r","s",0,0],[146,52.0,"l","s",0,0],[162,21.9,"r","s",0,0],[141,10.8,"r","s",0,1],[173,41.5,"r","s",0,0],[176,11.2,"s","s",1,1],[141,5.6,"l","l",1,1],[160,35.8,"r","s",0,0],[140,59.8,"l","s",0,0],[125,20.2,"l","l",0,0],[128,15.3,"r","l",0,0],[159,42.5,"r","s",0,0],[175,53.7,"r","s",0,0],[104,29.7,"l","l",0,0],[111,115.9,"l","s",0,0],[116,18.0,"l","l",0,0],[189,22.7,"r","s",0,0],[166,99.6,"s","s",0,0],[100,20.5,"s","l",0,0],[136,8.3,"r","s",1,1],[139,16.0,"s","s",0,0],[194,53.0,"r","s",0,0],[87,74.0,"r","s",0,0],[74,5.9,"l","s",1,1],[167,39.6,"r","s",0,0],[164,31.0,"s","s",0,0],[226,95.2,"r","s",0,0],[95,9.3,"l","s",1,1],[175,62.8,"r","s",0,0],[63,5.4,"s","l",1,1],[244,56.3,"r","s",0,0],[166,66.2,"r","s",0,0],[66,6.8,"s","s",1,1],[162,7.9,"l","s",1,1],[113,36.4,"r","s",0,0],[206,65.6,"l","s",0,0],[66,25.5,"s","s",0,0],[113,45.6,"r","s",0,0],[144,28.8,"l","s",0,0],[144,18.7,"l","l",0,0],[120,30.7,"l","s",0,0],[139,18.9,"l","l",0,0],[135,1.5,"s","l",1,1],[77,9.8,"s","l",1,1],[118,116.5,"s","s",0,0],[117,20.0,"r","s",0,0],[152,6.1,"s","s",1,1],[94,9.8,"s","s",1,1],[148,14.6,"l","s",1,1],[138,10.2,"s","l",1,1],[125,30.2,"r","s",0,0],[143,11.5,"r","l",1,1],[128,19.9,"s","l",0,0],[116,38.3,"l","s",0,0],[117,6.3,"s","l",1,1],[150,8.7,"l","s",1,1],[143,35.7,"r","l",0,0],[148,13.3,"r","s",0,1],[140,9.6,"s","l",1,1],[142,14.4,"s","l",1,1],[144,9.8,"s","s",1,1],[118,29.5,"l","s",0,0],[106,25.8,"l","s",0,0],[120,21.9,"r","l",0,0],[156,25.7,"l","s",0,0],[173,20.0,"r","l",0,0],[104,41.1,"l","l",0,0],[109,7.3,"s","l",1,1],[233,79.1,"r","s",0,0],[79,16.2,"r","l",0,0],[167,12.0,"s","s",0,1],[116,26.7,"r","s",0,0],[225,57.4,"r","s",0,0],[159,18.9,"l","s",0,0],[112,12.8,"l","l",0,1],[169,25.4,"l","l",0,0],[166,50.4,"r","s",0,0],[130,38.1,"s","s",0,0],[181,21.7,"r","s",0,0],[243,150.6,"s","s",0,0],[151,26.7,"r","s",0,0],[129,45.4,"s","s",0,0],[136,87.1,"r","s",0,0],[87,51.0,"l","s",0,0],[115,24.1,"r","l",0,0],[181,61.7,"s","s",0,0],[62,20.5,"l","l",0,0],[175,44.4,"r","s",0,0],[200,56.8,"r","s",0,0],[111,17.2,"r","s",0,0],[191,60.2,"s","s",0,0],[60,4.1,"s","s",1,1],[163,18.7,"r","s",0,0],[95,33.0,"r","s",0,0],[243,75.0,"r","s",0,0],[75,35.8,"l","s",0,0],[172,37.4,"r","s",0,0],[108,4.4,"s","s",1,1],[163,34.0,"r","s",0,0],[159,35.3,"r","s",0,0],[242,37.4,"s","s",0,0],[143,22.1,"r","l",0,0],[243,30.5,"l","s",0,0],[241,111.3,"l","s",0,0],[111,26.7,"r","s",0,0],[111,22.3,"r","s",0,0],[233,81.5,"l","s",0,0],[82,5.4,"s","s",1,1],[191,28.3,"r","s",0,0],[146,11.0,"l","l",1,1],[151,21.8,"s","s",0,0],[128,14.9,"l","s",0,1],[141,0.6,"s","s",1,1],[116,15.0,"s","s",0,1],[121,14.2,"l","s",1,1],[130,129.3,"s","s",0,0],[129,24.6,"r","s",0,0],[160,32.5,"l","s",0,0],[73,5.2,"r","l",1,1],[107,13.9,"r","s",0,1],[215,57.6,"r","s",0,0],[202,173.7,"l","s",0,0],[174,35.6,"r","s",0,0],[116,55.5,"r","s",0,0],[141,67.3,"r","s",0,0],[67,62.2,"l","s",0,0],[62,7.6,"l","l",1,1],[179,32.4,"r","s",0,0],[151,39.2,"r","s",0,0],[163,53.7,"l","s",0,0],[145,16.3,"r","s",0,0],[205,66.5,"l","s",0,0],[67,18.1,"s","l",0,0],[227,30.6,"r","l",0,0],[244,74.2,"s","s",0,0],[73,5.4,"s","s",1,1],[206,39.6,"r","l",0,0],[180,21.5,"s","s",0,0],[104,30.6,"r","s",0,0],[246,81.8,"l","s",0,0],[82,26.0,"s","s",0,0],[180,36.5,"l","s",0,0],[155,89.9,"s","s",0,0],[90,14.5,"s","l",0,1],[109,6.6,"s","s",1,1],[131,18.4,"r","s",0,0],[144,21.9,"r","s",0,0],[156,34.4,"r","s",0,0],[173,76.4,"s","s",0,0],[76,49.6,"l","s",0,0],[202,173.0,"s","s",0,0],[173,51.2,"s","s",0,0],[111,10.6,"r","s",0,1],[158,9.4,"l","l",1,1],[156,29.1,"r","l",0,0],[91,12.9,"l","s",0,1],[153,36.7,"s","s",0,0],[243,25.7,"r","s",0,0],[200,21.1,"l","s",0,0],[181,71.6,"l","s",0,0],[72,30.7,"l","s",0,0],[100,72.9,"r","l",0,0],[73,11.4,"l","l",1,1],[193,29.3,"r","s",0,0],[110,33.3,"r","s",0,0],[146,28.0,"r","s",0,0],[174,12.0,"r","s",0,1],[126,35.5,"r","s",0,0],[134,17.7,"r","s",0,0],[141,142.9,"r","s",0,0],[141,31.1,"r","s",0,0],[130,21.0,"r","s",0,0],[135,34.8,"r","s",0,0],[152,16.0,"r","s",0,0],[250,72.2,"r","s",0,0],[72,9.0,"s","s",1,1],[147,20.2,"r","s",0,0],[173,48.0,"r","s",0,0],[126,7.7,"l","s",1,1],[135,11.4,"l","l",1,1],[147,127.2,"l","s",0,0],[127,11.8,"s","s",1,1],[131,16.6,"l","s",1,1],[132,8.1,"r","s",1,1],[155,14.8,"s","s",1,1],[110,24.7,"l","s",0,0],[138,3.2,"s","l",1,1],[195,92.5,"r","s",0,0],[93,44.2,"s","s",0,0],[240,106.9,"r","s",0,0],[107,13.6,"s","s",1,1],[210,110.0,"r","s",0,0],[110,15.6,"r","l",1,1],[148,31.6,"r","s",0,0],[202,138.5,"r","s",0,0],[139,36.3,"r","s",0,0],[130,33.3,"r","s",0,0],[187,76.9,"r","s",0,0],[70,22.4,"s","s",0,0],[102,16.9,"r","s",0,0],[182,32.6,"r","s",0,0],[137,178.2,"r","s",0,0],[178,91.9,"l","s",0,0],[92,27.1,"r","s",0,0],[124,16.4,"l","s",0,0],[224,87.0,"r","s",0,0],[87,17.1,"r","s",0,0],[82,9.0,"r","l",0,1],[124,45.7,"l","l",0,0],[195,177.3,"l","s",0,0],[177,95.4,"l","s",0,0],[95,18.7,"r","s",0,0],[243,29.6,"r","s",0,0],[151,6.7,"r","l",1,1],[170,44.3,"l","l",0,0],[130,18.2,"r","l",0,0],[136,4.6,"s","s",1,1],[242,168.9,"l","s",0,0],[169,143.1,"l","s",0,0],[143,29.2,"r","s",0,0],[115,21.6,"r","s",0,0],[131,24.0,"r","s",0,0],[159,20.9,"s","s",0,0],[175,76.1,"l","s",0,0],[76,26.3,"r","l",0,0],[111,43.7,"l","l",0,0],[110,24.0,"s","l",0,0],[209,26.4,"l","s",0,0],[170,66.1,"r","s",0,0],[66,45.6,"l","s",0,0],[109,32.3,"l","l",0,0],[145,18.5,"l","s",0,0],[114,31.0,"s","l",0,0],[102,56.0,"s","s",0,0],[166,62.2,"l","l",0,0],[62,37.8,"s","s",0,0],[158,32.1,"l","s",0,0],[181,9.7,"s","s",0,1],[218,103.0,"r","s",0,0],[103,10.4,"r","s",0,1],[239,70.0,"r","s",0,0],[70,35.1,"r","s",0,0],[206,36.2,"l","s",0,0],[178,30.9,"r","s",0,0],[100,37.8,"l","s",0,0],[175,38.3,"l","s",0,0],[246,71.1,"r","s",0,0],[71,35.3,"s","s",0,0],[142,7.5,"s","s",1,1],[165,22.4,"l","l",0,0],[122,4.2,"s","s",1,1],[138,0.0,"s","s",1,1],[152,24.5,"r","s",0,0],[114,18.4,"l","s",0,0],[131,11.9,"r","s",1,1],[159,15.5,"l","s",0,0],[173,38.6,"r","s",0,0],[112,14.5,"r","l",0,1],[112,6.6,"r","l",1,1],[214,49.8,"l","s",0,0],[163,4.8,"s","s",1,1],[209,40.1,"l","s",0,0],[152,37.1,"l","l",0,0],[184,81.1,"l","s",0,0],[81,18.0,"s","s",0,0],[166,49.0,"r","s",0,0],[164,53.3,"r","s",0,0],[151,28.5,"r","s",0,0],[131,9.9,"s","l",0,1],[194,98.3,"r","s",0,0],[98,26.0,"r","s",0,0],[243,57.4,"r","s",0,0],[191,23.4,"r","s",0,0],[122,4.5,"s","l",1,1],[133,80.1,"l","s",0,0],[80,9.3,"s","s",0,1],[185,12.3,"s","l",0,1]]; /* [startYds, leaveYds, side r/l/s, range s/l, onGreen, inZone] */
+
+document.getElementById('mini').innerHTML=BINS.map(([b,p,,n])=>
+  `<div class="rung"><span class="rlab">${b}y</span><span class="tr"><span class="fl" style="width:${p}%"></span></span>
+   <span class="rval"><b>${p}%</b> <span>· ${n}</span></span></div>`).join('');
+
+/* grouped bars */
+(function(){
+  const W=384,H=204,base=162,max=50,bw=14,gap=3,grp=52,x0=10;
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Green Zone and on-green rate by distance">';
+  [50,25].forEach(v=>{const y=base-v/max*118;
+    s+=`<line x1="${x0}" y1="${y}" x2="${W-4}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`
+      +`<text x="${W-4}" y="${y-3}" text-anchor="end" class="xn">${v}%</text>`;});
+  BINS.forEach(([b,gz,gr,n],i)=>{
+    const gx=x0+4+i*grp, h1=gz/max*118, h2=gr/max*118;
+    s+=`<rect x="${gx}" y="${base-h1}" width="${bw}" height="${h1}" rx="3" fill="var(--bar)"/>`
+      +`<rect x="${gx+bw+gap}" y="${base-h2}" width="${bw}" height="${h2}" rx="3" fill="var(--barlite)"/>`
+      +`<text x="${gx+bw/2}" y="${base-h1-5}" text-anchor="middle" class="vlab">${gz}</text>`
+      +`<text x="${gx+bw+gap+bw/2}" y="${base-h2-5}" text-anchor="middle" class="vlab2">${gr}</text>`
+      +`<text x="${gx+bw+gap/2}" y="${base+15}" text-anchor="middle" class="xlab">${b}</text>`
+      +`<text x="${gx+bw+gap/2}" y="${base+28}" text-anchor="middle" class="xn">(${n})</text>`;
+  });
+  s+=`<line x1="${x0}" y1="${base}" x2="${W-4}" y2="${base}" stroke="var(--muted)" stroke-width="1"/></svg>`;
+  document.getElementById('gzchart').innerHTML=s;
+})();
+
+/* Where you miss — band-filtered rows + scatter */
+const MLAB={ss:"Short straight",sr:"Short right",sl:"Short left",ls:"Long straight",lr:"Long right",ll:"Long left"};
+function setBand(lo,hi){
+  const inband=SHOTS.filter(d=>d[0]>=lo&&d[0]<hi);
+  const misses=inband.filter(d=>!d[5]);
+  const counts={};
+  misses.forEach(d=>{const k=d[3]+(d[2]==='r'?'r':d[2]==='l'?'l':'s');counts[k]=(counts[k]||0)+1;});
+  const rows=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('misssub').textContent=
+    `${misses.length} zone misses from ${inband.length} approaches in the last 3 months`;
+  document.getElementById('missrows').innerHTML=rows.map(([k,n])=>{
+    const p=Math.round(100*n/misses.length);
+    return `<div class="missrow"><span class="mlab">${MLAB[k]}</span>
+      <span class="mtr"><span class="mfl" style="width:${p}%"></span></span>
+      <span class="mval"><b>${p}%</b> <span>· ${n}</span></span></div>`;}).join('');
+  drawScatter(inband);
+}
+function drawScatter(shots){
+  const W=384,H=308,cx=192,cy=118,S=2.05,MAXR=178;
+  const DIR={ss:[0,1],sr:[.72,.7],sl:[-.72,.7],ls:[0,-1],lr:[.72,-.7],ll:[-.72,-.7]};
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Shot finish positions">';
+  s+=`<ellipse cx="${cx}" cy="${cy}" rx="34" ry="26" fill="var(--chip)" stroke="var(--line)"/>`
+    +`<circle cx="${cx}" cy="${cy}" r="${15*S}" fill="none" stroke="var(--dim)" stroke-dasharray="3 4"/>`
+    +`<text x="${cx+15*S+4}" y="${cy+3}" class="xn">15y</text>`
+    +`<line x1="${cx}" y1="${cy-13}" x2="${cx}" y2="${cy+3}" stroke="var(--muted)" stroke-width="1.4"/>`
+    +`<path d="M ${cx} ${cy-13} l 8 3 l -8 3 z" fill="var(--forest)"/>`
+    +`<text x="${cx}" y="${H-6}" text-anchor="middle" class="xn">short of the green ↓</text>`;
+  shots.forEach((d,i)=>{
+    const [,rem,side,rng,green,zone]=d;
+    let ang;
+    if(green||zone){ ang=(i*137.5)%360*Math.PI/180; }
+    else{
+      const k=rng+(side==='r'?'r':side==='l'?'l':'s');
+      const v=DIR[k]||DIR.ss, base=Math.atan2(v[0],v[1]);
+      ang=base+(((i*97)%36)-18)*Math.PI/180;
+    }
+    const r=Math.min(rem*S,MAXR);
+    const x=cx+Math.sin(ang)*r, y=cy+Math.cos(ang)*r;
+    if(y<8||y>H-16||x<6||x>W-6) return;
+    const fill=green?'var(--bar)':zone?'none':(rng==='s'?'var(--red)':'var(--dim)');
+    const stroke=zone&&!green?'var(--bar)':'none';
+    s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="${fill}"`
+      +(stroke!=='none'?` stroke="${stroke}" stroke-width="1.5"`:'')+` fill-opacity="${green||zone?1:.75}"/>`;
+  });
+  s+='</svg>';
+  document.getElementById('scat').innerHTML=s;
+}
+document.querySelectorAll('#bandchips button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#bandchips button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  setBand(+b.dataset.lo,+b.dataset.hi);
+});
+setBand(150,999);
+
+const HOLES=[1,0,1,1,0,1,1,2,1,2,2,1,1,1,1,1,0,-1];
+document.getElementById('holestrip').innerHTML=HOLES.map((v,i)=>
+  `<span class="hcell ${v<0?'bird':v===0?'par':v>=2?'dbl':'bog'}"><span>${i+1}</span></span>`).join('');
+function showScr(k){
+  document.getElementById('scr-home').classList.toggle('on',k==='home');
+  document.getElementById('scr-game').classList.toggle('on',k==='game');
+  document.getElementById('nav-home').classList.toggle('on',k==='home');
+  document.getElementById('nav-game').classList.toggle('on',k==='game');
+  window.scrollTo(0,0);
+}
+const drill=document.getElementById('drill'),deck=document.getElementById('deck');
+function openDrill(){drill.classList.add('open');deck.scrollLeft=0}
+function closeDrill(){drill.classList.remove('open')}
+deck.addEventListener('scroll',()=>{const on=deck.scrollLeft>deck.clientWidth/2;
+  document.getElementById('d0').classList.toggle('on',!on);
+  document.getElementById('d1').classList.toggle('on',on);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrill()});
+</script>
