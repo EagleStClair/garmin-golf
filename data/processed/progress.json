@@ -1,7 +1,7 @@
 {
-  "generatedFromRounds": 44,
-  "since": "2026-05-01",
-  "thisRoundDate": "2026-09-17",
+  "generatedFromRounds": 83,
+  "since": "2018-05-01",
+  "thisRoundDate": "2026-09-20",
   "thisRoundClean": true,
   "baselines": {
     "scratch": {
@@ -18,137 +18,137 @@
     "myAverage": {
       "label": "My average",
       "byCategory": {
-        "offTee": -4.5,
-        "longApproach": -6.2,
-        "midApproach": -7.1,
-        "inside50": -7.4,
-        "putting": -3.1
+        "offTee": -4.7,
+        "longApproach": -5.0,
+        "midApproach": -2.4,
+        "inside50": -0.9,
+        "putting": -1.4
       },
-      "sg0to100": -9.9
+      "sg0to100": -1.6
     },
-    "target15": {
-      "label": "Target 15",
+    "target12": {
+      "label": "Target 12",
       "byCategory": {
-        "offTee": -2.7,
-        "longApproach": -3.0,
-        "midApproach": -3.0,
-        "inside50": -3.6,
-        "putting": -2.7
+        "offTee": -2.16,
+        "longApproach": -2.4,
+        "midApproach": -2.4,
+        "inside50": -2.88,
+        "putting": -2.16
       },
-      "sg0to100": -5.4,
+      "sg0to100": -4.32,
       "modeled": true
     }
   },
   "scoring": {
-    "averageOverRating18": 29.6,
-    "potentialOverRating18": 26.6,
-    "bestOverRating18": 20.8,
+    "averageOverRating18": 21.5,
+    "potentialOverRating18": 17.3,
+    "bestOverRating18": 12.9,
     "garminHandicap": 23.6,
     "break90OverRating": 22,
-    "handicapIndexEst": 25.8
+    "handicapIndexEst": 12.4
   },
   "sg": {
     "thisRound": {
       "byCategory": {
-        "offTee": -6.6,
-        "longApproach": -6.3,
-        "midApproach": -4.1,
-        "inside50": -12.6,
-        "putting": -0.2
+        "offTee": -6.5,
+        "longApproach": -5.9,
+        "midApproach": -5.1,
+        "inside50": 3.9,
+        "putting": 0.0
       },
-      "total": -29.8,
-      "sg0to100": -15.6,
+      "total": -13.6,
+      "sg0to100": 2.5,
       "cleanRounds": 1
     },
     "last5": {
       "byCategory": {
-        "offTee": -5.0,
-        "longApproach": -6.8,
-        "midApproach": -6.4,
-        "inside50": -9.7,
-        "putting": -1.0
+        "offTee": -4.6,
+        "longApproach": -6.6,
+        "midApproach": -1.0,
+        "inside50": 1.3,
+        "putting": 0.0
       },
-      "total": -28.9,
-      "sg0to100": -12.7,
+      "total": -10.9,
+      "sg0to100": 1.6,
       "cleanRounds": 5
     },
     "last10": {
       "byCategory": {
-        "offTee": -4.9,
-        "longApproach": -6.3,
-        "midApproach": -6.6,
-        "inside50": -8.1,
-        "putting": -2.0
+        "offTee": -5.1,
+        "longApproach": -5.5,
+        "midApproach": -1.0,
+        "inside50": 1.8,
+        "putting": 0.0
       },
-      "total": -27.9,
-      "sg0to100": -11.0,
+      "total": -9.8,
+      "sg0to100": 1.3,
       "cleanRounds": 10
     },
     "last20": {
       "byCategory": {
-        "offTee": -4.6,
-        "longApproach": -6.0,
-        "midApproach": -6.7,
-        "inside50": -7.8,
-        "putting": -2.5
+        "offTee": -5.3,
+        "longApproach": -5.6,
+        "midApproach": -1.4,
+        "inside50": 1.6,
+        "putting": 0.0
       },
-      "total": -27.6,
-      "sg0to100": -10.6,
+      "total": -10.7,
+      "sg0to100": 1.3,
       "cleanRounds": 20
     },
     "allTime": {
       "byCategory": {
-        "offTee": -4.5,
-        "longApproach": -6.2,
-        "midApproach": -7.1,
-        "inside50": -7.4,
-        "putting": -3.1
+        "offTee": -4.7,
+        "longApproach": -5.0,
+        "midApproach": -2.4,
+        "inside50": -0.9,
+        "putting": -1.4
       },
-      "total": -28.3,
-      "sg0to100": -9.9,
-      "cleanRounds": 39
+      "total": -14.4,
+      "sg0to100": -1.6,
+      "cleanRounds": 83
     }
   },
   "authoritative": {
     "thisRound": {
-      "overRating18": 20.8,
-      "handicapDiff": 20.8,
-      "putts18": 32.0,
-      "threePutts18": 2.0,
-      "penalties18": 1.0,
-      "doubles18": 3.0
+      "overRating18": null,
+      "handicapDiff": null,
+      "putts18": 42.0,
+      "threePutts18": 6.0,
+      "penalties18": 2.0,
+      "doubles18": 6.0
     },
     "last5": {
-      "overRating18": 27.6,
-      "handicapDiff": 26.8,
-      "putts18": 33.8,
-      "threePutts18": 2.2,
-      "penalties18": 1.8,
-      "doubles18": 5.5
+      "overRating18": 22.2,
+      "handicapDiff": 19.2,
+      "putts18": 36.8,
+      "threePutts18": 3.7,
+      "penalties18": 2.4,
+      "doubles18": 4.2
     },
     "last10": {
-      "overRating18": 27.5,
-      "handicapDiff": 27.0,
-      "putts18": 34.0,
-      "threePutts18": 1.7,
-      "penalties18": 1.1,
-      "doubles18": 4.8
+      "overRating18": 26.0,
+      "handicapDiff": 22.8,
+      "putts18": 37.8,
+      "threePutts18": 3.6,
+      "penalties18": 4.1,
+      "doubles18": 6.6
     },
     "last20": {
-      "overRating18": 27.7,
-      "handicapDiff": 27.0,
-      "putts18": 35.2,
-      "threePutts18": 2.3,
-      "penalties18": 1.9,
-      "doubles18": 5.5
+      "overRating18": 26.6,
+      "handicapDiff": 23.4,
+      "putts18": 37.3,
+      "threePutts18": 3.6,
+      "penalties18": 4.3,
+      "doubles18": 6.9
     },
     "allTime": {
-      "overRating18": 29.6,
-      "handicapDiff": 28.9,
-      "putts18": 36.1,
-      "threePutts18": 2.9,
-      "penalties18": 2.2,
-      "doubles18": 6.4
+      "overRating18": 21.5,
+      "handicapDiff": 19.0,
+      "putts18": 35.2,
+      "threePutts18": 3.3,
+      "penalties18": 3.8,
+      "doubles18": 5.6
     }
   },
   "putting": {
@@ -161,27 +161,27 @@
       },
       {
         "label": "3\u20136 ft",
-        "n": 1,
-        "avg": 2.0,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "6\u201310 ft",
-        "n": 2,
-        "avg": 1.5,
-        "makePct": 50
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "10\u201320 ft",
-        "n": 5,
-        "avg": 1.8,
-        "makePct": 40
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "20\u201340 ft",
-        "n": 9,
-        "avg": 1.89,
-        "makePct": 22
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "40+ ft",
@@ -199,384 +199,384 @@
       },
       {
         "label": "3\u20136 ft",
-        "n": 2,
-        "avg": 2.0,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "6\u201310 ft",
-        "n": 4,
-        "avg": 2.0,
-        "makePct": 25
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "10\u201320 ft",
-        "n": 17,
-        "avg": 2.0,
-        "makePct": 12
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "20\u201340 ft",
-        "n": 32,
-        "avg": 1.88,
-        "makePct": 25
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "40+ ft",
-        "n": 7,
-        "avg": 2.0,
-        "makePct": 29
+        "n": 0,
+        "avg": null,
+        "makePct": null
       }
     ],
     "last10": [
       {
         "label": "0\u20133 ft",
-        "n": 2,
-        "avg": 2.0,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "3\u20136 ft",
-        "n": 4,
-        "avg": 2.25,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "6\u201310 ft",
-        "n": 10,
-        "avg": 2.0,
-        "makePct": 10
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "10\u201320 ft",
-        "n": 32,
-        "avg": 1.97,
-        "makePct": 12
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "20\u201340 ft",
-        "n": 56,
-        "avg": 1.93,
-        "makePct": 18
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "40+ ft",
-        "n": 11,
-        "avg": 2.0,
-        "makePct": 18
+        "n": 0,
+        "avg": null,
+        "makePct": null
       }
     ],
     "last20": [
       {
         "label": "0\u20133 ft",
-        "n": 2,
-        "avg": 2.0,
-        "makePct": 0
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "3\u20136 ft",
-        "n": 8,
-        "avg": 2.12,
-        "makePct": 12
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "6\u201310 ft",
-        "n": 17,
-        "avg": 1.88,
-        "makePct": 18
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "10\u201320 ft",
-        "n": 72,
-        "avg": 2.08,
-        "makePct": 10
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "20\u201340 ft",
-        "n": 126,
-        "avg": 1.97,
-        "makePct": 15
+        "n": 0,
+        "avg": null,
+        "makePct": null
       },
       {
         "label": "40+ ft",
-        "n": 22,
-        "avg": 2.05,
-        "makePct": 14
+        "n": 0,
+        "avg": null,
+        "makePct": null
       }
     ],
     "allTime": [
       {
         "label": "0\u20133 ft",
         "n": 6,
-        "avg": 1.83,
+        "avg": 2.17,
         "makePct": 17
       },
       {
         "label": "3\u20136 ft",
         "n": 17,
-        "avg": 2.24,
-        "makePct": 6
+        "avg": 1.94,
+        "makePct": 24
       },
       {
         "label": "6\u201310 ft",
         "n": 41,
-        "avg": 1.93,
-        "makePct": 20
+        "avg": 1.9,
+        "makePct": 29
       },
       {
         "label": "10\u201320 ft",
-        "n": 134,
+        "n": 144,
         "avg": 2.04,
-        "makePct": 13
+        "makePct": 16
       },
       {
         "label": "20\u201340 ft",
-        "n": 259,
-        "avg": 2.05,
-        "makePct": 13
+        "n": 238,
+        "avg": 2.07,
+        "makePct": 16
       },
       {
         "label": "40+ ft",
-        "n": 60,
-        "avg": 2.17,
-        "makePct": 12
+        "n": 42,
+        "avg": 2.33,
+        "makePct": 2
       }
     ]
   },
   "priorityMetrics": {
     "thisRound": {
       "penalties18": {
-        "value": 1.0,
-        "nRounds": 1,
-        "nObs": 18
-      },
-      "doubles18": {
-        "value": 3.0,
-        "nRounds": 1,
-        "nObs": 18
-      },
-      "cleanSecondShotPct": {
-        "value": 40,
-        "nRounds": 1,
-        "nObs": 5
-      },
-      "recoveryOneShotPct": {
-        "value": 100,
-        "nRounds": 1,
-        "nObs": 3
-      },
-      "normalApproachGirPct": {
-        "value": 15,
-        "nRounds": 1,
-        "nObs": 20
-      },
-      "upDownPct": {
-        "value": 8,
-        "nRounds": 1,
-        "nObs": 13
-      },
-      "make3to6Pct": {
-        "value": 0,
-        "nRounds": 1,
-        "nObs": 1
-      },
-      "make6to10Pct": {
-        "value": 50,
-        "nRounds": 1,
-        "nObs": 2
-      },
-      "threePutt30PlusPct": {
-        "value": 11,
+        "value": 2.0,
         "nRounds": 1,
         "nObs": 9
+      },
+      "doubles18": {
+        "value": 6.0,
+        "nRounds": 1,
+        "nObs": 9
+      },
+      "cleanSecondShotPct": {
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
+      },
+      "recoveryOneShotPct": {
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
+      },
+      "normalApproachGirPct": {
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
+      },
+      "upDownPct": {
+        "value": 0,
+        "nRounds": 1,
+        "nObs": 8
+      },
+      "make3to6Pct": {
+        "value": null,
+        "nRounds": 1,
+        "nObs": 0
+      },
+      "make6to10Pct": {
+        "value": null,
+        "nRounds": 1,
+        "nObs": 0
+      },
+      "threePutt30PlusPct": {
+        "value": null,
+        "nRounds": 1,
+        "nObs": 0
       }
     },
     "last5": {
       "penalties18": {
-        "value": 1.8,
+        "value": 2.4,
         "nRounds": 5,
-        "nObs": 72
+        "nObs": 68
       },
       "doubles18": {
-        "value": 5.5,
+        "value": 4.2,
         "nRounds": 5,
-        "nObs": 72
+        "nObs": 68
       },
       "cleanSecondShotPct": {
-        "value": 69,
-        "nRounds": 3,
-        "nObs": 13
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "recoveryOneShotPct": {
-        "value": 100,
-        "nRounds": 3,
-        "nObs": 6
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "normalApproachGirPct": {
-        "value": 8,
-        "nRounds": 3,
-        "nObs": 49
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "upDownPct": {
-        "value": 5,
+        "value": 11,
         "nRounds": 5,
-        "nObs": 57
+        "nObs": 47
       },
       "make3to6Pct": {
-        "value": 0,
+        "value": null,
         "nRounds": 5,
-        "nObs": 2
+        "nObs": 0
       },
       "make6to10Pct": {
-        "value": 25,
+        "value": null,
         "nRounds": 5,
-        "nObs": 4
+        "nObs": 0
       },
       "threePutt30PlusPct": {
-        "value": 15,
+        "value": null,
         "nRounds": 5,
-        "nObs": 39
+        "nObs": 0
       }
     },
     "last10": {
       "penalties18": {
-        "value": 1.1,
+        "value": 4.1,
         "nRounds": 10,
-        "nObs": 135
+        "nObs": 158
       },
       "doubles18": {
-        "value": 4.8,
+        "value": 6.6,
         "nRounds": 10,
-        "nObs": 135
+        "nObs": 158
       },
       "cleanSecondShotPct": {
-        "value": 67,
-        "nRounds": 4,
-        "nObs": 18
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "recoveryOneShotPct": {
-        "value": 85,
-        "nRounds": 4,
-        "nObs": 13
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "normalApproachGirPct": {
-        "value": 10,
-        "nRounds": 4,
-        "nObs": 73
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "upDownPct": {
-        "value": 6,
+        "value": 9,
         "nRounds": 10,
-        "nObs": 106
+        "nObs": 116
       },
       "make3to6Pct": {
-        "value": 0,
+        "value": null,
         "nRounds": 10,
-        "nObs": 4
+        "nObs": 0
       },
       "make6to10Pct": {
-        "value": 10,
+        "value": null,
         "nRounds": 10,
-        "nObs": 10
+        "nObs": 0
       },
       "threePutt30PlusPct": {
-        "value": 12,
+        "value": null,
         "nRounds": 10,
-        "nObs": 67
+        "nObs": 0
       }
     },
     "last20": {
       "penalties18": {
-        "value": 1.9,
+        "value": 4.3,
         "nRounds": 20,
-        "nObs": 279
+        "nObs": 323
       },
       "doubles18": {
-        "value": 5.5,
+        "value": 6.9,
         "nRounds": 20,
-        "nObs": 279
+        "nObs": 323
       },
       "cleanSecondShotPct": {
-        "value": 67,
-        "nRounds": 4,
-        "nObs": 18
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "recoveryOneShotPct": {
-        "value": 85,
-        "nRounds": 4,
-        "nObs": 13
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "normalApproachGirPct": {
-        "value": 10,
-        "nRounds": 4,
-        "nObs": 73
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "upDownPct": {
-        "value": 6,
+        "value": 8,
         "nRounds": 20,
-        "nObs": 211
+        "nObs": 237
       },
       "make3to6Pct": {
-        "value": 12,
+        "value": null,
         "nRounds": 20,
-        "nObs": 8
+        "nObs": 0
       },
       "make6to10Pct": {
-        "value": 18,
+        "value": null,
         "nRounds": 20,
-        "nObs": 17
+        "nObs": 0
       },
       "threePutt30PlusPct": {
-        "value": 13,
+        "value": null,
         "nRounds": 20,
-        "nObs": 148
+        "nObs": 0
       }
     },
     "allTime": {
       "penalties18": {
-        "value": 2.2,
-        "nRounds": 44,
-        "nObs": 585
+        "value": 3.8,
+        "nRounds": 83,
+        "nObs": 1429
       },
       "doubles18": {
-        "value": 6.4,
-        "nRounds": 44,
-        "nObs": 585
+        "value": 5.6,
+        "nRounds": 83,
+        "nObs": 1429
       },
       "cleanSecondShotPct": {
-        "value": 67,
-        "nRounds": 4,
-        "nObs": 18
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "recoveryOneShotPct": {
-        "value": 85,
-        "nRounds": 4,
-        "nObs": 13
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "normalApproachGirPct": {
-        "value": 10,
-        "nRounds": 4,
-        "nObs": 73
+        "value": null,
+        "nRounds": 0,
+        "nObs": 0
       },
       "upDownPct": {
-        "value": 8,
-        "nRounds": 44,
-        "nObs": 463
+        "value": 12,
+        "nRounds": 83,
+        "nObs": 989
       },
       "make3to6Pct": {
-        "value": 6,
-        "nRounds": 44,
+        "value": 24,
+        "nRounds": 83,
         "nObs": 17
       },
       "make6to10Pct": {
-        "value": 20,
-        "nRounds": 44,
+        "value": 29,
+        "nRounds": 83,
         "nObs": 41
       },
       "threePutt30PlusPct": {
-        "value": 18,
-        "nRounds": 44,
-        "nObs": 319
+        "value": 25,
+        "nRounds": 83,
+        "nObs": 280
       }
     }
   },
@@ -587,78 +587,363 @@
       "goal": 90,
       "quarters": [
         {
-          "q": "2025-Q4",
-          "rounds": 4,
-          "holes": 72,
-          "avgScore": 107.0,
-          "overRating18": 38.0,
-          "pen18": 6.5,
-          "dbl18": 11.3,
-          "tp18": 7.9,
-          "girPct": 14.0,
-          "fwPct": 83.0,
+          "q": "2018-Q2",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 87.0,
+          "overRating18": 14.9,
+          "pen18": null,
+          "dbl18": 2.0,
+          "tp18": null,
+          "girPct": null,
+          "fwPct": 33.0,
           "mix": {
             "birdie": 0.0,
-            "par": 11.1,
-            "bogey": 26.4,
-            "double": 62.5
+            "par": 27.8,
+            "bogey": 61.1,
+            "double": 11.1
+          },
+          "thin": true
+        },
+        {
+          "q": "2018-Q3",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 88.0,
+          "overRating18": 16.1,
+          "pen18": null,
+          "dbl18": 4.0,
+          "tp18": 1.0,
+          "girPct": 39.0,
+          "fwPct": 14.0,
+          "mix": {
+            "birdie": 5.6,
+            "par": 33.3,
+            "bogey": 38.9,
+            "double": 22.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2019-Q2",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 91.0,
+          "overRating18": 18.9,
+          "pen18": null,
+          "dbl18": 3.0,
+          "tp18": 4.0,
+          "girPct": 17.0,
+          "fwPct": 22.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 22.2,
+            "bogey": 61.1,
+            "double": 16.7
+          },
+          "thin": true
+        },
+        {
+          "q": "2019-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 89.3,
+          "overRating18": 17.8,
+          "pen18": null,
+          "dbl18": 5.0,
+          "tp18": 2.0,
+          "girPct": 35.0,
+          "fwPct": 26.0,
+          "mix": {
+            "birdie": 2.8,
+            "par": 34.3,
+            "bogey": 35.2,
+            "double": 27.8
           },
           "thin": false
         },
         {
-          "q": "2026-Q1",
+          "q": "2020-Q2",
           "rounds": 3,
           "holes": 54,
-          "avgScore": 104.3,
-          "overRating18": 34.0,
-          "pen18": 6.9,
-          "dbl18": 11.0,
-          "tp18": 8.3,
-          "girPct": 19.0,
-          "fwPct": 72.0,
+          "avgScore": 92.3,
+          "overRating18": 21.4,
+          "pen18": 2.0,
+          "dbl18": 6.0,
+          "tp18": 3.3,
+          "girPct": 22.0,
+          "fwPct": 40.0,
           "mix": {
             "birdie": 1.9,
-            "par": 9.3,
-            "bogey": 27.8,
-            "double": 61.1
+            "par": 18.5,
+            "bogey": 46.3,
+            "double": 33.3
           },
           "thin": false
+        },
+        {
+          "q": "2020-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 89.2,
+          "overRating18": 18.3,
+          "pen18": 6.7,
+          "dbl18": 4.5,
+          "tp18": 2.5,
+          "girPct": 28.0,
+          "fwPct": 47.0,
+          "mix": {
+            "birdie": 3.7,
+            "par": 28.7,
+            "bogey": 42.6,
+            "double": 25.0
+          },
+          "thin": false
+        },
+        {
+          "q": "2021-Q2",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 92.0,
+          "overRating18": 22.0,
+          "pen18": 4.0,
+          "dbl18": 4.0,
+          "tp18": 2.0,
+          "girPct": 22.0,
+          "fwPct": 43.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 27.8,
+            "bogey": 50.0,
+            "double": 22.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2021-Q3",
+          "rounds": 4,
+          "holes": 72,
+          "avgScore": 93.0,
+          "overRating18": 21.1,
+          "pen18": 4.3,
+          "dbl18": 6.0,
+          "tp18": 3.8,
+          "girPct": 26.0,
+          "fwPct": 33.0,
+          "mix": {
+            "birdie": 1.4,
+            "par": 25.0,
+            "bogey": 40.3,
+            "double": 33.3
+          },
+          "thin": false
+        },
+        {
+          "q": "2022-Q2",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 99.5,
+          "overRating18": 27.4,
+          "pen18": 4.5,
+          "dbl18": 8.5,
+          "tp18": 6.0,
+          "girPct": 28.0,
+          "fwPct": 23.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 16.7,
+            "bogey": 36.1,
+            "double": 47.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2022-Q3",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 93.0,
+          "overRating18": 22.7,
+          "pen18": 2.7,
+          "dbl18": 6.0,
+          "tp18": 4.7,
+          "girPct": 26.0,
+          "fwPct": 44.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 25.9,
+            "bogey": 38.9,
+            "double": 33.3
+          },
+          "thin": false
+        },
+        {
+          "q": "2023-Q2",
+          "rounds": 5,
+          "holes": 90,
+          "avgScore": 94.2,
+          "overRating18": 23.0,
+          "pen18": 8.5,
+          "dbl18": 6.2,
+          "tp18": 3.8,
+          "girPct": 34.0,
+          "fwPct": 46.0,
+          "mix": {
+            "birdie": 1.1,
+            "par": 26.7,
+            "bogey": 37.8,
+            "double": 34.4
+          },
+          "thin": false
+        },
+        {
+          "q": "2023-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 88.5,
+          "overRating18": 17.3,
+          "pen18": 5.1,
+          "dbl18": 3.5,
+          "tp18": 3.7,
+          "girPct": 39.0,
+          "fwPct": 41.0,
+          "mix": {
+            "birdie": 2.8,
+            "par": 35.2,
+            "bogey": 42.6,
+            "double": 19.4
+          },
+          "thin": false
+        },
+        {
+          "q": "2024-Q2",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 92.0,
+          "overRating18": 21.8,
+          "pen18": 6.0,
+          "dbl18": 4.7,
+          "tp18": 3.7,
+          "girPct": 28.0,
+          "fwPct": 32.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 27.8,
+            "bogey": 44.4,
+            "double": 25.9
+          },
+          "thin": false
+        },
+        {
+          "q": "2024-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 91.3,
+          "overRating18": 20.1,
+          "pen18": 3.8,
+          "dbl18": 5.2,
+          "tp18": 2.8,
+          "girPct": 23.0,
+          "fwPct": 40.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 30.6,
+            "bogey": 40.7,
+            "double": 28.7
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q2",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 96.7,
+          "overRating18": 26.6,
+          "pen18": 3.8,
+          "dbl18": 6.3,
+          "tp18": 5.0,
+          "girPct": 35.0,
+          "fwPct": 40.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 33.3,
+            "bogey": 29.6,
+            "double": 35.2
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q3",
+          "rounds": 8,
+          "holes": 144,
+          "avgScore": 90.9,
+          "overRating18": 20.0,
+          "pen18": 3.8,
+          "dbl18": 5.4,
+          "tp18": 3.1,
+          "girPct": 31.0,
+          "fwPct": 38.0,
+          "mix": {
+            "birdie": 4.2,
+            "par": 28.5,
+            "bogey": 37.5,
+            "double": 29.9
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q4",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 94.0,
+          "overRating18": 23.9,
+          "pen18": 3.0,
+          "dbl18": 7.0,
+          "tp18": 4.0,
+          "girPct": 33.0,
+          "fwPct": 29.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 22.2,
+            "bogey": 38.9,
+            "double": 38.9
+          },
+          "thin": true
         },
         {
           "q": "2026-Q2",
-          "rounds": 11,
-          "holes": 198,
-          "avgScore": 99.2,
-          "overRating18": 32.2,
-          "pen18": 2.7,
-          "dbl18": 9.6,
-          "tp18": 4.0,
-          "girPct": 11.0,
-          "fwPct": 53.0,
+          "rounds": 5,
+          "holes": 90,
+          "avgScore": 96.4,
+          "overRating18": 26.3,
+          "pen18": 5.1,
+          "dbl18": 6.8,
+          "tp18": 3.4,
+          "girPct": 21.0,
+          "fwPct": 36.0,
           "mix": {
-            "birdie": 0.5,
-            "par": 12.6,
-            "bogey": 33.3,
-            "double": 53.5
+            "birdie": 4.4,
+            "par": 15.6,
+            "bogey": 42.2,
+            "double": 37.8
           },
           "thin": false
         },
         {
           "q": "2026-Q3",
-          "rounds": 14,
-          "holes": 252,
-          "avgScore": 96.0,
-          "overRating18": 28.2,
-          "pen18": 2.4,
-          "dbl18": 7.0,
-          "tp18": 1.9,
-          "girPct": 17.0,
-          "fwPct": 51.0,
+          "rounds": 8,
+          "holes": 144,
+          "avgScore": 97.4,
+          "overRating18": 27.1,
+          "pen18": 5.2,
+          "dbl18": 7.6,
+          "tp18": 3.5,
+          "girPct": 26.0,
+          "fwPct": 33.0,
           "mix": {
-            "birdie": 1.2,
-            "par": 19.4,
-            "bogey": 40.5,
-            "double": 38.9
+            "birdie": 0.7,
+            "par": 24.3,
+            "bogey": 32.6,
+            "double": 42.4
           },
           "thin": false
         }
@@ -670,78 +955,97 @@
       "goal": 45,
       "quarters": [
         {
-          "q": "2025-Q4",
+          "q": "2019-Q2",
           "rounds": 1,
-          "holes": 9,
-          "avgScore": 49.0,
-          "overRating18": 39.4,
+          "holes": 18,
+          "avgScore": 47.0,
+          "overRating18": -50.2,
           "pen18": null,
-          "dbl18": 14.0,
-          "tp18": 14.0,
+          "dbl18": 3.0,
+          "tp18": 4.0,
           "girPct": 22.0,
-          "fwPct": 0.0,
+          "fwPct": 11.0,
           "mix": {
             "birdie": 0.0,
             "par": 11.1,
-            "bogey": 11.1,
-            "double": 77.8
+            "bogey": 22.2,
+            "double": 16.7
           },
           "thin": true
         },
         {
-          "q": "2026-Q1",
-          "rounds": 2,
+          "q": "2024-Q2",
+          "rounds": 1,
           "holes": 18,
-          "avgScore": 42.0,
-          "overRating18": 23.4,
+          "avgScore": 45.0,
+          "overRating18": null,
           "pen18": 0.0,
-          "dbl18": 8.0,
-          "tp18": 6.0,
-          "girPct": 17.0,
-          "fwPct": 33.0,
+          "dbl18": 3.0,
+          "tp18": 4.0,
+          "girPct": 33.0,
+          "fwPct": 43.0,
           "mix": {
             "birdie": 0.0,
             "par": 16.7,
-            "bogey": 38.9,
-            "double": 44.4
+            "bogey": 16.7,
+            "double": 16.7
           },
           "thin": true
         },
         {
-          "q": "2026-Q2",
-          "rounds": 12,
-          "holes": 108,
-          "avgScore": 39.7,
-          "overRating18": 19.4,
-          "pen18": 1.2,
-          "dbl18": 4.5,
-          "tp18": 3.7,
-          "girPct": 28.0,
-          "fwPct": 56.0,
+          "q": "2025-Q3",
+          "rounds": 2,
+          "holes": 27,
+          "avgScore": 62.5,
+          "overRating18": 17.0,
+          "pen18": 2.9,
+          "dbl18": 6.7,
+          "tp18": 3.6,
+          "girPct": 24.0,
+          "fwPct": 29.0,
           "mix": {
-            "birdie": 1.9,
-            "par": 22.2,
-            "bogey": 50.9,
+            "birdie": 3.7,
+            "par": 25.9,
+            "bogey": 25.9,
+            "double": 37.0
+          },
+          "thin": true
+        },
+        {
+          "q": "2025-Q4",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 59.0,
+          "overRating18": -21.6,
+          "pen18": 3.3,
+          "dbl18": 4.5,
+          "tp18": 4.1,
+          "girPct": 36.0,
+          "fwPct": 21.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 16.7,
+            "bogey": 19.4,
             "double": 25.0
           },
-          "thin": false
+          "thin": true
         },
         {
           "q": "2026-Q3",
-          "rounds": 13,
-          "holes": 117,
-          "avgScore": 37.2,
-          "overRating18": 14.6,
-          "pen18": 1.1,
-          "dbl18": 2.9,
-          "tp18": 2.5,
-          "girPct": 34.0,
-          "fwPct": 72.0,
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 53.7,
+          "overRating18": -32.6,
+          "pen18": 1.7,
+          "dbl18": 2.3,
+          "tp18": 4.5,
+          "girPct": 28.0,
+          "fwPct": 48.0,
           "mix": {
-            "birdie": 4.3,
-            "par": 29.9,
-            "bogey": 49.6,
-            "double": 16.2
+            "birdie": 1.9,
+            "par": 14.8,
+            "bogey": 29.6,
+            "double": 13.0
           },
           "thin": false
         }
@@ -753,78 +1057,363 @@
       "goal": 90,
       "quarters": [
         {
-          "q": "2025-Q4",
-          "rounds": 5,
-          "holes": 81,
-          "avgScore": 105.2,
-          "overRating18": 38.4,
-          "pen18": 6.5,
-          "dbl18": 11.6,
-          "tp18": 8.6,
-          "girPct": 15.0,
-          "fwPct": 76.0,
+          "q": "2018-Q2",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 87.0,
+          "overRating18": 14.9,
+          "pen18": null,
+          "dbl18": 2.0,
+          "tp18": null,
+          "girPct": null,
+          "fwPct": 33.0,
           "mix": {
             "birdie": 0.0,
-            "par": 11.1,
-            "bogey": 24.7,
-            "double": 64.2
+            "par": 27.8,
+            "bogey": 61.1,
+            "double": 11.1
+          },
+          "thin": true
+        },
+        {
+          "q": "2018-Q3",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 88.0,
+          "overRating18": 16.1,
+          "pen18": null,
+          "dbl18": 4.0,
+          "tp18": 1.0,
+          "girPct": 39.0,
+          "fwPct": 14.0,
+          "mix": {
+            "birdie": 5.6,
+            "par": 33.3,
+            "bogey": 38.9,
+            "double": 22.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2019-Q2",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 92.5,
+          "overRating18": -15.6,
+          "pen18": null,
+          "dbl18": 3.0,
+          "tp18": 4.0,
+          "girPct": 19.0,
+          "fwPct": 19.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 16.7,
+            "bogey": 41.7,
+            "double": 16.7
+          },
+          "thin": true
+        },
+        {
+          "q": "2019-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 89.3,
+          "overRating18": 17.8,
+          "pen18": null,
+          "dbl18": 5.0,
+          "tp18": 2.0,
+          "girPct": 35.0,
+          "fwPct": 26.0,
+          "mix": {
+            "birdie": 2.8,
+            "par": 34.3,
+            "bogey": 35.2,
+            "double": 27.8
           },
           "thin": false
         },
         {
-          "q": "2026-Q1",
-          "rounds": 5,
+          "q": "2020-Q2",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 92.3,
+          "overRating18": 21.4,
+          "pen18": 2.0,
+          "dbl18": 6.0,
+          "tp18": 3.3,
+          "girPct": 22.0,
+          "fwPct": 40.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 18.5,
+            "bogey": 46.3,
+            "double": 33.3
+          },
+          "thin": false
+        },
+        {
+          "q": "2020-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 89.2,
+          "overRating18": 18.3,
+          "pen18": 6.7,
+          "dbl18": 4.5,
+          "tp18": 2.5,
+          "girPct": 28.0,
+          "fwPct": 47.0,
+          "mix": {
+            "birdie": 3.7,
+            "par": 28.7,
+            "bogey": 42.6,
+            "double": 25.0
+          },
+          "thin": false
+        },
+        {
+          "q": "2021-Q2",
+          "rounds": 1,
+          "holes": 18,
+          "avgScore": 92.0,
+          "overRating18": 22.0,
+          "pen18": 4.0,
+          "dbl18": 4.0,
+          "tp18": 2.0,
+          "girPct": 22.0,
+          "fwPct": 43.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 27.8,
+            "bogey": 50.0,
+            "double": 22.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2021-Q3",
+          "rounds": 4,
           "holes": 72,
-          "avgScore": 96.2,
-          "overRating18": 28.7,
-          "pen18": 5.7,
-          "dbl18": 10.3,
-          "tp18": 7.7,
-          "girPct": 19.0,
-          "fwPct": 67.0,
+          "avgScore": 93.0,
+          "overRating18": 21.1,
+          "pen18": 4.3,
+          "dbl18": 6.0,
+          "tp18": 3.8,
+          "girPct": 26.0,
+          "fwPct": 33.0,
           "mix": {
             "birdie": 1.4,
-            "par": 11.1,
-            "bogey": 30.6,
-            "double": 56.9
+            "par": 25.0,
+            "bogey": 40.3,
+            "double": 33.3
+          },
+          "thin": false
+        },
+        {
+          "q": "2022-Q2",
+          "rounds": 2,
+          "holes": 36,
+          "avgScore": 99.5,
+          "overRating18": 27.4,
+          "pen18": 4.5,
+          "dbl18": 8.5,
+          "tp18": 6.0,
+          "girPct": 28.0,
+          "fwPct": 23.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 16.7,
+            "bogey": 36.1,
+            "double": 47.2
+          },
+          "thin": true
+        },
+        {
+          "q": "2022-Q3",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 93.0,
+          "overRating18": 22.7,
+          "pen18": 2.7,
+          "dbl18": 6.0,
+          "tp18": 4.7,
+          "girPct": 26.0,
+          "fwPct": 44.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 25.9,
+            "bogey": 38.9,
+            "double": 33.3
+          },
+          "thin": false
+        },
+        {
+          "q": "2023-Q2",
+          "rounds": 5,
+          "holes": 90,
+          "avgScore": 94.2,
+          "overRating18": 23.0,
+          "pen18": 8.5,
+          "dbl18": 6.2,
+          "tp18": 3.8,
+          "girPct": 34.0,
+          "fwPct": 46.0,
+          "mix": {
+            "birdie": 1.1,
+            "par": 26.7,
+            "bogey": 37.8,
+            "double": 34.4
+          },
+          "thin": false
+        },
+        {
+          "q": "2023-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 88.5,
+          "overRating18": 17.3,
+          "pen18": 5.1,
+          "dbl18": 3.5,
+          "tp18": 3.7,
+          "girPct": 39.0,
+          "fwPct": 41.0,
+          "mix": {
+            "birdie": 2.8,
+            "par": 35.2,
+            "bogey": 42.6,
+            "double": 19.4
+          },
+          "thin": false
+        },
+        {
+          "q": "2024-Q2",
+          "rounds": 4,
+          "holes": 72,
+          "avgScore": 91.5,
+          "overRating18": 21.8,
+          "pen18": 4.9,
+          "dbl18": 4.3,
+          "tp18": 3.7,
+          "girPct": 29.0,
+          "fwPct": 33.0,
+          "mix": {
+            "birdie": 1.4,
+            "par": 25.0,
+            "bogey": 37.5,
+            "double": 23.6
+          },
+          "thin": false
+        },
+        {
+          "q": "2024-Q3",
+          "rounds": 6,
+          "holes": 108,
+          "avgScore": 91.3,
+          "overRating18": 20.1,
+          "pen18": 3.8,
+          "dbl18": 5.2,
+          "tp18": 2.8,
+          "girPct": 23.0,
+          "fwPct": 40.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 30.6,
+            "bogey": 40.7,
+            "double": 28.7
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q2",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 96.7,
+          "overRating18": 26.6,
+          "pen18": 3.8,
+          "dbl18": 6.3,
+          "tp18": 5.0,
+          "girPct": 35.0,
+          "fwPct": 40.0,
+          "mix": {
+            "birdie": 1.9,
+            "par": 33.3,
+            "bogey": 29.6,
+            "double": 35.2
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q3",
+          "rounds": 10,
+          "holes": 171,
+          "avgScore": 90.9,
+          "overRating18": 19.4,
+          "pen18": 3.7,
+          "dbl18": 5.6,
+          "tp18": 3.2,
+          "girPct": 30.0,
+          "fwPct": 37.0,
+          "mix": {
+            "birdie": 4.1,
+            "par": 28.1,
+            "bogey": 35.7,
+            "double": 31.0
+          },
+          "thin": false
+        },
+        {
+          "q": "2025-Q4",
+          "rounds": 3,
+          "holes": 54,
+          "avgScore": 96.1,
+          "overRating18": -6.4,
+          "pen18": 3.2,
+          "dbl18": 5.3,
+          "tp18": 4.1,
+          "girPct": 35.0,
+          "fwPct": 24.0,
+          "mix": {
+            "birdie": 0.0,
+            "par": 18.5,
+            "bogey": 25.9,
+            "double": 29.6
           },
           "thin": false
         },
         {
           "q": "2026-Q2",
-          "rounds": 23,
-          "holes": 306,
-          "avgScore": 88.8,
-          "overRating18": 25.2,
-          "pen18": 2.2,
-          "dbl18": 7.8,
-          "tp18": 3.9,
-          "girPct": 17.0,
-          "fwPct": 54.0,
+          "rounds": 5,
+          "holes": 90,
+          "avgScore": 96.4,
+          "overRating18": 26.3,
+          "pen18": 5.1,
+          "dbl18": 6.8,
+          "tp18": 3.4,
+          "girPct": 21.0,
+          "fwPct": 36.0,
           "mix": {
-            "birdie": 1.0,
-            "par": 16.0,
-            "bogey": 39.5,
-            "double": 43.5
+            "birdie": 4.4,
+            "par": 15.6,
+            "bogey": 42.2,
+            "double": 37.8
           },
           "thin": false
         },
         {
           "q": "2026-Q3",
-          "rounds": 27,
-          "holes": 369,
-          "avgScore": 85.6,
-          "overRating18": 21.7,
-          "pen18": 2.0,
-          "dbl18": 5.7,
-          "tp18": 2.1,
-          "girPct": 23.0,
-          "fwPct": 54.0,
+          "rounds": 11,
+          "holes": 198,
+          "avgScore": 95.6,
+          "overRating18": 10.8,
+          "pen18": 4.5,
+          "dbl18": 6.2,
+          "tp18": 3.7,
+          "girPct": 27.0,
+          "fwPct": 36.0,
           "mix": {
-            "birdie": 2.2,
-            "par": 22.8,
-            "bogey": 43.4,
-            "double": 31.7
+            "birdie": 1.0,
+            "par": 21.7,
+            "bogey": 31.8,
+            "double": 34.3
           },
           "thin": false
         }
@@ -833,815 +1422,1518 @@
   },
   "timeSeries": [
     {
-      "date": "2026-05-03",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 36,
-      "holes": 9,
-      "overRating18": 14.0,
+      "date": "2018-06-28",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 87,
+      "holes": 18,
+      "overRating18": 14.9,
       "per18": {
-        "offTee": -3.8,
-        "longApproach": -0.8,
-        "midApproach": -16.6,
-        "inside50": -0.8,
-        "putting": 2.4
+        "offTee": -4.3,
+        "longApproach": -4.4,
+        "midApproach": -2.0,
+        "inside50": -1.0,
+        "putting": 0.0
       },
       "pen18": 0.0,
       "dbl18": 2.0,
-      "tp18": 2.0,
-      "putts18": 30.0,
-      "clean": false
-    },
-    {
-      "date": "2026-05-06",
-      "course": "Jimmy Clay Golf Course ~ Jimmy Clay",
-      "score": 106,
-      "holes": 18,
-      "overRating18": 36.9,
-      "per18": {
-        "offTee": -5.8,
-        "longApproach": -10.0,
-        "midApproach": -10.2,
-        "inside50": -9.3,
-        "putting": -8.2
-      },
-      "pen18": 1.0,
-      "dbl18": 10.0,
-      "tp18": 5.0,
-      "putts18": 41.0,
+      "tp18": 0.0,
+      "putts18": 0.0,
       "clean": true
     },
     {
-      "date": "2026-05-15",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole/Nine Hole",
-      "score": 92,
+      "date": "2018-07-23",
+      "course": "St. Arild Golfklubb",
+      "score": 88,
       "holes": 18,
-      "overRating18": 31.4,
+      "overRating18": 16.3,
       "per18": {
-        "offTee": -4.2,
-        "longApproach": -8.6,
-        "midApproach": -4.9,
-        "inside50": -7.3,
-        "putting": -8.1
+        "offTee": 0.0,
+        "longApproach": 0.0,
+        "midApproach": 0.0,
+        "inside50": 0.0,
+        "putting": 0.0
       },
-      "pen18": 6.0,
-      "dbl18": 11.0,
-      "tp18": 7.0,
-      "putts18": 40.0,
+      "pen18": 0.0,
+      "dbl18": 3.0,
+      "tp18": 0.0,
+      "putts18": 0.0,
       "clean": true
     },
     {
-      "date": "2026-05-25",
-      "course": "Hancock Golf Course",
+      "date": "2018-08-05",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 88,
+      "holes": 18,
+      "overRating18": 15.9,
+      "per18": {
+        "offTee": 0.0,
+        "longApproach": 0.0,
+        "midApproach": 0.0,
+        "inside50": 0.0,
+        "putting": 0.0
+      },
+      "pen18": 0.0,
+      "dbl18": 5.0,
+      "tp18": 1.0,
+      "putts18": 29.0,
+      "clean": true
+    },
+    {
+      "date": "2019-06-02",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 91,
+      "holes": 18,
+      "overRating18": 18.9,
+      "per18": {
+        "offTee": -6.0,
+        "longApproach": -6.5,
+        "midApproach": -4.3,
+        "inside50": -3.2,
+        "putting": 0.0
+      },
+      "pen18": 0.0,
+      "dbl18": 3.0,
+      "tp18": 4.0,
+      "putts18": 32.0,
+      "clean": true
+    },
+    {
+      "date": "2019-06-21",
+      "course": "Alings\u00e5s Golfklubb",
       "score": 47,
       "holes": 9,
-      "overRating18": 28.8,
+      "overRating18": -50.2,
       "per18": {
-        "offTee": -30.5,
-        "longApproach": -17.7,
-        "midApproach": -26.9,
-        "inside50": -21.6,
-        "putting": -1.6
+        "offTee": -1.0,
+        "longApproach": 0.0,
+        "midApproach": 0.0,
+        "inside50": -2.1,
+        "putting": 0.0
       },
       "pen18": 0.0,
       "dbl18": 6.0,
       "tp18": 4.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2019-07-07",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 88,
+      "holes": 18,
+      "overRating18": 15.9,
+      "per18": {
+        "offTee": -5.2,
+        "longApproach": -2.6,
+        "midApproach": -1.1,
+        "inside50": -1.5,
+        "putting": 0.0
+      },
+      "pen18": 0.0,
+      "dbl18": 6.0,
+      "tp18": 3.0,
       "putts18": 36.0,
-      "clean": false
+      "clean": true
     },
     {
-      "date": "2026-05-27",
-      "course": "Falconhead Golf Club",
-      "score": 101,
+      "date": "2019-07-19",
+      "course": "Sotenas Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 95,
       "holes": 18,
-      "overRating18": 32.3,
+      "overRating18": 24.7,
       "per18": {
-        "offTee": -6.7,
-        "longApproach": -9.6,
-        "midApproach": -8.4,
-        "inside50": -8.8,
-        "putting": -8.7
+        "offTee": -3.3,
+        "longApproach": -7.5,
+        "midApproach": -1.3,
+        "inside50": -3.2,
+        "putting": 0.0
       },
-      "pen18": 1.0,
-      "dbl18": 10.0,
-      "tp18": 10.0,
-      "putts18": 43.0,
-      "clean": false
+      "pen18": 0.0,
+      "dbl18": 6.0,
+      "tp18": 1.0,
+      "putts18": 37.0,
+      "clean": true
     },
     {
-      "date": "2026-05-29",
-      "course": "Riverside Golf Course",
-      "score": 99,
+      "date": "2019-07-29",
+      "course": "Lerjedalens Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 90,
       "holes": 18,
-      "overRating18": 31.8,
+      "overRating18": 18.2,
       "per18": {
-        "offTee": -6.5,
-        "longApproach": -10.7,
-        "midApproach": -6.0,
-        "inside50": -8.7,
-        "putting": -3.3
+        "offTee": 0.0,
+        "longApproach": 0.0,
+        "midApproach": 0.0,
+        "inside50": 0.0,
+        "putting": 0.0
       },
-      "pen18": 1.0,
-      "dbl18": 9.0,
+      "pen18": 0.0,
+      "dbl18": 4.0,
+      "tp18": 1.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2019-08-11",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 85,
+      "holes": 18,
+      "overRating18": 12.9,
+      "per18": {
+        "offTee": -3.9,
+        "longApproach": -2.7,
+        "midApproach": -1.9,
+        "inside50": -0.9,
+        "putting": 0.0
+      },
+      "pen18": 0.0,
+      "dbl18": 4.0,
       "tp18": 3.0,
       "putts18": 37.0,
       "clean": true
     },
     {
-      "date": "2026-05-30",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 38,
-      "holes": 9,
-      "overRating18": 18.0,
+      "date": "2019-08-12",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 19.3,
       "per18": {
-        "offTee": -8.3,
-        "longApproach": -0.6,
-        "midApproach": -21.9,
-        "inside50": -13.0,
-        "putting": -4.5
+        "offTee": -4.6,
+        "longApproach": -6.2,
+        "midApproach": -3.0,
+        "inside50": -4.3,
+        "putting": 0.0
       },
       "pen18": 0.0,
       "dbl18": 4.0,
       "tp18": 2.0,
-      "putts18": 38.0,
-      "clean": false
+      "putts18": 33.0,
+      "clean": true
     },
     {
-      "date": "2026-06-01",
-      "course": "The Golf Club at Star Ranch",
-      "score": 99,
+      "date": "2019-09-08",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 88,
       "holes": 18,
-      "overRating18": 31.6,
+      "overRating18": 15.9,
       "per18": {
-        "offTee": -5.8,
-        "longApproach": -4.7,
-        "midApproach": -10.4,
-        "inside50": -11.0,
-        "putting": -4.4
-      },
-      "pen18": 5.0,
-      "dbl18": 10.0,
-      "tp18": 3.0,
-      "putts18": 38.0,
-      "clean": true
-    },
-    {
-      "date": "2026-06-04",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 39,
-      "holes": 9,
-      "overRating18": 18.4,
-      "per18": {
-        "offTee": -1.4,
-        "longApproach": -1.2,
-        "midApproach": -4.8,
-        "inside50": -7.8,
-        "putting": -7.5
+        "offTee": -5.0,
+        "longApproach": -4.2,
+        "midApproach": -1.1,
+        "inside50": -1.1,
+        "putting": 0.0
       },
       "pen18": 0.0,
-      "dbl18": 2.0,
-      "tp18": 6.0,
-      "putts18": 42.0,
-      "clean": true
-    },
-    {
-      "date": "2026-06-07",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 37,
-      "holes": 9,
-      "overRating18": 16.0,
-      "per18": {
-        "offTee": -2.3,
-        "longApproach": 0.0,
-        "midApproach": -6.0,
-        "inside50": 1.1,
-        "putting": -5.1
-      },
-      "pen18": 2.0,
-      "dbl18": 2.0,
-      "tp18": 4.0,
-      "putts18": 38.0,
-      "clean": true
-    },
-    {
-      "date": "2026-06-08",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 41,
-      "holes": 9,
-      "overRating18": 21.4,
-      "per18": {
-        "offTee": -2.7,
-        "longApproach": -6.0,
-        "midApproach": -5.0,
-        "inside50": -1.4,
-        "putting": -8.6
-      },
-      "pen18": 0.0,
-      "dbl18": 4.0,
-      "tp18": 6.0,
-      "putts18": 42.0,
-      "clean": true
-    },
-    {
-      "date": "2026-06-10",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 42,
-      "holes": 9,
-      "overRating18": 24.4,
-      "per18": {
-        "offTee": -2.9,
-        "longApproach": -4.5,
-        "midApproach": -6.9,
-        "inside50": -7.4,
-        "putting": -5.0
-      },
-      "pen18": 0.0,
-      "dbl18": 10.0,
-      "tp18": 6.0,
-      "putts18": 40.0,
-      "clean": true
-    },
-    {
-      "date": "2026-06-12",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 37,
-      "holes": 9,
-      "overRating18": 14.4,
-      "per18": {
-        "offTee": -1.4,
-        "longApproach": -2.7,
-        "midApproach": -8.3,
-        "inside50": -4.6,
-        "putting": -1.8
-      },
-      "pen18": 2.0,
-      "dbl18": 2.0,
+      "dbl18": 6.0,
       "tp18": 2.0,
       "putts18": 34.0,
       "clean": true
     },
     {
-      "date": "2026-06-19",
-      "course": "Avery Ranch Golf Club",
-      "score": 97,
+      "date": "2020-05-06",
+      "course": "G\u00f6teborgs Golf Klubb",
+      "score": 94,
       "holes": 18,
-      "overRating18": 29.2,
+      "overRating18": 25.0,
       "per18": {
-        "offTee": -6.0,
-        "longApproach": -7.8,
-        "midApproach": -6.3,
-        "inside50": -4.5,
-        "putting": -3.8
+        "offTee": -4.6,
+        "longApproach": -1.4,
+        "midApproach": -2.8,
+        "inside50": 0.2,
+        "putting": 0.0
       },
-      "pen18": 7.0,
-      "dbl18": 8.0,
+      "pen18": 0.0,
+      "dbl18": 7.0,
       "tp18": 3.0,
       "putts18": 38.0,
       "clean": true
     },
     {
-      "date": "2026-06-22",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 42,
-      "holes": 9,
-      "overRating18": 24.4,
+      "date": "2020-05-16",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 21.9,
       "per18": {
-        "offTee": -3.5,
-        "longApproach": -2.6,
-        "midApproach": -10.0,
-        "inside50": -7.6,
-        "putting": -6.2
+        "offTee": -4.7,
+        "longApproach": -5.8,
+        "midApproach": -3.6,
+        "inside50": 1.4,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 6.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2020-05-23",
+      "course": "Lerjedalens Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 89,
+      "holes": 18,
+      "overRating18": 17.2,
+      "per18": {
+        "offTee": -4.0,
+        "longApproach": -4.3,
+        "midApproach": -5.6,
+        "inside50": -2.4,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 4.0,
+      "tp18": 1.0,
+      "putts18": 35.0,
+      "clean": true
+    },
+    {
+      "date": "2020-07-12",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 91,
+      "holes": 18,
+      "overRating18": 18.9,
+      "per18": {
+        "offTee": -3.8,
+        "longApproach": -4.6,
+        "midApproach": -1.8,
+        "inside50": 2.3,
+        "putting": 0.0
+      },
+      "pen18": 9.0,
+      "dbl18": 4.0,
+      "tp18": 4.0,
+      "putts18": 33.0,
+      "clean": true
+    },
+    {
+      "date": "2020-07-16",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 84,
+      "holes": 18,
+      "overRating18": 13.3,
+      "per18": {
+        "offTee": -2.8,
+        "longApproach": -7.2,
+        "midApproach": -0.7,
+        "inside50": 0.9,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 5.0,
+      "tp18": 0.0,
+      "putts18": 30.0,
+      "clean": true
+    },
+    {
+      "date": "2020-07-21",
+      "course": "Allerum Golfklubb",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 22.9,
+      "per18": {
+        "offTee": -2.0,
+        "longApproach": -4.0,
+        "midApproach": -3.4,
+        "inside50": -3.2,
+        "putting": 0.0
+      },
+      "pen18": 16.0,
+      "dbl18": 6.0,
+      "tp18": 2.0,
+      "putts18": 29.0,
+      "clean": true
+    },
+    {
+      "date": "2020-07-24",
+      "course": "Trelleborg Golfklubb",
+      "score": 88,
+      "holes": 18,
+      "overRating18": 19.3,
+      "per18": {
+        "offTee": -4.2,
+        "longApproach": -4.1,
+        "midApproach": 0.1,
+        "inside50": -1.2,
+        "putting": 0.0
+      },
+      "pen18": 6.0,
+      "dbl18": 3.0,
+      "tp18": 2.0,
+      "putts18": 35.0,
+      "clean": true
+    },
+    {
+      "date": "2020-08-22",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 89,
+      "holes": 18,
+      "overRating18": 18.3,
+      "per18": {
+        "offTee": -4.5,
+        "longApproach": -5.2,
+        "midApproach": -3.0,
+        "inside50": -1.6,
+        "putting": 0.4
       },
       "pen18": 4.0,
+      "dbl18": 4.0,
+      "tp18": 2.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2020-09-06",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 89,
+      "holes": 18,
+      "overRating18": 16.9,
+      "per18": {
+        "offTee": -4.7,
+        "longApproach": -6.6,
+        "midApproach": -2.1,
+        "inside50": 0.5,
+        "putting": -6.4
+      },
+      "pen18": 2.0,
+      "dbl18": 5.0,
+      "tp18": 5.0,
+      "putts18": 37.0,
+      "clean": true
+    },
+    {
+      "date": "2021-05-29",
+      "course": "\u00d6ijared Golfklubb ~ Gamla",
+      "score": 92,
+      "holes": 18,
+      "overRating18": 22.0,
+      "per18": {
+        "offTee": -3.9,
+        "longApproach": -5.5,
+        "midApproach": -3.1,
+        "inside50": -1.2,
+        "putting": -0.9
+      },
+      "pen18": 4.0,
+      "dbl18": 4.0,
+      "tp18": 2.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2021-07-20",
+      "course": "Vasatorps Golfklubb ~ Classic Course",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 22.5,
+      "per18": {
+        "offTee": -3.9,
+        "longApproach": -5.6,
+        "midApproach": -5.6,
+        "inside50": -5.0,
+        "putting": -4.2
+      },
+      "pen18": 1.0,
+      "dbl18": 6.0,
+      "tp18": 3.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2021-07-28",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 17.9,
+      "per18": {
+        "offTee": -5.9,
+        "longApproach": -1.6,
+        "midApproach": -1.4,
+        "inside50": -1.4,
+        "putting": -5.0
+      },
+      "pen18": 9.0,
+      "dbl18": 5.0,
+      "tp18": 4.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2021-08-21",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 98,
+      "holes": 18,
+      "overRating18": 25.9,
+      "per18": {
+        "offTee": -2.6,
+        "longApproach": 0.1,
+        "midApproach": -1.9,
+        "inside50": -3.3,
+        "putting": -4.5
+      },
+      "pen18": 6.0,
       "dbl18": 8.0,
+      "tp18": 3.0,
+      "putts18": 35.0,
+      "clean": true
+    },
+    {
+      "date": "2021-09-18",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 17.9,
+      "per18": {
+        "offTee": -5.4,
+        "longApproach": -6.4,
+        "midApproach": -3.8,
+        "inside50": -0.4,
+        "putting": -5.2
+      },
+      "pen18": 1.0,
+      "dbl18": 5.0,
+      "tp18": 5.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2022-05-15",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 96,
+      "holes": 18,
+      "overRating18": 23.9,
+      "per18": {
+        "offTee": -6.4,
+        "longApproach": -2.9,
+        "midApproach": -5.3,
+        "inside50": -0.3,
+        "putting": -6.7
+      },
+      "pen18": 0.0,
+      "dbl18": 6.0,
+      "tp18": 6.0,
+      "putts18": 40.0,
+      "clean": true
+    },
+    {
+      "date": "2022-06-26",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 103,
+      "holes": 18,
+      "overRating18": 30.9,
+      "per18": {
+        "offTee": -4.2,
+        "longApproach": -3.5,
+        "midApproach": -5.1,
+        "inside50": -2.1,
+        "putting": -6.5
+      },
+      "pen18": 9.0,
+      "dbl18": 11.0,
+      "tp18": 6.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2022-08-01",
+      "course": "Sotenas Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 93,
+      "holes": 18,
+      "overRating18": 22.7,
+      "per18": {
+        "offTee": -4.7,
+        "longApproach": -7.0,
+        "midApproach": -3.7,
+        "inside50": -4.2,
+        "putting": -4.1
+      },
+      "pen18": 1.0,
+      "dbl18": 6.0,
+      "tp18": 4.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2022-08-03",
+      "course": "Sotenas Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 93,
+      "holes": 18,
+      "overRating18": 22.7,
+      "per18": {
+        "offTee": -4.2,
+        "longApproach": -7.8,
+        "midApproach": -1.6,
+        "inside50": -0.9,
+        "putting": -7.1
+      },
+      "pen18": 1.0,
+      "dbl18": 5.0,
+      "tp18": 6.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2022-08-05",
+      "course": "Sotenas Golfklubb ~ 18 H\u00e5lsbanan",
+      "score": 93,
+      "holes": 18,
+      "overRating18": 22.7,
+      "per18": {
+        "offTee": -4.0,
+        "longApproach": -7.6,
+        "midApproach": -1.3,
+        "inside50": -2.4,
+        "putting": -5.3
+      },
+      "pen18": 6.0,
+      "dbl18": 7.0,
+      "tp18": 4.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2023-05-20",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 93,
+      "holes": 18,
+      "overRating18": 20.9,
+      "per18": {
+        "offTee": -5.0,
+        "longApproach": -8.0,
+        "midApproach": -3.3,
+        "inside50": 0.1,
+        "putting": 0.0
+      },
+      "pen18": 7.0,
+      "dbl18": 8.0,
+      "tp18": 2.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2023-05-23",
+      "course": "\u00d6ijared Golfklubb ~ Nya",
+      "score": 98,
+      "holes": 18,
+      "overRating18": 27.6,
+      "per18": {
+        "offTee": -3.6,
+        "longApproach": -5.3,
+        "midApproach": -1.9,
+        "inside50": -4.8,
+        "putting": 0.0
+      },
+      "pen18": 12.0,
+      "dbl18": 7.0,
+      "tp18": 3.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2023-06-04",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 93,
+      "holes": 18,
+      "overRating18": 20.9,
+      "per18": {
+        "offTee": -5.5,
+        "longApproach": -3.5,
+        "midApproach": -5.1,
+        "inside50": -0.5,
+        "putting": 0.0
+      },
+      "pen18": 5.0,
+      "dbl18": 5.0,
+      "tp18": 3.0,
+      "putts18": 37.0,
+      "clean": true
+    },
+    {
+      "date": "2023-06-10",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 91,
+      "holes": 18,
+      "overRating18": 20.3,
+      "per18": {
+        "offTee": -5.1,
+        "longApproach": -4.9,
+        "midApproach": -1.7,
+        "inside50": -4.7,
+        "putting": 0.0
+      },
+      "pen18": 2.0,
+      "dbl18": 6.0,
+      "tp18": 4.0,
+      "putts18": 37.0,
+      "clean": true
+    },
+    {
+      "date": "2023-06-28",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 96,
+      "holes": 18,
+      "overRating18": 25.3,
+      "per18": {
+        "offTee": -4.4,
+        "longApproach": -2.9,
+        "midApproach": 1.3,
+        "inside50": 0.2,
+        "putting": 0.0
+      },
+      "pen18": 15.0,
+      "dbl18": 5.0,
+      "tp18": 7.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2023-07-09",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 89,
+      "holes": 18,
+      "overRating18": 16.9,
+      "per18": {
+        "offTee": -5.3,
+        "longApproach": -3.8,
+        "midApproach": 2.5,
+        "inside50": 1.5,
+        "putting": 0.0
+      },
+      "pen18": 5.0,
+      "dbl18": 4.0,
+      "tp18": 4.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2023-07-13",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 17.9,
+      "per18": {
+        "offTee": -6.7,
+        "longApproach": -5.2,
+        "midApproach": -3.1,
+        "inside50": -2.9,
+        "putting": -4.3
+      },
+      "pen18": 3.0,
+      "dbl18": 5.0,
+      "tp18": 5.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2023-07-14",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 87,
+      "holes": 18,
+      "overRating18": 14.9,
+      "per18": {
+        "offTee": -7.4,
+        "longApproach": -4.8,
+        "midApproach": -1.6,
+        "inside50": -3.7,
+        "putting": -3.6
+      },
+      "pen18": 0.0,
+      "dbl18": 2.0,
+      "tp18": 5.0,
+      "putts18": 38.0,
+      "clean": true
+    },
+    {
+      "date": "2023-07-25",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 86,
+      "holes": 18,
+      "overRating18": 15.3,
+      "per18": {
+        "offTee": -4.4,
+        "longApproach": -6.2,
+        "midApproach": -4.7,
+        "inside50": -2.3,
+        "putting": 0.9
+      },
+      "pen18": 4.0,
+      "dbl18": 2.0,
+      "tp18": 1.0,
+      "putts18": 30.0,
+      "clean": true
+    },
+    {
+      "date": "2023-07-26",
+      "course": "Stora Lundby Golfklubb",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 24.1,
+      "per18": {
+        "offTee": -4.3,
+        "longApproach": -7.1,
+        "midApproach": -3.3,
+        "inside50": -3.2,
+        "putting": -0.1
+      },
+      "pen18": 4.0,
+      "dbl18": 6.0,
+      "tp18": 2.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2023-08-28",
+      "course": "\u00d6ijared Golfklubb ~ Gamla",
+      "score": 85,
+      "holes": 18,
+      "overRating18": 15.0,
+      "per18": {
+        "offTee": -4.0,
+        "longApproach": -3.9,
+        "midApproach": -1.8,
+        "inside50": -3.4,
+        "putting": -4.5
+      },
+      "pen18": 3.0,
+      "dbl18": 2.0,
+      "tp18": 5.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2024-05-01",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 91,
+      "holes": 18,
+      "overRating18": null,
+      "per18": {
+        "offTee": -5.4,
+        "longApproach": -4.4,
+        "midApproach": -1.1,
+        "inside50": -2.7,
+        "putting": -4.8
+      },
+      "pen18": 6.0,
+      "dbl18": 3.0,
+      "tp18": 5.0,
+      "putts18": 37.0,
+      "clean": true
+    },
+    {
+      "date": "2024-05-12",
+      "course": "Herrljunga Golfklubb",
+      "score": 95,
+      "holes": 18,
+      "overRating18": 24.0,
+      "per18": {
+        "offTee": -6.7,
+        "longApproach": -5.4,
+        "midApproach": -3.3,
+        "inside50": -4.0,
+        "putting": -0.0
+      },
+      "pen18": 5.0,
+      "dbl18": 6.0,
+      "tp18": 4.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2024-05-23",
+      "course": "\u00d6ijared Golfklubb ~ Nya",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 19.6,
+      "per18": {
+        "offTee": -4.5,
+        "longApproach": -4.1,
+        "midApproach": -6.5,
+        "inside50": -2.6,
+        "putting": -4.2
+      },
+      "pen18": 2.0,
+      "dbl18": 5.0,
+      "tp18": 2.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2024-06-08",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 45,
+      "holes": 9,
+      "overRating18": null,
+      "per18": {
+        "offTee": -5.3,
+        "longApproach": -5.6,
+        "midApproach": -1.7,
+        "inside50": -4.7,
+        "putting": -7.9
+      },
+      "pen18": 0.0,
+      "dbl18": 6.0,
       "tp18": 4.0,
       "putts18": 40.0,
       "clean": true
     },
     {
-      "date": "2026-06-24",
-      "course": "Teravista Golf Club",
-      "score": 103,
+      "date": "2024-07-31",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 93,
       "holes": 18,
-      "overRating18": 32.5,
+      "overRating18": 20.9,
       "per18": {
-        "offTee": -6.2,
-        "longApproach": -9.3,
-        "midApproach": -7.9,
-        "inside50": -7.6,
-        "putting": -4.1
+        "offTee": -7.7,
+        "longApproach": -10.2,
+        "midApproach": -2.8,
+        "inside50": -2.1,
+        "putting": 1.8
       },
-      "pen18": 5.0,
-      "dbl18": 10.0,
-      "tp18": 3.0,
+      "pen18": 6.0,
+      "dbl18": 6.0,
+      "tp18": 0.0,
+      "putts18": 31.0,
+      "clean": true
+    },
+    {
+      "date": "2024-08-24",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 96,
+      "holes": 18,
+      "overRating18": null,
+      "per18": {
+        "offTee": -5.4,
+        "longApproach": -6.8,
+        "midApproach": -6.5,
+        "inside50": -5.2,
+        "putting": -3.9
+      },
+      "pen18": 6.0,
+      "dbl18": 8.0,
+      "tp18": 4.0,
+      "putts18": 37.0,
+      "clean": true
+    },
+    {
+      "date": "2024-09-02",
+      "course": "Delsj\u00f6 Golfklubb",
+      "score": 92,
+      "holes": 18,
+      "overRating18": 23.3,
+      "per18": {
+        "offTee": -6.0,
+        "longApproach": -5.8,
+        "midApproach": -1.5,
+        "inside50": -4.5,
+        "putting": -3.7
+      },
+      "pen18": 6.0,
+      "dbl18": 4.0,
+      "tp18": 5.0,
       "putts18": 39.0,
       "clean": true
     },
     {
-      "date": "2026-06-29",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 37,
-      "holes": 9,
-      "overRating18": 14.4,
+      "date": "2024-09-08",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 86,
+      "holes": 18,
+      "overRating18": 15.9,
       "per18": {
-        "offTee": -2.0,
-        "longApproach": -1.5,
+        "offTee": -6.1,
+        "longApproach": -2.9,
         "midApproach": -5.2,
-        "inside50": -0.0,
-        "putting": 0.4
+        "inside50": -1.1,
+        "putting": -1.9
       },
       "pen18": 4.0,
       "dbl18": 4.0,
+      "tp18": 1.0,
+      "putts18": 33.0,
+      "clean": true
+    },
+    {
+      "date": "2024-09-22",
+      "course": "Stora Lundby Golfklubb",
+      "score": 86,
+      "holes": 18,
+      "overRating18": 15.9,
+      "per18": {
+        "offTee": -3.0,
+        "longApproach": -6.6,
+        "midApproach": -2.6,
+        "inside50": -7.8,
+        "putting": -0.1
+      },
+      "pen18": 0.0,
+      "dbl18": 2.0,
+      "tp18": 1.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2024-09-29",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 95,
+      "holes": 18,
+      "overRating18": 24.3,
+      "per18": {
+        "offTee": -4.0,
+        "longApproach": -8.5,
+        "midApproach": -6.0,
+        "inside50": -5.0,
+        "putting": -5.7
+      },
+      "pen18": 1.0,
+      "dbl18": 7.0,
+      "tp18": 6.0,
+      "putts18": 40.0,
+      "clean": true
+    },
+    {
+      "date": "2025-04-21",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 88,
+      "holes": 18,
+      "overRating18": 17.9,
+      "per18": {
+        "offTee": -5.7,
+        "longApproach": -6.4,
+        "midApproach": -4.4,
+        "inside50": -3.0,
+        "putting": 0.0
+      },
+      "pen18": 2.0,
+      "dbl18": 5.0,
+      "tp18": 2.0,
+      "putts18": 32.0,
+      "clean": true
+    },
+    {
+      "date": "2025-05-03",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 101,
+      "holes": 18,
+      "overRating18": 30.9,
+      "per18": {
+        "offTee": -6.3,
+        "longApproach": -6.6,
+        "midApproach": -4.7,
+        "inside50": -3.8,
+        "putting": -5.8
+      },
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 6.0,
+      "putts18": 39.0,
+      "clean": true
+    },
+    {
+      "date": "2025-06-12",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 101,
+      "holes": 18,
+      "overRating18": 30.9,
+      "per18": {
+        "offTee": -6.5,
+        "longApproach": -7.5,
+        "midApproach": -1.6,
+        "inside50": -3.6,
+        "putting": -8.1
+      },
+      "pen18": 6.0,
+      "dbl18": 7.0,
+      "tp18": 7.0,
+      "putts18": 41.0,
+      "clean": true
+    },
+    {
+      "date": "2025-07-22",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 87,
+      "holes": 18,
+      "overRating18": 16.3,
+      "per18": {
+        "offTee": -3.7,
+        "longApproach": -6.4,
+        "midApproach": -4.7,
+        "inside50": -1.6,
+        "putting": -2.4
+      },
+      "pen18": 3.0,
+      "dbl18": 5.0,
+      "tp18": 3.0,
+      "putts18": 34.0,
+      "clean": true
+    },
+    {
+      "date": "2025-07-29",
+      "course": "Lerjedalens Golfklubb ~ 9 H\u00e5lsbanan",
+      "score": 42,
+      "holes": 8,
+      "overRating18": 20.2,
+      "per18": {
+        "offTee": -1.1,
+        "longApproach": -4.3,
+        "midApproach": -3.8,
+        "inside50": -1.3,
+        "putting": -1.9
+      },
+      "pen18": 6.8,
+      "dbl18": 9.0,
+      "tp18": 4.5,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-08-03",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 98,
+      "holes": 18,
+      "overRating18": 25.9,
+      "per18": {
+        "offTee": -7.1,
+        "longApproach": -4.4,
+        "midApproach": -1.7,
+        "inside50": 1.9,
+        "putting": 0.0
+      },
+      "pen18": 7.0,
+      "dbl18": 5.0,
+      "tp18": 2.0,
+      "putts18": 33.0,
+      "clean": true
+    },
+    {
+      "date": "2025-08-08",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 89,
+      "holes": 18,
+      "overRating18": 18.9,
+      "per18": {
+        "offTee": -4.9,
+        "longApproach": -3.9,
+        "midApproach": -3.5,
+        "inside50": 0.8,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 3.0,
+      "putts18": 33.0,
+      "clean": true
+    },
+    {
+      "date": "2025-08-14",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 91,
+      "holes": 18,
+      "overRating18": 20.9,
+      "per18": {
+        "offTee": -5.8,
+        "longApproach": -4.8,
+        "midApproach": -1.0,
+        "inside50": -2.7,
+        "putting": 0.0
+      },
+      "pen18": 4.0,
+      "dbl18": 6.0,
+      "tp18": 2.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-09-01",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 86,
+      "holes": 18,
+      "overRating18": 13.9,
+      "per18": {
+        "offTee": -4.6,
+        "longApproach": -3.8,
+        "midApproach": -2.9,
+        "inside50": 4.4,
+        "putting": 0.0
+      },
+      "pen18": 1.0,
+      "dbl18": 4.0,
+      "tp18": 4.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-09-07",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 90,
+      "holes": 18,
+      "overRating18": 19.9,
+      "per18": {
+        "offTee": -5.1,
+        "longApproach": -1.8,
+        "midApproach": -3.1,
+        "inside50": 2.8,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 3.0,
+      "tp18": 2.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-09-14",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 86,
+      "holes": 18,
+      "overRating18": 14.4,
+      "per18": {
+        "offTee": -3.4,
+        "longApproach": -5.9,
+        "midApproach": -1.5,
+        "inside50": 5.0,
+        "putting": 0.0
+      },
+      "pen18": 2.0,
+      "dbl18": 5.0,
+      "tp18": 3.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-09-21",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 100,
+      "holes": 18,
+      "overRating18": 29.9,
+      "per18": {
+        "offTee": -6.1,
+        "longApproach": -2.5,
+        "midApproach": -5.5,
+        "inside50": 4.3,
+        "putting": 0.0
+      },
+      "pen18": 4.0,
+      "dbl18": 8.0,
+      "tp18": 6.0,
+      "putts18": 41.0,
+      "clean": true
+    },
+    {
+      "date": "2025-09-28",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 83,
+      "holes": 17,
+      "overRating18": 13.7,
+      "per18": {
+        "offTee": -7.3,
+        "longApproach": -5.8,
+        "midApproach": -0.8,
+        "inside50": 1.8,
+        "putting": 0.0
+      },
+      "pen18": 1.1,
+      "dbl18": 6.4,
+      "tp18": 3.2,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-10-09",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 50,
+      "holes": 9,
+      "overRating18": -40.2,
+      "per18": {
+        "offTee": -4.2,
+        "longApproach": -11.6,
+        "midApproach": -2.2,
+        "inside50": -1.7,
+        "putting": 0.0
+      },
+      "pen18": 4.0,
+      "dbl18": 10.0,
+      "tp18": 8.0,
+      "putts18": 44.0,
+      "clean": true
+    },
+    {
+      "date": "2025-10-12",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 23.9,
+      "per18": {
+        "offTee": -4.8,
+        "longApproach": -4.8,
+        "midApproach": -0.6,
+        "inside50": 1.5,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 4.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2025-10-19",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 68,
+      "holes": 13,
+      "overRating18": -2.9,
+      "per18": {
+        "offTee": -6.2,
+        "longApproach": -10.0,
+        "midApproach": 0.4,
+        "inside50": 3.2,
+        "putting": 0.0
+      },
+      "pen18": 2.8,
+      "dbl18": 5.5,
+      "tp18": 1.4,
+      "putts18": 31.8,
+      "clean": true
+    },
+    {
+      "date": "2026-05-03",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 94,
+      "holes": 18,
+      "overRating18": 23.9,
+      "per18": {
+        "offTee": -7.1,
+        "longApproach": -4.2,
+        "midApproach": -0.9,
+        "inside50": 4.7,
+        "putting": 0.0
+      },
+      "pen18": 7.0,
+      "dbl18": 8.0,
+      "tp18": 2.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2026-05-06",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 97,
+      "holes": 18,
+      "overRating18": 26.9,
+      "per18": {
+        "offTee": -5.9,
+        "longApproach": -7.0,
+        "midApproach": -3.2,
+        "inside50": 1.7,
+        "putting": 0.0
+      },
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 8.0,
+      "putts18": 42.0,
+      "clean": true
+    },
+    {
+      "date": "2026-05-27",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 99,
+      "holes": 18,
+      "overRating18": 28.9,
+      "per18": {
+        "offTee": -6.2,
+        "longApproach": -6.8,
+        "midApproach": -1.6,
+        "inside50": 0.9,
+        "putting": 0.0
+      },
+      "pen18": 7.0,
+      "dbl18": 5.0,
       "tp18": 0.0,
       "putts18": 34.0,
       "clean": true
     },
     {
-      "date": "2026-07-03",
-      "course": "Avery Ranch Golf Club",
-      "score": 98,
+      "date": "2026-05-31",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 96,
       "holes": 18,
-      "overRating18": 30.2,
+      "overRating18": 25.9,
       "per18": {
-        "offTee": -5.5,
-        "longApproach": -12.4,
-        "midApproach": -6.5,
-        "inside50": -4.5,
-        "putting": -2.9
+        "offTee": -5.1,
+        "longApproach": -2.8,
+        "midApproach": -3.9,
+        "inside50": -2.7,
+        "putting": 0.0
       },
-      "pen18": 7.0,
-      "dbl18": 9.0,
+      "pen18": 3.0,
+      "dbl18": 7.0,
+      "tp18": 5.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2026-06-25",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 96,
+      "holes": 18,
+      "overRating18": 25.9,
+      "per18": {
+        "offTee": -5.3,
+        "longApproach": -5.7,
+        "midApproach": -3.3,
+        "inside50": 2.8,
+        "putting": 0.0
+      },
+      "pen18": 5.0,
+      "dbl18": 7.0,
       "tp18": 2.0,
       "putts18": 35.0,
       "clean": true
     },
     {
       "date": "2026-07-05",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 36,
-      "holes": 9,
-      "overRating18": 12.4,
-      "per18": {
-        "offTee": -5.2,
-        "longApproach": -3.7,
-        "midApproach": -17.9,
-        "inside50": -9.1,
-        "putting": 2.5
-      },
-      "pen18": 2.0,
-      "dbl18": 2.0,
-      "tp18": 0.0,
-      "putts18": 30.0,
-      "clean": false
-    },
-    {
-      "date": "2026-07-06",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 41,
-      "holes": 9,
-      "overRating18": 22.4,
-      "per18": {
-        "offTee": -3.2,
-        "longApproach": -1.3,
-        "midApproach": -11.5,
-        "inside50": -6.1,
-        "putting": -3.8
-      },
-      "pen18": 2.0,
-      "dbl18": 4.0,
-      "tp18": 2.0,
-      "putts18": 38.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-08",
-      "course": "Riverside Golf Course",
-      "score": 97,
-      "holes": 18,
-      "overRating18": 29.8,
-      "per18": {
-        "offTee": -3.9,
-        "longApproach": -8.5,
-        "midApproach": -6.5,
-        "inside50": -13.0,
-        "putting": 0.8
-      },
-      "pen18": 1.0,
-      "dbl18": 8.0,
-      "tp18": 0.0,
-      "putts18": 32.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-10",
-      "course": "Riverside Golf Course",
-      "score": 98,
-      "holes": 18,
-      "overRating18": 30.8,
-      "per18": {
-        "offTee": -4.0,
-        "longApproach": -7.9,
-        "midApproach": -9.5,
-        "inside50": -11.1,
-        "putting": -2.5
-      },
-      "pen18": 0.0,
-      "dbl18": 8.0,
-      "tp18": 3.0,
-      "putts18": 33.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-13",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 33,
-      "holes": 9,
-      "overRating18": 6.4,
-      "per18": {
-        "offTee": -5.0,
-        "longApproach": 0.0,
-        "midApproach": -7.8,
-        "inside50": -3.8,
-        "putting": 6.2
-      },
-      "pen18": 2.0,
-      "dbl18": 2.0,
-      "tp18": 0.0,
-      "putts18": 26.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-22",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 35,
-      "holes": 9,
-      "overRating18": 10.4,
-      "per18": {
-        "offTee": -2.1,
-        "longApproach": -1.6,
-        "midApproach": -6.2,
-        "inside50": -0.9,
-        "putting": -3.8
-      },
-      "pen18": 0.0,
-      "dbl18": 4.0,
-      "tp18": 4.0,
-      "putts18": 36.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-24",
-      "course": "Crystal Falls Golf Course",
+      "course": "Alings\u00e5s Golfklubb",
       "score": 105,
       "holes": 18,
-      "overRating18": 33.2,
+      "overRating18": 34.9,
       "per18": {
-        "offTee": -4.4,
-        "longApproach": -12.4,
-        "midApproach": -9.0,
-        "inside50": -11.0,
-        "putting": -4.5
+        "offTee": -2.5,
+        "longApproach": -2.3,
+        "midApproach": -2.1,
+        "inside50": 0.9,
+        "putting": 0.0
       },
-      "pen18": 6.0,
-      "dbl18": 12.0,
-      "tp18": 4.0,
-      "putts18": 38.0,
-      "clean": true
-    },
-    {
-      "date": "2026-07-29",
-      "course": "Jimmy Clay Golf Course ~ Jimmy Clay",
-      "score": 96,
-      "holes": 18,
-      "overRating18": 26.9,
-      "per18": {
-        "offTee": -5.3,
-        "longApproach": -6.7,
-        "midApproach": -6.6,
-        "inside50": -3.3,
-        "putting": -5.7
-      },
-      "pen18": 4.0,
-      "dbl18": 7.0,
+      "pen18": 8.0,
+      "dbl18": 10.0,
       "tp18": 4.0,
       "putts18": 40.0,
       "clean": true
     },
     {
-      "date": "2026-07-31",
-      "course": "The Golf Club at Star Ranch",
-      "score": 96,
+      "date": "2026-07-09",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 104,
       "holes": 18,
-      "overRating18": 28.6,
+      "overRating18": 33.9,
       "per18": {
-        "offTee": -7.1,
-        "longApproach": -6.6,
-        "midApproach": -5.2,
-        "inside50": -7.2,
-        "putting": 1.8
+        "offTee": -6.2,
+        "longApproach": -5.8,
+        "midApproach": 0.6,
+        "inside50": 4.5,
+        "putting": 0.0
       },
-      "pen18": 4.0,
-      "dbl18": 7.0,
-      "tp18": 1.0,
-      "putts18": 33.0,
+      "pen18": 5.0,
+      "dbl18": 10.0,
+      "tp18": 5.0,
+      "putts18": 41.0,
       "clean": true
     },
     {
-      "date": "2026-08-03",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 40,
-      "holes": 9,
-      "overRating18": 19.4,
-      "per18": {
-        "offTee": -1.8,
-        "longApproach": -4.8,
-        "midApproach": -5.6,
-        "inside50": -3.0,
-        "putting": -4.6
-      },
-      "pen18": 4.0,
-      "dbl18": 4.0,
-      "tp18": 2.0,
-      "putts18": 38.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-06",
-      "course": "Riverside Golf Course",
-      "score": 92,
+      "date": "2026-08-04",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 95,
       "holes": 18,
-      "overRating18": 24.8,
+      "overRating18": 24.9,
       "per18": {
-        "offTee": -2.9,
-        "longApproach": -5.4,
-        "midApproach": -7.8,
-        "inside50": -10.8,
-        "putting": -3.4
+        "offTee": -4.6,
+        "longApproach": -3.4,
+        "midApproach": -0.7,
+        "inside50": 2.3,
+        "putting": 0.0
       },
-      "pen18": 2.0,
-      "dbl18": 5.0,
-      "tp18": 1.0,
-      "putts18": 36.0,
+      "pen18": 6.0,
+      "dbl18": 9.0,
+      "tp18": 3.0,
+      "putts18": 39.0,
       "clean": true
     },
     {
-      "date": "2026-08-07",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 34,
-      "holes": 9,
-      "overRating18": 8.4,
+      "date": "2026-08-05",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 99,
+      "holes": 18,
+      "overRating18": 28.9,
       "per18": {
-        "offTee": -1.9,
-        "longApproach": 0.2,
-        "midApproach": -8.5,
-        "inside50": -6.3,
-        "putting": 3.7
+        "offTee": -5.6,
+        "longApproach": -4.7,
+        "midApproach": -0.8,
+        "inside50": -1.5,
+        "putting": 0.0
       },
-      "pen18": 0.0,
-      "dbl18": 2.0,
-      "tp18": 0.0,
-      "putts18": 30.0,
+      "pen18": 5.0,
+      "dbl18": 8.0,
+      "tp18": 5.0,
+      "putts18": 40.0,
       "clean": true
     },
     {
       "date": "2026-08-09",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 40,
-      "holes": 9,
-      "overRating18": 20.4,
-      "per18": {
-        "offTee": -1.5,
-        "longApproach": 0.0,
-        "midApproach": -5.1,
-        "inside50": -5.8,
-        "putting": -10.4
-      },
-      "pen18": 0.0,
-      "dbl18": 4.0,
-      "tp18": 10.0,
-      "putts18": 46.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-10",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 41,
-      "holes": 9,
-      "overRating18": 22.4,
-      "per18": {
-        "offTee": -3.3,
-        "longApproach": -1.4,
-        "midApproach": -7.3,
-        "inside50": -2.9,
-        "putting": -7.8
-      },
-      "pen18": 2.0,
-      "dbl18": 8.0,
-      "tp18": 6.0,
-      "putts18": 40.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-12",
-      "course": "Riverside Golf Course",
-      "score": 95,
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 98,
       "holes": 18,
-      "overRating18": 27.8,
+      "overRating18": 27.9,
       "per18": {
-        "offTee": -4.8,
-        "longApproach": -5.7,
-        "midApproach": -8.5,
-        "inside50": -8.8,
+        "offTee": -5.0,
+        "longApproach": -5.0,
+        "midApproach": -3.7,
+        "inside50": 2.3,
         "putting": 0.0
       },
-      "pen18": 2.0,
-      "dbl18": 6.0,
-      "tp18": 1.0,
-      "putts18": 33.0,
+      "pen18": 5.0,
+      "dbl18": 10.0,
+      "tp18": 4.0,
+      "putts18": 37.0,
       "clean": true
     },
     {
-      "date": "2026-08-14",
-      "course": "Riverside Golf Course",
-      "score": 93,
+      "date": "2026-08-22",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 92,
       "holes": 18,
-      "overRating18": 25.8,
+      "overRating18": 21.9,
       "per18": {
-        "offTee": -6.3,
-        "longApproach": -7.2,
-        "midApproach": -4.5,
-        "inside50": -10.2,
-        "putting": -2.7
+        "offTee": -6.2,
+        "longApproach": -4.8,
+        "midApproach": -0.5,
+        "inside50": 3.4,
+        "putting": 0.0
       },
-      "pen18": 1.0,
-      "dbl18": 4.0,
-      "tp18": 2.0,
-      "putts18": 34.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-17",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 37,
-      "holes": 9,
-      "overRating18": 14.4,
-      "per18": {
-        "offTee": -4.0,
-        "longApproach": -2.9,
-        "midApproach": -3.9,
-        "inside50": -1.5,
-        "putting": -3.0
-      },
-      "pen18": 2.0,
-      "dbl18": 2.0,
-      "tp18": 0.0,
-      "putts18": 32.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-21",
-      "course": "Riverside Golf Course",
-      "score": 95,
-      "holes": 18,
-      "overRating18": 27.8,
-      "per18": {
-        "offTee": -4.0,
-        "longApproach": -8.1,
-        "midApproach": -8.2,
-        "inside50": -12.0,
-        "putting": -5.5
-      },
-      "pen18": 0.0,
+      "pen18": 6.0,
       "dbl18": 5.0,
-      "tp18": 2.0,
-      "putts18": 35.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-28",
-      "course": "Riverside Golf Course",
-      "score": 94,
-      "holes": 18,
-      "overRating18": 26.8,
-      "per18": {
-        "offTee": -6.3,
-        "longApproach": -8.2,
-        "midApproach": -5.9,
-        "inside50": -5.7,
-        "putting": -3.9
-      },
-      "pen18": 0.0,
-      "dbl18": 7.0,
       "tp18": 1.0,
-      "putts18": 35.0,
-      "clean": true
-    },
-    {
-      "date": "2026-08-30",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 37,
-      "holes": 9,
-      "overRating18": 14.4,
-      "per18": {
-        "offTee": -3.8,
-        "longApproach": -1.9,
-        "midApproach": -11.3,
-        "inside50": -7.7,
-        "putting": 2.5
-      },
-      "pen18": 0.0,
-      "dbl18": 2.0,
-      "tp18": 0.0,
-      "putts18": 32.0,
-      "clean": true
-    },
-    {
-      "date": "2026-09-02",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 35,
-      "holes": 9,
-      "overRating18": 10.4,
-      "per18": {
-        "offTee": -4.9,
-        "longApproach": -2.0,
-        "midApproach": -4.0,
-        "inside50": 0.7,
-        "putting": -1.7
-      },
-      "pen18": 0.0,
-      "dbl18": 0.0,
-      "tp18": 2.0,
       "putts18": 36.0,
       "clean": true
     },
     {
-      "date": "2026-09-04",
-      "course": "Avery Ranch Golf Club",
-      "score": 102,
+      "date": "2026-08-23",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 92,
       "holes": 18,
-      "overRating18": 34.2,
+      "overRating18": 21.9,
       "per18": {
-        "offTee": -5.8,
-        "longApproach": -10.5,
-        "midApproach": -10.1,
-        "inside50": -13.9,
-        "putting": 1.4
-      },
-      "pen18": 5.0,
-      "dbl18": 10.0,
-      "tp18": 2.0,
-      "putts18": 33.0,
-      "clean": true
-    },
-    {
-      "date": "2026-09-10",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 35,
-      "holes": 9,
-      "overRating18": 10.4,
-      "per18": {
-        "offTee": -2.7,
+        "offTee": -5.0,
         "longApproach": -6.1,
-        "midApproach": -4.9,
-        "inside50": -5.1,
-        "putting": 2.7
+        "midApproach": -4.2,
+        "inside50": -0.8,
+        "putting": 0.0
       },
-      "pen18": 0.0,
-      "dbl18": 0.0,
-      "tp18": 2.0,
-      "putts18": 32.0,
-      "clean": true
-    },
-    {
-      "date": "2026-09-11",
-      "course": "Riverside Golf Course",
-      "score": 95,
-      "holes": 18,
-      "overRating18": 27.8,
-      "per18": {
-        "offTee": -5.1,
-        "longApproach": -5.6,
-        "midApproach": -8.8,
-        "inside50": -6.7,
-        "putting": -4.0
-      },
-      "pen18": 1.0,
-      "dbl18": 7.0,
-      "tp18": 2.0,
+      "pen18": 3.0,
+      "dbl18": 4.0,
+      "tp18": 3.0,
       "putts18": 35.0,
       "clean": true
     },
     {
-      "date": "2026-09-14",
-      "course": "Harvey Penick Golf Campus ~ Nine Hole",
-      "score": 39,
+      "date": "2026-09-03",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 44,
       "holes": 9,
-      "overRating18": 18.4,
+      "overRating18": -52.2,
       "per18": {
-        "offTee": -2.5,
-        "longApproach": -3.7,
-        "midApproach": -0.5,
-        "inside50": -6.0,
-        "putting": -5.5
+        "offTee": -4.9,
+        "longApproach": -6.1,
+        "midApproach": 4.0,
+        "inside50": 3.1,
+        "putting": 0.0
       },
       "pen18": 0.0,
       "dbl18": 4.0,
@@ -1650,22 +2942,60 @@
       "clean": true
     },
     {
-      "date": "2026-09-17",
-      "course": "Riverside Golf Course",
-      "score": 88,
+      "date": "2026-09-05",
+      "course": "V\u00e5rg\u00e5rda Golfklubb",
+      "score": 94,
       "holes": 18,
-      "overRating18": 20.8,
+      "overRating18": 22.4,
       "per18": {
-        "offTee": -6.6,
-        "longApproach": -6.3,
-        "midApproach": -4.1,
-        "inside50": -12.6,
-        "putting": -0.2
+        "offTee": -5.0,
+        "longApproach": -8.0,
+        "midApproach": -0.2,
+        "inside50": 0.6,
+        "putting": 0.0
       },
-      "pen18": 1.0,
-      "dbl18": 3.0,
-      "tp18": 2.0,
-      "putts18": 32.0,
+      "pen18": 3.0,
+      "dbl18": 5.0,
+      "tp18": 3.0,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2026-09-18",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 69,
+      "holes": 14,
+      "overRating18": -1.4,
+      "per18": {
+        "offTee": -2.1,
+        "longApproach": -6.3,
+        "midApproach": 1.7,
+        "inside50": 2.0,
+        "putting": 0.0
+      },
+      "pen18": 2.6,
+      "dbl18": 2.6,
+      "tp18": 3.9,
+      "putts18": 36.0,
+      "clean": true
+    },
+    {
+      "date": "2026-09-20",
+      "course": "Alings\u00e5s Golfklubb",
+      "score": 48,
+      "holes": 9,
+      "overRating18": -44.2,
+      "per18": {
+        "offTee": -6.5,
+        "longApproach": -5.9,
+        "midApproach": -5.1,
+        "inside50": 3.9,
+        "putting": 0.0
+      },
+      "pen18": 2.0,
+      "dbl18": 6.0,
+      "tp18": 6.0,
+      "putts18": 42.0,
       "clean": true
     }
   ]

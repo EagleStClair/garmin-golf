@@ -1,0 +1,380 @@
+{
+  "scorecardDetails": [
+    {
+      "scorecard": {
+        "id": 16540301,
+        "customerId": "",
+        "playerProfileId": 51595206,
+        "roundPlayerName": "Ingvar Sinclair",
+        "connectDisplayName": "a38f2fcf-5e62-4354-a9b4-930b606e0086",
+        "courseGlobalId": 27860,
+        "courseSnapshotId": 194628,
+        "frontNineGlobalCourseId": 27860,
+        "scoreType": "STROKE_PLAY",
+        "useHandicapScoring": true,
+        "useStrokeCounting": true,
+        "startTime": "2018-06-28T15:53:23.000Z",
+        "formattedStartTime": "2018-06-28T16:53:23+01:00",
+        "endTime": "2018-06-28T19:22:54.000Z",
+        "formattedEndTime": "2018-06-28T20:22:54+01:00",
+        "unitId": "11",
+        "roundType": "ALL",
+        "inProgress": false,
+        "holesCompleted": 18,
+        "publicRound": false,
+        "score": 2,
+        "playerHandicap": 13,
+        "courseHandicapStr": "110307011517130509100418060214160812",
+        "teeBox": "Gul",
+        "handicapType": "MEN",
+        "teeBoxRating": 72.1,
+        "teeBoxSlope": 130,
+        "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+        "handicappedStrokes": 74,
+        "strokes": 87,
+        "holes": [
+          {
+            "number": 1,
+            "strokes": 6,
+            "handicapScore": 5,
+            "lastModifiedDt": "2018-06-29T17:03:31.000Z",
+            "fairwayShotOutcome": "LEFT",
+            "pinPositionLat": 690533484,
+            "pinPositionLon": 149714721
+          },
+          {
+            "number": 2,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690560732,
+            "pinPositionLon": 149783130
+          },
+          {
+            "number": 3,
+            "strokes": 3,
+            "handicapScore": 2,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "NO_FAIRWAY",
+            "pinPositionLat": 690552786,
+            "pinPositionLon": 149758589
+          },
+          {
+            "number": 4,
+            "strokes": 7,
+            "handicapScore": 6,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690598146,
+            "pinPositionLon": 149782450
+          },
+          {
+            "number": 5,
+            "strokes": 5,
+            "handicapScore": 5,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690643398,
+            "pinPositionLon": 149744750
+          },
+          {
+            "number": 6,
+            "strokes": 3,
+            "handicapScore": 3,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "NO_FAIRWAY",
+            "pinPositionLat": 690629560,
+            "pinPositionLon": 149717346
+          },
+          {
+            "number": 7,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "LEFT",
+            "pinPositionLat": 690629690,
+            "pinPositionLon": 149665365
+          },
+          {
+            "number": 8,
+            "strokes": 4,
+            "handicapScore": 3,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690616686,
+            "pinPositionLon": 149763016
+          },
+          {
+            "number": 9,
+            "strokes": 4,
+            "handicapScore": 3,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690571828,
+            "pinPositionLon": 149815999
+          },
+          {
+            "number": 10,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690510588,
+            "pinPositionLon": 149793593
+          },
+          {
+            "number": 11,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690527948,
+            "pinPositionLon": 149707730
+          },
+          {
+            "number": 12,
+            "strokes": 5,
+            "handicapScore": 5,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690517330,
+            "pinPositionLon": 149777404
+          },
+          {
+            "number": 13,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690474666,
+            "pinPositionLon": 149768826
+          },
+          {
+            "number": 14,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690477494,
+            "pinPositionLon": 149813171
+          },
+          {
+            "number": 15,
+            "strokes": 4,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "NO_FAIRWAY",
+            "pinPositionLat": 690466864,
+            "pinPositionLon": 149779086
+          },
+          {
+            "number": 16,
+            "strokes": 5,
+            "handicapScore": 5,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690500162,
+            "pinPositionLon": 149819972
+          },
+          {
+            "number": 17,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "NO_FAIRWAY",
+            "pinPositionLat": 690496224,
+            "pinPositionLon": 149790384
+          },
+          {
+            "number": 18,
+            "strokes": 6,
+            "handicapScore": 5,
+            "lastModifiedDt": "2018-06-29T17:03:30.000Z",
+            "fairwayShotOutcome": "LEFT",
+            "pinPositionLat": 690533328,
+            "pinPositionLon": 149832021
+          }
+        ]
+      },
+      "scorecardStats": {
+        "frontNine": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 7,
+          "fairwaysHit": 2,
+          "fairwaysLeft": 2,
+          "fairwaysRight": 3,
+          "greensInRegulation": 0,
+          "greensRecorded": 0,
+          "putts": 0,
+          "strokes": 42,
+          "handicappedStrokes": 35,
+          "scoreWithHandicap": -1,
+          "scoreWithoutHandicap": 6,
+          "holesUnderPar": 0,
+          "holesPar": 4,
+          "holesBogey": 4,
+          "holesOverBogey": 1,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 4
+        },
+        "backNine": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 7,
+          "fairwaysHit": 4,
+          "fairwaysLeft": 1,
+          "fairwaysRight": 2,
+          "greensInRegulation": 0,
+          "greensRecorded": 0,
+          "putts": 0,
+          "strokes": 45,
+          "handicappedStrokes": 39,
+          "scoreWithHandicap": 3,
+          "scoreWithoutHandicap": 9,
+          "holesUnderPar": 0,
+          "holesPar": 1,
+          "holesBogey": 7,
+          "holesOverBogey": 1,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 3
+        },
+        "round": {
+          "holesPlayed": 18,
+          "fairwaysRecorded": 14,
+          "fairwaysHit": 6,
+          "fairwaysLeft": 3,
+          "fairwaysRight": 5,
+          "greensInRegulation": 0,
+          "greensRecorded": 0,
+          "putts": 0,
+          "strokes": 87,
+          "handicappedStrokes": 74,
+          "scoreWithHandicap": 2,
+          "scoreWithoutHandicap": 15,
+          "holesUnderPar": 0,
+          "holesPar": 5,
+          "holesBogey": 11,
+          "holesOverBogey": 2,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 7
+        }
+      },
+      "shotCounts": [
+        5,
+        3,
+        1,
+        4,
+        3,
+        1,
+        2,
+        3,
+        2,
+        3,
+        3,
+        2,
+        3,
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "statsComparison": {
+        "driveRating": "GOOD",
+        "approachRating": "GOOD",
+        "chipRating": "GOOD",
+        "puttRating": "UNKNOWN"
+      },
+      "longestShotInMeters": 232.243
+    }
+  ],
+  "courseSnapshots": [
+    {
+      "courseGlobalId": 27860,
+      "courseSnapshotId": 194628,
+      "name": "Alings\u00e5s Golfklubb",
+      "holePars": "543543444454443435",
+      "continent": "Europe",
+      "country": "Sweden",
+      "street": "Svanviksv\u00e4gen 1",
+      "city": "Alings\u00e5s",
+      "state": "V\u00e4stra G\u00f6taland",
+      "zip": "44195",
+      "phone": "0322 52421",
+      "web": "http://www.alingsasgk.se/extra/pod/",
+      "frontNinePar": 36,
+      "backNinePar": 36,
+      "roundPar": 72,
+      "releaseDate": "11/29/2023",
+      "lat": 57880784,
+      "lon": 12556530,
+      "tees": [
+        {
+          "name": "46",
+          "handicapType": "MEN",
+          "rating": 65.4,
+          "slope": 118,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "MEN",
+          "rating": 68.0,
+          "slope": 124,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "MEN",
+          "rating": 70.1,
+          "slope": 128,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "57",
+          "handicapType": "MEN",
+          "rating": 70.9,
+          "slope": 129,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "40",
+          "handicapType": "WOMEN",
+          "rating": 67.1,
+          "slope": 114,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "46",
+          "handicapType": "WOMEN",
+          "rating": 70.7,
+          "slope": 123,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "51",
+          "handicapType": "WOMEN",
+          "rating": 73.6,
+          "slope": 127,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "WOMEN",
+          "rating": 75.7,
+          "slope": 131,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        }
+      ]
+    }
+  ]
+}

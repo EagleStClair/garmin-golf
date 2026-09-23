@@ -1,9 +1,9 @@
 {
   "_note": "Rounds before analysisStartDate are excluded from pulls and from club/shot analysis. Reason: before this date the CT10 sensors weren't in the clubs and the bag differed, so the clubTypeId->name map in clubs.json doesn't apply and shot/club data is unreliable. Raw responses for older rounds may still exist locally; they're just not parsed or analyzed.",
-  "analysisStartDate": "2026-05-01",
+  "analysisStartDate": "2018-05-01",
   "publish": {
     "_note": "`python -m src.update --publish` copies site/index.html here; `--push` also git commits+pushes that repo (auto-deploys to S3 via its Action) AND commits the regenerated data/processed + site back to THIS repo. Set targetDir to null to disable publishing.",
-    "targetDir": "~/dev/colbyward.io/golf",
+    "targetDir": null,
     "_verifyNote": "After pushing, --push polls this URL until the live bytes match the build. A green git push only proves the Action was triggered, not that it deployed. Set to null to skip the check.",
     "verifyUrl": "https://colbyward.io/golf/index.html"
   },
@@ -31,7 +31,7 @@
     "insideMaxYds": 50,
     "headlineMaxYds": 100,
     "_targetNote": "Target-handicap baseline is MODELED (not per-shot empirical tables): a target-H golfer is taken to be ~H strokes/18 over scratch, split across buckets by handicapBucketWeights (research-informed: approach + wedge zone leak most). SG vs target = your SG vs scratch minus the target's. Directional, not exact — the bucket ranking is the signal.",
-    "targetHandicap": 15,
+    "targetHandicap": 12,
     "handicapBucketWeights": {
       "offTee": 0.18, "longApproach": 0.20, "midApproach": 0.20,
       "inside50": 0.24, "putting": 0.18

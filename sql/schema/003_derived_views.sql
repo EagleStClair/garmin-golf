@@ -89,24 +89,36 @@ GROUP BY r.round_id, r.total_strokes;
 -- approach's end onto the pin, producing a false 0 ft (legacy parser guard).
 CREATE OR REPLACE VIEW derived.hole_first_putt AS
 WITH green_reach AS (
-  SELECT s.round_id, s.hole_number, min(s.shot_order) AS reach_order
-  FROM canon.shot s
-  JOIN derived.shot_flags f USING (shot_id)
-  WHERE s.end_lie = 'Green' AND NOT f.phantom
-  GROUP BY s.round_id, s.hole_number
-), has_putt AS (
+  SELECT round_id, hole_number, shot_id, shot_order
+  FROM (
+    SELECT s.round_id,
+           s.hole_number,
+           s.shot_id,
+           s.shot_order,
+           row_number() OVER (
+             PARTITION BY s.round_id, s.hole_number
+             ORDER BY s.shot_order, s.shot_id
+           ) AS rn
+    FROM canon.shot s
+    JOIN derived.shot_flags f USING (shot_id)
+    WHERE s.end_lie = 'Green' AND NOT f.phantom
+  )
+  WHERE rn = 1
+),
+has_putt AS (
   SELECT DISTINCT s.round_id, s.hole_number
   FROM canon.shot s
   JOIN derived.shot_flags f USING (shot_id)
   WHERE s.shot_type = 'PUTT' AND NOT f.phantom
 )
-SELECT gr.round_id, gr.hole_number,
+SELECT gr.round_id,
+       gr.hole_number,
        round(g.remaining_yds * 3.0, 1) AS first_putt_ft
 FROM green_reach gr
-JOIN has_putt hp ON hp.round_id = gr.round_id AND hp.hole_number = gr.hole_number
-JOIN canon.shot s ON s.round_id = gr.round_id AND s.hole_number = gr.hole_number
-                 AND s.shot_order = gr.reach_order
-JOIN derived.shot_geom g ON g.shot_id = s.shot_id
+JOIN has_putt hp
+  ON hp.round_id = gr.round_id
+ AND hp.hole_number = gr.hole_number
+JOIN derived.shot_geom g USING (shot_id)
 WHERE g.remaining_yds IS NOT NULL;
 
 -- Per-hole facts + standard interpretations (GIR, scrambling, doubles).

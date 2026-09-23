@@ -44,6 +44,9 @@ _ROUND_COLS = [
 def _score_name(to_par: int) -> str:
     return SCORE_NAMES.get(to_par, f"+{to_par}" if to_par > 0 else str(to_par))
 
+def _signed_int(value: int | None) -> str:
+    """Format a score relative to par, including incomplete rounds/holes."""
+    return "—" if value is None else f"{value:+d}"
 
 def _iso(epoch_ms: int | None, offset_ms: int | None) -> str | None:
     if epoch_ms is None:
@@ -393,7 +396,7 @@ def render_markdown(doc: dict) -> str:
     cs = doc["coachSummary"]
     lines = [
         f"# {c['name']} ({c.get('city')} {c.get('state')}) — {s['date'][:10]}",
-        f"Par {sc['par']}, Score {sc['strokes']} ({sc['toPar']:+d}), "
+        f"Par {sc['par']}, Score {sc['strokes']} ({_signed_int(sc['toPar'])}), "
         f"{sc['putts']} putts, {sc['penalties']} penalties — tees: {s['teeBox']} "
         f"({s['teeBoxRating']}/{s['teeBoxSlope']})",
         f"FW {cs['fairways_hit']}/{cs['fairways_recorded']} · "
@@ -415,9 +418,18 @@ def render_markdown(doc: dict) -> str:
         gir = "GIR:yes" if h["gir"] else "GIR:no"
         si = f"SI{h['strokeIndex']}" if h["strokeIndex"] else ""
         plen = f"~{h['playedLengthYds']:.0f}y" if h["playedLengthYds"] else ""
+
+        if h["strokes"] is None:
+            score = "— (unplayed)"
+        else:
+            score = (
+                f"{h['strokes']} ({_signed_int(h['scoreToPar'])} "
+                f"{h['scoreName'] or ''})"
+            )
+
         lines.append(
-            f"H{h['number']} P{h['par']} {plen} {si}  {h['strokes']} ({h['scoreToPar']:+d} "
-            f"{h['scoreName']})  {fw}  {gir}  putts:{h['putts']}  pen:{h['penalties']}"
+            f"H{h['number']} P{h['par']} {plen} {si}  {score}  "
+            f"{fw}  {gir}  putts:{h['putts']}  pen:{h['penalties']}"
         )
         hn = hole_notes.get(h["number"])
         if hn and (hn.get("postTeeState") or hn.get("doubleClass")):
@@ -443,7 +455,6 @@ def render_markdown(doc: dict) -> str:
             )
         lines.append("")
     return "\n".join(lines)
-
 
 # --- entrypoint --------------------------------------------------------------------
 

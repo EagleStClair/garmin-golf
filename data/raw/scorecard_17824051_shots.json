@@ -1,0 +1,1212 @@
+{
+  "scorecardId": 17824051,
+  "perHole": [
+    {
+      "hole": null,
+      "response": {
+        "holeShots": [
+          {
+            "holeNumber": 1,
+            "pinPosition": {
+              "lat": 690533488,
+              "lon": 149714720
+            },
+            "shots": [
+              {
+                "id": 197318039,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464068000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 1,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690533718,
+                  "lon": 149784223,
+                  "lie": "Fairway"
+                },
+                "endLoc": {
+                  "lat": 690532944,
+                  "lon": 149754308,
+                  "lie": "Rough"
+                },
+                "meters": 148.583,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "LAYUP",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318007,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464169000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 1,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690532944,
+                  "lon": 149754308,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690533399,
+                  "lon": 149737405,
+                  "lie": "Fairway"
+                },
+                "meters": 83.9636,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318031,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464368000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 1,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690533399,
+                  "lon": 149737405,
+                  "lie": "Fairway"
+                },
+                "endLoc": {
+                  "lat": 690534191,
+                  "lon": 149714572,
+                  "lie": "Green"
+                },
+                "meters": 113.516,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318049,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464480000,
+                "shotOrder": 4,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 1,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690534191,
+                  "lon": 149714572,
+                  "lie": "Green"
+                },
+                "endLoc": {
+                  "lat": 690533484,
+                  "lon": 149714721,
+                  "lie": "Green"
+                },
+                "meters": 6.63797,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "UNKNOWN",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 2,
+            "pinPosition": {
+              "lat": 690560736,
+              "lon": 149783136
+            },
+            "shots": [
+              {
+                "id": 197318032,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464789000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 2,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690539831,
+                  "lon": 149732444,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690545393,
+                  "lon": 149756587,
+                  "lie": "Rough"
+                },
+                "meters": 130.532,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318018,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533464984000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 2,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690545393,
+                  "lon": 149756587,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690556863,
+                  "lon": 149784399,
+                  "lie": "Rough"
+                },
+                "meters": 174.616,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318013,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533465112000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 2,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690556863,
+                  "lon": 149784399,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690560732,
+                  "lon": 149783130,
+                  "lie": "Green"
+                },
+                "meters": 36.6447,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "UNKNOWN",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 3,
+            "pinPosition": {
+              "lat": 690552784,
+              "lon": 149758592
+            },
+            "shots": [
+              {
+                "id": 197318029,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533465588000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 3,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690562441,
+                  "lon": 149776345,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690554152,
+                  "lon": 149759075,
+                  "lie": "Green"
+                },
+                "meters": 115.416,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 4,
+            "pinPosition": {
+              "lat": 690598144,
+              "lon": 149782448
+            },
+            "shots": [
+              {
+                "id": 197318043,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533466069000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 4,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690550704,
+                  "lon": 149749592,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690569602,
+                  "lon": 149775878,
+                  "lie": "Rough"
+                },
+                "meters": 219.31,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318048,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533466259000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 4,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690570091,
+                  "lon": 149775871,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690581608,
+                  "lon": 149785349,
+                  "lie": "Fairway"
+                },
+                "meters": 117.295,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "UNKNOWN",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318017,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533466543000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 4,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690581233,
+                  "lon": 149785662,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690598146,
+                  "lon": 149782450,
+                  "lie": "Green"
+                },
+                "meters": 158.612,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 5,
+            "pinPosition": {
+              "lat": 690643392,
+              "lon": 149744752
+            },
+            "shots": [
+              {
+                "id": 197318035,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533467037000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 5,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690613539,
+                  "lon": 149775137,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690628161,
+                  "lon": 149741620,
+                  "lie": "Unknown"
+                },
+                "meters": 215.063,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318030,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533467272000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 5,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690628161,
+                  "lon": 149741620,
+                  "lie": "Unknown"
+                },
+                "endLoc": {
+                  "lat": 690643398,
+                  "lon": 149744750,
+                  "lie": "Green"
+                },
+                "meters": 143.016,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 6,
+            "pinPosition": {
+              "lat": 690629568,
+              "lon": 149717344
+            },
+            "shots": [
+              {
+                "id": 197318033,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533467644000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 6,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690639128,
+                  "lon": 149738875,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690631359,
+                  "lon": 149719218,
+                  "lie": "Green"
+                },
+                "meters": 121.488,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 7,
+            "pinPosition": {
+              "lat": 690629696,
+              "lon": 149665360
+            },
+            "shots": [
+              {
+                "id": 197318042,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533468412000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 7,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690640751,
+                  "lon": 149714723,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690633971,
+                  "lon": 149673864,
+                  "lie": "Rough"
+                },
+                "meters": 212.299,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318028,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533468526000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 7,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690633971,
+                  "lon": 149673864,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690630304,
+                  "lon": 149665525,
+                  "lie": "Green"
+                },
+                "meters": 53.6762,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 8,
+            "pinPosition": {
+              "lat": 690616688,
+              "lon": 149763024
+            },
+            "shots": [
+              {
+                "id": 197318040,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533469102000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 8,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690624634,
+                  "lon": 149706274,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690620532,
+                  "lon": 149751961,
+                  "lie": "Rough"
+                },
+                "meters": 229.817,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318044,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533469329000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 8,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690620568,
+                  "lon": 149751772,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690616434,
+                  "lon": 149764527,
+                  "lie": "Green"
+                },
+                "meters": 74.096,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 9,
+            "pinPosition": {
+              "lat": 690571824,
+              "lon": 149816000
+            },
+            "shots": [
+              {
+                "id": 197318016,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533470050000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 9,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690601654,
+                  "lon": 149785554,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690580764,
+                  "lon": 149807378,
+                  "lie": "Rough"
+                },
+                "meters": 222.96,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318009,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533470220000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 9,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690580764,
+                  "lon": 149807378,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690571059,
+                  "lon": 149815972,
+                  "lie": "Green"
+                },
+                "meters": 100.086,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 10,
+            "pinPosition": {
+              "lat": 690510592,
+              "lon": 149793600
+            },
+            "shots": [
+              {
+                "id": 197318020,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533471343000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 10,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690541134,
+                  "lon": 149830182,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690518946,
+                  "lon": 149811048,
+                  "lie": "Rough"
+                },
+                "meters": 227.753,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318041,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533471523000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 10,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690518946,
+                  "lon": 149811048,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690510170,
+                  "lon": 149795330,
+                  "lie": "Green"
+                },
+                "meters": 113.075,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 11,
+            "pinPosition": {
+              "lat": 690527952,
+              "lon": 149707728
+            },
+            "shots": [
+              {
+                "id": 197318010,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533471986000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 11,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690509996,
+                  "lon": 149778885,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690502069,
+                  "lon": 149738127,
+                  "lie": "Rough"
+                },
+                "meters": 215.318,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318046,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533472198000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 11,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690501702,
+                  "lon": 149737657,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690515966,
+                  "lon": 149721491,
+                  "lie": "Rough"
+                },
+                "meters": 155.393,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "LAYUP",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318023,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533472316000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 11,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690515966,
+                  "lon": 149721491,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690526991,
+                  "lon": 149711960,
+                  "lie": "Rough"
+                },
+                "meters": 113.217,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318034,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533472412000,
+                "shotOrder": 4,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 11,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690526991,
+                  "lon": 149711960,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690526785,
+                  "lon": 149707049,
+                  "lie": "Green"
+                },
+                "meters": 24.4391,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "CHIP",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 12,
+            "pinPosition": {
+              "lat": 690517328,
+              "lon": 149777408
+            },
+            "shots": [
+              {
+                "id": 197318012,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533472866000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 12,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690525749,
+                  "lon": 149722741,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690521659,
+                  "lon": 149768124,
+                  "lie": "Fairway"
+                },
+                "meters": 228.363,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318011,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533472950000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 12,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690521659,
+                  "lon": 149768124,
+                  "lie": "Fairway"
+                },
+                "endLoc": {
+                  "lat": 690515936,
+                  "lon": 149780528,
+                  "lie": "Rough"
+                },
+                "meters": 81.4762,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318027,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533473034000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 12,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690515936,
+                  "lon": 149780528,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690516227,
+                  "lon": 149779653,
+                  "lie": "Rough"
+                },
+                "meters": 5.11934,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "CHIP",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 13,
+            "pinPosition": {
+              "lat": 690474672,
+              "lon": 149768832
+            },
+            "shots": [
+              {
+                "id": 197318015,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533473539000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 13,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690502689,
+                  "lon": 149780011,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690487915,
+                  "lon": 149787221,
+                  "lie": "Rough"
+                },
+                "meters": 142.416,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318025,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533473692000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 13,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690487791,
+                  "lon": 149787303,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690481534,
+                  "lon": 149773108,
+                  "lie": "Rough"
+                },
+                "meters": 91.4808,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318047,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533473787000,
+                "shotOrder": 3,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 13,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690481378,
+                  "lon": 149773237,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690474666,
+                  "lon": 149768826,
+                  "lie": "Green"
+                },
+                "meters": 66.3407,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 14,
+            "pinPosition": {
+              "lat": 690477488,
+              "lon": 149813168
+            },
+            "shots": [
+              {
+                "id": 197318022,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533474272000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 14,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690453994,
+                  "lon": 149769959,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690471319,
+                  "lon": 149791152,
+                  "lie": "Rough"
+                },
+                "meters": 192.848,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318008,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533474406000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 14,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690471319,
+                  "lon": 149791152,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690476430,
+                  "lon": 149815222,
+                  "lie": "Rough"
+                },
+                "meters": 128.597,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 15,
+            "pinPosition": {
+              "lat": 690466864,
+              "lon": 149779088
+            },
+            "shots": [
+              {
+                "id": 197318038,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533474940000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 15,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690476794,
+                  "lon": 149803130,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690467680,
+                  "lon": 149780156,
+                  "lie": "Green"
+                },
+                "meters": 142.214,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 16,
+            "pinPosition": {
+              "lat": 690500160,
+              "lon": 149819968
+            },
+            "shots": [
+              {
+                "id": 197318014,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533475460000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 16,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690476078,
+                  "lon": 149782871,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690490863,
+                  "lon": 149804037,
+                  "lie": "Rough"
+                },
+                "meters": 173.379,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318036,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533475574000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 16,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690490863,
+                  "lon": 149804037,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690500162,
+                  "lon": 149819972,
+                  "lie": "Green"
+                },
+                "meters": 117.384,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 17,
+            "pinPosition": {
+              "lat": 690496224,
+              "lon": 149790384
+            },
+            "shots": [
+              {
+                "id": 197318021,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533475958000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 17,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690504376,
+                  "lon": 149824147,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690505551,
+                  "lon": 149803150,
+                  "lie": "Rough"
+                },
+                "meters": 104.747,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318019,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533476053000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 17,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690505551,
+                  "lon": 149803150,
+                  "lie": "Rough"
+                },
+                "endLoc": {
+                  "lat": 690497661,
+                  "lon": 149789444,
+                  "lie": "Rough"
+                },
+                "meters": 100.217,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "RECOVERY",
+                "excludeFromStats": false
+              }
+            ]
+          },
+          {
+            "holeNumber": 18,
+            "pinPosition": {
+              "lat": 690533328,
+              "lon": 149832016
+            },
+            "shots": [
+              {
+                "id": 197318024,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533476642000,
+                "shotOrder": 1,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 18,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690500987,
+                  "lon": 149784216,
+                  "lie": "TeeBox"
+                },
+                "endLoc": {
+                  "lat": 690517626,
+                  "lon": 149824388,
+                  "lie": "Fairway"
+                },
+                "meters": 252.641,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "TEE",
+                "excludeFromStats": false
+              },
+              {
+                "id": 197318045,
+                "scorecardId": 17824051,
+                "playerProfileId": 51595206,
+                "shotTime": 1533476835000,
+                "shotOrder": 2,
+                "shotTimeZoneOffset": 7200000,
+                "clubId": 0,
+                "holeNumber": 18,
+                "autoShotType": "USED",
+                "startLoc": {
+                  "lat": 690517626,
+                  "lon": 149824388,
+                  "lie": "Fairway"
+                },
+                "endLoc": {
+                  "lat": 690533628,
+                  "lon": 149834470,
+                  "lie": "Rough"
+                },
+                "meters": 157.464,
+                "shotSource": "DEVICE_AUTO",
+                "shotType": "APPROACH",
+                "excludeFromStats": false
+              }
+            ]
+          }
+        ],
+        "clubDetails": [
+          {
+            "id": 0,
+            "clubTypeId": 0,
+            "shaftLength": 0.0,
+            "flexTypeId": "REGULAR",
+            "averageDistance": 0,
+            "adviceDistance": 0,
+            "retired": false,
+            "deleted": false,
+            "lastModifiedTime": "2026-09-21T18:09:31.677Z"
+          }
+        ]
+      }
+    }
+  ]
+}

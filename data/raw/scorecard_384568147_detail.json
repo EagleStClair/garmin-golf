@@ -1,0 +1,375 @@
+{
+  "scorecardDetails": [
+    {
+      "scorecard": {
+        "id": 384568147,
+        "customerId": "",
+        "playerProfileId": 51595206,
+        "roundPlayerName": "Ingvar Sinclair",
+        "connectDisplayName": "a38f2fcf-5e62-4354-a9b4-930b606e0086",
+        "courseGlobalId": 27860,
+        "courseSnapshotId": 194628,
+        "frontNineGlobalCourseId": 27860,
+        "scoreType": "STROKE_PLAY",
+        "useHandicapScoring": true,
+        "useStrokeCounting": true,
+        "distanceWalked": 5293,
+        "stepsTaken": 7208,
+        "startTime": "2026-09-20T09:23:41.000Z",
+        "formattedStartTime": "2026-09-20T11:23:41+02:00",
+        "endTime": "2026-09-20T11:23:28.000Z",
+        "formattedEndTime": "2026-09-20T13:23:28+02:00",
+        "unitId": "3436610055",
+        "roundType": "BACK_9",
+        "inProgress": false,
+        "excludeFromStats": false,
+        "holesCompleted": 9,
+        "publicRound": false,
+        "score": 4,
+        "playerHandicap": 17,
+        "courseHandicapStr": "110307011517130509100418060214160812",
+        "teeBox": "54",
+        "handicapType": "MEN",
+        "teeBoxRating": 70.1,
+        "teeBoxSlope": 128,
+        "lastModifiedDt": "2026-09-20T12:31:28.000Z",
+        "sensorOnPutter": false,
+        "handicappedStrokes": 40,
+        "strokes": 48,
+        "holes": [
+          {
+            "number": 1,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690533488,
+            "pinPositionLon": 149714720
+          },
+          {
+            "number": 2,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690560736,
+            "pinPositionLon": 149783136
+          },
+          {
+            "number": 3,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690552784,
+            "pinPositionLon": 149758592
+          },
+          {
+            "number": 4,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690598144,
+            "pinPositionLon": 149782448
+          },
+          {
+            "number": 5,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690643392,
+            "pinPositionLon": 149744752
+          },
+          {
+            "number": 6,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690629568,
+            "pinPositionLon": 149717344
+          },
+          {
+            "number": 7,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690629696,
+            "pinPositionLon": 149665360
+          },
+          {
+            "number": 8,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690616688,
+            "pinPositionLon": 149763024
+          },
+          {
+            "number": 9,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "pinPositionLat": 690571824,
+            "pinPositionLon": 149816000
+          },
+          {
+            "number": 10,
+            "strokes": 5,
+            "penalties": 0,
+            "handicapScore": 4,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690510592,
+            "pinPositionLon": 149793600
+          },
+          {
+            "number": 11,
+            "strokes": 8,
+            "penalties": 0,
+            "handicapScore": 7,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 3,
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690527952,
+            "pinPositionLon": 149707728
+          },
+          {
+            "number": 12,
+            "strokes": 4,
+            "penalties": 0,
+            "handicapScore": 4,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "HIT",
+            "pinPositionLat": 690517328,
+            "pinPositionLon": 149777408
+          },
+          {
+            "number": 13,
+            "strokes": 5,
+            "penalties": 0,
+            "handicapScore": 4,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT",
+            "pinPositionLat": 690474672,
+            "pinPositionLon": 149768832
+          },
+          {
+            "number": 14,
+            "strokes": 5,
+            "penalties": 0,
+            "handicapScore": 4,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690477488,
+            "pinPositionLon": 149813168
+          },
+          {
+            "number": 15,
+            "strokes": 4,
+            "penalties": 0,
+            "handicapScore": 3,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "pinPositionLat": 690466864,
+            "pinPositionLon": 149779088
+          },
+          {
+            "number": 16,
+            "strokes": 6,
+            "penalties": 0,
+            "handicapScore": 5,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 3,
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690500160,
+            "pinPositionLon": 149819968
+          },
+          {
+            "number": 17,
+            "strokes": 4,
+            "penalties": 0,
+            "handicapScore": 3,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 2,
+            "pinPositionLat": 690496224,
+            "pinPositionLon": 149790384
+          },
+          {
+            "number": 18,
+            "strokes": 7,
+            "penalties": 1,
+            "handicapScore": 6,
+            "lastModifiedDt": "2026-09-20T11:23:37.000Z",
+            "putts": 3,
+            "fairwayShotOutcome": "RIGHT",
+            "pinPositionLat": 690533328,
+            "pinPositionLon": 149832016
+          }
+        ]
+      },
+      "scorecardStats": {
+        "frontNine": {
+          "holesPlayed": 0,
+          "fairwaysRecorded": 0,
+          "fairwaysHit": 0,
+          "fairwaysLeft": 0,
+          "fairwaysRight": 0,
+          "greensInRegulation": 0,
+          "greensRecorded": 0,
+          "putts": 0,
+          "strokes": 0,
+          "handicappedStrokes": 0,
+          "scoreWithHandicap": 0,
+          "scoreWithoutHandicap": 0,
+          "holesUnderPar": 0,
+          "holesPar": 0,
+          "holesBogey": 0,
+          "holesOverBogey": 0,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 0
+        },
+        "backNine": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 7,
+          "fairwaysHit": 2,
+          "fairwaysLeft": 1,
+          "fairwaysRight": 4,
+          "greensInRegulation": 1,
+          "greensRecorded": 9,
+          "putts": 21,
+          "strokes": 48,
+          "handicappedStrokes": 40,
+          "scoreWithHandicap": 4,
+          "scoreWithoutHandicap": 12,
+          "meanPuttsPerHole": 2.3333333,
+          "holesUnderPar": 0,
+          "holesPar": 1,
+          "holesBogey": 5,
+          "holesOverBogey": 3,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 2
+        },
+        "round": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 7,
+          "fairwaysHit": 2,
+          "fairwaysLeft": 1,
+          "fairwaysRight": 4,
+          "greensInRegulation": 1,
+          "greensRecorded": 9,
+          "putts": 21,
+          "strokes": 48,
+          "handicappedStrokes": 40,
+          "scoreWithHandicap": 4,
+          "scoreWithoutHandicap": 12,
+          "meanPuttsPerHole": 2.3333333,
+          "holesUnderPar": 0,
+          "holesPar": 1,
+          "holesBogey": 5,
+          "holesOverBogey": 3,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 2
+        }
+      },
+      "shotCounts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        5,
+        2,
+        3,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      "statsComparison": {
+        "driveRating": "GOOD",
+        "approachRating": "POOR",
+        "chipRating": "EXCELLENT",
+        "puttRating": "UNKNOWN"
+      },
+      "longestShotInMeters": 218.865
+    }
+  ],
+  "courseSnapshots": [
+    {
+      "courseGlobalId": 27860,
+      "courseSnapshotId": 194628,
+      "name": "Alings\u00e5s Golfklubb",
+      "holePars": "543543444454443435",
+      "continent": "Europe",
+      "country": "Sweden",
+      "street": "Svanviksv\u00e4gen 1",
+      "city": "Alings\u00e5s",
+      "state": "V\u00e4stra G\u00f6taland",
+      "zip": "44195",
+      "phone": "0322 52421",
+      "web": "http://www.alingsasgk.se/extra/pod/",
+      "frontNinePar": 36,
+      "backNinePar": 36,
+      "roundPar": 72,
+      "releaseDate": "11/29/2023",
+      "lat": 57880784,
+      "lon": 12556530,
+      "tees": [
+        {
+          "name": "46",
+          "handicapType": "MEN",
+          "rating": 65.4,
+          "slope": 118,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "MEN",
+          "rating": 68.0,
+          "slope": 124,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "MEN",
+          "rating": 70.1,
+          "slope": 128,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "57",
+          "handicapType": "MEN",
+          "rating": 70.9,
+          "slope": 129,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "40",
+          "handicapType": "WOMEN",
+          "rating": 67.1,
+          "slope": 114,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "46",
+          "handicapType": "WOMEN",
+          "rating": 70.7,
+          "slope": 123,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "51",
+          "handicapType": "WOMEN",
+          "rating": 73.6,
+          "slope": 127,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        },
+        {
+          "name": "54",
+          "handicapType": "WOMEN",
+          "rating": 75.7,
+          "slope": 131,
+          "holeHandicaps": "110307011517130509100418060214160812"
+        }
+      ]
+    }
+  ]
+}

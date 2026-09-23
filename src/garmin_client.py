@@ -78,14 +78,21 @@ def get_all_shots(
     holes: Iterable[int] = range(1, 19),
     pause: float = 1.5,
 ) -> dict:
-    """Fetch shots for every hole, one request per hole (gentle — SPEC §10).
+    """Fetch all holes in one unfiltered request.
 
-    Returns a raw, loss-free structure: each hole's untouched response is kept under
-    ``perHole``. Merging/normalizing is parse.py's job, not this layer's.
+    Garmin's API does not reliably support hole filters for holes 10-18.
+    Omitting hole_numbers returns the complete scorecard correctly.
     """
-    per_hole: list[dict] = []
-    for hole in holes:
-        resp = get_shot_hole(api, scorecard_id, hole)
-        per_hole.append({"hole": hole, "response": resp})
-        time.sleep(pause)
-    return {"scorecardId": scorecard_id, "perHole": per_hole}
+    del holes, pause  # retained for compatibility with existing callers
+
+    response = api.get_golf_shot_data(scorecard_id)
+
+    return {
+        "scorecardId": scorecard_id,
+        "perHole": [
+            {
+                "hole": "all",
+                "response": response,
+            }
+        ],
+    }

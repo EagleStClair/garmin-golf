@@ -1,347 +1,906 @@
 {
-  "generatedFromRounds": 29,
+  "generatedFromRounds": 72,
   "basis": "score vs course rating \u2014 18-hole regulation rounds only (rate trends still use every round)",
   "window": 16,
-  "summary": "Your scoring has improved primarily by raising your floor: bad rounds are 7 strokes better than when tracking began, your best golf is 3 strokes better, and your round-to-round range has narrowed from 7 to 4 strokes.",
+  "summary": "Your scoring has improved primarily by moving your whole game down together: bad rounds are 7 strokes worse than when tracking began, your best golf is 6 strokes worse, and your round-to-round range is steady near 6 strokes.",
   "current": {
-    "ceiling": 26.8,
-    "median": 28.2,
-    "floor": 30.8,
-    "gap": 4.0,
-    "gapAdjusted": 3.7,
-    "date": "2026-09-17"
+    "ceiling": 22.4,
+    "median": 25.9,
+    "floor": 28.9,
+    "gap": 6.5,
+    "gapAdjusted": 8.5,
+    "date": "2026-09-05"
   },
   "start": {
-    "ceiling": 30.2,
-    "median": 31.8,
-    "floor": 37.5,
-    "gap": 7.3,
-    "gapAdjusted": 5.7,
-    "date": "2026-07-03"
+    "ceiling": 15.9,
+    "median": 17.7,
+    "floor": 21.9,
+    "gap": 6.0,
+    "gapAdjusted": 4.6,
+    "date": "2020-07-21"
   },
   "cone": {
     "rounds": [
       {
-        "date": "2025-11-07",
-        "v": 43.5,
-        "src": "18birdies"
-      },
-      {
-        "date": "2025-11-18",
-        "v": 28.8,
-        "src": "18birdies"
-      },
-      {
-        "date": "2025-11-28",
-        "v": 41.8,
-        "src": "18birdies"
-      },
-      {
-        "date": "2026-01-02",
-        "v": 37.5,
-        "src": "18birdies"
-      },
-      {
-        "date": "2026-03-22",
-        "v": 30.4,
+        "date": "2018-06-28",
+        "v": 14.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-04-03",
-        "v": 37.8,
+        "date": "2018-07-23",
+        "v": 16.3,
         "src": "garminconnect"
       },
       {
-        "date": "2026-04-08",
-        "v": 31.8,
+        "date": "2018-08-05",
+        "v": 15.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-04-17",
-        "v": 26.8,
+        "date": "2019-06-02",
+        "v": 18.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-07-07",
+        "v": 15.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-07-19",
+        "v": 24.7,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-07-29",
+        "v": 18.2,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-08-11",
+        "v": 12.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-08-12",
+        "v": 19.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2019-09-08",
+        "v": 15.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-05-06",
+        "v": 25.0,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-05-16",
+        "v": 21.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-05-23",
+        "v": 17.2,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-07-12",
+        "v": 18.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-07-16",
+        "v": 13.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-07-21",
+        "v": 22.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-07-24",
+        "v": 19.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-08-22",
+        "v": 18.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2020-09-06",
+        "v": 16.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2021-05-29",
+        "v": 22.0,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2021-07-20",
+        "v": 22.5,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2021-07-28",
+        "v": 17.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2021-08-21",
+        "v": 25.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2021-09-18",
+        "v": 17.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2022-05-15",
+        "v": 23.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2022-06-26",
+        "v": 30.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2022-08-01",
+        "v": 22.7,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2022-08-03",
+        "v": 22.7,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2022-08-05",
+        "v": 22.7,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-05-20",
+        "v": 20.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-05-23",
+        "v": 27.6,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-06-04",
+        "v": 20.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-06-10",
+        "v": 20.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-06-28",
+        "v": 25.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-07-09",
+        "v": 16.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-07-13",
+        "v": 17.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-07-14",
+        "v": 14.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-07-25",
+        "v": 15.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-07-26",
+        "v": 24.1,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2023-08-28",
+        "v": 15.0,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-05-12",
+        "v": 24.0,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-05-23",
+        "v": 19.6,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-07-31",
+        "v": 20.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-09-02",
+        "v": 23.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-09-08",
+        "v": 15.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-09-22",
+        "v": 15.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2024-09-29",
+        "v": 24.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-04-21",
+        "v": 17.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-05-03",
+        "v": 30.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-06-12",
+        "v": 30.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-07-22",
+        "v": 16.3,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-08-03",
+        "v": 25.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-08-08",
+        "v": 18.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-08-14",
+        "v": 20.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-09-01",
+        "v": 13.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-09-07",
+        "v": 19.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-09-14",
+        "v": 14.4,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-09-21",
+        "v": 29.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2025-10-12",
+        "v": 23.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2026-05-03",
+        "v": 23.9,
         "src": "garminconnect"
       },
       {
         "date": "2026-05-06",
-        "v": 36.9,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-05-15",
-        "v": 31.4,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-05-27",
-        "v": 32.3,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-05-29",
-        "v": 31.8,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-06-01",
-        "v": 31.6,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-06-19",
-        "v": 29.2,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-06-24",
-        "v": 32.5,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-07-03",
-        "v": 30.2,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-07-08",
-        "v": 29.8,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-07-10",
-        "v": 30.8,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-07-24",
-        "v": 33.2,
-        "src": "garminconnect"
-      },
-      {
-        "date": "2026-07-29",
         "v": 26.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-07-31",
-        "v": 28.6,
+        "date": "2026-05-27",
+        "v": 28.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-08-06",
-        "v": 24.8,
+        "date": "2026-05-31",
+        "v": 25.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-08-12",
-        "v": 27.8,
+        "date": "2026-06-25",
+        "v": 25.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-08-14",
-        "v": 25.8,
+        "date": "2026-07-05",
+        "v": 34.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-08-21",
-        "v": 27.8,
+        "date": "2026-07-09",
+        "v": 33.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-08-28",
-        "v": 26.8,
+        "date": "2026-08-04",
+        "v": 24.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-09-04",
-        "v": 34.2,
+        "date": "2026-08-05",
+        "v": 28.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-09-11",
-        "v": 27.8,
+        "date": "2026-08-09",
+        "v": 27.9,
         "src": "garminconnect"
       },
       {
-        "date": "2026-09-17",
-        "v": 20.8,
+        "date": "2026-08-22",
+        "v": 21.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2026-08-23",
+        "v": 21.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2026-09-05",
+        "v": 22.4,
         "src": "garminconnect"
       }
     ],
     "points": [
       {
-        "date": "2026-04-17",
+        "date": "2019-08-11",
         "i": 7,
-        "p20": 29.4,
-        "p50": 34.6,
-        "p80": 40.2,
+        "p20": 15.3,
+        "p50": 16.1,
+        "p80": 18.6,
         "full": false
+      },
+      {
+        "date": "2019-08-12",
+        "i": 8,
+        "p20": 15.5,
+        "p50": 16.3,
+        "p80": 19.1,
+        "full": false
+      },
+      {
+        "date": "2019-09-08",
+        "i": 9,
+        "p20": 15.7,
+        "p50": 16.1,
+        "p80": 19.0,
+        "full": false
+      },
+      {
+        "date": "2020-05-06",
+        "i": 10,
+        "p20": 15.9,
+        "p50": 16.3,
+        "p80": 19.3,
+        "full": false
+      },
+      {
+        "date": "2020-05-16",
+        "i": 11,
+        "p20": 15.9,
+        "p50": 17.2,
+        "p80": 21.4,
+        "full": false
+      },
+      {
+        "date": "2020-05-23",
+        "i": 12,
+        "p20": 15.9,
+        "p50": 17.2,
+        "p80": 20.9,
+        "full": false
+      },
+      {
+        "date": "2020-07-12",
+        "i": 13,
+        "p20": 15.9,
+        "p50": 17.7,
+        "p80": 20.3,
+        "full": false
+      },
+      {
+        "date": "2020-07-16",
+        "i": 14,
+        "p20": 15.7,
+        "p50": 17.2,
+        "p80": 19.8,
+        "full": false
+      },
+      {
+        "date": "2020-07-21",
+        "i": 15,
+        "p20": 15.9,
+        "p50": 17.7,
+        "p80": 21.9,
+        "full": true
+      },
+      {
+        "date": "2020-07-24",
+        "i": 16,
+        "p20": 15.9,
+        "p50": 18.5,
+        "p80": 21.9,
+        "full": true
+      },
+      {
+        "date": "2020-08-22",
+        "i": 17,
+        "p20": 15.9,
+        "p50": 18.6,
+        "p80": 21.9,
+        "full": true
+      },
+      {
+        "date": "2020-09-06",
+        "i": 18,
+        "p20": 15.9,
+        "p50": 18.6,
+        "p80": 21.9,
+        "full": true
+      },
+      {
+        "date": "2021-05-29",
+        "i": 19,
+        "p20": 15.9,
+        "p50": 18.6,
+        "p80": 22.0,
+        "full": true
+      },
+      {
+        "date": "2021-07-20",
+        "i": 20,
+        "p20": 16.9,
+        "p50": 19.1,
+        "p80": 22.5,
+        "full": true
+      },
+      {
+        "date": "2021-07-28",
+        "i": 21,
+        "p20": 16.9,
+        "p50": 18.6,
+        "p80": 22.0,
+        "full": true
+      },
+      {
+        "date": "2021-08-21",
+        "i": 22,
+        "p20": 16.9,
+        "p50": 19.1,
+        "p80": 22.5,
+        "full": true
+      },
+      {
+        "date": "2021-09-18",
+        "i": 23,
+        "p20": 17.2,
+        "p50": 19.1,
+        "p80": 22.5,
+        "full": true
+      },
+      {
+        "date": "2022-05-15",
+        "i": 24,
+        "p20": 17.2,
+        "p50": 19.1,
+        "p80": 22.9,
+        "full": true
+      },
+      {
+        "date": "2022-06-26",
+        "i": 25,
+        "p20": 17.9,
+        "p50": 20.6,
+        "p80": 23.9,
+        "full": true
+      },
+      {
+        "date": "2022-08-01",
+        "i": 26,
+        "p20": 17.9,
+        "p50": 20.6,
+        "p80": 22.9,
+        "full": true
+      },
+      {
+        "date": "2022-08-03",
+        "i": 27,
+        "p20": 17.9,
+        "p50": 20.6,
+        "p80": 22.9,
+        "full": true
+      },
+      {
+        "date": "2022-08-05",
+        "i": 28,
+        "p20": 17.9,
+        "p50": 22.2,
+        "p80": 22.9,
+        "full": true
+      },
+      {
+        "date": "2023-05-20",
+        "i": 29,
+        "p20": 17.9,
+        "p50": 22.2,
+        "p80": 22.9,
+        "full": true
+      },
+      {
+        "date": "2023-05-23",
+        "i": 30,
+        "p20": 18.3,
+        "p50": 22.6,
+        "p80": 23.9,
+        "full": true
+      },
+      {
+        "date": "2023-06-04",
+        "i": 31,
+        "p20": 18.3,
+        "p50": 22.2,
+        "p80": 23.9,
+        "full": true
+      },
+      {
+        "date": "2023-06-10",
+        "i": 32,
+        "p20": 18.3,
+        "p50": 22.2,
+        "p80": 23.9,
+        "full": true
+      },
+      {
+        "date": "2023-06-28",
+        "i": 33,
+        "p20": 20.3,
+        "p50": 22.6,
+        "p80": 25.3,
+        "full": true
+      },
+      {
+        "date": "2023-07-09",
+        "i": 34,
+        "p20": 20.3,
+        "p50": 22.6,
+        "p80": 25.3,
+        "full": true
+      },
+      {
+        "date": "2023-07-13",
+        "i": 35,
+        "p20": 17.9,
+        "p50": 22.6,
+        "p80": 25.3,
+        "full": true
+      },
+      {
+        "date": "2023-07-14",
+        "i": 36,
+        "p20": 17.9,
+        "p50": 21.8,
+        "p80": 25.3,
+        "full": true
+      },
+      {
+        "date": "2023-07-25",
+        "i": 37,
+        "p20": 17.9,
+        "p50": 21.8,
+        "p80": 25.3,
+        "full": true
+      },
+      {
+        "date": "2023-07-26",
+        "i": 38,
+        "p20": 17.9,
+        "p50": 21.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2023-08-28",
+        "i": 39,
+        "p20": 16.9,
+        "p50": 21.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2024-05-12",
+        "i": 40,
+        "p20": 16.9,
+        "p50": 21.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2024-05-23",
+        "i": 41,
+        "p20": 16.9,
+        "p50": 20.9,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2024-07-31",
+        "i": 42,
+        "p20": 16.9,
+        "p50": 20.9,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2024-09-02",
+        "i": 43,
+        "p20": 16.9,
+        "p50": 20.9,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2024-09-08",
+        "i": 44,
+        "p20": 15.9,
+        "p50": 20.6,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2024-09-22",
+        "i": 45,
+        "p20": 15.9,
+        "p50": 20.0,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2024-09-29",
+        "i": 46,
+        "p20": 15.9,
+        "p50": 20.0,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2025-04-21",
+        "i": 47,
+        "p20": 15.9,
+        "p50": 18.8,
+        "p80": 24.0,
+        "full": true
+      },
+      {
+        "date": "2025-05-03",
+        "i": 48,
+        "p20": 15.9,
+        "p50": 18.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2025-06-12",
+        "i": 49,
+        "p20": 15.9,
+        "p50": 18.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2025-07-22",
+        "i": 50,
+        "p20": 15.9,
+        "p50": 18.8,
+        "p80": 24.1,
+        "full": true
+      },
+      {
+        "date": "2025-08-03",
+        "i": 51,
+        "p20": 15.9,
+        "p50": 20.2,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-08-08",
+        "i": 52,
+        "p20": 15.9,
+        "p50": 20.2,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-08-14",
+        "i": 53,
+        "p20": 16.3,
+        "p50": 20.9,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-09-01",
+        "i": 54,
+        "p20": 15.9,
+        "p50": 20.2,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-09-07",
+        "i": 55,
+        "p20": 16.3,
+        "p50": 20.4,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-09-14",
+        "i": 56,
+        "p20": 15.9,
+        "p50": 19.8,
+        "p80": 24.3,
+        "full": true
+      },
+      {
+        "date": "2025-09-21",
+        "i": 57,
+        "p20": 15.9,
+        "p50": 20.4,
+        "p80": 25.9,
+        "full": true
+      },
+      {
+        "date": "2025-10-12",
+        "i": 58,
+        "p20": 15.9,
+        "p50": 20.4,
+        "p80": 25.9,
+        "full": true
+      },
+      {
+        "date": "2026-05-03",
+        "i": 59,
+        "p20": 15.9,
+        "p50": 20.4,
+        "p80": 25.9,
+        "full": true
       },
       {
         "date": "2026-05-06",
-        "i": 8,
-        "p20": 29.8,
-        "p50": 36.9,
-        "p80": 39.4,
-        "full": false
-      },
-      {
-        "date": "2026-05-15",
-        "i": 9,
-        "p20": 30.1,
-        "p50": 34.4,
-        "p80": 38.6,
-        "full": false
+        "i": 60,
+        "p20": 16.3,
+        "p50": 22.4,
+        "p80": 26.9,
+        "full": true
       },
       {
         "date": "2026-05-27",
-        "i": 10,
-        "p20": 30.4,
-        "p50": 32.3,
-        "p80": 37.8,
-        "full": false
-      },
-      {
-        "date": "2026-05-29",
-        "i": 11,
-        "p20": 30.6,
-        "p50": 32.0,
-        "p80": 37.7,
-        "full": false
-      },
-      {
-        "date": "2026-06-01",
-        "i": 12,
-        "p20": 30.8,
-        "p50": 31.8,
-        "p80": 37.7,
-        "full": false
-      },
-      {
-        "date": "2026-06-19",
-        "i": 13,
-        "p20": 29.9,
-        "p50": 31.8,
-        "p80": 37.6,
-        "full": false
-      },
-      {
-        "date": "2026-06-24",
-        "i": 14,
-        "p20": 30.2,
-        "p50": 31.8,
-        "p80": 37.6,
-        "full": false
-      },
-      {
-        "date": "2026-07-03",
-        "i": 15,
-        "p20": 30.2,
-        "p50": 31.8,
-        "p80": 37.5,
+        "i": 61,
+        "p20": 17.9,
+        "p50": 23.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-07-08",
-        "i": 16,
-        "p20": 29.8,
-        "p50": 31.7,
-        "p80": 36.9,
+        "date": "2026-05-31",
+        "i": 62,
+        "p20": 17.9,
+        "p50": 23.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-07-10",
-        "i": 17,
-        "p20": 30.2,
-        "p50": 31.7,
-        "p80": 36.9,
+        "date": "2026-06-25",
+        "i": 63,
+        "p20": 18.9,
+        "p50": 24.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-07-24",
-        "i": 18,
-        "p20": 30.2,
-        "p50": 31.7,
-        "p80": 33.2,
+        "date": "2026-07-05",
+        "i": 64,
+        "p20": 18.9,
+        "p50": 24.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-07-29",
-        "i": 19,
-        "p20": 29.8,
-        "p50": 31.5,
-        "p80": 32.5,
+        "date": "2026-07-09",
+        "i": 65,
+        "p20": 18.9,
+        "p50": 24.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-07-31",
-        "i": 20,
-        "p20": 29.2,
-        "p50": 31.5,
-        "p80": 32.5,
+        "date": "2026-08-04",
+        "i": 66,
+        "p20": 19.9,
+        "p50": 25.4,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-08-06",
-        "i": 21,
-        "p20": 28.6,
-        "p50": 31.1,
-        "p80": 32.3,
+        "date": "2026-08-05",
+        "i": 67,
+        "p20": 19.9,
+        "p50": 25.4,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-08-12",
-        "i": 22,
-        "p20": 27.8,
-        "p50": 30.5,
-        "p80": 32.3,
+        "date": "2026-08-09",
+        "i": 68,
+        "p20": 20.9,
+        "p50": 25.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-08-14",
-        "i": 23,
-        "p20": 27.8,
-        "p50": 30.5,
-        "p80": 32.3,
+        "date": "2026-08-22",
+        "i": 69,
+        "p20": 21.9,
+        "p50": 25.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-08-21",
-        "i": 24,
-        "p20": 27.8,
-        "p50": 30.0,
-        "p80": 31.8,
+        "date": "2026-08-23",
+        "i": 70,
+        "p20": 21.9,
+        "p50": 25.9,
+        "p80": 28.9,
         "full": true
       },
       {
-        "date": "2026-08-28",
-        "i": 25,
-        "p20": 26.9,
-        "p50": 29.5,
-        "p80": 31.8,
-        "full": true
-      },
-      {
-        "date": "2026-09-04",
-        "i": 26,
-        "p20": 26.9,
-        "p50": 29.5,
-        "p80": 31.8,
-        "full": true
-      },
-      {
-        "date": "2026-09-11",
-        "i": 27,
-        "p20": 26.9,
-        "p50": 28.9,
-        "p80": 31.6,
-        "full": true
-      },
-      {
-        "date": "2026-09-17",
-        "i": 28,
-        "p20": 26.8,
-        "p50": 28.2,
-        "p80": 30.8,
+        "date": "2026-09-05",
+        "i": 71,
+        "p20": 22.4,
+        "p50": 25.9,
+        "p80": 28.9,
         "full": true
       }
     ]
@@ -356,11 +915,11 @@
       "modeled": true
     },
     {
-      "label": "15 hcp",
-      "handicap": 15,
-      "median": 20.2,
-      "ceiling": 16.6,
-      "floor": 23.9,
+      "label": "12 hcp",
+      "handicap": 12,
+      "median": 17.0,
+      "ceiling": 13.5,
+      "floor": 20.4,
       "modeled": true
     },
     {
@@ -383,86 +942,90 @@
   "insights": [
     {
       "cat": "Miss pattern",
-      "text": "Short-right is your dominant mid-iron miss: across 375 6i\u20139i approaches, 77% finish short and 44% miss right. One more club and a start line adjustment attack both.",
+      "text": "Short-right is your dominant mid-iron miss: across 821 6i\u20139i approaches, 80% finish short and 33% miss right. One more club and a start line adjustment attack both.",
       "confidence": "High confidence",
-      "score": 103
-    },
-    {
-      "cat": "Approach ladder",
-      "text": "Your approach game falls off a cliff at 150 yards: 125\u2013150y reaches the Green Zone 37% of the time (n=107) but 150\u2013170y only 16% (n=82), leaving a median 32 yards. Lay up to the range that still works.",
-      "confidence": "High confidence",
-      "score": 101
-    },
-    {
-      "cat": "Reliability",
-      "text": "Your 18-hole consistency is a strength: drift-adjusted, your round-to-round gap is ~4 strokes vs ~8 for a typical golfer at your level. Improvement for you means moving the whole cone down, not narrowing it.",
-      "confidence": "Moderate confidence",
-      "score": 92
-    },
-    {
-      "cat": "Scoring structure",
-      "text": "Bogey-or-better holes have risen from 67% to 78% over your last 10 rounds.",
-      "confidence": "High confidence",
-      "score": 88
-    },
-    {
-      "cat": "Approach ladder",
-      "text": "7 Iron from 160\u2013170y is a reach swing: of 17 shots, 100% finish short and 76% finish right, and only 6% reach the Green Zone. One more club is the whole fix.",
-      "confidence": "Moderate confidence",
-      "score": 86
+      "score": 115
     },
     {
       "cat": "Development",
-      "text": "Your scoring floor (bad-but-normal golf) has improved 7 strokes \u2014 blow-up rounds now land near +31 instead of +38.",
+      "text": "Your scoring floor (bad-but-normal golf) has improved -7 strokes \u2014 blow-up rounds now land near +29 instead of +22.",
       "confidence": "High confidence",
+      "score": 84
+    },
+    {
+      "cat": "Approach ladder",
+      "text": "100\u2013110y is your best window: 80% of 10 approaches reach the Green Zone, against 49% across the whole 60\u2013170y band. Worth leaving yourself that number off the tee.",
+      "confidence": "Moderate confidence",
       "score": 80
+    },
+    {
+      "cat": "Development",
+      "text": "Your typical scoring level has improved -8 strokes per 18 since tracking began (18 over rating \u2192 26).",
+      "confidence": "High confidence",
+      "score": 71
+    },
+    {
+      "cat": "Development",
+      "text": "Your ceiling has improved -6 strokes \u2014 your best golf now runs about +22 vs rating.",
+      "confidence": "High confidence",
+      "score": 71
+    },
+    {
+      "cat": "Approach ladder",
+      "text": "Your approach game falls off a cliff at 125 yards: 100\u2013125y reaches the Green Zone 62% of the time (n=37) but 125\u2013150y only 49% (n=51), leaving a median 16 yards. Lay up to the range that still works.",
+      "confidence": "High confidence",
+      "score": 62
     }
   ],
   "floorDrivers": [
     {
       "label": "Penalties /18",
-      "prev": 2.5,
-      "now": 0.9,
-      "delta": -1.6,
+      "prev": 4.5,
+      "now": 3.8,
+      "delta": -0.7,
       "verdict": "improving"
     },
     {
       "label": "Doubles+ /18",
-      "prev": 5.9,
-      "now": 4.0,
-      "delta": -1.9,
+      "prev": 6.6,
+      "now": 5.8,
+      "delta": -0.8,
       "verdict": "improving"
     },
     {
       "label": "3-putts /18",
-      "prev": 3.1,
-      "now": 1.7,
-      "delta": -1.4,
-      "verdict": "improving"
+      "prev": 3.8,
+      "now": 3.8,
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "label": "GIR %",
-      "prev": 30.0,
-      "now": 23.3,
-      "delta": -6.7,
-      "verdict": "worse"
+      "prev": 27.7,
+      "now": 26.4,
+      "delta": -1.4,
+      "verdict": "flat"
     },
     {
       "label": "Bogey-or-better %",
-      "prev": 67.2,
-      "now": 77.8,
-      "delta": 10.5,
-      "verdict": "improving"
+      "prev": 55.0,
+      "now": 55.5,
+      "delta": 0.6,
+      "verdict": "flat"
     }
   ],
   "priorities": [
     {
       "text": "Approach distance + start line: take one more club and start it left of target on mid-irons.",
-      "evidence": "77% of 375 mid-iron approaches finish short, 44% miss right; GIR is 23.3%."
+      "evidence": "80% of 821 mid-iron approaches finish short, 33% miss right; GIR is 26.4%."
     },
     {
-      "text": "Biggest strokes leak right now: Inside 50.",
-      "evidence": "-8.1 strokes per 18 vs scratch over your last 10 clean rounds \u2014 the worst of your five SG buckets."
+      "text": "Biggest strokes leak right now: Long approach (150+).",
+      "evidence": "-5.5 strokes per 18 vs scratch over your last 10 clean rounds \u2014 the worst of your five SG buckets."
+    },
+    {
+      "text": "Annotate more rounds \u2014 the process layer is your differentiator and it's running on minimal context.",
+      "evidence": "Clean-2nd-shot, recovery and normal-approach metrics currently cover 0 annotated rounds; 3\u20135 makes them trendable."
     }
   ],
   "note": "Deterministic: every sentence is generated from measured windows (cone = rolling p20/p50/p80 of score vs rating; trends = last 10 vs previous 10). Annotation-dependent metrics show their coverage."

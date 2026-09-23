@@ -1,0 +1,360 @@
+{
+  "scorecardDetails": [
+    {
+      "scorecard": {
+        "id": 53349616,
+        "customerId": "",
+        "playerProfileId": 51595206,
+        "roundPlayerName": "Ingvar Sinclair",
+        "connectDisplayName": "a38f2fcf-5e62-4354-a9b4-930b606e0086",
+        "courseGlobalId": 27691,
+        "courseSnapshotId": 185511,
+        "frontNineGlobalCourseId": 27691,
+        "scoreType": "STROKE_PLAY",
+        "useHandicapScoring": true,
+        "useStrokeCounting": true,
+        "startTime": "2019-07-29T06:29:20.000Z",
+        "formattedStartTime": "2019-07-29T07:29:20+01:00",
+        "endTime": "2019-07-29T10:33:43.000Z",
+        "formattedEndTime": "2019-07-29T11:33:43+01:00",
+        "unitId": "11",
+        "roundType": "ALL",
+        "inProgress": false,
+        "excludeFromStats": false,
+        "holesCompleted": 18,
+        "publicRound": false,
+        "score": 5,
+        "playerHandicap": 13,
+        "courseHandicapStr": "040618021210141608091711051303011507",
+        "teeBox": "Gul",
+        "handicapType": "MEN",
+        "teeBoxRating": 71.8,
+        "teeBoxSlope": 132,
+        "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+        "sensorOnPutter": false,
+        "handicappedStrokes": 77,
+        "strokes": 90,
+        "holes": [
+          {
+            "number": 1,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 2,
+            "strokes": 4,
+            "handicapScore": 3,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "HIT"
+          },
+          {
+            "number": 3,
+            "strokes": 2,
+            "handicapScore": 2,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 1,
+            "fairwayShotOutcome": "NO_FAIRWAY"
+          },
+          {
+            "number": 4,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 5,
+            "strokes": 4,
+            "handicapScore": 3,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 1,
+            "fairwayShotOutcome": "HIT"
+          },
+          {
+            "number": 6,
+            "strokes": 4,
+            "handicapScore": 3,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "NO_FAIRWAY"
+          },
+          {
+            "number": 7,
+            "strokes": 4,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:52.000Z",
+            "putts": 1,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 8,
+            "strokes": 4,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "NO_FAIRWAY"
+          },
+          {
+            "number": 9,
+            "strokes": 8,
+            "handicapScore": 7,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 10,
+            "strokes": 7,
+            "handicapScore": 6,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 11,
+            "strokes": 4,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 3,
+            "fairwayShotOutcome": "NO_FAIRWAY"
+          },
+          {
+            "number": 12,
+            "strokes": 8,
+            "handicapScore": 7,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "HIT"
+          },
+          {
+            "number": 13,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "RIGHT"
+          },
+          {
+            "number": 14,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "HIT"
+          },
+          {
+            "number": 15,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "RIGHT"
+          },
+          {
+            "number": 16,
+            "strokes": 8,
+            "handicapScore": 7,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "LEFT"
+          },
+          {
+            "number": 17,
+            "strokes": 3,
+            "handicapScore": 3,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "NO_FAIRWAY"
+          },
+          {
+            "number": 18,
+            "strokes": 5,
+            "handicapScore": 4,
+            "lastModifiedDt": "2019-07-29T12:51:53.000Z",
+            "putts": 2,
+            "fairwayShotOutcome": "RIGHT"
+          }
+        ]
+      },
+      "scorecardStats": {
+        "frontNine": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 6,
+          "fairwaysHit": 2,
+          "fairwaysLeft": 4,
+          "fairwaysRight": 0,
+          "greensInRegulation": 3,
+          "greensRecorded": 9,
+          "putts": 15,
+          "strokes": 40,
+          "handicappedStrokes": 34,
+          "scoreWithHandicap": -1,
+          "scoreWithoutHandicap": 5,
+          "meanPuttsPerHole": 1.6666666,
+          "holesUnderPar": 1,
+          "holesPar": 4,
+          "holesBogey": 3,
+          "holesOverBogey": 1,
+          "holesBirdie": 1,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 1
+        },
+        "backNine": {
+          "holesPlayed": 9,
+          "fairwaysRecorded": 7,
+          "fairwaysHit": 2,
+          "fairwaysLeft": 2,
+          "fairwaysRight": 3,
+          "greensInRegulation": 3,
+          "greensRecorded": 9,
+          "putts": 19,
+          "strokes": 50,
+          "handicappedStrokes": 43,
+          "scoreWithHandicap": 6,
+          "scoreWithoutHandicap": 13,
+          "meanPuttsPerHole": 2.1111112,
+          "holesUnderPar": 0,
+          "holesPar": 2,
+          "holesBogey": 4,
+          "holesOverBogey": 3,
+          "holesBirdie": 0,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 2
+        },
+        "round": {
+          "holesPlayed": 18,
+          "fairwaysRecorded": 13,
+          "fairwaysHit": 4,
+          "fairwaysLeft": 6,
+          "fairwaysRight": 3,
+          "greensInRegulation": 6,
+          "greensRecorded": 18,
+          "putts": 34,
+          "strokes": 90,
+          "handicappedStrokes": 77,
+          "scoreWithHandicap": 5,
+          "scoreWithoutHandicap": 18,
+          "meanPuttsPerHole": 1.8888888,
+          "holesUnderPar": 1,
+          "holesPar": 6,
+          "holesBogey": 7,
+          "holesOverBogey": 4,
+          "holesBirdie": 1,
+          "holesEagle": 0,
+          "holesDoubleEagleOrUnder": 0,
+          "upsAndDowns": 0,
+          "chips": 3
+        }
+      },
+      "shotCounts": [
+        2,
+        2,
+        1,
+        3,
+        2,
+        1,
+        2,
+        2,
+        0,
+        3,
+        1,
+        4,
+        3,
+        2,
+        2,
+        3,
+        1,
+        1
+      ],
+      "statsComparison": {
+        "driveRating": "GOOD",
+        "approachRating": "EXCELLENT",
+        "chipRating": "EXCELLENT",
+        "puttRating": "UNKNOWN"
+      },
+      "longestShotInMeters": 239.46
+    }
+  ],
+  "courseSnapshots": [
+    {
+      "courseGlobalId": 27691,
+      "courseSnapshotId": 185511,
+      "name": "Lerjedalens Golfklubb ~ 18 H\u00e5lsbanan",
+      "holePars": "443543435435445534",
+      "continent": "Europe",
+      "country": "Sweden",
+      "street": "Kroksj\u00f6v\u00e4gen 1",
+      "city": "Gunnilse",
+      "state": "V\u00e4stra G\u00f6taland",
+      "zip": "42456",
+      "phone": "031 943253",
+      "web": "http://www.lerjedalen.se/",
+      "frontNinePar": 35,
+      "backNinePar": 37,
+      "roundPar": 72,
+      "releaseDate": "12/20/2016",
+      "lat": 57794428,
+      "lon": 12105560,
+      "tees": [
+        {
+          "name": "Bl\u00e5",
+          "handicapType": "MEN",
+          "rating": 69.9,
+          "slope": 125,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "Gul",
+          "handicapType": "MEN",
+          "rating": 71.8,
+          "slope": 132,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "R\u00f6d",
+          "handicapType": "MEN",
+          "rating": 69.9,
+          "slope": 125,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "Vit",
+          "handicapType": "MEN",
+          "rating": 73.3,
+          "slope": 132,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "Bl\u00e5",
+          "handicapType": "WOMEN",
+          "rating": 76.0,
+          "slope": 134,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "Gul",
+          "handicapType": "WOMEN",
+          "rating": 78.2,
+          "slope": 139,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        },
+        {
+          "name": "R\u00f6d",
+          "handicapType": "WOMEN",
+          "rating": 73.0,
+          "slope": 128,
+          "holeHandicaps": "040618021210141608091711051303011507"
+        }
+      ]
+    }
+  ]
+}
