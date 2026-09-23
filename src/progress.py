@@ -309,8 +309,76 @@ def _outcome_section(con) -> dict:
                        if h else None,
                 "thin": n_rounds < 3,
             })
-        out[key] = {"label": s["label"], "scoreBasis": s["scoreBasis"],
-                    "goal": s["goal"], "quarters": quarters}
+        # Annual aggregation uses the exact same definitions as the quarterly table.
+        # Keep the quarterly calculation above untouched.
+        year_rounds = {r[0]: r for r in con.execute(f"""
+            SELECT strftime(r.round_date, '%Y') AS year,
+                   count(*),
+                   round(avg(CASE WHEN ? = 'all'
+                             THEN r.total_strokes * 18.0 / r.holes_completed
+                             ELSE r.total_strokes END), 1),
+                   round(avg((r.total_strokes - r.tee_rating) * 18.0 / r.holes_completed)
+                         FILTER (WHERE r.tee_rating IS NOT NULL), 1)
+            FROM canon.round r WHERE {s["where"]}
+            GROUP BY year
+        """, [key]).fetchall()}
+
+        year_holes = {r[0]: r for r in con.execute(f"""
+            SELECT strftime(hf.round_date, '%Y') AS year,
+                   count(*),
+                   round(18.0 * sum(hf.penalties)
+                         / nullif(count(hf.penalties), 0), 1),
+                   round(18.0 * count(*) FILTER (WHERE hf.double_plus) / count(*), 1),
+                   round(18.0 * count(*) FILTER (WHERE hf.putts >= 3)
+                         / nullif(count(hf.putts), 0), 1),
+                   round(100.0 * count(*) FILTER (WHERE hf.gir)
+                         / nullif(count(*) FILTER (WHERE hf.gir IS NOT NULL), 0)),
+                   round(100.0 * count(*) FILTER (WHERE hf.fairway_outcome = 'HIT')
+                         / nullif(count(*) FILTER
+                                  (WHERE hf.fairway_outcome IS NOT NULL), 0)),
+                   round(18.0 * sum(hf.putts)
+                         / nullif(count(hf.putts), 0), 1),
+                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par < 0) / count(*), 1),
+                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par = 0) / count(*), 1),
+                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par = 1) / count(*), 1),
+                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par >= 2) / count(*), 1)
+            FROM derived.hole_facts hf
+            JOIN canon.round r USING (round_id)
+            WHERE {s["where"]}
+            GROUP BY year
+        """).fetchall()}
+
+        years = []
+        for year in sorted(year_rounds):
+            _, n_rounds, avg_score, over_rating = year_rounds[year]
+            h = year_holes.get(year)
+            years.append({
+                "year": year,
+                "rounds": n_rounds,
+                "holes": h[1] if h else 0,
+                "avgScore": avg_score,
+                "overRating18": over_rating,
+                "pen18": h[2] if h else None,
+                "dbl18": h[3] if h else None,
+                "tp18": h[4] if h else None,
+                "girPct": h[5] if h else None,
+                "fwPct": h[6] if h else None,
+                "putts18": h[7] if h else None,
+                "mix": {
+                    "birdie": h[8], "par": h[9],
+                    "bogey": h[10], "double": h[11]
+                } if h else None,
+                "thin": n_rounds < 3,
+            })
+
+        out[key] = {
+            "label": s["label"],
+            "scoreBasis": s["scoreBasis"],
+            "goal": s["goal"],
+            "quarters": quarters,
+            "years": years,
+        }
+
     return out
 
 

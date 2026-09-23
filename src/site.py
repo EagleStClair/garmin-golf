@@ -475,6 +475,10 @@ TEMPLATE = r"""<!doctype html>
       <div class="foot" id="overdict" style="margin-top:6px"></div></div>
     <div class="card"><h2>Outcome metrics by quarter<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">per-18 ratios · scorecard only</span></h2>
       <div id="otable" style="overflow-x:auto"></div>
+      <div style="margin-top:18px">
+        <h3 style="margin:0 0 8px">Outcome metrics by year</h3>
+        <div id="oytable" style="overflow-x:auto"></div>
+      </div>
       <div class="foot" style="margin-top:6px">Green/red is direction-aware. Birdie/par/bogey/double live in the score mix below.</div></div>
     <div class="card"><h2>Score mix by quarter<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">what your holes are made of</span></h2>
       <div class="mixgrid" id="omix"></div>
@@ -703,6 +707,7 @@ function renderOutcome(){
   const last=qs[qs.length-1], prev=qs[qs.length-2];
   const t1=document.getElementById('ot1');
   document.getElementById('ot1l').textContent="This quarter ("+(last?qlab(last.q):"—")+")";
+
   t1.textContent=last&&val(last)!=null?val(last).toFixed(1):"—";
   const dtile=(el,sel,a,b,suffix)=>{
     const e=document.getElementById(el), s=document.getElementById(sel);
@@ -793,6 +798,36 @@ function renderOutcome(){
     return `<div class="mixrow"><span class="mixq">${i===qs.length-1?"<b>"+qlab(q.q)+"</b>":qlab(q.q)}${q.thin?' <i class="esttag">n='+q.rounds+'⚠</i>':""}</span>`
       +`<div class="mixbar">${seg("m-bird",m.birdie)}${seg("m-par",m.par)}${seg("m-bog",m.bogey)}${seg("m-dbl",m.double)}</div></div>`;
   }).join("");
+  // Year table — separate from the existing quarterly table.
+  const years=sc.years||[];
+  const YROWS=[
+    ["avgScore","Avg score",1],
+    ["pen18","Penalties /18",1],
+    ["dbl18","Doubles+ /18",1],
+    ["tp18","3-putts /18",1],
+    ["putts18","Putts /18",1],
+    ["girPct","GIR %",0],
+    ["fwPct","Fairways %",0]
+  ];
+
+  const yhead=
+    `<tr><th>Metric</th>`+
+    years.map(y=>`<th>${y.year}</th>`).join("")+
+    `</tr>`;
+
+  const yrows=YROWS.map(([key,label,dec])=>{
+    const cells=years.map(y=>{
+      const v=y[key];
+      return `<td>${v==null?"—":v.toFixed(dec)+(key.endsWith("Pct")?"%":"")}</td>`;
+    }).join("");
+    return `<tr><td>${label}</td>${cells}</tr>`;
+  }).join("");
+
+  const yearly=document.getElementById('oytable');
+  if(yearly){
+    yearly.innerHTML=
+      `<table class="putt otab"><thead>${yhead}</thead><tbody>${yrows}</tbody></table>`;
+  }
 }
 document.getElementById('oscope').onclick=e=>{if(!e.target.dataset.s)return;oScope=e.target.dataset.s;
   [...e.currentTarget.children].forEach(b=>b.classList.toggle('on',b===e.target));renderOutcome();};
