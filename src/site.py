@@ -603,6 +603,15 @@ TEMPLATE = r"""<!doctype html>
 
 <script>
 const DATA = /*__DATA__*/null;
+
+const M_PER_YD = 0.9144;
+
+function toM(yd, digits=0) {
+  return yd == null
+    ? "?"
+    : `${(yd * M_PER_YD).toFixed(digits)}m`;
+}
+
 const P=DATA.progress, SG=P.sg, AU=P.authoritative, BL=P.baselines;
 const CATS=[["offTee","Off-Tee"],["longApproach","Long"],["midApproach","Mid"],
             ["inside50","In50"],["putting","Putt"]];
@@ -916,8 +925,8 @@ function renderRoundDetail(i){
         const rf=s.rem==null?"":(Math.round(s.rem*3)===0?" → in":` → ${Math.round(s.rem*3)} ft`);
         return `<div><span class="sn">${s.n}</span>${club} <span class="mut">${bf}${rf}</span>${sg}</div>`;
       }
-      const yd=s.yards===null?"?":`${Math.round(s.yards)}y`;
-      const rem=s.rem===null?"":` →${Math.round(s.rem)}y`;
+      const yd=toM(s.yards);
+      const rem=s.rem===null?"":` →${toM(s.rem)}`;
       return `<div><span class="sn">${s.n}</span>${club} ${yd} <span class="mut">${s.from}→${s.to}${rem}</span>${sg}</div>`;
     }).join("");
     const fw=h.fw?`FW:${h.fw}`:"";const gir=h.gir?"GIR":"";
@@ -953,8 +962,10 @@ function dbar(d){
   const side=d.straightPct>=50?'mostly straight'
     :d.leftPct>d.rightPct?`misses left ${d.leftPct}%`:`misses right ${d.rightPct}%`;
   const depth=d.shortPct>=60?`short ${d.shortPct}%`:d.longPct>=60?`long ${d.longPct}%`:'depth mixed';
-  const full=`left ${d.leftPct}% · straight ${d.straightPct}% · right ${d.rightPct}% — `+
-    `short ${d.shortPct}% / long ${d.longPct}% · median offline ${d.medianLateralYds}y · n=${d.approachShots}`;
+  const full =
+    `left ${d.leftPct}% · straight ${d.straightPct}% · right ${d.rightPct}% — ` +
+    `short ${d.shortPct}% / long ${d.longPct}% · ` +
+    `median offline ${toM(d.medianLateralYds, 1)} · n=${d.approachShots}`;
   return `<div class="dwrap" title="${full}"><div class="dbar">${seg(d.leftPct,'dl')}${seg(d.straightPct,'ds')}${seg(d.rightPct,'dr')}</div>
     <div class="dtxt">${side} · ${depth}</div></div>`;
 }
@@ -1005,10 +1016,11 @@ function drawHole(){
   document.getElementById('hnext').disabled=mHole===holes.length-1;
   h.shots.forEach(s=>{if(!s.start||!s.end)return;
     L.polyline([s.start,s.end],{color:'#fff',weight:2,opacity:.65}).addTo(mlayer);pts.push(s.start,s.end);
-    const yd=s.yards!=null?Math.round(s.yards):'';
+    const yd=s.yards!=null?toM(s.yards):'';
     // dot + label sit where the shot was PLAYED FROM; the line shows where it went
     const m=L.marker(s.start,{icon:dot(sgColor(s.sg))});
-    m.bindPopup(`<b>#${s.n} ${s.club}</b> ${yd}y from here<br>${s.from} → ${s.to}`+(s.sg!=null?` · SG ${s.sg>0?'+':''}${s.sg.toFixed(1)}`:''));
+    m.bindPopup(`<b>#${s.n} ${s.club}</b> ${yd} from here<br>${s.from} → ${s.to}`+
+      (s.sg!=null?` · SG ${s.sg>0?'+':''}${s.sg.toFixed(1)}`:''));
     if(s.type!=='PUTT')m.bindTooltip(`${abbr(s.club)} ${yd}`,{permanent:true,direction:'right',className:'tag',offset:[8,0]});
     m.addTo(mlayer);});
   const lastS=[...h.shots].reverse().find(x=>x.end);
@@ -1213,7 +1225,7 @@ function renderLadTable(L){
     `<th>n</th><th>Median leave</th></tr></thead><tbody>`+
     L.bins.map(b=>{
       const on=b.key===ladOpen;
-      const leave=b.medianLeaveYds==null?'—':b.medianLeaveYds.toFixed(1)+'y';
+      const leave=b.medianLeaveYds==null?'—':toM(b.medianLeaveYds, 1);
       return `<tr class="ladrow${on?' on':''}" data-bin="${b.key}"><td>${b.label}`+
         `<span class="ladcaret">${on?'▾':'▸'}</span></td>`+
         `<td>${ladPill(b)}</td><td>${b.zone.n}</td><td>${leave}</td></tr>`;
@@ -1252,7 +1264,7 @@ function renderLadAnat(){
     `<table class="dtab" style="margin-top:6px"><tbody>`+
       row('Green Zone',`${pc(b.zone.pct)} <span style="color:var(--muted)">n=${b.zone.n}</span>`)+
       row('Inside 10 yards',`${pc(b.ring10.pct)} <span style="color:var(--muted)">n=${b.ring10.n}</span>`)+
-      row('Median leave',b.medianLeaveYds==null?'—':b.medianLeaveYds.toFixed(1)+'y')+
+      row('Median leave',b.medianLeaveYds==null?'—':toM(b.medianLeaveYds, 1))+
       row('Cost to hole out',pay==null?'—':`${pay.strokes.toFixed(2)} strokes `+
         `<span style="color:var(--muted)">n=${pay.n}</span>`)+
       row('Miss (range)',`${pc(m.shortPct)} short · ${pc(m.longPct)} long `+
