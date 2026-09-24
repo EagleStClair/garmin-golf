@@ -473,12 +473,8 @@ TEMPLATE = r"""<!doctype html>
       </div>
       <div class="ochartwrap"><svg id="osvg" viewBox="0 0 880 300" width="100%"></svg><div class="otip" id="otip"></div></div>
       <div class="foot" id="overdict" style="margin-top:6px"></div></div>
-    <div class="card"><h2>Outcome metrics by quarter<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">per-18 ratios · scorecard only</span></h2>
+    <div class="card"><h2>Outcome metrics by year<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">per-18 ratios · scorecard only</span></h2>
       <div id="otable" style="overflow-x:auto"></div>
-      <div style="margin-top:18px">
-        <h3 style="margin:0 0 8px">Outcome metrics by year</h3>
-        <div id="oytable" style="overflow-x:auto"></div>
-      </div>
       <div class="foot" style="margin-top:6px">Green/red is direction-aware. Birdie/par/bogey/double live in the score mix below.</div></div>
     <div class="card"><h2>Score mix by quarter<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">what your holes are made of</span></h2>
       <div class="mixgrid" id="omix"></div>
@@ -694,20 +690,18 @@ function renderProgress(){
 let oScope="h18", oLens="raw";
 const OROWS=[["avgScore","Avg score","down",1],["pen18","Penalties","down",1],
   ["dbl18","Doubles+","down",1],["tp18","3-putts","down",1],
+  ["putts18","Putts","down",1],
   ["girPct","GIR %","up",0],["fwPct","Fairways %","up",0]];
-function qlab(q){const [y,n]=q.split("-");return n+" ’"+y.slice(2);}
 function ofmt(v,d){return v==null?"—":v.toFixed(d);}
 function renderOutcome(){
   const O=P.outcome; if(!O||!O[oScope])return;
-  const sc=O[oScope], all=sc.quarters, qs=all.slice(-8);
+  const sc=O[oScope], qs=sc.years||[];
   const val=q=> oLens==="raw"? q.avgScore : q.overRating18;
   document.getElementById('obasis').textContent=
-    (oLens==="raw"? "avg score, "+sc.scoreBasis : "score vs course rating, per 18")+" · quarterly";
-  // tiles
+    (oLens==="raw"? "avg score, "+sc.scoreBasis : "score vs course rating, per 18")+" · yearly";
   const last=qs[qs.length-1], prev=qs[qs.length-2];
   const t1=document.getElementById('ot1');
-  document.getElementById('ot1l').textContent="This quarter ("+(last?qlab(last.q):"—")+")";
-
+  document.getElementById('ot1l').textContent="This year ("+(last?last.year:"—")+")";
   t1.textContent=last&&val(last)!=null?val(last).toFixed(1):"—";
   const dtile=(el,sel,a,b,suffix)=>{
     const e=document.getElementById(el), s=document.getElementById(sel);
@@ -720,18 +714,17 @@ function renderOutcome(){
   document.getElementById('ot1s').innerHTML=last&&prev&&val(last)!=null&&val(prev)!=null?
     ((val(last)-val(prev))<=0?`<span class="gd">▼ ${(val(prev)-val(last)).toFixed(1)}</span>`
       :`<span class="bd">▲ ${(val(last)-val(prev)).toFixed(1)}</span>`)
-    +` vs ${qlab(prev.q)} · n=${last.rounds}`:(last?`n=${last.rounds}`:"");
-  const back4=all.length>4?all[all.length-5]:null;
+    +` vs ${prev.year} · n=${last.rounds}`:(last?`n=${last.rounds}`:"");
+  const back4=qs.length>4?qs[qs.length-5]:null;
   dtile('ot2','ot2s',last?val(last):null,back4?val(back4):null,
     back4?`${ofmt(val(back4),1)} → ${ofmt(val(last),1)}`:"");
   if(!back4){document.getElementById('ot2').textContent="—";
-    document.getElementById('ot2s').textContent="needs 5+ quarters";}
-  const first=all[0];
+    document.getElementById('ot2s').textContent="needs 5+ years";}
+  const first=qs[0];
   dtile('ot3','ot3s',last?val(last):null,first&&first!==last?val(first):null,
-    first&&first!==last?`${ofmt(val(first),1)} (${qlab(first.q)}) → ${ofmt(val(last),1)}`:"");
+    first&&first!==last?`${ofmt(val(first),1)} (${first.year}) → ${ofmt(val(last),1)}`:"");
   if(!first||first===last){document.getElementById('ot3').textContent="—";
-    document.getElementById('ot3s').textContent="one quarter so far";}
-  // chart
+    document.getElementById('ot3s').textContent="one year so far";}
   const pts=qs.map((q,i)=>({q,v:val(q),i})).filter(p=>p.v!=null);
   const svg=document.getElementById('osvg');
   const cw=(svg.parentNode&&svg.parentNode.clientWidth)||880, K=cw&&cw<560?2.0:1;
@@ -750,10 +743,10 @@ function renderOutcome(){
   g+=`<path d="${pts.map((p,k)=>(k?"L":"M")+X(p.i)+" "+Y(p.v)).join(" ")}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>`;
   pts.forEach((p,k)=>{
     const lastPt=k===pts.length-1;
-    g+=`<circle cx="${X(p.i)}" cy="${Y(p.v)}" r="${lastPt?6.5:5.5}" fill="var(--accent)" stroke="#fff" stroke-width="2" data-q="${qlab(p.q.q)}" data-v="${p.v.toFixed(1)}" data-n="n=${p.q.rounds} round${p.q.rounds===1?"":"s"}${p.q.thin?" — thin sample":""}"/>`;
+    g+=`<circle cx="${X(p.i)}" cy="${Y(p.v)}" r="${lastPt?6.5:5.5}" fill="var(--accent)" stroke="#fff" stroke-width="2" data-q="${p.q.year}" data-v="${p.v.toFixed(1)}" data-n="n=${p.q.rounds} round${p.q.rounds===1?"":"s"}${p.q.thin?" — thin sample":""}"/>`;
     if(k===0||lastPt) g+=`<text class="ptlab" font-size="${12*K}" x="${X(p.i)}" y="${Y(p.v)-12}" text-anchor="middle">${p.v.toFixed(1)}</text>`;
   });
-  qs.forEach((q,i)=>{g+=`<text class="qlab" font-size="${11.5*K}" x="${X(i)}" y="${284+(K>1?4:0)}" text-anchor="middle">${qlab(q.q)}</text>`
+  qs.forEach((q,i)=>{g+=`<text class="qlab" font-size="${11.5*K}" x="${X(i)}" y="${284+(K>1?4:0)}" text-anchor="middle">${q.year}</text>`
     +`<text class="nlab" font-size="${10*K}" x="${X(i)}" y="${297+(K>1?16:0)}" text-anchor="middle">n=${q.rounds}${q.thin?" ⚠":""}</text>`;});
   svg.innerHTML=g;
   const tip=document.getElementById('otip');
@@ -763,17 +756,15 @@ function renderOutcome(){
       tip.style.left=(r.left-w.left+r.width/2)+'px';tip.style.top=(r.top-w.top)+'px';tip.style.opacity=1;});
     c.addEventListener('mouseleave',()=>tip.style.opacity=0);
   });
-  // verdict
   let streak=0;
   for(let k=pts.length-1;k>0&&pts[k].v<pts[k-1].v;k--)streak++;
   const vd=document.getElementById('overdict');
   if(pts.length<2){vd.textContent="";}
   else{const total=pts[0].v-pts[pts.length-1].v;
     const word=total>1?"Improving":total<-1?"Regressing":"Plateau";
-    vd.innerHTML=`<b>${word}</b>${streak>1?` — ${streak} straight quarters better`:""}`
-      +` · ${total>=0?"−":"+"}${Math.abs(total).toFixed(1)} since ${qlab(pts[0].q.q)}`;}
-  // table
-  const hd=`<tr><th>Metric /18</th>${qs.map((q,i)=>`<th${i===qs.length-1?' class="now"':''}>${qlab(q.q)}</th>`).join("")}<th>Δ</th></tr>`;
+    vd.innerHTML=`<b>${word}</b>${streak>1?` — ${streak} straight years better`:""}`
+      +` · ${total>=0?"−":"+"}${Math.abs(total).toFixed(1)} since ${pts[0].q.year}`;}
+  const hd=`<tr><th>Metric /18</th>${qs.map((q,i)=>`<th${i===qs.length-1?' class="now"':''}>${q.year}</th>`).join("")}<th>Δ</th></tr>`;
   const rows=OROWS.map(([key,lab,dir,dec])=>{
     const cells=qs.map((q,i)=>{
       const v=key==="avgScore"?q.avgScore:q[key];
@@ -791,43 +782,12 @@ function renderOutcome(){
   }).join("");
   document.getElementById('otable').innerHTML=
     `<table class="putt otab"><thead>${hd}</thead><tbody>${rows}</tbody></table>`;
-  // score mix
   document.getElementById('omix').innerHTML=qs.map((q,i)=>{
     const m=q.mix; if(!m)return "";
     const seg=(cls,v)=>`<span class="${cls}" style="width:${v}%">${v>=10?Math.round(v)+"%":""}</span>`;
-    return `<div class="mixrow"><span class="mixq">${i===qs.length-1?"<b>"+qlab(q.q)+"</b>":qlab(q.q)}${q.thin?' <i class="esttag">n='+q.rounds+'⚠</i>':""}</span>`
+    return `<div class="mixrow"><span class="mixq">${i===qs.length-1?"<b>"+q.year+"</b>":q.year}${q.thin?' <i class="esttag">n='+q.rounds+'⚠</i>':""}</span>`
       +`<div class="mixbar">${seg("m-bird",m.birdie)}${seg("m-par",m.par)}${seg("m-bog",m.bogey)}${seg("m-dbl",m.double)}</div></div>`;
   }).join("");
-  // Year table — separate from the existing quarterly table.
-  const years=sc.years||[];
-  const YROWS=[
-    ["avgScore","Avg score",1],
-    ["pen18","Penalties /18",1],
-    ["dbl18","Doubles+ /18",1],
-    ["tp18","3-putts /18",1],
-    ["putts18","Putts /18",1],
-    ["girPct","GIR %",0],
-    ["fwPct","Fairways %",0]
-  ];
-
-  const yhead=
-    `<tr><th>Metric</th>`+
-    years.map(y=>`<th>${y.year}</th>`).join("")+
-    `</tr>`;
-
-  const yrows=YROWS.map(([key,label,dec])=>{
-    const cells=years.map(y=>{
-      const v=y[key];
-      return `<td>${v==null?"—":v.toFixed(dec)+(key.endsWith("Pct")?"%":"")}</td>`;
-    }).join("");
-    return `<tr><td>${label}</td>${cells}</tr>`;
-  }).join("");
-
-  const yearly=document.getElementById('oytable');
-  if(yearly){
-    yearly.innerHTML=
-      `<table class="putt otab"><thead>${yhead}</thead><tbody>${yrows}</tbody></table>`;
-  }
 }
 document.getElementById('oscope').onclick=e=>{if(!e.target.dataset.s)return;oScope=e.target.dataset.s;
   [...e.currentTarget.children].forEach(b=>b.classList.toggle('on',b===e.target));renderOutcome();};

@@ -211,7 +211,9 @@ def build(write: bool = True) -> dict:
                    f"your round-to-round range has widened from {start['gap']:.0f} to "
                    f"{current['gap']:.0f} strokes" if g_chg <= -1 else
                    f"your round-to-round range is steady near {current['gap']:.0f} strokes")
-        summary = (f"Your scoring has improved primarily by {driver}: bad rounds are "
+        overall = start["median"] - current["median"]   # + = genuinely better
+        direction = "improved" if overall > 0 else "declined" if overall < 0 else "shifted"
+        summary = (f"Your scoring has {direction} primarily by {driver}: bad rounds are "
                    f"{abs(f_imp):.0f} strokes {'better' if f_imp >= 0 else 'worse'} than when "
                    f"tracking began, your best golf is {abs(c_imp):.0f} strokes "
                    f"{'better' if c_imp >= 0 else 'worse'}, and {gap_txt}.")

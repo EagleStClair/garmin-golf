@@ -1,6 +1,6 @@
 # Insights — how is my golf changing?
 
-Your scoring has improved primarily by moving your whole game down together: bad rounds are 7 strokes worse than when tracking began, your best golf is 6 strokes worse, and your round-to-round range is steady near 6 strokes.
+Your scoring has declined primarily by moving your whole game down together: bad rounds are 7 strokes worse than when tracking began, your best golf is 6 strokes worse, and your round-to-round range is steady near 6 strokes.
 
 Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds only (rate trends still use every round)):
   ceiling 15.9 → 22.4 · median 17.7 → 25.9 · floor 21.9 → 28.9 · gap 6.0 → 6.5

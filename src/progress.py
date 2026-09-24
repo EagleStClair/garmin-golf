@@ -243,7 +243,7 @@ def _priority_window(rounds: list[dict]) -> dict:
 
 
 def _outcome_section(con) -> dict:
-    """Layer-1 Outcome data: quarterly scorecard-objective trends per round scope.
+    """Layer-1 Outcome data: annual scorecard-objective trends per round scope.
 
     Scopes: 18-hole rounds (the headline), 9-hole rounds (their own per-9 trend),
     and everything normalized per 18. NO analysis-cutoff filter here — the Outcome
@@ -262,56 +262,6 @@ def _outcome_section(con) -> dict:
     out = {}
     for key, s in scopes.items():
         rounds = {r[0]: r for r in con.execute(f"""
-            SELECT strftime(r.round_date, '%Y') || '-Q' ||
-                   CAST((month(r.round_date) + 2) // 3 AS VARCHAR) AS q,
-                   count(*),
-                   round(avg(CASE WHEN ? = 'all'
-                             THEN r.total_strokes * 18.0 / r.holes_completed
-                             ELSE r.total_strokes END), 1),
-                   round(avg((r.total_strokes - r.tee_rating) * 18.0 / r.holes_completed)
-                         FILTER (WHERE r.tee_rating IS NOT NULL), 1)
-            FROM canon.round r WHERE {s["where"]}
-            GROUP BY q""", [key]).fetchall()}
-        # Ratios normalize over RECORDED holes for nullable stats (penalties, putts,
-        # GIR, fairways) — backfilled rounds can have '-' cells, and a partial column
-        # must not deflate a rate. Score-based stats are always complete.
-        holes = {r[0]: r for r in con.execute(f"""
-            SELECT strftime(hf.round_date, '%Y') || '-Q' ||
-                   CAST((month(hf.round_date) + 2) // 3 AS VARCHAR) AS q,
-                   count(*),
-                   round(18.0 * sum(hf.penalties)
-                         / nullif(count(hf.penalties), 0), 1),
-                   round(18.0 * count(*) FILTER (WHERE hf.double_plus) / count(*), 1),
-                   round(18.0 * count(*) FILTER (WHERE hf.putts >= 3)
-                         / nullif(count(hf.putts), 0), 1),
-                   round(100.0 * count(*) FILTER (WHERE hf.gir)
-                         / nullif(count(*) FILTER (WHERE hf.gir IS NOT NULL), 0)),
-                   round(100.0 * count(*) FILTER (WHERE hf.fairway_outcome = 'HIT')
-                         / nullif(count(*) FILTER (WHERE hf.fairway_outcome IS NOT NULL), 0)),
-                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par < 0) / count(*), 1),
-                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par = 0) / count(*), 1),
-                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par = 1) / count(*), 1),
-                   round(100.0 * count(*) FILTER (WHERE hf.score_to_par >= 2) / count(*), 1)
-            FROM derived.hole_facts hf
-            JOIN canon.round r USING (round_id) WHERE {s["where"]}
-            GROUP BY q""").fetchall()}
-        quarters = []
-        for q in sorted(rounds):
-            _, n_rounds, avg_score, over_rating = rounds[q]
-            h = holes.get(q)
-            quarters.append({
-                "q": q, "rounds": n_rounds, "holes": h[1] if h else 0,
-                "avgScore": avg_score, "overRating18": over_rating,
-                "pen18": h[2] if h else None, "dbl18": h[3] if h else None,
-                "tp18": h[4] if h else None, "girPct": h[5] if h else None,
-                "fwPct": h[6] if h else None,
-                "mix": {"birdie": h[7], "par": h[8], "bogey": h[9], "double": h[10]}
-                       if h else None,
-                "thin": n_rounds < 3,
-            })
-        # Annual aggregation uses the exact same definitions as the quarterly table.
-        # Keep the quarterly calculation above untouched.
-        year_rounds = {r[0]: r for r in con.execute(f"""
             SELECT strftime(r.round_date, '%Y') AS year,
                    count(*),
                    round(avg(CASE WHEN ? = 'all'
@@ -323,7 +273,7 @@ def _outcome_section(con) -> dict:
             GROUP BY year
         """, [key]).fetchall()}
 
-        year_holes = {r[0]: r for r in con.execute(f"""
+        holes = {r[0]: r for r in con.execute(f"""
             SELECT strftime(hf.round_date, '%Y') AS year,
                    count(*),
                    round(18.0 * sum(hf.penalties)
@@ -349,9 +299,9 @@ def _outcome_section(con) -> dict:
         """).fetchall()}
 
         years = []
-        for year in sorted(year_rounds):
-            _, n_rounds, avg_score, over_rating = year_rounds[year]
-            h = year_holes.get(year)
+        for year in sorted(rounds):
+            _, n_rounds, avg_score, over_rating = rounds[year]
+            h = holes.get(year)
             years.append({
                 "year": year,
                 "rounds": n_rounds,
@@ -375,7 +325,6 @@ def _outcome_section(con) -> dict:
             "label": s["label"],
             "scoreBasis": s["scoreBasis"],
             "goal": s["goal"],
-            "quarters": quarters,
             "years": years,
         }
 
