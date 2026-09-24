@@ -7,11 +7,11 @@ Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds on
 
 ## What changed
 - [Miss pattern · High confidence] Short-right is your dominant mid-iron miss: across 821 6i–9i approaches, 80% finish short and 33% miss right. One more club and a start line adjustment attack both.
-- [Development · High confidence] Your scoring floor (bad-but-normal golf) has improved -7 strokes — blow-up rounds now land near +29 instead of +22.
-- [Approach ladder · Moderate confidence] 100–110y is your best window: 80% of 10 approaches reach the Green Zone, against 49% across the whole 60–170y band. Worth leaving yourself that number off the tee.
-- [Development · High confidence] Your typical scoring level has improved -8 strokes per 18 since tracking began (18 over rating → 26).
-- [Development · High confidence] Your ceiling has improved -6 strokes — your best golf now runs about +22 vs rating.
-- [Approach ladder · High confidence] Your approach game falls off a cliff at 125 yards: 100–125y reaches the Green Zone 62% of the time (n=37) but 125–150y only 49% (n=51), leaving a median 16 yards. Lay up to the range that still works.
+- [Development · High confidence] Your scoring floor (bad-but-normal golf) has declined 7 strokes — blow-up rounds now land near +29 versus +22 when tracking began.
+- [Development · High confidence] Your typical scoring level has declined -8 strokes per 18 since tracking began (18 over rating → 26).
+- [Development · High confidence] Your ceiling has declined 6 strokes — your best golf now runs about +22 vs rating (was +16).
+- [Approach ladder · High confidence] Your approach game falls off a cliff at 125 yards: 100–125y reaches the Green Zone 62% of the time (n=34) but 125–150y only 48% (n=46), leaving a median 16 yards. Lay up to the range that still works.
+- [Approach ladder · Moderate confidence] 8 Iron from 150–160y is a reach swing: of 16 shots, 88% finish short and 62% finish right, and only 25% reach the Green Zone. One more club is the whole fix.
 
 ## Floor drivers (last 10 vs previous 10)
 - Penalties /18: 4.5 → 3.8 (improving)

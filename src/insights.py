@@ -222,21 +222,30 @@ def build(write: bool = True) -> dict:
     if current and start:
         lt = round(start["median"] - current["median"], 1)
         if abs(lt) >= 2:
+            lt_word = "improved" if lt > 0 else "declined"
             cands.append(_cand("Development",
-                f"Your typical scoring level has improved {lt:.0f} strokes per 18 since "
+                f"Your typical scoring level has {lt_word} {lt:.0f} strokes per 18 since "
                 f"tracking began ({start['median']:.0f} over rating → {current['median']:.0f}).",
                 lt / 15, n_rounds, 1.3))
         if abs(start["floor"] - current["floor"]) >= 2:
             d = start["floor"] - current["floor"]
+            d_word = "improved" if d > 0 else "declined"
+            f_txt = (f"blow-up rounds now land near +{current['floor']:.0f} instead of "
+                     f"+{start['floor']:.0f}" if d > 0 else
+                     f"blow-up rounds now land near +{current['floor']:.0f} versus "
+                     f"+{start['floor']:.0f} when tracking began")
             cands.append(_cand("Development",
-                f"Your scoring floor (bad-but-normal golf) has improved {d:.0f} strokes "
-                f"— blow-up rounds now land near +{current['floor']:.0f} instead of "
-                f"+{start['floor']:.0f}.", d / 10, n_rounds, 1.2))
+                f"Your scoring floor (bad-but-normal golf) has {d_word} {abs(d):.0f} "
+                f"strokes — {f_txt}.",
+                d / 10, n_rounds, 1.2))
         if abs(start["ceiling"] - current["ceiling"]) >= 2:
             d = start["ceiling"] - current["ceiling"]
+            d_word = "improved" if d > 0 else "declined"
             cands.append(_cand("Development",
-                f"Your ceiling has improved {d:.0f} strokes — your best golf now runs about "
-                f"+{current['ceiling']:.0f} vs rating.", d / 10, n_rounds, 1.1))
+                f"Your ceiling has {d_word} {abs(d):.0f} strokes — your best golf now "
+                f"runs about +{current['ceiling']:.0f} vs rating "
+                f"(was +{start['ceiling']:.0f}).",
+                d / 10, n_rounds, 1.1))
         if abs(start["gap"] - current["gap"]) >= 1.5:
             d = start["gap"] - current["gap"]
             word = "narrowed" if d > 0 else "widened"
@@ -246,11 +255,21 @@ def build(write: bool = True) -> dict:
                 f"{'your bad golf is becoming much less expensive' if d > 0 else 'form is getting streakier'}.",
                 d / 8, n_rounds, 1.2))
         f_imp, c_imp = start["floor"] - current["floor"], start["ceiling"] - current["ceiling"]
-        if f_imp > c_imp + 2:
-            cands.append(_cand("Reliability",
-                f"Most of your improvement is reliability, not peak performance: the floor "
-                f"has moved {f_imp:.0f} strokes to the ceiling's {c_imp:.0f}. Fewer disasters, "
-                f"similar best golf.", (f_imp - c_imp) / 8, n_rounds, 1.1))
+        if abs(f_imp - c_imp) >= 2:
+            if f_imp > 0 and c_imp > 0:
+                txt = (f"Most of your improvement is reliability, not peak performance: "
+                       f"the floor has moved {f_imp:.0f} strokes to the ceiling's "
+                       f"{c_imp:.0f}. Fewer disasters, similar best golf.")
+            elif f_imp < 0 and c_imp < 0:
+                txt = (f"Your decline is broad: the floor has moved {abs(f_imp):.0f} "
+                       f"strokes and the ceiling {abs(c_imp):.0f}. Both bad days and "
+                       f"best golf are worse — a whole-game level shift.")
+            else:
+                txt = (f"Floor and ceiling are moving in opposite directions: floor "
+                       f"{f_imp:+.0f}, ceiling {c_imp:+.0f} strokes — level and "
+                       f"consistency are diverging.")
+            cands.append(_cand("Reliability", txt,
+                               abs(f_imp - c_imp) / 8, n_rounds, 1.1))
 
     for key, label, unit, good_down, scale in (
             ("pen18", "Penalties", "per 18", True, 2.0),

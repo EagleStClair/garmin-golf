@@ -948,33 +948,33 @@
     },
     {
       "cat": "Development",
-      "text": "Your scoring floor (bad-but-normal golf) has improved -7 strokes \u2014 blow-up rounds now land near +29 instead of +22.",
+      "text": "Your scoring floor (bad-but-normal golf) has declined 7 strokes \u2014 blow-up rounds now land near +29 versus +22 when tracking began.",
       "confidence": "High confidence",
       "score": 84
     },
     {
+      "cat": "Development",
+      "text": "Your typical scoring level has declined -8 strokes per 18 since tracking began (18 over rating \u2192 26).",
+      "confidence": "High confidence",
+      "score": 71
+    },
+    {
+      "cat": "Development",
+      "text": "Your ceiling has declined 6 strokes \u2014 your best golf now runs about +22 vs rating (was +16).",
+      "confidence": "High confidence",
+      "score": 71
+    },
+    {
       "cat": "Approach ladder",
-      "text": "100\u2013110y is your best window: 80% of 10 approaches reach the Green Zone, against 49% across the whole 60\u2013170y band. Worth leaving yourself that number off the tee.",
+      "text": "Your approach game falls off a cliff at 125 yards: 100\u2013125y reaches the Green Zone 62% of the time (n=34) but 125\u2013150y only 48% (n=46), leaving a median 16 yards. Lay up to the range that still works.",
+      "confidence": "High confidence",
+      "score": 67
+    },
+    {
+      "cat": "Approach ladder",
+      "text": "8 Iron from 150\u2013160y is a reach swing: of 16 shots, 88% finish short and 62% finish right, and only 25% reach the Green Zone. One more club is the whole fix.",
       "confidence": "Moderate confidence",
-      "score": 80
-    },
-    {
-      "cat": "Development",
-      "text": "Your typical scoring level has improved -8 strokes per 18 since tracking began (18 over rating \u2192 26).",
-      "confidence": "High confidence",
-      "score": 71
-    },
-    {
-      "cat": "Development",
-      "text": "Your ceiling has improved -6 strokes \u2014 your best golf now runs about +22 vs rating.",
-      "confidence": "High confidence",
-      "score": 71
-    },
-    {
-      "cat": "Approach ladder",
-      "text": "Your approach game falls off a cliff at 125 yards: 100\u2013125y reaches the Green Zone 62% of the time (n=37) but 125\u2013150y only 49% (n=51), leaving a median 16 yards. Lay up to the range that still works.",
-      "confidence": "High confidence",
-      "score": 62
+      "score": 46
     }
   ],
   "floorDrivers": [
