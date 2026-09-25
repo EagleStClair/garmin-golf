@@ -467,7 +467,7 @@ TEMPLATE = r"""<!doctype html>
           <button data-l="rating">vs rating</button></div>
       </div>
       <div class="ohero">
-        <div><div class="lab" id="ot1l">This quarter</div><div class="v" id="ot1">—</div><div class="osub" id="ot1s"></div></div>
+        <div><div class="lab" id="ot1l">This year</div><div class="v" id="ot1">—</div><div class="osub" id="ot1s"></div></div>
         <div><div class="lab">12-month change</div><div class="v" id="ot2">—</div><div class="osub" id="ot2s"></div></div>
         <div><div class="lab">Since start</div><div class="v" id="ot3">—</div><div class="osub" id="ot3s"></div></div>
       </div>
@@ -476,7 +476,7 @@ TEMPLATE = r"""<!doctype html>
     <div class="card"><h2>Outcome metrics by year<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">per-18 ratios · scorecard only</span></h2>
       <div id="otable" style="overflow-x:auto"></div>
       <div class="foot" style="margin-top:6px">Green/red is direction-aware. Birdie/par/bogey/double live in the score mix below.</div></div>
-    <div class="card"><h2>Score mix by quarter<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">what your holes are made of</span></h2>
+    <div class="card"><h2>Score mix by year<span style="float:right;text-transform:none;font-weight:400;letter-spacing:0;color:var(--muted)">what your holes are made of</span></h2>
       <div class="mixgrid" id="omix"></div>
       <div class="mixlegend"><span><s class="sw m-bird"></s>Birdie+</span><span><s class="sw m-par"></s>Par</span><span><s class="sw m-bog"></s>Bogey</span><span><s class="sw m-dbl"></s>Double+</span></div>
       <div class="foot" style="margin-top:4px">Improvement reads as mass flowing left (doubles → bogeys → pars).</div></div>

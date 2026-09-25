@@ -117,7 +117,7 @@ def _load_rounds(con) -> list[dict]:
                      /nullif(count(*) FILTER (WHERE gir IS NOT NULL),0) AS gir_pct,
                  100.0*count(*) FILTER (WHERE score_to_par<=1)/count(*) AS bob_pct
           FROM derived.hole_facts GROUP BY round_id)
-        SELECT r.round_date, (r.total_strokes-r.tee_rating)*18.0/r.holes_completed,
+        SELECT r.round_date, r.total_strokes*18.0 / r.holes_completed - r.tee_rating,
                r.source, r.holes_completed, hf.pen18, hf.dbl18, hf.tp18, hf.gir_pct,
                hf.bob_pct
         FROM canon.round r JOIN hf USING (round_id)

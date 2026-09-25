@@ -267,7 +267,7 @@ def _outcome_section(con) -> dict:
                    round(avg(CASE WHEN ? = 'all'
                              THEN r.total_strokes * 18.0 / r.holes_completed
                              ELSE r.total_strokes END), 1),
-                   round(avg((r.total_strokes - r.tee_rating) * 18.0 / r.holes_completed)
+                   round(avg(r.total_strokes * 18.0 / r.holes_completed - r.tee_rating)
                          FILTER (WHERE r.tee_rating IS NOT NULL), 1)
             FROM canon.round r WHERE {s["where"]}
             GROUP BY year
