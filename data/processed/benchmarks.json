@@ -5,9 +5,9 @@
     "retrieved": "2026-09-06",
     "note": "Groups are SCORE-RANGE groups, not exact handicaps: Pro1 64-71, Pro2 72-79, Am1 70-83 (low-handicap ams), Am2 84-97 (middle), Am3 98-120 (high). ~40,000 shots, 500 rounds, 130+ golfers, 2005-2007. Values transcribed verbatim from Tables 1-4 and Eq. 2."
   },
-  "generated": "2026-09-25",
-  "avgScore18": 97.1,
-  "adjScore18": 98.8,
+  "generated": "2026-09-27",
+  "avgScore18": 96.5,
+  "adjScore18": 98.2,
   "standardCourseRating": 72.0,
   "nScoreRounds": 10,
   "yourGroup": "Am3",
@@ -46,7 +46,7 @@
       "key": "green100to150Fwy",
       "label": "Approach 100-150y (fairway lie): green hit %",
       "yours": 43,
-      "n": 235,
+      "n": 237,
       "unit": "%",
       "groups": {
         "Am1": 63,
@@ -60,7 +60,7 @@
       "key": "prox100to150Fwy",
       "label": "Approach 100-150y (fairway): median leave, % of start",
       "yours": 12.5,
-      "n": 235,
+      "n": 237,
       "unit": "% of start distance",
       "groups": {
         "Am1": 8.7,
@@ -75,7 +75,7 @@
       "key": "green100to150Rough",
       "label": "Approach 100-150y (rough lie): green hit %",
       "yours": 40,
-      "n": 235,
+      "n": 238,
       "unit": "%",
       "groups": {
         "Am1": 53,
@@ -89,7 +89,7 @@
       "key": "green20to60Fwy",
       "label": "Pitch 20-60y (fairway lie): on green %",
       "yours": 80,
-      "n": 158,
+      "n": 163,
       "unit": "%",
       "groups": {
         "Am1": 93,
@@ -102,8 +102,8 @@
     {
       "key": "prox20to60Fwy",
       "label": "Pitch 20-60y (fairway): median leave, % of start",
-      "yours": 13.9,
-      "n": 158,
+      "yours": 14.1,
+      "n": 163,
       "unit": "% of start distance",
       "groups": {
         "Am1": 13.8,
@@ -118,7 +118,7 @@
       "key": "green20to60Rough",
       "label": "Pitch 20-60y (rough lie): on green %",
       "yours": 79,
-      "n": 317,
+      "n": 318,
       "unit": "%",
       "groups": {
         "Am1": 86,
@@ -146,7 +146,7 @@
       "key": "onePutt50",
       "label": "Distance you hole 50% of putts (ft)",
       "yours": 4.5,
-      "n": 488,
+      "n": 489,
       "unit": "ft",
       "groups": {
         "Am1": 5.8,
@@ -161,7 +161,7 @@
       "key": "twoPuttDist",
       "label": "Average 2-putt distance (ft)",
       "yours": 23.0,
-      "n": 298,
+      "n": 299,
       "unit": "ft",
       "groups": {
         "Am1": 25,
@@ -188,8 +188,8 @@
     {
       "key": "awfulShots",
       "label": "Awful shots per 18 (shot value < -0.8, no putts)",
-      "yours": 4.8,
-      "n": 83,
+      "yours": 5.9,
+      "n": 84,
       "unit": "/round",
       "groups": {
         "Am1": 1.9,
@@ -198,7 +198,7 @@
       },
       "betterIs": "lower",
       "placement": "between Am3 and Am2 (nearer Am2)",
-      "note": "clean rounds only; benchmark for your adjusted scoring level: A = 0.24*98.8 - 17.1 = 6.6"
+      "note": "clean rounds only; benchmark for your adjusted scoring level: A = 0.24*98.2 - 17.1 = 6.5"
     }
   ]
 }

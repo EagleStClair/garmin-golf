@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -8.57,
+    "totalRecordedVsScratch": -14.34,
     "byCategory": {
       "offTee": -4.56,
       "longApproach": -1.4,
       "midApproach": -2.78,
-      "inside50": 0.17,
+      "inside50": -5.6,
       "putting": 0.0
     },
-    "sg0to100": -3.12,
+    "sg0to100": -8.9,
     "categorizedShots": 44,
     "penaltyStrokes": 0,
     "doublesOrWorse": 7,
@@ -303,7 +303,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.505,
+          "strokesGained": -0.495,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -617,7 +617,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.432,
+          "strokesGained": -0.568,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -1273,7 +1273,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.922,
+          "strokesGained": -1.455,
           "confidence": "inferred",
           "resultCategory": "short"
         }
@@ -1473,7 +1473,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.047,
+          "strokesGained": -0.151,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -1972,7 +1972,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.681,
+          "strokesGained": -0.319,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -2129,7 +2129,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.252,
+          "strokesGained": -1.368,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -2243,7 +2243,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.222,
+          "strokesGained": -1.244,
           "confidence": "inferred",
           "resultCategory": "green"
         },

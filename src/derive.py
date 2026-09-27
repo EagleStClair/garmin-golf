@@ -25,7 +25,7 @@ RAW_DIR = Path("data/raw")
 
 # Bump when SG derivation logic changes; rows in derived.shot_sg carry it so a
 # stale-version scan is one query away.
-SG_VERSION = 1
+SG_VERSION = 3
 
 
 def derive_geom(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None) -> int:
@@ -74,42 +74,127 @@ def _round_filter(round_ids: list[int] | None, column: str) -> tuple[str, list]:
 
 
 def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None) -> int:
-    """(Re)compute derived.shot_sg for non-phantom shots. Putts get category 'putting'
-    with NULL strokes_gained (putting SG is count-based, see derive_putting)."""
+    """(Re)compute derived.shot_sg.
+
+    Normal non-putting shots use shot-to-shot SG.
+
+    For holes without trustworthy first-putt geometry, the final shot from
+    inside 50 yards owns the complete short-game outcome through the hole,
+    including subsequent putts.
+
+    For holes with trustworthy first-putt geometry, SG remains shot-based so
+    putting can be calculated separately by derive_putting().
+    """
     base = Baseline()
     cuts = sg_distance_cuts()
     where, params = _round_filter(round_ids, "s.round_id")
+
     rows = con.execute(f"""
-        SELECT s.shot_id, s.round_id, s.start_lie, s.end_lie, h.par,
-               g.to_pin_before_yds, g.remaining_yds
+        SELECT
+            s.shot_id,
+            s.round_id,
+            s.hole_number,
+            s.shot_order,
+            s.start_lie,
+            s.end_lie,
+            h.par,
+            h.strokes,
+            g.to_pin_before_yds,
+            g.remaining_yds
         FROM canon.shot s
-        JOIN canon.hole h ON h.round_id = s.round_id AND h.hole_number = s.hole_number
-        JOIN derived.shot_flags f ON f.shot_id = s.shot_id
-        LEFT JOIN derived.shot_geom g ON g.shot_id = s.shot_id
+        JOIN canon.hole h
+          ON h.round_id = s.round_id
+         AND h.hole_number = s.hole_number
+        JOIN derived.shot_flags f
+          ON f.shot_id = s.shot_id
+        LEFT JOIN derived.shot_geom g
+          ON g.shot_id = s.shot_id
         WHERE NOT f.phantom {where}
-        """, params).fetchall()
+        ORDER BY s.round_id, s.hole_number, s.shot_order
+    """, params).fetchall()
 
     con.execute("BEGIN")
+
     if round_ids is None:
         con.execute("DELETE FROM derived.shot_sg")
     else:
-        con.execute("DELETE FROM derived.shot_sg WHERE shot_id IN "
-                    "(SELECT shot_id FROM canon.shot WHERE round_id IN (SELECT unnest(?)))",
-                    [round_ids])
+        con.execute(
+            "DELETE FROM derived.shot_sg WHERE shot_id IN "
+            "(SELECT shot_id FROM canon.shot "
+            "WHERE round_id IN (SELECT unnest(?)))",
+            [round_ids],
+        )
+
+    # Holes with reliable first-putt geometry can keep putting separate.
+    putting_geometry = {
+        (rid, hole)
+        for rid, hole in con.execute("""
+            SELECT round_id, hole_number
+            FROM derived.hole_first_putt
+            WHERE first_putt_ft IS NOT NULL
+        """).fetchall()
+    }
+
+    # Last non-putting shot from inside 50 yards on each hole.
+    last_short_game = {}
+
+    for (
+        shot_id, rid, hole, shot_order,
+        from_lie, to_lie, par, hole_strokes,
+        d_before, d_after
+    ) in rows:
+        if (
+            from_lie != "Green"
+            and d_before is not None
+            and d_before <= cuts["insideMaxYds"]
+        ):
+            last_short_game[(rid, hole)] = shot_id
+
     n = 0
-    for shot_id, _rid, from_lie, to_lie, par, d_before, d_after in rows:
-        shot = {"from": from_lie, "distanceToPinBeforeYds": d_before}
+
+    for (
+        shot_id, rid, hole, shot_order,
+        from_lie, to_lie, par, hole_strokes,
+        d_before, d_after
+    ) in rows:
+        shot = {
+            "from": from_lie,
+            "distanceToPinBeforeYds": d_before,
+        }
         cat = categorize(shot, par, cuts)
         sg = None
+
         if cat != "putting":
-            sg = shot_sg(base, from_lie=from_lie, to_lie=to_lie,
-                         dist_before_yds=d_before, dist_after_yds=d_after)
-        con.execute("INSERT INTO derived.shot_sg VALUES (?,?,?,?)",
-                    [shot_id, cat, sg, SG_VERSION])
+            sg = shot_sg(
+                base,
+                from_lie=from_lie,
+                to_lie=to_lie,
+                dist_before_yds=d_before,
+                dist_after_yds=d_after,
+            )
+
+            # Without reliable first-putt geometry, the final inside-50 shot
+            # owns the complete outcome through the hole.
+            if (
+                (rid, hole) not in putting_geometry
+                and last_short_game.get((rid, hole)) == shot_id
+            ):
+                expected = base.expected(
+                    lie=from_lie,
+                    dist_yds=d_before,
+                )
+                if expected is not None:
+                    strokes_remaining = hole_strokes - shot_order + 1
+                    sg = expected - strokes_remaining
+
+        con.execute(
+            "INSERT INTO derived.shot_sg VALUES (?,?,?,?)",
+            [shot_id, cat, sg, SG_VERSION],
+        )
         n += 1
+
     con.execute("COMMIT")
     return n
-
 
 def derive_putting(con: duckdb.DuckDBPyConnection,
                    round_ids: list[int] | None = None) -> int:
