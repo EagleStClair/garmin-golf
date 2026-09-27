@@ -51,7 +51,7 @@ def _compact_round(path: Path) -> dict:
         "stem": path.stem, "md": md_path.read_text() if md_path.exists() else "",
         "date": rnd["date"][:10], "course": course["name"],
         "score": sc["strokes"], "toPar": sc.get("toPar"), "par": course["par"], "holes": holes,
-        "overRating18": round((sc["strokes"] - rating) * 18 / holes, 1) if rating else None,
+        "overRating18": round(sc["strokes"] * 18 / holes - rating, 1) if rating else None,
         "tees": rnd.get("teeBox"), "rating": rating, "slope": rnd.get("teeBoxSlope"),
         "putts": sc["putts"], "penalties": sc["penalties"],
         "doubles": sg.get("doublesOrWorse", 0),
