@@ -29,8 +29,8 @@ from .constants import POLLUTION_DELTA, RECENT_N, SG_CATS, SG_LABELS, SG_SHORT
 OUT_JSON = Path("data/processed/progress.json")
 OUT_MD = Path("data/processed/progress.md")
 SCRATCH_PUTTS_18 = 30
-GARMIN_HANDICAP = 23.6
-BREAK_90_OVER_RATING = 22    # ~ shooting 89 on the player's ~67-rated tees
+GARMIN_HANDICAP = 17.5
+BREAK_90_OVER_RATING = 19    # ~ shooting 89 on the player's ~67-rated tees
 
 # Dashboard putting bands (vNext fine bands; first-putt distance is GPS-derived, so
 # the shortest band is the least reliable).
