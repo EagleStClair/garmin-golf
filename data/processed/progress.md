@@ -21,12 +21,12 @@ _Average − potential = ~4 strokes of volatility (your blow-up tax — fewer do
 
 | Bucket | This round | Last 5 | All-time |
 |---|--:|--:|--:|
-| Off-the-Tee | -6.4 | -5.0 | -5.0 |
+| Off-the-Tee | -5.0 | -4.6 | -4.9 |
 | Long approach (150+) | -5.4 | -7.0 | -6.3 |
 | Mid approach (50–150) | -4.7 | -6.0 | -6.2 |
 | Inside 50 | -6.9 | -6.0 | -4.6 |
 | Putting | +0.0 | +0.0 | +0.0 |
-| **Total** | -23.4 | -24.0 | -22.1 |
+| **Total** | -22.0 | -23.6 | -22.0 |
 
 _Read across: **This vs Last 5** = was this round above/below your form (signal vs noise). **Last 5 vs All-time** = are you trending up. Putting is count-based (authoritative putts); other buckets are GPS-based; the absolute total runs a few strokes hot — trust the ranking._
 
@@ -106,8 +106,8 @@ _vsRtg = score over rating per 18 (authoritative). SG per 18; ⚠ = over-recorde
 | 2026-05-27 | Alingsås Golfklubb | 99 | 18 | +28.9 | -6.2 | -7.8 | -7.8 | -5.6 | +0.0 | |
 | 2026-05-31 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.1 | -4.8 | -10.6 | -7.8 | +0.0 | |
 | 2026-06-25 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.3 | -7.2 | -9.4 | -4.2 | +0.0 | |
-| 2026-07-05 | Alingsås Golfklubb | 105 | 18 | +34.9 | -7.5 | -9.3 | -7.2 | -8.2 | +0.0 | |
-| 2026-07-09 | Alingsås Golfklubb | 104 | 18 | +33.9 | -11.2 | -6.8 | -7.4 | -8.9 | +0.0 | |
+| 2026-07-05 | Alingsås Golfklubb | 105 | 18 | +34.9 | -3.9 | -9.3 | -7.2 | -8.2 | +0.0 | |
+| 2026-07-09 | Alingsås Golfklubb | 104 | 18 | +33.9 | -7.9 | -6.8 | -7.4 | -8.9 | +0.0 | |
 | 2026-08-04 | Alingsås Golfklubb | 95 | 18 | +24.9 | -5.0 | -6.5 | -5.1 | -7.8 | +0.0 | |
 | 2026-08-05 | Alingsås Golfklubb | 99 | 18 | +28.9 | -5.6 | -8.7 | -9.1 | -5.9 | +0.0 | |
 | 2026-08-09 | Alingsås Golfklubb | 98 | 18 | +27.9 | -5.0 | -6.1 | -9.4 | -7.7 | +0.0 | |
@@ -117,4 +117,4 @@ _vsRtg = score over rating per 18 (authoritative). SG per 18; ⚠ = over-recorde
 | 2026-09-05 | Vårgårda Golfklubb | 94 | 18 | +22.4 | -5.0 | -9.1 | -6.3 | -5.8 | +0.0 | |
 | 2026-09-18 | Alingsås Golfklubb | 69 | 14 | +-1.4 | -2.1 | -6.3 | -6.4 | -3.2 | +0.0 | |
 | 2026-09-20 | Alingsås Golfklubb | 48 | 9 | +-44.2 | -6.5 | -7.9 | -5.3 | -10.2 | +0.0 | |
-| 2026-09-26 | Alingsås Golfklubb | 90 | 18 | +19.9 | -6.4 | -5.4 | -4.7 | -6.9 | +0.0 | |
+| 2026-09-26 | Alingsås Golfklubb | 90 | 18 | +19.9 | -5.0 | -5.4 | -4.7 | -6.9 | +0.0 | |

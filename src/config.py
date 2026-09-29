@@ -32,6 +32,12 @@ def publish_verify_url() -> str | None:
     return (_analysis_config().get("publish") or {}).get("verifyUrl")
 
 
+def sg_excluded_holes() -> dict[int, list[int]]:
+    """Holes picked up / never finished — excluded from SG entirely."""
+    sg = _analysis_config().get("strokesGained", {})
+    return {int(k): list(v) for k, v in (sg.get("excludeHoles") or {}).items()}
+
+
 def sg_distance_cuts() -> dict:
     """Distance cuts (yards) for the SG approach buckets and the 0-100 headline metric.
     Player-tunable in config/analysis.json."""

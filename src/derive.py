@@ -16,7 +16,7 @@ from pathlib import Path
 
 import duckdb
 
-from .config import sg_distance_cuts
+from .config import sg_distance_cuts, sg_excluded_holes
 from .constants import METERS_TO_YARDS
 from .geo import shot_geometry
 from .sg_core import Baseline, categorize, shot_sg
@@ -25,7 +25,7 @@ RAW_DIR = Path("data/raw")
 
 # Bump when SG derivation logic changes; rows in derived.shot_sg carry it so a
 # stale-version scan is one query away.
-SG_VERSION = 4
+SG_VERSION = 5
 
 
 def derive_geom(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None) -> int:
@@ -126,6 +126,7 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
             [round_ids],
         )
 
+
     # Last non-putting shot from inside 50 yards on each hole.
     last_short_game = {}
 
@@ -139,6 +140,14 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
 
     n = 0
 
+    # Picked-up holes (never finished): no result to grade — exclude from SG.
+    excluded = {
+        (rid, hole)
+        for rid, holes in sg_excluded_holes().items()
+        for hole in holes
+    }
+
+
     for (
         shot_id, rid, hole, shot_order,
         from_lie, to_lie, par, hole_strokes, penalties,
@@ -151,7 +160,10 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
         cat = categorize(shot, par, cuts)
         sg = None
 
-        if cat != "putting":
+        if (rid, hole) in excluded:
+            pass                    # picked up — no SG for any shot on this hole
+
+        elif cat != "putting":
             sg = shot_sg(
                 base,
                 from_lie=from_lie,
