@@ -43,8 +43,8 @@ def sg_distance_cuts() -> dict:
     }
 
 
-_DEFAULT_WEIGHTS = {"offTee": 0.18, "longApproach": 0.20, "midApproach": 0.20,
-                    "inside50": 0.24, "putting": 0.18}
+_DEFAULT_WEIGHTS = {"offTee": 0.18, "longApproach": 0.22, "midApproach": 0.22,
+                    "inside50": 0.38}
 
 
 def sg_target() -> dict:

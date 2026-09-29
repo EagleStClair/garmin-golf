@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -20.01,
+    "totalRecordedVsScratch": -20.11,
     "byCategory": {
       "offTee": -2.96,
-      "longApproach": -6.58,
-      "midApproach": -2.64,
+      "longApproach": -6.63,
+      "midApproach": -2.69,
       "inside50": -7.83,
       "putting": 0.0
     },
-    "sg0to100": -8.92,
+    "sg0to100": -9.05,
     "categorizedShots": 52,
     "penaltyStrokes": 0,
     "doublesOrWorse": 2,
@@ -303,7 +303,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.074,
+          "strokesGained": -0.034,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1146,7 +1146,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.088,
+          "strokesGained": 0.022,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2961,7 +2961,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": -0.066,
+          "strokesGained": -0.009,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -3604,7 +3604,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.244,
+          "strokesGained": -0.1,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -4090,7 +4090,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.078,
+          "strokesGained": -0.203,
           "confidence": "inferred",
           "resultCategory": "green"
         },

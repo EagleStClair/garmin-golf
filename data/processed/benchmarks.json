@@ -188,7 +188,7 @@
     {
       "key": "awfulShots",
       "label": "Awful shots per 18 (shot value < -0.8, no putts)",
-      "yours": 6.0,
+      "yours": 9.0,
       "n": 84,
       "unit": "/round",
       "groups": {
@@ -197,7 +197,7 @@
         "Am3": 9.3
       },
       "betterIs": "lower",
-      "placement": "between Am3 and Am2 (nearer Am2)",
+      "placement": "between Am3 and Am2 (nearer Am3)",
       "note": "clean rounds only; benchmark for your adjusted scoring level: A = 0.24*98.2 - 17.1 = 6.5"
     }
   ]

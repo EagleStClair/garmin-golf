@@ -33,8 +33,8 @@
     "_targetNote": "Target-handicap baseline is MODELED (not per-shot empirical tables): a target-H golfer is taken to be ~H strokes/18 over scratch, split across buckets by handicapBucketWeights (research-informed: approach + wedge zone leak most). SG vs target = your SG vs scratch minus the target's. Directional, not exact — the bucket ranking is the signal.",
     "targetHandicap": 12,
     "handicapBucketWeights": {
-      "offTee": 0.18, "longApproach": 0.20, "midApproach": 0.20,
-      "inside50": 0.24, "putting": 0.18
+      "offTee": 0.18, "longApproach": 0.22, "midApproach": 0.22,
+      "inside50": 0.38
     }
   }
 }

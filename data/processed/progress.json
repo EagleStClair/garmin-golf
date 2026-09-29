@@ -18,24 +18,24 @@
     "myAverage": {
       "label": "My average",
       "byCategory": {
-        "offTee": -4.7,
-        "longApproach": -5.0,
-        "midApproach": -2.4,
-        "inside50": -4.2,
+        "offTee": -5.0,
+        "longApproach": -6.3,
+        "midApproach": -6.2,
+        "inside50": -4.6,
         "putting": 0.0
       },
-      "sg0to100": -4.8
+      "sg0to100": -6.8
     },
     "target12": {
       "label": "Target 12",
       "byCategory": {
         "offTee": -2.16,
-        "longApproach": -2.4,
-        "midApproach": -2.4,
-        "inside50": -2.88,
-        "putting": -2.16
+        "longApproach": -2.64,
+        "midApproach": -2.64,
+        "inside50": -4.56,
+        "putting": 0.0
       },
-      "sg0to100": -4.32,
+      "sg0to100": -6.14,
       "modeled": true
     }
   },
@@ -50,62 +50,62 @@
   "sg": {
     "thisRound": {
       "byCategory": {
-        "offTee": -3.4,
-        "longApproach": -5.2,
-        "midApproach": -1.7,
+        "offTee": -6.4,
+        "longApproach": -5.4,
+        "midApproach": -4.7,
         "inside50": -6.9,
         "putting": 0.0
       },
-      "total": -17.2,
-      "sg0to100": -7.0,
+      "total": -23.4,
+      "sg0to100": -9.0,
       "cleanRounds": 1
     },
     "last5": {
       "byCategory": {
-        "offTee": -4.2,
-        "longApproach": -6.4,
-        "midApproach": -0.3,
-        "inside50": -5.4,
+        "offTee": -5.0,
+        "longApproach": -7.0,
+        "midApproach": -6.0,
+        "inside50": -6.0,
         "putting": 0.0
       },
-      "total": -16.3,
-      "sg0to100": -4.5,
+      "total": -24.0,
+      "sg0to100": -8.2,
       "cleanRounds": 5
     },
     "last10": {
       "byCategory": {
-        "offTee": -4.8,
-        "longApproach": -5.5,
-        "midApproach": -1.3,
-        "inside50": -5.4,
+        "offTee": -5.2,
+        "longApproach": -6.7,
+        "midApproach": -6.7,
+        "inside50": -6.3,
         "putting": 0.0
       },
-      "total": -17.0,
-      "sg0to100": -6.0,
+      "total": -24.9,
+      "sg0to100": -9.0,
       "cleanRounds": 10
     },
     "last20": {
       "byCategory": {
-        "offTee": -5.1,
-        "longApproach": -5.6,
-        "midApproach": -1.5,
-        "inside50": -5.0,
+        "offTee": -5.9,
+        "longApproach": -6.9,
+        "midApproach": -7.6,
+        "inside50": -6.2,
         "putting": 0.0
       },
-      "total": -17.2,
-      "sg0to100": -5.4,
+      "total": -26.6,
+      "sg0to100": -9.3,
       "cleanRounds": 20
     },
     "allTime": {
       "byCategory": {
-        "offTee": -4.7,
-        "longApproach": -5.0,
-        "midApproach": -2.4,
-        "inside50": -4.2,
+        "offTee": -5.0,
+        "longApproach": -6.3,
+        "midApproach": -6.2,
+        "inside50": -4.6,
         "putting": 0.0
       },
-      "total": -16.3,
-      "sg0to100": -4.8,
+      "total": -22.1,
+      "sg0to100": -6.8,
       "cleanRounds": 84
     }
   },
@@ -1052,8 +1052,8 @@
       "overRating18": 14.9,
       "per18": {
         "offTee": -4.3,
-        "longApproach": -4.4,
-        "midApproach": -2.0,
+        "longApproach": -8.1,
+        "midApproach": -5.0,
         "inside50": -4.6,
         "putting": 0.0
       },
@@ -1109,8 +1109,8 @@
       "overRating18": 18.9,
       "per18": {
         "offTee": -6.0,
-        "longApproach": -6.5,
-        "midApproach": -4.3,
+        "longApproach": -8.4,
+        "midApproach": -7.3,
         "inside50": -3.9,
         "putting": 0.0
       },
@@ -1147,8 +1147,8 @@
       "overRating18": 15.9,
       "per18": {
         "offTee": -5.2,
-        "longApproach": -2.6,
-        "midApproach": -1.1,
+        "longApproach": -3.0,
+        "midApproach": -6.4,
         "inside50": -8.2,
         "putting": 0.0
       },
@@ -1166,8 +1166,8 @@
       "overRating18": 24.7,
       "per18": {
         "offTee": -3.3,
-        "longApproach": -7.5,
-        "midApproach": -1.3,
+        "longApproach": -8.0,
+        "midApproach": -9.2,
         "inside50": -5.6,
         "putting": 0.0
       },
@@ -1204,8 +1204,8 @@
       "overRating18": 12.9,
       "per18": {
         "offTee": -3.9,
-        "longApproach": -2.7,
-        "midApproach": -1.9,
+        "longApproach": -3.9,
+        "midApproach": -11.1,
         "inside50": -0.9,
         "putting": 0.0
       },
@@ -1223,8 +1223,8 @@
       "overRating18": 19.3,
       "per18": {
         "offTee": -4.6,
-        "longApproach": -6.2,
-        "midApproach": -3.0,
+        "longApproach": -10.0,
+        "midApproach": -6.5,
         "inside50": -3.9,
         "putting": 0.0
       },
@@ -1242,8 +1242,8 @@
       "overRating18": 15.9,
       "per18": {
         "offTee": -5.0,
-        "longApproach": -4.2,
-        "midApproach": -1.1,
+        "longApproach": -7.1,
+        "midApproach": -8.5,
         "inside50": -2.2,
         "putting": 0.0
       },
@@ -1261,8 +1261,8 @@
       "overRating18": 25.0,
       "per18": {
         "offTee": -4.6,
-        "longApproach": -1.4,
-        "midApproach": -2.8,
+        "longApproach": -9.1,
+        "midApproach": -10.2,
         "inside50": -5.6,
         "putting": 0.0
       },
@@ -1280,9 +1280,9 @@
       "overRating18": 21.9,
       "per18": {
         "offTee": -4.7,
-        "longApproach": -5.8,
-        "midApproach": -3.6,
-        "inside50": -10.0,
+        "longApproach": -6.8,
+        "midApproach": -5.2,
+        "inside50": -9.1,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -1299,8 +1299,8 @@
       "overRating18": 17.2,
       "per18": {
         "offTee": -4.0,
-        "longApproach": -4.3,
-        "midApproach": -5.6,
+        "longApproach": -6.6,
+        "midApproach": -4.6,
         "inside50": -3.8,
         "putting": 0.0
       },
@@ -1318,9 +1318,9 @@
       "overRating18": 18.9,
       "per18": {
         "offTee": -3.8,
-        "longApproach": -4.6,
-        "midApproach": -1.8,
-        "inside50": -2.0,
+        "longApproach": -5.6,
+        "midApproach": -6.7,
+        "inside50": -1.8,
         "putting": 0.0
       },
       "pen18": 9.0,
@@ -1337,9 +1337,9 @@
       "overRating18": 13.3,
       "per18": {
         "offTee": -2.8,
-        "longApproach": -7.2,
-        "midApproach": -0.7,
-        "inside50": -4.3,
+        "longApproach": -9.4,
+        "midApproach": -0.9,
+        "inside50": -3.9,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -1355,10 +1355,10 @@
       "holes": 18,
       "overRating18": 22.9,
       "per18": {
-        "offTee": -2.0,
-        "longApproach": -4.0,
-        "midApproach": -3.4,
-        "inside50": -2.7,
+        "offTee": -1.0,
+        "longApproach": -7.1,
+        "midApproach": -4.5,
+        "inside50": -1.7,
         "putting": 0.0
       },
       "pen18": 16.0,
@@ -1375,9 +1375,9 @@
       "overRating18": 19.3,
       "per18": {
         "offTee": -4.2,
-        "longApproach": -4.1,
-        "midApproach": 0.1,
-        "inside50": -2.1,
+        "longApproach": -4.9,
+        "midApproach": -4.9,
+        "inside50": -1.8,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1395,8 +1395,8 @@
       "per18": {
         "offTee": -4.5,
         "longApproach": -5.2,
-        "midApproach": -3.0,
-        "inside50": -4.7,
+        "midApproach": -6.6,
+        "inside50": -3.6,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -1413,9 +1413,9 @@
       "overRating18": 16.9,
       "per18": {
         "offTee": -4.7,
-        "longApproach": -6.6,
-        "midApproach": -2.1,
-        "inside50": -3.1,
+        "longApproach": -8.8,
+        "midApproach": -4.9,
+        "inside50": -2.2,
         "putting": 0.0
       },
       "pen18": 2.0,
@@ -1432,9 +1432,9 @@
       "overRating18": 22.0,
       "per18": {
         "offTee": -3.9,
-        "longApproach": -5.5,
-        "midApproach": -3.1,
-        "inside50": -2.3,
+        "longApproach": -6.8,
+        "midApproach": -7.0,
+        "inside50": -0.3,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -1451,8 +1451,8 @@
       "overRating18": 22.5,
       "per18": {
         "offTee": -3.9,
-        "longApproach": -5.6,
-        "midApproach": -5.6,
+        "longApproach": -6.6,
+        "midApproach": -7.1,
         "inside50": -7.6,
         "putting": 0.0
       },
@@ -1470,9 +1470,9 @@
       "overRating18": 17.9,
       "per18": {
         "offTee": -5.9,
-        "longApproach": -1.6,
-        "midApproach": -1.4,
-        "inside50": -2.4,
+        "longApproach": -1.9,
+        "midApproach": -6.0,
+        "inside50": -2.5,
         "putting": 0.0
       },
       "pen18": 9.0,
@@ -1488,10 +1488,10 @@
       "holes": 18,
       "overRating18": 25.9,
       "per18": {
-        "offTee": -2.6,
-        "longApproach": 0.1,
-        "midApproach": -1.9,
-        "inside50": -5.9,
+        "offTee": -5.8,
+        "longApproach": -3.0,
+        "midApproach": -2.9,
+        "inside50": -6.8,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1508,8 +1508,8 @@
       "overRating18": 17.9,
       "per18": {
         "offTee": -5.4,
-        "longApproach": -6.4,
-        "midApproach": -3.8,
+        "longApproach": -7.3,
+        "midApproach": -7.8,
         "inside50": -3.7,
         "putting": 0.0
       },
@@ -1528,7 +1528,7 @@
       "per18": {
         "offTee": -6.4,
         "longApproach": -2.9,
-        "midApproach": -5.3,
+        "midApproach": -10.6,
         "inside50": -2.4,
         "putting": 0.0
       },
@@ -1545,10 +1545,10 @@
       "holes": 18,
       "overRating18": 30.9,
       "per18": {
-        "offTee": -4.2,
-        "longApproach": -3.5,
-        "midApproach": -5.1,
-        "inside50": -3.1,
+        "offTee": -9.2,
+        "longApproach": -5.7,
+        "midApproach": -7.9,
+        "inside50": -3.9,
         "putting": 0.0
       },
       "pen18": 9.0,
@@ -1565,8 +1565,8 @@
       "overRating18": 22.7,
       "per18": {
         "offTee": -4.7,
-        "longApproach": -7.0,
-        "midApproach": -3.7,
+        "longApproach": -6.9,
+        "midApproach": -6.5,
         "inside50": -6.2,
         "putting": 0.0
       },
@@ -1584,8 +1584,8 @@
       "overRating18": 22.7,
       "per18": {
         "offTee": -4.2,
-        "longApproach": -7.8,
-        "midApproach": -1.6,
+        "longApproach": -11.4,
+        "midApproach": -5.5,
         "inside50": -4.5,
         "putting": 0.0
       },
@@ -1604,8 +1604,8 @@
       "per18": {
         "offTee": -4.0,
         "longApproach": -7.6,
-        "midApproach": -1.3,
-        "inside50": -1.6,
+        "midApproach": -5.7,
+        "inside50": -1.9,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1623,8 +1623,8 @@
       "per18": {
         "offTee": -5.0,
         "longApproach": -8.0,
-        "midApproach": -3.3,
-        "inside50": -1.1,
+        "midApproach": -5.3,
+        "inside50": -3.1,
         "putting": 0.0
       },
       "pen18": 7.0,
@@ -1640,10 +1640,10 @@
       "holes": 18,
       "overRating18": 27.6,
       "per18": {
-        "offTee": -3.6,
+        "offTee": 0.8,
         "longApproach": -5.3,
-        "midApproach": -1.9,
-        "inside50": -3.2,
+        "midApproach": -10.1,
+        "inside50": -4.1,
         "putting": 0.0
       },
       "pen18": 12.0,
@@ -1660,9 +1660,9 @@
       "overRating18": 20.9,
       "per18": {
         "offTee": -5.5,
-        "longApproach": -3.5,
-        "midApproach": -5.1,
-        "inside50": -2.2,
+        "longApproach": -5.5,
+        "midApproach": -7.0,
+        "inside50": -4.8,
         "putting": 0.0
       },
       "pen18": 5.0,
@@ -1679,8 +1679,8 @@
       "overRating18": 20.3,
       "per18": {
         "offTee": -5.1,
-        "longApproach": -4.9,
-        "midApproach": -1.7,
+        "longApproach": -7.8,
+        "midApproach": -2.7,
         "inside50": -7.3,
         "putting": 0.0
       },
@@ -1698,9 +1698,9 @@
       "overRating18": 25.3,
       "per18": {
         "offTee": -4.4,
-        "longApproach": -2.9,
-        "midApproach": 1.3,
-        "inside50": -2.7,
+        "longApproach": -6.7,
+        "midApproach": -2.7,
+        "inside50": -5.7,
         "putting": 0.0
       },
       "pen18": 15.0,
@@ -1717,9 +1717,9 @@
       "overRating18": 16.9,
       "per18": {
         "offTee": -5.3,
-        "longApproach": -3.8,
-        "midApproach": 2.5,
-        "inside50": -3.1,
+        "longApproach": -3.5,
+        "midApproach": -5.4,
+        "inside50": -5.1,
         "putting": 0.0
       },
       "pen18": 5.0,
@@ -1737,8 +1737,8 @@
       "per18": {
         "offTee": -6.7,
         "longApproach": -5.2,
-        "midApproach": -3.1,
-        "inside50": -3.9,
+        "midApproach": -6.4,
+        "inside50": -4.0,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -1755,8 +1755,8 @@
       "overRating18": 14.9,
       "per18": {
         "offTee": -7.4,
-        "longApproach": -4.8,
-        "midApproach": -1.6,
+        "longApproach": -5.9,
+        "midApproach": -3.9,
         "inside50": -4.0,
         "putting": 0.0
       },
@@ -1774,9 +1774,9 @@
       "overRating18": 15.3,
       "per18": {
         "offTee": -4.4,
-        "longApproach": -6.2,
-        "midApproach": -4.7,
-        "inside50": -1.5,
+        "longApproach": -6.5,
+        "midApproach": -4.0,
+        "inside50": -1.9,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -1793,9 +1793,9 @@
       "overRating18": 24.1,
       "per18": {
         "offTee": -4.3,
-        "longApproach": -7.1,
-        "midApproach": -3.3,
-        "inside50": -2.7,
+        "longApproach": -7.2,
+        "midApproach": -9.0,
+        "inside50": -3.6,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -1812,9 +1812,9 @@
       "overRating18": 15.0,
       "per18": {
         "offTee": -4.0,
-        "longApproach": -3.9,
-        "midApproach": -1.8,
-        "inside50": 0.3,
+        "longApproach": -5.2,
+        "midApproach": -3.2,
+        "inside50": -1.1,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -1831,9 +1831,9 @@
       "overRating18": null,
       "per18": {
         "offTee": -5.4,
-        "longApproach": -4.4,
-        "midApproach": -1.1,
-        "inside50": -0.1,
+        "longApproach": -7.5,
+        "midApproach": -7.1,
+        "inside50": -1.3,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1850,9 +1850,9 @@
       "overRating18": 24.0,
       "per18": {
         "offTee": -6.7,
-        "longApproach": -5.4,
-        "midApproach": -3.3,
-        "inside50": -3.6,
+        "longApproach": -6.8,
+        "midApproach": -7.1,
+        "inside50": -4.7,
         "putting": 0.0
       },
       "pen18": 5.0,
@@ -1869,9 +1869,9 @@
       "overRating18": 19.6,
       "per18": {
         "offTee": -4.5,
-        "longApproach": -4.1,
-        "midApproach": -6.5,
-        "inside50": -6.0,
+        "longApproach": -4.4,
+        "midApproach": -8.9,
+        "inside50": -4.2,
         "putting": 0.0
       },
       "pen18": 2.0,
@@ -1889,7 +1889,7 @@
       "per18": {
         "offTee": -5.3,
         "longApproach": -5.6,
-        "midApproach": -1.7,
+        "midApproach": -2.9,
         "inside50": -11.4,
         "putting": 0.0
       },
@@ -1907,9 +1907,9 @@
       "overRating18": 20.9,
       "per18": {
         "offTee": -7.7,
-        "longApproach": -10.2,
-        "midApproach": -2.8,
-        "inside50": -2.1,
+        "longApproach": -10.5,
+        "midApproach": -0.2,
+        "inside50": -3.8,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1928,7 +1928,7 @@
         "offTee": -5.4,
         "longApproach": -6.8,
         "midApproach": -6.5,
-        "inside50": -3.4,
+        "inside50": -4.8,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -1946,7 +1946,7 @@
       "per18": {
         "offTee": -6.0,
         "longApproach": -5.8,
-        "midApproach": -1.5,
+        "midApproach": -3.8,
         "inside50": -5.6,
         "putting": 0.0
       },
@@ -1964,9 +1964,9 @@
       "overRating18": 15.9,
       "per18": {
         "offTee": -6.1,
-        "longApproach": -2.9,
-        "midApproach": -5.2,
-        "inside50": -1.8,
+        "longApproach": -3.3,
+        "midApproach": -6.7,
+        "inside50": -1.1,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -1984,7 +1984,7 @@
       "per18": {
         "offTee": -3.0,
         "longApproach": -6.6,
-        "midApproach": -2.6,
+        "midApproach": -2.7,
         "inside50": -7.8,
         "putting": 0.0
       },
@@ -2002,9 +2002,9 @@
       "overRating18": 24.3,
       "per18": {
         "offTee": -4.0,
-        "longApproach": -8.5,
-        "midApproach": -6.0,
-        "inside50": -8.5,
+        "longApproach": -9.4,
+        "midApproach": -7.3,
+        "inside50": -8.4,
         "putting": 0.0
       },
       "pen18": 1.0,
@@ -2021,8 +2021,8 @@
       "overRating18": 17.9,
       "per18": {
         "offTee": -5.7,
-        "longApproach": -6.4,
-        "midApproach": -4.4,
+        "longApproach": -6.5,
+        "midApproach": -6.2,
         "inside50": -3.0,
         "putting": 0.0
       },
@@ -2040,8 +2040,8 @@
       "overRating18": 30.9,
       "per18": {
         "offTee": -6.3,
-        "longApproach": -6.6,
-        "midApproach": -4.7,
+        "longApproach": -7.5,
+        "midApproach": -7.9,
         "inside50": -12.4,
         "putting": 0.0
       },
@@ -2058,10 +2058,10 @@
       "holes": 18,
       "overRating18": 30.9,
       "per18": {
-        "offTee": -6.5,
-        "longApproach": -7.5,
-        "midApproach": -1.6,
-        "inside50": -4.0,
+        "offTee": -12.4,
+        "longApproach": -8.3,
+        "midApproach": -6.2,
+        "inside50": -3.3,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -2078,9 +2078,9 @@
       "overRating18": 16.3,
       "per18": {
         "offTee": -3.7,
-        "longApproach": -6.4,
-        "midApproach": -4.7,
-        "inside50": -3.8,
+        "longApproach": -7.8,
+        "midApproach": -3.4,
+        "inside50": -4.0,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2097,8 +2097,8 @@
       "overRating18": 20.2,
       "per18": {
         "offTee": -1.1,
-        "longApproach": -4.3,
-        "midApproach": -3.8,
+        "longApproach": -6.5,
+        "midApproach": -12.0,
         "inside50": -4.1,
         "putting": 0.0
       },
@@ -2116,9 +2116,9 @@
       "overRating18": 25.9,
       "per18": {
         "offTee": -7.1,
-        "longApproach": -4.4,
-        "midApproach": -1.7,
-        "inside50": -3.3,
+        "longApproach": -5.4,
+        "midApproach": -9.4,
+        "inside50": -4.3,
         "putting": 0.0
       },
       "pen18": 7.0,
@@ -2135,8 +2135,8 @@
       "overRating18": 18.9,
       "per18": {
         "offTee": -4.9,
-        "longApproach": -3.9,
-        "midApproach": -3.5,
+        "longApproach": -6.5,
+        "midApproach": -7.3,
         "inside50": -2.6,
         "putting": 0.0
       },
@@ -2153,9 +2153,9 @@
       "holes": 18,
       "overRating18": 20.9,
       "per18": {
-        "offTee": -5.8,
-        "longApproach": -4.8,
-        "midApproach": -1.0,
+        "offTee": -7.8,
+        "longApproach": -5.1,
+        "midApproach": -3.0,
         "inside50": -6.4,
         "putting": 0.0
       },
@@ -2173,8 +2173,8 @@
       "overRating18": 13.9,
       "per18": {
         "offTee": -4.6,
-        "longApproach": -3.8,
-        "midApproach": -2.9,
+        "longApproach": -6.8,
+        "midApproach": -3.3,
         "inside50": -5.6,
         "putting": 0.0
       },
@@ -2192,9 +2192,9 @@
       "overRating18": 19.9,
       "per18": {
         "offTee": -5.1,
-        "longApproach": -1.8,
-        "midApproach": -3.1,
-        "inside50": -3.4,
+        "longApproach": -7.8,
+        "midApproach": -4.9,
+        "inside50": -4.4,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2211,9 +2211,9 @@
       "overRating18": 14.4,
       "per18": {
         "offTee": -3.4,
-        "longApproach": -5.9,
-        "midApproach": -1.5,
-        "inside50": -2.3,
+        "longApproach": -6.0,
+        "midApproach": -6.6,
+        "inside50": -3.3,
         "putting": 0.0
       },
       "pen18": 2.0,
@@ -2230,9 +2230,9 @@
       "overRating18": 29.9,
       "per18": {
         "offTee": -6.1,
-        "longApproach": -2.5,
-        "midApproach": -5.5,
-        "inside50": -5.6,
+        "longApproach": -4.5,
+        "midApproach": -13.3,
+        "inside50": -7.6,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -2249,8 +2249,8 @@
       "overRating18": 13.7,
       "per18": {
         "offTee": -7.3,
-        "longApproach": -5.8,
-        "midApproach": -0.8,
+        "longApproach": -7.4,
+        "midApproach": -3.4,
         "inside50": -4.7,
         "putting": 0.0
       },
@@ -2269,8 +2269,8 @@
       "per18": {
         "offTee": -4.2,
         "longApproach": -11.6,
-        "midApproach": -2.2,
-        "inside50": -5.6,
+        "midApproach": -10.3,
+        "inside50": -4.9,
         "putting": 0.0
       },
       "pen18": 4.0,
@@ -2286,10 +2286,10 @@
       "holes": 18,
       "overRating18": 23.9,
       "per18": {
-        "offTee": -4.8,
-        "longApproach": -4.8,
-        "midApproach": -0.6,
-        "inside50": -2.9,
+        "offTee": -5.8,
+        "longApproach": -5.8,
+        "midApproach": -11.1,
+        "inside50": -3.9,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2307,8 +2307,8 @@
       "per18": {
         "offTee": -6.2,
         "longApproach": -10.0,
-        "midApproach": 0.4,
-        "inside50": -2.7,
+        "midApproach": -3.9,
+        "inside50": -5.4,
         "putting": 0.0
       },
       "pen18": 2.8,
@@ -2325,8 +2325,8 @@
       "overRating18": 23.9,
       "per18": {
         "offTee": -7.1,
-        "longApproach": -4.2,
-        "midApproach": -0.9,
+        "longApproach": -6.2,
+        "midApproach": -6.6,
         "inside50": -2.5,
         "putting": 0.0
       },
@@ -2344,9 +2344,9 @@
       "overRating18": 26.9,
       "per18": {
         "offTee": -5.9,
-        "longApproach": -7.0,
-        "midApproach": -3.2,
-        "inside50": -7.0,
+        "longApproach": -5.4,
+        "midApproach": -10.3,
+        "inside50": -8.1,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2363,9 +2363,9 @@
       "overRating18": 28.9,
       "per18": {
         "offTee": -6.2,
-        "longApproach": -6.8,
-        "midApproach": -1.6,
-        "inside50": -5.1,
+        "longApproach": -7.8,
+        "midApproach": -7.8,
+        "inside50": -5.6,
         "putting": 0.0
       },
       "pen18": 7.0,
@@ -2382,9 +2382,9 @@
       "overRating18": 25.9,
       "per18": {
         "offTee": -5.1,
-        "longApproach": -2.8,
-        "midApproach": -3.9,
-        "inside50": -6.8,
+        "longApproach": -4.8,
+        "midApproach": -10.6,
+        "inside50": -7.8,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2401,8 +2401,8 @@
       "overRating18": 25.9,
       "per18": {
         "offTee": -5.3,
-        "longApproach": -5.7,
-        "midApproach": -3.3,
+        "longApproach": -7.2,
+        "midApproach": -9.4,
         "inside50": -4.2,
         "putting": 0.0
       },
@@ -2419,10 +2419,10 @@
       "holes": 18,
       "overRating18": 34.9,
       "per18": {
-        "offTee": -2.5,
-        "longApproach": -2.3,
-        "midApproach": -2.1,
-        "inside50": -5.1,
+        "offTee": -7.5,
+        "longApproach": -9.3,
+        "midApproach": -7.2,
+        "inside50": -8.2,
         "putting": 0.0
       },
       "pen18": 8.0,
@@ -2438,10 +2438,10 @@
       "holes": 18,
       "overRating18": 33.9,
       "per18": {
-        "offTee": -6.2,
-        "longApproach": -5.8,
-        "midApproach": 0.6,
-        "inside50": -4.5,
+        "offTee": -11.2,
+        "longApproach": -6.8,
+        "midApproach": -7.4,
+        "inside50": -8.9,
         "putting": 0.0
       },
       "pen18": 5.0,
@@ -2457,10 +2457,10 @@
       "holes": 18,
       "overRating18": 24.9,
       "per18": {
-        "offTee": -4.6,
-        "longApproach": -3.4,
-        "midApproach": -0.7,
-        "inside50": -4.8,
+        "offTee": -5.0,
+        "longApproach": -6.5,
+        "midApproach": -5.1,
+        "inside50": -7.8,
         "putting": 0.0
       },
       "pen18": 6.0,
@@ -2477,8 +2477,8 @@
       "overRating18": 28.9,
       "per18": {
         "offTee": -5.6,
-        "longApproach": -4.7,
-        "midApproach": -0.8,
+        "longApproach": -8.7,
+        "midApproach": -9.1,
         "inside50": -5.9,
         "putting": 0.0
       },
@@ -2496,9 +2496,9 @@
       "overRating18": 27.9,
       "per18": {
         "offTee": -5.0,
-        "longApproach": -5.0,
-        "midApproach": -3.7,
-        "inside50": -6.7,
+        "longApproach": -6.1,
+        "midApproach": -9.4,
+        "inside50": -7.7,
         "putting": 0.0
       },
       "pen18": 5.0,
@@ -2515,8 +2515,8 @@
       "overRating18": 21.9,
       "per18": {
         "offTee": -6.2,
-        "longApproach": -4.8,
-        "midApproach": -0.5,
+        "longApproach": -4.9,
+        "midApproach": -5.6,
         "inside50": -5.6,
         "putting": 0.0
       },
@@ -2535,8 +2535,8 @@
       "per18": {
         "offTee": -5.0,
         "longApproach": -6.1,
-        "midApproach": -4.2,
-        "inside50": -4.4,
+        "midApproach": -7.4,
+        "inside50": -6.0,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2554,7 +2554,7 @@
       "per18": {
         "offTee": -4.9,
         "longApproach": -6.1,
-        "midApproach": 4.0,
+        "midApproach": -8.0,
         "inside50": -4.9,
         "putting": 0.0
       },
@@ -2572,9 +2572,9 @@
       "overRating18": 22.4,
       "per18": {
         "offTee": -5.0,
-        "longApproach": -8.0,
-        "midApproach": -0.2,
-        "inside50": -5.3,
+        "longApproach": -9.1,
+        "midApproach": -6.3,
+        "inside50": -5.8,
         "putting": 0.0
       },
       "pen18": 3.0,
@@ -2592,8 +2592,8 @@
       "per18": {
         "offTee": -2.1,
         "longApproach": -6.3,
-        "midApproach": 1.7,
-        "inside50": -0.6,
+        "midApproach": -6.4,
+        "inside50": -3.2,
         "putting": 0.0
       },
       "pen18": 2.6,
@@ -2610,8 +2610,8 @@
       "overRating18": -44.2,
       "per18": {
         "offTee": -6.5,
-        "longApproach": -5.9,
-        "midApproach": -5.1,
+        "longApproach": -7.9,
+        "midApproach": -5.3,
         "inside50": -10.2,
         "putting": 0.0
       },
@@ -2628,9 +2628,9 @@
       "holes": 18,
       "overRating18": 19.9,
       "per18": {
-        "offTee": -3.4,
-        "longApproach": -5.2,
-        "midApproach": -1.7,
+        "offTee": -6.4,
+        "longApproach": -5.4,
+        "midApproach": -4.7,
         "inside50": -6.9,
         "putting": 0.0
       },

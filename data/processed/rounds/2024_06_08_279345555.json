@@ -86,11 +86,11 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -12.05,
+    "totalRecordedVsScratch": -12.62,
     "byCategory": {
       "offTee": -2.67,
       "longApproach": -2.82,
-      "midApproach": -0.86,
+      "midApproach": -1.43,
       "inside50": -5.7,
       "putting": 0.0
     },
@@ -746,7 +746,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.044,
+          "strokesGained": -0.056,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -946,7 +946,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.452,
+          "strokesGained": 0.132,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1546,7 +1546,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.072,
+          "strokesGained": -0.089,
           "confidence": "inferred",
           "resultCategory": "green"
         },

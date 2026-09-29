@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -16.87,
+    "totalRecordedVsScratch": -16.77,
     "byCategory": {
       "offTee": -4.42,
-      "longApproach": -6.21,
-      "midApproach": -4.72,
-      "inside50": -1.52,
+      "longApproach": -6.49,
+      "midApproach": -4.0,
+      "inside50": -1.86,
       "putting": 0.0
     },
-    "sg0to100": -1.95,
+    "sg0to100": -1.49,
     "categorizedShots": 52,
     "penaltyStrokes": 4,
     "doublesOrWorse": 2,
@@ -260,7 +260,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.03,
+          "strokesGained": -0.1,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -460,7 +460,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.555,
+          "strokesGained": 0.275,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -703,7 +703,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.186,
+          "strokesGained": -0.213,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1303,7 +1303,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.271,
+          "strokesGained": -0.336,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2832,7 +2832,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.157,
+          "strokesGained": -0.488,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -3075,7 +3075,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.031,
+          "strokesGained": 0.911,
           "confidence": "inferred",
           "resultCategory": "green"
         },

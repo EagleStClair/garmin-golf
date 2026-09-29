@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -17.41,
+    "totalRecordedVsScratch": -24.02,
     "byCategory": {
       "offTee": -4.28,
-      "longApproach": -7.11,
-      "midApproach": -3.34,
-      "inside50": -2.68,
+      "longApproach": -7.16,
+      "midApproach": -8.97,
+      "inside50": -3.61,
       "putting": 0.0
     },
-    "sg0to100": -2.32,
+    "sg0to100": -8.78,
     "categorizedShots": 53,
     "penaltyStrokes": 4,
     "doublesOrWorse": 6,
@@ -832,7 +832,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.215,
+          "strokesGained": 0.116,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1746,7 +1746,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.276,
+          "strokesGained": -0.004,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1946,7 +1946,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.262,
+          "strokesGained": 0.311,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2060,7 +2060,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": -0.215,
+          "strokesGained": -0.036,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2389,7 +2389,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.312,
+          "strokesGained": -0.666,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3032,7 +3032,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.432,
+          "strokesGained": -0.084,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -3275,7 +3275,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.957,
+          "strokesGained": -4.043,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -3432,7 +3432,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.621,
+          "strokesGained": -0.576,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3918,7 +3918,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.194,
+          "strokesGained": -0.209,
           "confidence": "inferred",
           "resultCategory": "green"
         },

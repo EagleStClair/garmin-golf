@@ -134,11 +134,7 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
         from_lie, to_lie, par, hole_strokes, penalties,
         d_before, d_after
     ) in rows:
-        if (
-            from_lie != "Green"
-            and d_before is not None
-            and d_before <= cuts["insideMaxYds"]
-        ):
+        if from_lie != "Green":
             last_short_game[(rid, hole)] = shot_id
 
     n = 0
@@ -170,13 +166,16 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
             # could get charged to short game here. Safer to fall back to the normal
             # shot-to-shot SG above than to blame short game for a stroke that may have
             # nothing to do with it.
-            if last_short_game.get((rid, hole)) == shot_id and not penalties:
+            if (
+                last_short_game.get((rid, hole)) == shot_id
+                and hole_strokes is not None
+                ):
                 expected = base.expected(
                     lie=from_lie,
                     dist_yds=d_before,
                 )
                 if expected is not None:
-                    strokes_remaining = hole_strokes - shot_order + 1
+                    strokes_remaining = hole_strokes - (penalties or 0) - shot_order + 1
                     sg = expected - strokes_remaining
 
         con.execute(

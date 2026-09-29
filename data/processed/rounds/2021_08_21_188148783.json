@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -10.2,
+    "totalRecordedVsScratch": -18.41,
     "byCategory": {
-      "offTee": -2.56,
-      "longApproach": 0.09,
-      "midApproach": -1.86,
-      "inside50": -5.87,
+      "offTee": -5.81,
+      "longApproach": -2.98,
+      "midApproach": -2.86,
+      "inside50": -6.76,
       "putting": 0.0
     },
-    "sg0to100": -5.87,
+    "sg0to100": -6.76,
     "categorizedShots": 36,
     "penaltyStrokes": 6,
     "doublesOrWorse": 8,
@@ -594,7 +594,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.092,
+          "strokesGained": -0.974,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -1292,7 +1292,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.34,
+          "strokesGained": -0.552,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -1378,7 +1378,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 1.491,
+          "strokesGained": 3.491,
           "confidence": "authoritative",
           "resultCategory": "green"
         }
@@ -2606,7 +2606,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 1.051,
+          "strokesGained": 0.051,
           "confidence": "authoritative",
           "resultCategory": "green"
         }
@@ -2677,7 +2677,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 1.426,
+          "strokesGained": -2.574,
           "confidence": "authoritative",
           "resultCategory": "green"
         }
@@ -2748,7 +2748,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "offTee",
-          "strokesGained": 0.825,
+          "strokesGained": -2.425,
           "confidence": "authoritative",
           "resultCategory": "green"
         },

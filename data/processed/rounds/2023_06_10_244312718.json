@@ -86,15 +86,15 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -19.1,
+    "totalRecordedVsScratch": -22.98,
     "byCategory": {
       "offTee": -5.12,
-      "longApproach": -4.93,
-      "midApproach": -1.71,
+      "longApproach": -7.83,
+      "midApproach": -2.69,
       "inside50": -7.34,
       "putting": 0.0
     },
-    "sg0to100": -9.02,
+    "sg0to100": -8.59,
     "categorizedShots": 49,
     "penaltyStrokes": 2,
     "doublesOrWorse": 6,
@@ -662,7 +662,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.101,
+          "strokesGained": -0.081,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -733,7 +733,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.252,
+          "strokesGained": -0.048,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -847,7 +847,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 0.203,
+          "strokesGained": -0.697,
           "confidence": "inferred",
           "resultCategory": "green"
         }
@@ -918,7 +918,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": 0.058,
+          "strokesGained": -1.041,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1318,7 +1318,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "midApproach",
-          "strokesGained": -0.698,
+          "strokesGained": -0.29,
           "confidence": "inferred",
           "resultCategory": "long-right"
         }
@@ -2687,7 +2687,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": 1.231,
+          "strokesGained": -0.769,
           "confidence": "inferred",
           "resultCategory": "green"
         }
