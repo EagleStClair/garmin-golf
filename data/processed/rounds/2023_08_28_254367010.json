@@ -86,24 +86,24 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -17.6,
+    "totalRecordedVsScratch": -9.39,
     "byCategory": {
       "offTee": -4.04,
       "longApproach": -3.86,
       "midApproach": -1.8,
-      "inside50": -3.38,
-      "putting": -4.52
+      "inside50": 0.31,
+      "putting": 0.0
     },
-    "sg0to100": -3.73,
+    "sg0to100": -0.04,
     "categorizedShots": 46,
     "penaltyStrokes": 3,
     "doublesOrWorse": 2,
     "putting": {
       "totalPutts": 39,
       "threePutts": 5,
-      "sgFromCounts": -4.52,
-      "holesMeasured": 18,
-      "puttsCovered": 39
+      "sgFromCounts": 0.0,
+      "holesMeasured": 0,
+      "puttsCovered": 0
     },
     "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
   },
@@ -703,7 +703,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.466,
+          "strokesGained": -0.503,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1146,7 +1146,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.026,
+          "strokesGained": 0.808,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2032,7 +2032,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.534,
+          "strokesGained": 1.4,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -2918,7 +2918,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.676,
+          "strokesGained": -0.622,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3161,7 +3161,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.608,
+          "strokesGained": 0.367,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3361,7 +3361,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.422,
+          "strokesGained": -0.461,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -3961,7 +3961,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.466,
+          "strokesGained": -0.498,
           "confidence": "authoritative",
           "resultCategory": "green"
         },

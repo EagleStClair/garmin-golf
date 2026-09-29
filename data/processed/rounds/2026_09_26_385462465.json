@@ -86,13 +86,13 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -17.23,
+    "totalRecordedVsScratch": -17.22,
     "byCategory": {
       "offTee": -3.44,
       "longApproach": -5.16,
       "midApproach": -1.72,
       "inside50": -6.9,
-      "putting": -0.01
+      "putting": 0.0
     },
     "sg0to100": -6.98,
     "categorizedShots": 50,
@@ -101,9 +101,9 @@
     "putting": {
       "totalPutts": 34,
       "threePutts": 1,
-      "sgFromCounts": -0.01,
-      "holesMeasured": 1,
-      "puttsCovered": 2
+      "sgFromCounts": 0.0,
+      "holesMeasured": 0,
+      "puttsCovered": 0
     },
     "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
   },

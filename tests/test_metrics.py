@@ -44,28 +44,6 @@ def test_graded_shots_have_sg(derived_db):
     assert rows and all(sg is not None for (sg,) in rows)
 
 
-def test_hole_putting_matches_independent_baseline(derived_db):
-    """SQL-side hole_putting must equal a from-scratch sg_core computation."""
-    base = Baseline()
-    rows = derived_db.execute("""
-        SELECT hp.first_putt_ft, hp.expected_putts, h.putts
-        FROM derived.hole_putting hp
-        JOIN canon.hole h USING (round_id, hole_number)""").fetchall()
-    assert len(rows) == 2
-    for fp_ft, expected, _putts in rows:
-        assert expected == pytest.approx(base.expected_putts(fp_ft))
-
-
-def test_round_sg_putting_is_count_based(derived_db):
-    sg_putting = derived_db.execute(
-        "SELECT sg_putting FROM derived.round_sg").fetchone()[0]
-    want = derived_db.execute("""
-        SELECT sum(hp.expected_putts - h.putts)
-        FROM derived.hole_putting hp
-        JOIN canon.hole h USING (round_id, hole_number)""").fetchone()[0]
-    assert sg_putting == pytest.approx(want)
-
-
 def test_round_metrics_counts(derived_db):
     row = derived_db.execute("""
         SELECT holes, total_strokes, total_putts, total_penalties, doubles_plus,

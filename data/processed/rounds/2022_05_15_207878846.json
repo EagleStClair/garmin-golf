@@ -86,24 +86,24 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -23.56,
+    "totalRecordedVsScratch": -17.01,
     "byCategory": {
       "offTee": -6.42,
       "longApproach": -2.88,
       "midApproach": -5.33,
-      "inside50": -2.27,
-      "putting": -6.66
+      "inside50": -2.38,
+      "putting": 0.0
     },
-    "sg0to100": -4.25,
+    "sg0to100": -4.36,
     "categorizedShots": 52,
     "penaltyStrokes": 0,
     "doublesOrWorse": 6,
     "putting": {
       "totalPutts": 40,
       "threePutts": 6,
-      "sgFromCounts": -6.66,
-      "holesMeasured": 13,
-      "puttsCovered": 32
+      "sgFromCounts": 0.0,
+      "holesMeasured": 0,
+      "puttsCovered": 0
     },
     "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
   },
@@ -2061,7 +2061,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.498,
+          "strokesGained": -0.478,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -2347,7 +2347,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.497,
+          "strokesGained": -0.555,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2876,7 +2876,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.525,
+          "strokesGained": -1.595,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3162,7 +3162,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.445,
+          "strokesGained": 1.445,
           "confidence": "authoritative",
           "resultCategory": "green"
         }

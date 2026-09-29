@@ -25,7 +25,7 @@ RAW_DIR = Path("data/raw")
 
 # Bump when SG derivation logic changes; rows in derived.shot_sg carry it so a
 # stale-version scan is one query away.
-SG_VERSION = 3
+SG_VERSION = 4
 
 
 def derive_geom(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None) -> int:
@@ -78,12 +78,12 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
 
     Normal non-putting shots use shot-to-shot SG.
 
-    For holes without trustworthy first-putt geometry, the final shot from
-    inside 50 yards owns the complete short-game outcome through the hole,
-    including subsequent putts.
-
-    For holes with trustworthy first-putt geometry, SG remains shot-based so
-    putting can be calculated separately by derive_putting().
+    The final shot from inside 50 yards on each hole owns the complete short-game
+    outcome through the hole, including subsequent putts -- always, not just when
+    first-putt geometry is missing. Garmin's on-green GPS is unreliable either way
+    (no real pin position), so this is one rule for every hole, old CT10 rounds
+    included, rather than switching methods depending on what data happens to exist.
+    derive_putting() and the separate sg_putting figure are no longer used.
     """
     base = Baseline()
     cuts = sg_distance_cuts()
@@ -99,6 +99,7 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
             s.end_lie,
             h.par,
             h.strokes,
+            h.penalties,
             g.to_pin_before_yds,
             g.remaining_yds
         FROM canon.shot s
@@ -125,22 +126,12 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
             [round_ids],
         )
 
-    # Holes with reliable first-putt geometry can keep putting separate.
-    putting_geometry = {
-        (rid, hole)
-        for rid, hole in con.execute("""
-            SELECT round_id, hole_number
-            FROM derived.hole_first_putt
-            WHERE first_putt_ft IS NOT NULL
-        """).fetchall()
-    }
-
     # Last non-putting shot from inside 50 yards on each hole.
     last_short_game = {}
 
     for (
         shot_id, rid, hole, shot_order,
-        from_lie, to_lie, par, hole_strokes,
+        from_lie, to_lie, par, hole_strokes, penalties,
         d_before, d_after
     ) in rows:
         if (
@@ -154,7 +145,7 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
 
     for (
         shot_id, rid, hole, shot_order,
-        from_lie, to_lie, par, hole_strokes,
+        from_lie, to_lie, par, hole_strokes, penalties,
         d_before, d_after
     ) in rows:
         shot = {
@@ -173,12 +164,13 @@ def derive_sg(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = None
                 dist_after_yds=d_after,
             )
 
-            # Without reliable first-putt geometry, the final inside-50 shot
-            # owns the complete outcome through the hole.
-            if (
-                (rid, hole) not in putting_geometry
-                and last_short_game.get((rid, hole)) == shot_id
-            ):
+            # The final inside-50 shot owns the complete outcome through the hole --
+            # unless the hole had a penalty. Penalties are only recorded per-hole, with
+            # no record of which shot they belong to, so a penalty anywhere on the hole
+            # could get charged to short game here. Safer to fall back to the normal
+            # shot-to-shot SG above than to blame short game for a stroke that may have
+            # nothing to do with it.
+            if last_short_game.get((rid, hole)) == shot_id and not penalties:
                 expected = base.expected(
                     lie=from_lie,
                     dist_yds=d_before,
@@ -226,7 +218,8 @@ def derive_all(con: duckdb.DuckDBPyConnection, round_ids: list[int] | None = Non
     return {
         "shotGeom": derive_geom(con, round_ids),
         "shotSg": derive_sg(con, round_ids),
-        "holePutting": derive_putting(con, round_ids),
+        # holePutting/derive_putting retired: derive_sg's inside50 rule now covers
+        # putting on every hole, uniformly, so the separate CT10-only path is unused.
     }
 
 

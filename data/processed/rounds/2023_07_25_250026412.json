@@ -86,24 +86,24 @@
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -16.77,
+    "totalRecordedVsScratch": -16.87,
     "byCategory": {
       "offTee": -4.42,
       "longApproach": -6.21,
       "midApproach": -4.72,
-      "inside50": -2.3,
-      "putting": 0.88
+      "inside50": -1.52,
+      "putting": 0.0
     },
-    "sg0to100": -2.73,
+    "sg0to100": -1.95,
     "categorizedShots": 52,
     "penaltyStrokes": 4,
     "doublesOrWorse": 2,
     "putting": {
       "totalPutts": 30,
       "threePutts": 1,
-      "sgFromCounts": 0.88,
-      "holesMeasured": 17,
-      "puttsCovered": 29
+      "sgFromCounts": 0.0,
+      "holesMeasured": 0,
+      "puttsCovered": 0
     },
     "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
   },
@@ -903,7 +903,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.298,
+          "strokesGained": 0.686,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1103,7 +1103,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.253,
+          "strokesGained": -0.425,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -1546,7 +1546,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.384,
+          "strokesGained": 0.461,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -1789,7 +1789,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.306,
+          "strokesGained": -1.681,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -2032,7 +2032,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.182,
+          "strokesGained": -0.607,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -2189,7 +2189,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.208,
+          "strokesGained": 0.762,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -2432,7 +2432,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.453,
+          "strokesGained": 0.387,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -2589,7 +2589,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.11,
+          "strokesGained": -0.35,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3275,7 +3275,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 0.035,
+          "strokesGained": -0.337,
           "confidence": "inferred",
           "resultCategory": "green"
         },
@@ -3518,7 +3518,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.453,
+          "strokesGained": 0.51,
           "confidence": "authoritative",
           "resultCategory": "green"
         },
@@ -3918,7 +3918,7 @@
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.297,
+          "strokesGained": -0.331,
           "confidence": "inferred",
           "resultCategory": "green"
         },

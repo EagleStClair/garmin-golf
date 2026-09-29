@@ -22,5 +22,5 @@ Cone (rolling 16 rounds, score vs course rating — 18-hole regulation rounds on
 
 ## What to focus on
 1. Approach distance + start line: take one more club and start it left of target on mid-irons.  _(80% of 843 mid-iron approaches finish short, 33% miss right; GIR is 25.2%.)_
-2. Biggest strokes leak right now: Inside 50.  _(-7.8 strokes per 18 vs scratch over your last 10 clean rounds — the worst of your five SG buckets.)_
+2. Biggest strokes leak right now: Long approach (150+).  _(-5.5 strokes per 18 vs scratch over your last 10 clean rounds — the worst of your five SG buckets.)_
 3. Annotate more rounds — the process layer is your differentiator and it's running on minimal context.  _(Clean-2nd-shot, recovery and normal-approach metrics currently cover 0 annotated rounds; 3–5 makes them trendable.)_
