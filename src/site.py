@@ -551,7 +551,6 @@ TEMPLATE = r"""<!doctype html>
     <div class="ctl"><span class="lab">Metric over time</span>
       <select class="rsel" id="trendMetric"></select></div>
     <div class="card"><div id="trendhead"></div><div id="trendchart"></div>
-      <div id="trendpick" style="font-size:13px;text-align:center;min-height:18px;color:var(--accent)"></div>
       <div class="foot" id="trendfoot"></div></div>
     <div class="foot" style="padding:0 4px">Read the line, not the dots: the dark line is your
       5-round form; dots are individual rounds (green = clean, grey = over-recorded — kept for
@@ -1042,10 +1041,11 @@ const TREND=[
   {g:'Performance — SG vs scratch',k:'midApproach',label:'SG Mid approach',clean:true,low:false,get:r=>r.per18.midApproach},
   {g:'Performance — SG vs scratch',k:'inside50',label:'SG Inside 50',clean:true,low:false,get:r=>r.per18.inside50},
   {g:'Performance — SG vs scratch',k:'putting',label:'SG Putting',clean:true,low:false,get:r=>r.per18.putting}];
-let trendMetric='over',lastPts=[];
-{const gs={};TREND.forEach(m=>{(gs[m.g]=gs[m.g]||[]).push(m);});
-document.getElementById('trendMetric').innerHTML=Object.entries(gs).map(([g,ms])=>
-  `<optgroup label="${g}">${ms.map(m=>`<option value="${m.k}">${m.label}</option>`).join("")}</optgroup>`).join("");}
+let trendMetric='g:Outcome',lastPts=[];
+document.getElementById('trendMetric').innerHTML = `
+  <option value="g:Outcome">Outcome</option>
+  <option value="g:Performance — SG vs scratch">Performance SG</option>
+`;
 document.getElementById('trendMetric').onchange=e=>{trendMetric=e.target.value;renderTrend();};
 function slope(ys){const n=ys.length;if(n<2)return 0;const mx=(n-1)/2,my=ys.reduce((a,b)=>a+b,0)/n;
   let nu=0,de=0;ys.forEach((y,i)=>{nu+=(i-mx)*(y-my);de+=(i-mx)**2;});return de?nu/de:0;}
@@ -1056,7 +1056,7 @@ function dir(ys,low){const n=ys.length,ch=slope(ys)*(n-1);   // fitted change ov
          c:good?'up':'down'};}
 function roll(ys,n){return ys.map((_,i)=>{const a=ys.slice(Math.max(0,i-n+1),i+1);
   return a.reduce((x,y)=>x+y,0)/a.length;});}
-function chart(pts,zero){
+function chart(pts,zero,ci){
   if(pts.length<2)return '<div class="foot">need ≥2 rounds to show a trend</div>';
   const cw=document.getElementById('trendchart').clientWidth||880, K=cw&&cw<560?2.0:1;
   const W=880,H=290+(K>1?26:0),L=46,Rm=16,T=22,B=36*K,ys=pts.map(p=>p.y);
@@ -1070,7 +1070,7 @@ function chart(pts,zero){
   if(zero&&0>mn&&0<mx){const z=Y(0);
     s+=`<line x1="${L}" y1="${z}" x2="${W-Rm}" y2="${z}" stroke="#9aa098" stroke-dasharray="3 4"/>`;}
   // per-round dots (light) under a rolling-5 form line (the read)
-  pts.forEach((p,i)=>{s+=`<circle cx="${X(i)}" cy="${Y(p.y)}" r="3.5" fill="${p.clean?'#9db8a9':'#cfd4cf'}" data-i="${i}" style="cursor:pointer"/>`;});
+  pts.forEach((p,i)=>{s+=`<circle cx="${X(i)}" cy="${Y(p.y)}" r="3.5" fill="${p.clean?'#9db8a9':'#cfd4cf'}" data-i="${i}" data-c="${ci}" style="cursor:pointer"/>`;});
   if(pts.length>=5){const rys=roll(ys,5);
     s+=`<polyline points="${rys.map((v,i)=>X(i)+','+Y(v)).join(' ')}" fill="none" stroke="#1f4a36" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="pointer-events:none"/>`;
     const last=rys[rys.length-1];
@@ -1088,19 +1088,45 @@ function chart(pts,zero){
   return s+'</svg>';
 }
 function renderTrend(){
-  const m=TREND.find(x=>x.k===trendMetric);
-  const all=TS.filter(r=>m.clean?r.clean:(m.get(r)!=null));
-  lastPts=all.slice(-20).map(r=>({label:r.date.slice(5).replace('-','/'),date:r.date,y:m.get(r),clean:r.clean}));
-  const d=lastPts.length>=2?dir(lastPts.map(p=>p.y),m.low):{t:'',c:'flat'};
-  document.getElementById('trendhead').innerHTML=`<b>${m.label.replace(/ \(.*/,'')}</b><span class="wchip">last ${lastPts.length} rounds</span><span class="tpill ${d.c}">${d.t}</span>`;
-  document.getElementById('trendchart').innerHTML=chart(lastPts,m.k!=='over');
+  const ms=trendMetric.startsWith('g:')?TREND.filter(m=>m.g===trendMetric.slice(2))
+             :[TREND.find(x=>x.k===trendMetric)];
+  lastPts=ms.map(m=>TS.filter(r=>m.clean?r.clean:(m.get(r)!=null))
+    .slice(-20).map(r=>({label:r.date.slice(5).replace('-','/'),date:r.date,y:m.get(r),clean:r.clean})));
+  document.getElementById('trendhead').innerHTML=
+    `<b>${ms.length>1?ms[0].g:ms[0].label.replace(/ \(.*/,'')}</b><span class="wchip">last ${lastPts[0].length} rounds</span>`;
+  const one=(m,i)=>{
+    const pts=lastPts[i],ys=pts.map(p=>p.y);
+    const d=pts.length>=2?dir(ys,m.low):{t:'',c:'flat'};
+    return `<div class="trenditem">
+      <div style="font-size:14px;font-weight:700;margin:2px 0 6px">
+        ${m.label}
+        <span class="tpill ${d.c}" style="margin-left:8px">${d.t}</span>
+      </div>
+      ${chart(pts,m.k!=='over',i)}
+      <div class="trendpick" data-chart="${i}" style="font-size:13px;text-align:center;min-height:18px;color:var(--accent);margin-top:4px"></div>
+    </div>`;
+  };
+  document.getElementById('trendchart').innerHTML=ms.length>1
+    ?`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:10px 28px">${ms.map(one).join("")}</div>`
+    :one(ms[0],0);
   document.getElementById('trendfoot').textContent=
-    `last ${lastPts.length} of ${all.length} ${m.clean?'clean ':''}rounds · dots = rounds, line = 5-round average · tap a dot for its date`;
-  document.getElementById('trendpick').textContent='';
+    `dots = rounds, line = 5-round average · tap a dot for its date`;
 }
 document.getElementById('trendchart').addEventListener('click',e=>{
-  if(e.target.tagName!=='circle')return;const p=lastPts[+e.target.dataset.i];if(!p)return;
-  document.getElementById('trendpick').innerHTML=`<b>${p.date}</b> — ${p.y>0?'+':''}${p.y.toFixed(1)}${p.clean?'':' <span class="mut">(over-recorded)</span>'}`;});
+  if(e.target.tagName!=='circle')return;
+
+  const ci=+e.target.dataset.c;
+  const pts=lastPts[ci]||lastPts[0];
+  const p=pts[+e.target.dataset.i];
+  if(!p)return;
+
+  const pick=e.target.closest('.trenditem')?.querySelector('.trendpick');
+  if(!pick)return;
+
+  pick.innerHTML=
+    `<b>${p.date}</b> — ${p.y>0?'+':''}${p.y.toFixed(1)}`+
+    `${p.clean?'':' <span class="mut">(over-recorded)</span>'}`;
+});
 
 /* ---- coach (tiny markdown renderer) ---- */
 function md(t){
