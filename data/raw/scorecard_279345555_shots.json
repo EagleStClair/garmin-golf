@@ -2,7 +2,7 @@
   "scorecardId": 279345555,
   "perHole": [
     {
-      "hole": null,
+      "hole": "all",
       "response": {
         "holeShots": [
           {
@@ -1204,7 +1204,7 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2026-09-21T18:07:46.474Z"
+            "lastModifiedTime": "2026-10-01T14:40:13.552Z"
           },
           {
             "id": 16585529,
@@ -1213,9 +1213,10 @@
             "flexTypeId": "REGULAR",
             "averageDistance": 0,
             "adviceDistance": 0,
-            "retired": false,
+            "retired": true,
             "deleted": false,
-            "lastModifiedTime": "2018-02-28T17:58:38.000Z"
+            "lastModifiedTime": "2026-09-30T19:59:46.000Z",
+            "model": "TaylorMade AeroBurner"
           },
           {
             "id": 16585530,
@@ -1224,9 +1225,10 @@
             "flexTypeId": "REGULAR",
             "averageDistance": 0,
             "adviceDistance": 0,
-            "retired": false,
+            "retired": true,
             "deleted": false,
-            "lastModifiedTime": "2018-02-28T17:58:38.000Z"
+            "lastModifiedTime": "2026-09-30T20:00:00.000Z",
+            "model": "TaylorMade RBZ"
           },
           {
             "id": 626740096,
@@ -1237,7 +1239,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:14:17.000Z"
+            "lastModifiedTime": "2026-09-23T07:51:53.000Z",
+            "model": "Titleist 735-CM"
           },
           {
             "id": 626740166,
@@ -1248,7 +1251,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:14:36.000Z"
+            "lastModifiedTime": "2026-09-23T07:52:06.000Z",
+            "model": "Titleist 735-CM"
           },
           {
             "id": 626740184,
@@ -1259,7 +1263,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:14:50.000Z"
+            "lastModifiedTime": "2026-09-23T07:52:14.000Z",
+            "model": "Titleist 735-CM"
           },
           {
             "id": 626740219,
@@ -1270,7 +1275,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:14:58.000Z"
+            "lastModifiedTime": "2026-09-23T07:52:21.000Z",
+            "model": "Titleist 735-CM"
           },
           {
             "id": 626740254,
@@ -1281,7 +1287,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:15:08.000Z"
+            "lastModifiedTime": "2026-09-23T07:52:28.000Z",
+            "model": "Titleist 735-CM"
           },
           {
             "id": 626740324,
@@ -1292,7 +1299,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:15:35.000Z"
+            "lastModifiedTime": "2026-09-23T07:53:11.000Z",
+            "model": "Titleist Vokey SM9 52"
           },
           {
             "id": 626740342,
@@ -1303,7 +1311,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2023-06-28T19:15:45.000Z"
+            "lastModifiedTime": "2026-09-23T07:53:24.000Z",
+            "model": "Titleist Vokey SM9 56"
           },
           {
             "id": 539797671,
@@ -1314,7 +1323,8 @@
             "adviceDistance": 0,
             "retired": false,
             "deleted": false,
-            "lastModifiedTime": "2022-06-27T10:46:36.000Z"
+            "lastModifiedTime": "2026-09-23T07:49:29.000Z",
+            "model": "Yes Bella-12"
           }
         ]
       }

@@ -51,7 +51,9 @@ def _compact_round(path: Path) -> dict:
         "stem": path.stem, "md": md_path.read_text() if md_path.exists() else "",
         "date": rnd["date"][:10], "course": course["name"],
         "score": sc["strokes"], "toPar": sc.get("toPar"), "par": course["par"], "holes": holes,
-        "overRating18": round(sc["strokes"] * 18 / holes - rating, 1) if rating else None,
+        "overRating18": round(
+            sc["strokes"] - rating * (holes / 18 if rating >= 45 else 1.0), 1
+            ) if rating else None,
         "tees": rnd.get("teeBox"), "rating": rating, "slope": rnd.get("teeBoxSlope"),
         "putts": sc["putts"], "penalties": sc["penalties"],
         "doubles": sg.get("doublesOrWorse", 0),
@@ -1029,7 +1031,7 @@ function showMap(){initMap();setTimeout(()=>{lmap.invalidateSize();drawHole();},
 const TS=P.timeSeries;
 const sumCats=r=>CATS.reduce((a,[k])=>a+(r.per18[k]||0),0);
 const TREND=[
-  {g:'Outcome',k:'over',label:'Score vs rating (lower = better)',clean:false,low:true,get:r=>r.overRating18},
+  {g:'Outcome',k:'over',label:'Score vs rating /18 (lower = better)',clean:false,low:true,get:r=>r.overRating18},
   {g:'Outcome',k:'pen',label:'Penalties /18',clean:false,low:true,get:r=>r.pen18},
   {g:'Outcome',k:'dbl',label:'Doubles+ /18',clean:false,low:true,get:r=>r.dbl18},
   {g:'Outcome',k:'tp',label:'3-putts /18',clean:false,low:true,get:r=>r.tp18},

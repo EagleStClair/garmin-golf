@@ -2,8 +2,8 @@
   "_note": "Club identity. Resolution order per shot: byClubId[clubId] first (a physical club), else byType[clubTypeId] (Garmin's COARSE category — collapses e.g. two wedges into one), else 'unknown'. clubId 0 = no sensor / not selected. retiredClubIds are old clubs no longer in the bag; analysis excludes them.",
   "_verifyWedges": "Garmin can't expose loft, so the wedge labels below are PROVISIONAL (ordered by distance). The bag is PW + Vokey 52/56.",
   "byClubId": {
-    "16585529": "Driver",
-    "16585530": "Spoon",
+    "956688133": "Driver",
+    "956688152": "5 Wood",
 
     "626740078": "3 Iron",
     "626740096": "4 Iron",
@@ -23,7 +23,9 @@
     "16585537": "6 Iron",
     "16585538": "7 Iron",
     "16585539": "8 Iron",
-    "16585540": "9 Iron"
+    "16585540": "9 Iron",
+    "16585529": "Driver",
+    "16585530": "Spoon"
   },
   "retiredClubIds": [16585534, 16585536, 16585537, 16585538, 16585539, 16585540],
   "map": {

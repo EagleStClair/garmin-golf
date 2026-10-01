@@ -114,7 +114,13 @@ def _is_clean(d: dict) -> bool:
 
 def _over_rating18(d: dict) -> float | None:
     r = d["round"].get("teeBoxRating")
-    return round((d["score"]["strokes"] - r) * 18 / _holes(d), 1) if r is not None else None
+    if r is None:
+        return None
+    # Over-rating for the holes actually played (matches site.py's round payload):
+    # an 18-hole course rating is prorated by holes/18 (estimate for the unplayed
+    # holes); a sub-18 course rating (<40) already covers the round as played.
+    covered = 9 if r < 45 else 18
+    return round(d["score"]["strokes"] - r * _holes(d) / covered, 1)
 
 
 def _diff18(d: dict) -> float | None:
@@ -267,8 +273,9 @@ def _outcome_section(con) -> dict:
                    round(avg(CASE WHEN ? = 'all'
                              THEN r.total_strokes * 18.0 / r.holes_completed
                              ELSE r.total_strokes END), 1),
-                   round(avg(r.total_strokes * 18.0 / r.holes_completed - r.tee_rating)
-                         FILTER (WHERE r.tee_rating IS NOT NULL), 1)
+                   round(avg(r.total_strokes - CASE WHEN r.tee_rating < 45 THEN r.tee_rating
+                          ELSE r.tee_rating * r.holes_completed / 18.0 END)
+                    FILTER (WHERE r.tee_rating IS NOT NULL), 1)
             FROM canon.round r WHERE {s["where"]}
             GROUP BY year
         """, [key]).fetchall()}
@@ -393,7 +400,10 @@ def build(through_scorecard_id: int | None = None, write: bool = True) -> dict:
     series = [{
         "date": d["round"]["date"][:10], "course": d["course"]["name"],
         "score": d["score"]["strokes"], "holes": _holes(d),
-        "overRating18": _over_rating18(d),
+        # Trend series is a per-18 RATE (like every other metric on the chart);
+        # round-level displays keep the as-played value from _over_rating18.
+        "overRating18": (round(_over_rating18(d) * 18 / _holes(d), 1)
+                         if _over_rating18(d) is not None else None),
         "per18": {cat: round(d["strokesGained"]["byCategory"][cat] * 18 / _holes(d), 1)
                   for cat in SG_CATS},
         "pen18": round(d["strokesGained"]["penaltyStrokes"] * 18 / _holes(d), 1),
