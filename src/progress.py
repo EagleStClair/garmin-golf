@@ -13,7 +13,7 @@ All aggregation reads the DuckDB derived layer (canon facts + recomputable views
 this module only windows per-round rows and renders. Authoritative metrics
 (score-vs-rating, putts, penalties, doubles) use every round in the window. Strokes
 Gained uses only CLEAN rounds (over-recorded rounds excluded — their shot data is
-phantom). Putting SG is count-based; other SG buckets are GPS-based.
+phantom). SG buckets are GPS-based; putting is tracked as counts (putts, 3-putts).
 
 Usage:  python -m src.progress
 """
@@ -38,8 +38,7 @@ PUTT_BANDS = [("0–3 ft", "0-3"), ("3–6 ft", "3-6"), ("6–10 ft", "6-10"),
               ("10–20 ft", "10-20"), ("20–40 ft", "20-40"), ("40+ ft", "40+")]
 
 _SG_COLS = {"offTee": "sg_off_tee", "longApproach": "sg_long_approach",
-            "midApproach": "sg_mid_approach", "inside50": "sg_inside50",
-            "putting": "sg_putting"}
+            "midApproach": "sg_mid_approach", "inside50": "sg_inside50"}
 
 
 def _load_rounds_from_db(con) -> list[dict]:
@@ -51,7 +50,7 @@ def _load_rounds_from_db(con) -> list[dict]:
                r.total_strokes, r.total_putts, r.total_penalties, r.holes_completed,
                rr.shot_count_delta,
                sg.sg_off_tee, sg.sg_long_approach, sg.sg_mid_approach, sg.sg_inside50,
-               sg.sg_putting, sg.sg_0_100,
+               sg.sg_0_100,
                m.doubles_plus, m.three_putt_holes, m.scramble_opps, m.scramble_saves,
                m.putts_3_6, m.makes_3_6, m.putts_6_10, m.makes_6_10,
                m.long_first_putts, m.long_three_putts
@@ -76,7 +75,7 @@ def _load_rounds_from_db(con) -> list[dict]:
 
     records = []
     for (rid, start, course, rating, slope, strokes, putts, pens, holes, delta,
-         ott, lng, mid, i50, sgp, sg0, dbl, tp3, opps, saves,
+         ott, lng, mid, i50, sg0, dbl, tp3, opps, saves,
          p36, m36, p610, m610, plong, plong3) in rows:
         records.append({
             "scorecardId": rid,
@@ -87,8 +86,7 @@ def _load_rounds_from_db(con) -> list[dict]:
             "strokesGained": {
                 # rounded per round to match the legacy round documents exactly
                 "byCategory": {"offTee": round(ott, 2), "longApproach": round(lng, 2),
-                               "midApproach": round(mid, 2), "inside50": round(i50, 2),
-                               "putting": round(sgp, 2)},
+                               "midApproach": round(mid, 2), "inside50": round(i50, 2)},
                 "sg0to100": round(sg0, 2),
                 "penaltyStrokes": pens,
                 "doublesOrWorse": dbl,

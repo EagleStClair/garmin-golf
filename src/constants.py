@@ -7,12 +7,11 @@ any module that needs one imports it from here so a tuning change lands everywhe
 from __future__ import annotations
 
 # --- Strokes Gained buckets (order matters: display order) ---
-SG_CATS = ["offTee", "longApproach", "midApproach", "inside50", "putting"]
+SG_CATS = ["offTee", "longApproach", "midApproach", "inside50"]
 SG_LABELS = {"offTee": "Off-the-Tee", "longApproach": "Long approach (150+)",
-             "midApproach": "Mid approach (50–150)", "inside50": "Inside 50",
-             "putting": "Putting"}
+             "midApproach": "Mid approach (50–150)", "inside50": "Inside 50"}
 SG_SHORT = {"offTee": "OTT", "longApproach": "Long", "midApproach": "Mid",
-            "inside50": "In50", "putting": "Putt"}
+            "inside50": "In50"}
 
 # --- Data-quality gates ---
 POLLUTION_DELTA = 3            # shotCountDelta above this = over-recorded; shot layer untrusted

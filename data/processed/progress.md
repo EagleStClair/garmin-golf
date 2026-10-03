@@ -1,120 +1,120 @@
 # Golf Progress Dashboard
-_From 84 rounds since 2018-05-01. Latest round: 2026-09-26. Re-run `python -m src.progress` after each round._
+_From 85 rounds since 2018-05-01. Latest round: 2026-10-03. Re-run `python -m src.progress` after each round._
 
 > **Reading the signs:** two different conventions. Section 1 (score vs rating) is "over par" style — **+ = strokes OVER scratch, lower is better**. Section 3 (Strokes Gained) is analytics style — **− = strokes LOST to scratch, toward 0 is better**. They're mirror images: +29 over ≈ −29 gained = "~30 strokes from a pro."
 
 ## 1 · Scoring level — strokes OVER scratch (lower is better, 0 = scratch)
-**Average +21.6/18** · Potential (better half ≈ handicap) **+17.4** · best +12.9 · Garmin handicap 17.5 · **Break-90 ≈ +19**.
+**Average +21.6/18** · Potential (better half ≈ handicap) **+17.5** · best +12.9 · Garmin handicap 17.5 · **Break-90 ≈ +19**.
 _Average − potential = ~4 strokes of volatility (your blow-up tax — fewer doubles closes it)._
 
 ## 2 · Review first (authoritative — count these before anything else)
 | Metric /18 | This round | Last 5 | All-time |
 |---|--:|--:|--:|
-| Score vs rating | +19.9 | +21.2 | +21.6 |
-| Penalties | 2.0 | 2.1 | 3.7 |
-| Doubles+ | 5.0 | 4.5 | 5.6 |
-| Putts | 34 | 36 | 35 |
-| 3-putts | 1.0 | 3.2 | 3.3 |
+| Score vs rating | +18.9 | +20.4 | +21.6 |
+| Penalties | 3.0 | 2.6 | 3.7 |
+| Doubles+ | 6.0 | 4.9 | 5.6 |
+| Putts | 38 | 37 | 35 |
+| 3-putts | 6.0 | 3.7 | 3.3 |
 
 ## 3 · Strokes Gained vs scratch — negative = strokes LOST (toward 0 is better)
-**SG 0–100, your leverage number:** This round -9.0 · Last 5 -8.2 · All-time -6.8  _(100yd-and-in, no putts — where scores move)_
+**SG 0–100, your leverage number:** This round -5.9 · Last 5 -7.8 · All-time -6.8  _(100yd-and-in, no putts — where scores move)_
 
 | Bucket | This round | Last 5 | All-time |
 |---|--:|--:|--:|
-| Off-the-Tee | -5.0 | -4.6 | -4.9 |
-| Long approach (150+) | -5.4 | -7.0 | -6.3 |
-| Mid approach (50–150) | -4.7 | -6.0 | -6.2 |
-| Inside 50 | -6.9 | -6.0 | -4.6 |
-| Putting | +0.0 | +0.0 | +0.0 |
-| **Total** | -22.0 | -23.6 | -22.0 |
+| Off-the-Tee | -8.1 | -5.4 | -5.0 |
+| Long approach (150+) | -4.9 | -6.6 | -6.3 |
+| Mid approach (50–150) | -4.5 | -5.4 | -6.2 |
+| Inside 50 | -3.8 | -5.6 | -4.6 |
+| **Total** | -21.3 | -23.0 | -22.1 |
 
 _Read across: **This vs Last 5** = was this round above/below your form (signal vs noise). **Last 5 vs All-time** = are you trending up. Putting is count-based (authoritative putts); other buckets are GPS-based; the absolute total runs a few strokes hot — trust the ranking._
 
 ## 4 · Per-round history
 _vsRtg = score over rating per 18 (authoritative). SG per 18; ⚠ = over-recorded, excluded from SG windows._
-| Date | Course | Score | H | vsRtg | OTT | Long | Mid | In50 | Putt | |
-|---|---|--:|--:|--:|--:|--:|--:|--:|--:|:--|
-| 2018-06-28 | Alingsås Golfklubb | 87 | 18 | +14.9 | -4.3 | -8.1 | -5.0 | -4.6 | +0.0 | |
-| 2018-07-23 | St. Arild Golfklub | 88 | 18 | +16.3 | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 | |
-| 2018-08-05 | Alingsås Golfklubb | 88 | 18 | +15.9 | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 | |
-| 2019-06-02 | Alingsås Golfklubb | 91 | 18 | +18.9 | -6.0 | -8.4 | -7.3 | -3.9 | +0.0 | |
-| 2019-06-21 | Alingsås Golfklubb | 47 | 9 | +22.0 | -1.0 | +0.0 | +0.0 | -4.4 | +0.0 | |
-| 2019-07-07 | Alingsås Golfklubb | 88 | 18 | +15.9 | -5.2 | -3.0 | -6.4 | -8.2 | +0.0 | |
-| 2019-07-19 | Sotenas Golfklubb  | 95 | 18 | +24.7 | -3.3 | -8.0 | -9.2 | -5.6 | +0.0 | |
-| 2019-07-29 | Lerjedalens Golfkl | 90 | 18 | +18.2 | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 | |
-| 2019-08-11 | Alingsås Golfklubb | 85 | 18 | +12.9 | -3.9 | -3.9 | -11.1 | -0.9 | +0.0 | |
-| 2019-08-12 | Vårgårda Golfklubb | 90 | 18 | +19.3 | -4.6 | -10.0 | -6.5 | -3.9 | +0.0 | |
-| 2019-09-08 | Alingsås Golfklubb | 88 | 18 | +15.9 | -5.0 | -7.1 | -8.5 | -2.2 | +0.0 | |
-| 2020-05-06 | Göteborgs Golf Klu | 94 | 18 | +25.0 | -4.6 | -9.1 | -10.2 | -5.6 | +0.0 | |
-| 2020-05-16 | Alingsås Golfklubb | 94 | 18 | +21.9 | -4.7 | -6.8 | -5.2 | -9.1 | +0.0 | |
-| 2020-05-23 | Lerjedalens Golfkl | 89 | 18 | +17.2 | -4.0 | -6.6 | -4.6 | -3.8 | +0.0 | |
-| 2020-07-12 | Alingsås Golfklubb | 91 | 18 | +18.9 | -3.8 | -5.6 | -6.7 | -1.8 | +0.0 | |
-| 2020-07-16 | Vårgårda Golfklubb | 84 | 18 | +13.3 | -2.8 | -9.4 | -0.9 | -3.9 | +0.0 | |
-| 2020-07-21 | Allerum Golfklubb | 94 | 18 | +22.9 | -1.0 | -7.1 | -4.5 | -1.7 | +0.0 | |
-| 2020-07-24 | Trelleborg Golfklu | 88 | 18 | +19.3 | -4.2 | -4.9 | -4.9 | -1.8 | +0.0 | |
-| 2020-08-22 | Vårgårda Golfklubb | 89 | 18 | +18.3 | -4.5 | -5.2 | -6.6 | -3.6 | +0.0 | |
-| 2020-09-06 | Alingsås Golfklubb | 89 | 18 | +16.9 | -4.7 | -8.8 | -4.9 | -2.2 | +0.0 | |
-| 2021-05-29 | Öijared Golfklubb  | 92 | 18 | +22.0 | -3.9 | -6.8 | -7.0 | -0.3 | +0.0 | |
-| 2021-07-20 | Vasatorps Golfklub | 94 | 18 | +22.5 | -3.9 | -6.6 | -7.1 | -7.6 | +0.0 | |
-| 2021-07-28 | Alingsås Golfklubb | 90 | 18 | +17.9 | -5.9 | -1.9 | -6.0 | -2.5 | +0.0 | |
-| 2021-08-21 | Alingsås Golfklubb | 98 | 18 | +25.9 | -5.8 | -3.0 | -2.9 | -6.8 | +0.0 | |
-| 2021-09-18 | Alingsås Golfklubb | 90 | 18 | +17.9 | -5.4 | -7.3 | -7.8 | -3.7 | +0.0 | |
-| 2022-05-15 | Alingsås Golfklubb | 96 | 18 | +23.9 | -6.4 | -2.9 | -10.6 | -2.4 | +0.0 | |
-| 2022-06-26 | Alingsås Golfklubb | 103 | 18 | +30.9 | -9.2 | -5.7 | -7.9 | -3.9 | +0.0 | |
-| 2022-08-01 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.7 | -6.9 | -6.5 | -6.2 | +0.0 | |
-| 2022-08-03 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.2 | -11.4 | -5.5 | -4.5 | +0.0 | |
-| 2022-08-05 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.0 | -7.6 | -5.7 | -1.9 | +0.0 | |
-| 2023-05-20 | Alingsås Golfklubb | 93 | 18 | +20.9 | -5.0 | -8.0 | -5.3 | -3.1 | +0.0 | |
-| 2023-05-23 | Öijared Golfklubb  | 98 | 18 | +27.6 | +0.8 | -5.3 | -10.1 | -4.1 | +0.0 | |
-| 2023-06-04 | Alingsås Golfklubb | 93 | 18 | +20.9 | -5.5 | -5.5 | -7.0 | -4.8 | +0.0 | |
-| 2023-06-10 | Vårgårda Golfklubb | 91 | 18 | +20.3 | -5.1 | -7.8 | -2.7 | -7.3 | +0.0 | |
-| 2023-06-28 | Vårgårda Golfklubb | 96 | 18 | +25.3 | -4.4 | -6.7 | -2.7 | -5.7 | +0.0 | |
-| 2023-07-09 | Alingsås Golfklubb | 89 | 18 | +16.9 | -5.3 | -3.5 | -5.4 | -5.1 | +0.0 | |
-| 2023-07-13 | Alingsås Golfklubb | 90 | 18 | +17.9 | -6.7 | -5.2 | -6.4 | -4.0 | +0.0 | |
-| 2023-07-14 | Alingsås Golfklubb | 87 | 18 | +14.9 | -7.4 | -5.9 | -3.9 | -4.0 | +0.0 | |
-| 2023-07-25 | Vårgårda Golfklubb | 86 | 18 | +15.3 | -4.4 | -6.5 | -4.0 | -1.9 | +0.0 | |
-| 2023-07-26 | Stora Lundby Golfk | 94 | 18 | +24.1 | -4.3 | -7.2 | -9.0 | -3.6 | +0.0 | |
-| 2023-08-28 | Öijared Golfklubb  | 85 | 18 | +15.0 | -4.0 | -5.2 | -3.2 | -1.1 | +0.0 | |
-| 2024-05-01 | Alingsås Golfklubb | 91 | 18 | +23.0 | -5.4 | -7.5 | -7.1 | -1.3 | +0.0 | |
-| 2024-05-12 | Herrljunga Golfklu | 95 | 18 | +24.0 | -6.7 | -6.8 | -7.1 | -4.7 | +0.0 | |
-| 2024-05-23 | Öijared Golfklubb  | 90 | 18 | +19.6 | -4.5 | -4.4 | -8.9 | -4.2 | +0.0 | |
-| 2024-06-08 | Alingsås Golfklubb | 45 | 9 | +22.0 | -5.3 | -5.6 | -2.9 | -11.4 | +0.0 | |
-| 2024-07-31 | Alingsås Golfklubb | 93 | 18 | +20.9 | -7.7 | -10.5 | -0.2 | -3.8 | +0.0 | |
-| 2024-08-24 | Alingsås Golfklubb | 96 | 18 | +28.0 | -5.4 | -6.8 | -6.5 | -4.8 | +0.0 | |
-| 2024-09-02 | Delsjö Golfklubb | 92 | 18 | +23.3 | -6.0 | -5.8 | -3.8 | -5.6 | +0.0 | |
-| 2024-09-08 | Alingsås Golfklubb | 86 | 18 | +15.9 | -6.1 | -3.3 | -6.7 | -1.1 | +0.0 | |
-| 2024-09-22 | Stora Lundby Golfk | 86 | 18 | +15.9 | -3.0 | -6.6 | -2.7 | -7.8 | +0.0 | |
-| 2024-09-29 | Vårgårda Golfklubb | 95 | 18 | +24.3 | -4.0 | -9.4 | -7.3 | -8.4 | +0.0 | |
-| 2025-04-21 | Alingsås Golfklubb | 88 | 18 | +17.9 | -5.7 | -6.5 | -6.2 | -3.0 | +0.0 | |
-| 2025-05-03 | Alingsås Golfklubb | 101 | 18 | +30.9 | -6.3 | -7.5 | -7.9 | -12.4 | +0.0 | |
-| 2025-06-12 | Alingsås Golfklubb | 101 | 18 | +30.9 | -12.4 | -8.3 | -6.2 | -3.3 | +0.0 | |
-| 2025-07-22 | Vårgårda Golfklubb | 87 | 18 | +16.3 | -3.7 | -7.8 | -3.4 | -4.0 | +0.0 | |
-| 2025-07-29 | Lerjedalens Golfkl | 42 | 8 | +28.6 | -1.1 | -6.5 | -12.0 | -4.1 | +0.0 | |
-| 2025-08-03 | Alingsås Golfklubb | 98 | 18 | +25.9 | -7.1 | -5.4 | -9.4 | -4.3 | +0.0 | |
-| 2025-08-08 | Alingsås Golfklubb | 89 | 18 | +18.9 | -4.9 | -6.5 | -7.3 | -2.6 | +0.0 | |
-| 2025-08-14 | Alingsås Golfklubb | 91 | 18 | +20.9 | -7.8 | -5.1 | -3.0 | -6.4 | +0.0 | |
-| 2025-09-01 | Alingsås Golfklubb | 86 | 18 | +13.9 | -4.6 | -6.8 | -3.3 | -5.6 | +0.0 | |
-| 2025-09-07 | Alingsås Golfklubb | 90 | 18 | +19.9 | -5.1 | -7.8 | -4.9 | -4.4 | +0.0 | |
-| 2025-09-14 | Vårgårda Golfklubb | 86 | 18 | +14.4 | -3.4 | -6.0 | -6.6 | -3.3 | +0.0 | |
-| 2025-09-21 | Alingsås Golfklubb | 100 | 18 | +29.9 | -6.1 | -4.5 | -13.3 | -7.6 | +0.0 | |
-| 2025-09-28 | Alingsås Golfklubb | 83 | 17 | +17.8 | -7.3 | -7.4 | -3.4 | -4.7 | +0.0 | |
-| 2025-10-09 | Alingsås Golfklubb | 50 | 9 | +30.0 | -4.2 | -11.6 | -10.3 | -4.9 | +0.0 | |
-| 2025-10-12 | Alingsås Golfklubb | 94 | 18 | +23.9 | -5.8 | -5.8 | -11.1 | -3.9 | +0.0 | |
-| 2025-10-19 | Alingsås Golfklubb | 68 | 13 | +24.1 | -6.2 | -10.0 | -3.9 | -5.4 | +0.0 | |
-| 2026-05-03 | Alingsås Golfklubb | 94 | 18 | +23.9 | -7.1 | -6.2 | -6.6 | -2.5 | +0.0 | |
-| 2026-05-06 | Alingsås Golfklubb | 97 | 18 | +26.9 | -5.9 | -5.4 | -10.3 | -8.1 | +0.0 | |
-| 2026-05-27 | Alingsås Golfklubb | 99 | 18 | +28.9 | -6.2 | -7.8 | -7.8 | -5.6 | +0.0 | |
-| 2026-05-31 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.1 | -4.8 | -10.6 | -7.8 | +0.0 | |
-| 2026-06-25 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.3 | -7.2 | -9.4 | -4.2 | +0.0 | |
-| 2026-07-05 | Alingsås Golfklubb | 105 | 18 | +34.9 | -3.9 | -9.3 | -7.2 | -8.2 | +0.0 | |
-| 2026-07-09 | Alingsås Golfklubb | 104 | 18 | +33.9 | -7.9 | -6.8 | -7.4 | -8.9 | +0.0 | |
-| 2026-08-04 | Alingsås Golfklubb | 95 | 18 | +24.9 | -5.0 | -6.5 | -5.1 | -7.8 | +0.0 | |
-| 2026-08-05 | Alingsås Golfklubb | 99 | 18 | +28.9 | -5.6 | -8.7 | -9.1 | -5.9 | +0.0 | |
-| 2026-08-09 | Alingsås Golfklubb | 98 | 18 | +27.9 | -5.0 | -6.1 | -9.4 | -7.7 | +0.0 | |
-| 2026-08-22 | Alingsås Golfklubb | 92 | 18 | +21.9 | -6.2 | -4.9 | -5.6 | -5.6 | +0.0 | |
-| 2026-08-23 | Alingsås Golfklubb | 92 | 18 | +21.9 | -5.0 | -6.1 | -7.4 | -6.0 | +0.0 | |
-| 2026-09-03 | Alingsås Golfklubb | 44 | 9 | +18.0 | -4.9 | -6.1 | -8.0 | -4.9 | +0.0 | |
-| 2026-09-05 | Vårgårda Golfklubb | 94 | 18 | +22.4 | -5.0 | -9.1 | -6.3 | -5.8 | +0.0 | |
-| 2026-09-18 | Alingsås Golfklubb | 69 | 14 | +18.6 | -2.1 | -6.3 | -6.4 | -3.2 | +0.0 | |
-| 2026-09-20 | Alingsås Golfklubb | 48 | 9 | +26.0 | -6.5 | -7.9 | -5.3 | -10.2 | +0.0 | |
-| 2026-09-26 | Alingsås Golfklubb | 90 | 18 | +19.9 | -5.0 | -5.4 | -4.7 | -6.9 | +0.0 | |
+| Date | Course | Score | H | vsRtg | OTT | Long | Mid | In50 | |
+|---|---|--:|--:|--:|--:|--:|--:|--:|:--|
+| 2018-06-28 | Alingsås Golfklubb | 87 | 18 | +14.9 | -4.3 | -8.1 | -5.0 | -4.6 | |
+| 2018-07-23 | St. Arild Golfklub | 88 | 18 | +16.3 | +0.0 | +0.0 | +0.0 | +0.0 | |
+| 2018-08-05 | Alingsås Golfklubb | 88 | 18 | +15.9 | +0.0 | +0.0 | +0.0 | +0.0 | |
+| 2019-06-02 | Alingsås Golfklubb | 91 | 18 | +18.9 | -6.0 | -8.4 | -7.3 | -3.9 | |
+| 2019-06-21 | Alingsås Golfklubb | 47 | 9 | +22.0 | -1.0 | +0.0 | +0.0 | -4.4 | |
+| 2019-07-07 | Alingsås Golfklubb | 88 | 18 | +15.9 | -5.2 | -3.0 | -6.4 | -8.2 | |
+| 2019-07-19 | Sotenas Golfklubb  | 95 | 18 | +24.7 | -3.3 | -8.0 | -9.2 | -5.6 | |
+| 2019-07-29 | Lerjedalens Golfkl | 90 | 18 | +18.2 | +0.0 | +0.0 | +0.0 | +0.0 | |
+| 2019-08-11 | Alingsås Golfklubb | 85 | 18 | +12.9 | -3.9 | -3.9 | -11.1 | -0.9 | |
+| 2019-08-12 | Vårgårda Golfklubb | 90 | 18 | +19.3 | -4.6 | -10.0 | -6.5 | -3.9 | |
+| 2019-09-08 | Alingsås Golfklubb | 88 | 18 | +15.9 | -5.0 | -7.1 | -8.5 | -2.2 | |
+| 2020-05-06 | Göteborgs Golf Klu | 94 | 18 | +25.0 | -4.6 | -9.1 | -10.2 | -5.6 | |
+| 2020-05-16 | Alingsås Golfklubb | 94 | 18 | +21.9 | -4.7 | -6.8 | -5.2 | -9.1 | |
+| 2020-05-23 | Lerjedalens Golfkl | 89 | 18 | +17.2 | -4.0 | -6.6 | -4.6 | -3.8 | |
+| 2020-07-12 | Alingsås Golfklubb | 91 | 18 | +18.9 | -3.8 | -5.6 | -6.7 | -1.8 | |
+| 2020-07-16 | Vårgårda Golfklubb | 84 | 18 | +13.3 | -2.8 | -9.4 | -0.9 | -3.9 | |
+| 2020-07-21 | Allerum Golfklubb | 94 | 18 | +22.9 | -1.0 | -7.1 | -4.5 | -1.7 | |
+| 2020-07-24 | Trelleborg Golfklu | 88 | 18 | +19.3 | -4.2 | -4.9 | -4.9 | -1.8 | |
+| 2020-08-22 | Vårgårda Golfklubb | 89 | 18 | +18.3 | -4.5 | -5.2 | -6.6 | -3.6 | |
+| 2020-09-06 | Alingsås Golfklubb | 89 | 18 | +16.9 | -4.7 | -8.8 | -4.9 | -2.2 | |
+| 2021-05-29 | Öijared Golfklubb  | 92 | 18 | +22.0 | -3.9 | -6.8 | -7.0 | -0.3 | |
+| 2021-07-20 | Vasatorps Golfklub | 94 | 18 | +22.5 | -3.9 | -6.6 | -7.1 | -7.6 | |
+| 2021-07-28 | Alingsås Golfklubb | 90 | 18 | +17.9 | -5.9 | -1.9 | -6.0 | -2.5 | |
+| 2021-08-21 | Alingsås Golfklubb | 98 | 18 | +25.9 | -5.8 | -3.0 | -2.9 | -6.8 | |
+| 2021-09-18 | Alingsås Golfklubb | 90 | 18 | +17.9 | -5.4 | -7.3 | -7.8 | -3.7 | |
+| 2022-05-15 | Alingsås Golfklubb | 96 | 18 | +23.9 | -6.4 | -2.9 | -10.6 | -2.4 | |
+| 2022-06-26 | Alingsås Golfklubb | 103 | 18 | +30.9 | -9.2 | -5.7 | -7.9 | -3.9 | |
+| 2022-08-01 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.7 | -6.9 | -6.5 | -6.2 | |
+| 2022-08-03 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.2 | -11.4 | -5.5 | -4.5 | |
+| 2022-08-05 | Sotenas Golfklubb  | 93 | 18 | +22.7 | -4.0 | -7.6 | -5.7 | -1.9 | |
+| 2023-05-20 | Alingsås Golfklubb | 93 | 18 | +20.9 | -5.0 | -8.0 | -5.3 | -3.1 | |
+| 2023-05-23 | Öijared Golfklubb  | 98 | 18 | +27.6 | +0.8 | -5.3 | -10.1 | -4.1 | |
+| 2023-06-04 | Alingsås Golfklubb | 93 | 18 | +20.9 | -5.5 | -5.5 | -7.0 | -4.8 | |
+| 2023-06-10 | Vårgårda Golfklubb | 91 | 18 | +20.3 | -5.1 | -7.8 | -2.7 | -7.3 | |
+| 2023-06-28 | Vårgårda Golfklubb | 96 | 18 | +25.3 | -4.4 | -6.7 | -2.7 | -5.7 | |
+| 2023-07-09 | Alingsås Golfklubb | 89 | 18 | +16.9 | -5.3 | -3.5 | -5.4 | -5.1 | |
+| 2023-07-13 | Alingsås Golfklubb | 90 | 18 | +17.9 | -6.7 | -5.2 | -6.4 | -4.0 | |
+| 2023-07-14 | Alingsås Golfklubb | 87 | 18 | +14.9 | -7.4 | -5.9 | -3.9 | -4.0 | |
+| 2023-07-25 | Vårgårda Golfklubb | 86 | 18 | +15.3 | -4.4 | -6.5 | -4.0 | -1.9 | |
+| 2023-07-26 | Stora Lundby Golfk | 94 | 18 | +24.1 | -4.3 | -7.2 | -9.0 | -3.6 | |
+| 2023-08-28 | Öijared Golfklubb  | 85 | 18 | +15.0 | -4.0 | -5.2 | -3.2 | -1.1 | |
+| 2024-05-01 | Alingsås Golfklubb | 91 | 18 | +23.0 | -5.4 | -7.5 | -7.1 | -1.3 | |
+| 2024-05-12 | Herrljunga Golfklu | 95 | 18 | +24.0 | -6.7 | -6.8 | -7.1 | -4.7 | |
+| 2024-05-23 | Öijared Golfklubb  | 90 | 18 | +19.6 | -4.5 | -4.4 | -8.9 | -4.2 | |
+| 2024-06-08 | Alingsås Golfklubb | 45 | 9 | +22.0 | -5.3 | -5.6 | -2.9 | -11.4 | |
+| 2024-07-31 | Alingsås Golfklubb | 93 | 18 | +20.9 | -7.7 | -10.5 | -0.2 | -3.8 | |
+| 2024-08-24 | Alingsås Golfklubb | 96 | 18 | +28.0 | -5.4 | -6.8 | -6.5 | -4.8 | |
+| 2024-09-02 | Delsjö Golfklubb | 92 | 18 | +23.3 | -6.0 | -5.8 | -3.8 | -5.6 | |
+| 2024-09-08 | Alingsås Golfklubb | 86 | 18 | +15.9 | -6.1 | -3.3 | -6.7 | -1.1 | |
+| 2024-09-22 | Stora Lundby Golfk | 86 | 18 | +15.9 | -3.0 | -6.6 | -2.7 | -7.8 | |
+| 2024-09-29 | Vårgårda Golfklubb | 95 | 18 | +24.3 | -4.0 | -9.4 | -7.3 | -8.4 | |
+| 2025-04-21 | Alingsås Golfklubb | 88 | 18 | +17.9 | -5.7 | -6.5 | -6.2 | -3.0 | |
+| 2025-05-03 | Alingsås Golfklubb | 101 | 18 | +30.9 | -6.3 | -7.5 | -7.9 | -12.4 | |
+| 2025-06-12 | Alingsås Golfklubb | 101 | 18 | +30.9 | -12.4 | -8.3 | -6.2 | -3.3 | |
+| 2025-07-22 | Vårgårda Golfklubb | 87 | 18 | +16.3 | -3.7 | -7.8 | -3.4 | -4.0 | |
+| 2025-07-29 | Lerjedalens Golfkl | 42 | 8 | +28.6 | -1.1 | -6.5 | -12.0 | -4.1 | |
+| 2025-08-03 | Alingsås Golfklubb | 98 | 18 | +25.9 | -7.1 | -5.4 | -9.4 | -4.3 | |
+| 2025-08-08 | Alingsås Golfklubb | 89 | 18 | +18.9 | -4.9 | -6.5 | -7.3 | -2.6 | |
+| 2025-08-14 | Alingsås Golfklubb | 91 | 18 | +20.9 | -7.8 | -5.1 | -3.0 | -6.4 | |
+| 2025-09-01 | Alingsås Golfklubb | 86 | 18 | +13.9 | -4.6 | -6.8 | -3.3 | -5.6 | |
+| 2025-09-07 | Alingsås Golfklubb | 90 | 18 | +19.9 | -5.1 | -7.8 | -4.9 | -4.4 | |
+| 2025-09-14 | Vårgårda Golfklubb | 86 | 18 | +14.4 | -3.4 | -6.0 | -6.6 | -3.3 | |
+| 2025-09-21 | Alingsås Golfklubb | 100 | 18 | +29.9 | -6.1 | -4.5 | -13.3 | -7.6 | |
+| 2025-09-28 | Alingsås Golfklubb | 83 | 17 | +17.8 | -7.3 | -7.4 | -3.4 | -4.7 | |
+| 2025-10-09 | Alingsås Golfklubb | 50 | 9 | +30.0 | -4.2 | -11.6 | -10.3 | -4.9 | |
+| 2025-10-12 | Alingsås Golfklubb | 94 | 18 | +23.9 | -5.8 | -5.8 | -11.1 | -3.9 | |
+| 2025-10-19 | Alingsås Golfklubb | 68 | 13 | +24.1 | -6.2 | -10.0 | -3.9 | -5.4 | |
+| 2026-05-03 | Alingsås Golfklubb | 94 | 18 | +23.9 | -7.1 | -6.2 | -6.6 | -2.5 | |
+| 2026-05-06 | Alingsås Golfklubb | 97 | 18 | +26.9 | -5.9 | -5.4 | -10.3 | -8.1 | |
+| 2026-05-27 | Alingsås Golfklubb | 99 | 18 | +28.9 | -6.2 | -7.8 | -7.8 | -5.6 | |
+| 2026-05-31 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.1 | -4.8 | -10.6 | -7.8 | |
+| 2026-06-25 | Alingsås Golfklubb | 96 | 18 | +25.9 | -5.3 | -7.2 | -9.4 | -4.2 | |
+| 2026-07-05 | Alingsås Golfklubb | 105 | 18 | +34.9 | -3.9 | -9.3 | -7.2 | -8.2 | |
+| 2026-07-09 | Alingsås Golfklubb | 104 | 18 | +33.9 | -7.9 | -6.8 | -7.4 | -8.9 | |
+| 2026-08-04 | Alingsås Golfklubb | 95 | 18 | +24.9 | -5.0 | -6.5 | -5.1 | -7.8 | |
+| 2026-08-05 | Alingsås Golfklubb | 99 | 18 | +28.9 | -5.6 | -8.7 | -9.1 | -5.9 | |
+| 2026-08-09 | Alingsås Golfklubb | 98 | 18 | +27.9 | -5.0 | -6.1 | -9.4 | -7.7 | |
+| 2026-08-22 | Alingsås Golfklubb | 92 | 18 | +21.9 | -6.2 | -4.9 | -5.6 | -5.6 | |
+| 2026-08-23 | Alingsås Golfklubb | 92 | 18 | +21.9 | -5.0 | -6.1 | -7.4 | -6.0 | |
+| 2026-09-03 | Alingsås Golfklubb | 44 | 9 | +18.0 | -4.9 | -6.1 | -8.0 | -4.9 | |
+| 2026-09-05 | Vårgårda Golfklubb | 94 | 18 | +22.4 | -5.0 | -9.1 | -6.3 | -5.8 | |
+| 2026-09-18 | Alingsås Golfklubb | 69 | 14 | +18.6 | -2.1 | -6.3 | -6.4 | -3.2 | |
+| 2026-09-20 | Alingsås Golfklubb | 48 | 9 | +26.0 | -6.5 | -7.9 | -5.3 | -10.2 | |
+| 2026-09-26 | Alingsås Golfklubb | 90 | 18 | +19.9 | -5.0 | -5.4 | -4.7 | -6.9 | |
+| 2026-10-03 | Alingsås Golfklubb | 89 | 18 | +18.9 | -8.1 | -4.9 | -4.5 | -3.8 | |

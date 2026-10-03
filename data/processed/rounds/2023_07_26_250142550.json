@@ -91,8 +91,7 @@
       "offTee": -4.28,
       "longApproach": -7.16,
       "midApproach": -8.97,
-      "inside50": -3.61,
-      "putting": 0.0
+      "inside50": -3.61
     },
     "sg0to100": -8.78,
     "categorizedShots": 53,
@@ -101,11 +100,10 @@
     "putting": {
       "totalPutts": 34,
       "threePutts": 2,
-      "sgFromCounts": 0.0,
       "holesMeasured": 0,
       "puttsCovered": 0
     },
-    "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
+    "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting appears as counts only (totalPutts/threePutts), not strokes gained."
   },
   "garminStats": {
     "holesPlayed": 18,

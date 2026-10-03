@@ -380,7 +380,7 @@ def build(write: bool = True) -> dict:
         priorities.append({
             "text": f"Biggest strokes leak right now: {SG_LABELS[worst]}.",
             "evidence": f"{sg10[worst]:+.1f} strokes per 18 vs scratch over your last 10 "
-                        f"clean rounds — the worst of your five SG buckets."})
+                        f"clean rounds — the worst of your {len(sg10)} SG buckets."})
     ann_rounds = max((int((pm.get(k) or {}).get("nRounds") or 0)
                       for k in ("cleanSecondShotPct", "recoveryOneShotPct",
                                 "normalApproachGirPct")), default=0)

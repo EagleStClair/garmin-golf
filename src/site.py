@@ -615,9 +615,9 @@ function toM(yd, digits=0) {
 
 const P=DATA.progress, SG=P.sg, AU=P.authoritative, BL=P.baselines;
 const CATS=[["offTee","Off-Tee"],["longApproach","Long"],["midApproach","Mid"],
-            ["inside50","In50"],["putting","Putt"]];
+            ["inside50","In50"]];
 const FULL={offTee:"Off-the-Tee",longApproach:"Long approach 150+",midApproach:"Mid approach 50–150",
-  inside50:"Inside 50",putting:"Putting"};
+  inside50:"Inside 50"};
 const WLAB={thisRound:"This round",last5:"Last 5",last10:"Last 10",last20:"Last 20",
   allTime:"All-time"};
 let win="thisRound", base="scratch", detailRound=0;
@@ -1039,8 +1039,7 @@ const TREND=[
   {g:'Performance — SG vs scratch',k:'offTee',label:'SG Off-the-Tee',clean:true,low:false,get:r=>r.per18.offTee},
   {g:'Performance — SG vs scratch',k:'longApproach',label:'SG Long approach',clean:true,low:false,get:r=>r.per18.longApproach},
   {g:'Performance — SG vs scratch',k:'midApproach',label:'SG Mid approach',clean:true,low:false,get:r=>r.per18.midApproach},
-  {g:'Performance — SG vs scratch',k:'inside50',label:'SG Inside 50',clean:true,low:false,get:r=>r.per18.inside50},
-  {g:'Performance — SG vs scratch',k:'putting',label:'SG Putting',clean:true,low:false,get:r=>r.per18.putting}];
+  {g:'Performance — SG vs scratch',k:'inside50',label:'SG Inside 50',clean:true,low:false,get:r=>r.per18.inside50}];
 let trendMetric='g:Outcome',lastPts=[];
 document.getElementById('trendMetric').innerHTML = `
   <option value="g:Outcome">Outcome</option>
@@ -1107,7 +1106,7 @@ function renderTrend(){
     </div>`;
   };
   document.getElementById('trendchart').innerHTML=ms.length>1
-    ?`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:10px 28px">${ms.map(one).join("")}</div>`
+    ?`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(430px,100%),1fr));gap:10px 28px">${ms.map(one).join("")}</div>`
     :one(ms[0],0);
   document.getElementById('trendfoot').textContent=
     `dots = rounds, line = 5-round average · tap a dot for its date`;
@@ -1420,7 +1419,7 @@ function buildPack(r){
     L.push(`- SG 0–100 (leverage, 100yd & in, no putts): ${l5.sg0to100.toFixed(1)} (all-time ${all.sg0to100.toFixed(1)})`);
   }
   if(au)L.push('',`Authoritative (last 5): penalties ${au.penalties18}/18 · doubles+ ${au.doubles18}/18 · putts ${au.putts18.toFixed(0)}/18 · 3-putts ${au.threePutts18}/18.`);
-  L.push('','_Data note: putting & inside-50 (short-game) SG are GPS-approximate (directional); off-the-tee & full-approach are reliable; trust the bucket ranking over the absolute total. Putt counts/penalties/score are authoritative._');
+  L.push('','_Data note: inside-50 (short-game) SG is GPS-approximate (directional); off-the-tee & full-approach are reliable; trust the bucket ranking over the absolute total. Putt counts/penalties/score are authoritative._');
   return L.join('\n');
 }
 function copyText(t){

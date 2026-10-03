@@ -228,34 +228,32 @@ def build_round_document(con, rid: int) -> dict:
     real_count = raw_recorded - phantom_count
 
     sg_row = con.execute("""
-        SELECT sg_off_tee, sg_long_approach, sg_mid_approach, sg_inside50, sg_putting,
+        SELECT sg_off_tee, sg_long_approach, sg_mid_approach, sg_inside50,
                sg_0_100, categorized_shots, putt_holes_measured, putts_covered
         FROM derived.round_sg WHERE round_id = ?""", [rid]).fetchone()
     by_cat = {"offTee": round(sg_row[0], 2), "longApproach": round(sg_row[1], 2),
-              "midApproach": round(sg_row[2], 2), "inside50": round(sg_row[3], 2),
-              "putting": round(sg_row[4], 2)}
+              "midApproach": round(sg_row[2], 2), "inside50": round(sg_row[3], 2)}
     three_putts = sum(1 for h in holes if (h["putts"] or 0) >= 3)
     doubles = sum(1 for h in holes if (h["scoreToPar"] or 0) >= 2)
     strokes_gained_summary = {
         "baseline": "PGA Tour (scratch), approximate",
         "totalRecordedVsScratch": round(sum(by_cat.values()), 2),
         "byCategory": by_cat,
-        "sg0to100": round(sg_row[5], 2),
-        "categorizedShots": sg_row[6],
+        "sg0to100": round(sg_row[4], 2),
+        "categorizedShots": sg_row[5],
         "penaltyStrokes": r["total_penalties"],
         "doublesOrWorse": doubles,
         "putting": {
             "totalPutts": r["total_putts"],
             "threePutts": three_putts,
-            "sgFromCounts": by_cat["putting"],
-            "holesMeasured": sg_row[7],
-            "puttsCovered": sg_row[8],
+            "holesMeasured": sg_row[6],
+            "puttsCovered": sg_row[7],
         },
         "note": (
             "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots "
             "excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid "
             "50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). "
-            "Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
+            "Putting appears as counts only (totalPutts/threePutts), not strokes gained."
         ),
     }
 
@@ -384,7 +382,7 @@ def _recon_line(r: dict) -> str:
 def _sg_line(sg: dict) -> str:
     c = sg["byCategory"]
     short = {"offTee": "OTT", "longApproach": "Long", "midApproach": "Mid",
-             "inside50": "In50", "putting": "Putt"}
+             "inside50": "In50"}
     parts = " · ".join(f"{short[k]} {c[k]:+.1f}" for k in short)
     return (f"Strokes Gained vs scratch: {parts} = {sg['totalRecordedVsScratch']:+.1f}\n"
             f"SG 0–100 (leverage): {sg['sg0to100']:+.1f} · {sg['penaltyStrokes']} penalties · "

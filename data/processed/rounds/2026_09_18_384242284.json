@@ -71,41 +71,39 @@
     "double_or_worse": 2,
     "three_putts": 3,
     "scramble_opportunities": 9,
-    "up_and_down_saves": 1,
+    "up_and_down_saves": 2,
     "up_and_down_saves_derived": 1,
-    "scramble_pct": 11.1,
+    "scramble_pct": 22.2,
     "first_putt_distance_avg_ft": null,
     "first_putt_distance_basis": "0 holes that reached the green (GPS-based)",
     "longest_drive_yds": 348.0,
     "garmin_ratings": {
       "driveRating": "GOOD",
       "approachRating": "GOOD",
-      "chipRating": "POOR",
+      "chipRating": "GOOD",
       "puttRating": "UNKNOWN"
     }
   },
   "strokesGained": {
     "baseline": "PGA Tour (scratch), approximate",
-    "totalRecordedVsScratch": -14.03,
+    "totalRecordedVsScratch": -14.04,
     "byCategory": {
       "offTee": -1.64,
       "longApproach": -4.93,
       "midApproach": -4.98,
-      "inside50": -2.48,
-      "putting": 0.0
+      "inside50": -2.49
     },
     "sg0to100": -4.88,
-    "categorizedShots": 41,
+    "categorizedShots": 40,
     "penaltyStrokes": 2,
     "doublesOrWorse": 2,
     "putting": {
       "totalPutts": 28,
       "threePutts": 3,
-      "sgFromCounts": 0.0,
       "holesMeasured": 0,
       "puttsCovered": 0
     },
-    "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting is count-based (3-putts penalized; totalPutts/threePutts authoritative)."
+    "note": "Tee-to-green SG is per-shot over recorded shots (penalties & un-sensed shots excluded). Buckets are distance-based (offTee = par4/5 tee; long 150+, mid 50-150, inside-50). sg0to100 is the leverage metric (100yd-and-in, no putts). Putting appears as counts only (totalPutts/threePutts), not strokes gained."
   },
   "garminStats": {
     "holesPlayed": 14,
@@ -128,22 +126,22 @@
     "holesBirdie": 1,
     "holesEagle": 0,
     "holesDoubleEagleOrUnder": 0,
-    "upsAndDowns": 1,
+    "upsAndDowns": 2,
     "chips": 4
   },
   "garminRatings": {
     "driveRating": "GOOD",
     "approachRating": "GOOD",
-    "chipRating": "POOR",
+    "chipRating": "GOOD",
     "puttRating": "UNKNOWN"
   },
   "garminLongestShotMeters": 229.246,
   "reconciliation": {
-    "recordedShots": 42,
-    "rawRecordedShots": 42,
+    "recordedShots": 41,
+    "rawRecordedShots": 41,
     "strokes": 69,
     "penalties": 2,
-    "shotCountDelta": -27,
+    "shotCountDelta": -28,
     "phantomShots": 0,
     "phantomShotHoles": [],
     "suspectHoles": [],
@@ -2106,7 +2104,7 @@
       "number": 17,
       "par": 3,
       "strokeIndex": 8,
-      "playedLengthYds": 182.7,
+      "playedLengthYds": 182.6,
       "strokes": 4,
       "putts": 1,
       "penalties": 0,
@@ -2117,7 +2115,7 @@
       "firstPuttDistanceFt": null,
       "scrambleOpportunity": true,
       "scrambleSave": false,
-      "shotCountDelta": 0,
+      "shotCountDelta": -1,
       "handicapScore": 3,
       "pin": {
         "lat": 57.876724898815155,
@@ -2125,7 +2123,7 @@
         "lie": null,
         "lieSource": null
       },
-      "shotsRecorded": 4,
+      "shotsRecorded": 3,
       "phantomShots": 0,
       "shots": [
         {
@@ -2138,36 +2136,36 @@
           "type": "APPROACH",
           "autoShotType": "USED",
           "source": "DEVICE_AUTO",
-          "yards": 174.1,
-          "meters": 159.178,
+          "yards": 173.9,
+          "meters": 159.028,
           "from": "TeeBox",
           "to": "Rough",
           "start": {
-            "lat": 57.87737608887255,
-            "lon": 12.557831620797515,
+            "lat": 57.87737499922514,
+            "lon": 12.55782994441688,
             "lie": "TeeBox",
             "lieSource": "CARTOGRAPHY"
           },
           "end": {
-            "lat": 57.876956993713975,
-            "lon": 12.555260471999645,
+            "lat": 57.876955568790436,
+            "lon": 12.55526164546609,
             "lie": "Rough",
             "lieSource": "CARTOGRAPHY"
           },
           "shotTime": "2026-09-18T16:53:43+02:00",
           "excludeFromStats": false,
           "offMap": false,
-          "distanceToPinBeforeYds": 182.7,
-          "distanceRemainingYds": 28.3,
+          "distanceToPinBeforeYds": 182.6,
+          "distanceRemainingYds": 28.1,
           "miss": {
             "range": "short",
             "side": "right",
-            "lateralYds": 26.1
+            "lateralYds": 25.9
           },
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "longApproach",
-          "strokesGained": -0.666,
+          "strokesGained": -0.664,
           "confidence": "inferred",
           "resultCategory": "short-right"
         },
@@ -2181,105 +2179,62 @@
           "type": "CHIP",
           "autoShotType": "USED",
           "source": "DEVICE_AUTO",
-          "yards": 47.1,
-          "meters": 43.0561,
+          "yards": 46.5,
+          "meters": 42.5186,
           "from": "Rough",
           "to": "Rough",
           "start": {
-            "lat": 57.876956993713975,
-            "lon": 12.555260471999645,
+            "lat": 57.876955568790436,
+            "lon": 12.55526164546609,
             "lie": "Rough",
             "lieSource": "CARTOGRAPHY"
           },
           "end": {
-            "lat": 57.876572431996465,
-            "lon": 12.555182604119182,
+            "lat": 57.87657511420548,
+            "lon": 12.555198110640049,
             "lie": "Rough",
             "lieSource": "CARTOGRAPHY"
           },
           "shotTime": "2026-09-18T16:54:17+02:00",
           "excludeFromStats": false,
           "offMap": false,
-          "distanceToPinBeforeYds": 28.3,
-          "distanceRemainingYds": 19.7,
+          "distanceToPinBeforeYds": 28.1,
+          "distanceRemainingYds": 19.1,
           "miss": {
             "range": "long",
             "side": "right",
-            "lateralYds": 7.6
+            "lateralYds": 6.6
           },
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": -0.909,
+          "strokesGained": -0.897,
           "confidence": "inferred",
           "resultCategory": "long-right"
         },
         {
-          "shotId": 10756017745,
-          "shotNumber": 3,
-          "club": "Putter",
-          "clubTypeId": 23,
-          "clubId": 539797671,
-          "clubRetired": false,
-          "type": "CHIP",
-          "autoShotType": "USED",
-          "source": "DEVICE_AUTO",
-          "yards": 1.2,
-          "meters": 1.07534,
-          "from": "Rough",
-          "to": "Rough",
-          "start": {
-            "lat": 57.876572431996465,
-            "lon": 12.555182604119182,
-            "lie": "Rough",
-            "lieSource": "CARTOGRAPHY"
-          },
-          "end": {
-            "lat": 57.87657427601516,
-            "lon": 12.555200457572937,
-            "lie": "Rough",
-            "lieSource": "CARTOGRAPHY"
-          },
-          "shotTime": "2026-09-18T16:54:35+02:00",
-          "excludeFromStats": false,
-          "offMap": false,
-          "distanceToPinBeforeYds": 19.7,
-          "distanceRemainingYds": 19.1,
-          "miss": {
-            "range": "short",
-            "side": "straight",
-            "lateralYds": 1.0
-          },
-          "phantom": false,
-          "phantomReason": null,
-          "sgCategory": "inside50",
-          "strokesGained": -0.985,
-          "confidence": "inferred",
-          "resultCategory": "short"
-        },
-        {
           "shotId": 10756017751,
-          "shotNumber": 4,
+          "shotNumber": 3,
           "club": "8 Iron",
           "clubTypeId": 17,
           "clubId": 626740219,
           "clubRetired": false,
-          "type": "UNKNOWN",
+          "type": "CHIP",
           "autoShotType": "USED",
           "source": "DEVICE_AUTO",
-          "yards": 19.1,
-          "meters": 17.4959,
+          "yards": 19.2,
+          "meters": 17.5679,
           "from": "Rough",
           "to": "Green",
           "start": {
-            "lat": 57.87657427601516,
-            "lon": 12.555200457572937,
+            "lat": 57.87657511420548,
+            "lon": 12.555198110640049,
             "lie": "Rough",
             "lieSource": "CARTOGRAPHY"
           },
           "end": {
-            "lat": 57.876724898815155,
-            "lon": 12.555284947156906,
+            "lat": 57.87672565318644,
+            "lon": 12.555287210270762,
             "lie": "Green",
             "lieSource": "CARTOGRAPHY"
           },
@@ -2287,16 +2242,16 @@
           "excludeFromStats": false,
           "offMap": false,
           "distanceToPinBeforeYds": 19.1,
-          "distanceRemainingYds": 0.0,
+          "distanceRemainingYds": 0.2,
           "miss": {
             "range": "long",
             "side": "straight",
-            "lateralYds": 0.0
+            "lateralYds": 0.1
           },
           "phantom": false,
           "phantomReason": null,
           "sgCategory": "inside50",
-          "strokesGained": 1.567,
+          "strokesGained": 0.567,
           "confidence": "inferred",
           "resultCategory": "green"
         }

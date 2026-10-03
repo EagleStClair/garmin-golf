@@ -1,15 +1,15 @@
 {
-  "generatedFromRounds": 75,
+  "generatedFromRounds": 76,
   "basis": "score vs course rating \u2014 18-hole regulation rounds only (rate trends still use every round)",
   "window": 16,
-  "summary": "Your scoring has declined primarily by moving your whole game down together: bad rounds are 7 strokes worse than when tracking began, your best golf is 6 strokes worse, and your round-to-round range is steady near 6 strokes.",
+  "summary": "Your scoring has declined primarily by moving your whole game down together: bad rounds are 7 strokes worse than when tracking began, your best golf is 6 strokes worse, and your round-to-round range has widened from 6 to 7 strokes.",
   "current": {
-    "ceiling": 22.4,
-    "median": 25.9,
+    "ceiling": 21.9,
+    "median": 25.4,
     "floor": 28.9,
-    "gap": 6.5,
+    "gap": 7.0,
     "gapAdjusted": 8.5,
-    "date": "2026-09-26"
+    "date": "2026-10-03"
   },
   "start": {
     "ceiling": 15.9,
@@ -394,6 +394,11 @@
       {
         "date": "2026-09-26",
         "v": 19.9,
+        "src": "garminconnect"
+      },
+      {
+        "date": "2026-10-03",
+        "v": 18.9,
         "src": "garminconnect"
       }
     ],
@@ -941,6 +946,14 @@
         "p50": 25.9,
         "p80": 28.9,
         "full": true
+      },
+      {
+        "date": "2026-10-03",
+        "i": 75,
+        "p20": 21.9,
+        "p50": 25.4,
+        "p80": 28.9,
+        "full": true
       }
     ]
   },
@@ -981,9 +994,21 @@
   "insights": [
     {
       "cat": "Miss pattern",
-      "text": "Short-right is your dominant mid-iron miss: across 843 6i\u20139i approaches, 80% finish short and 33% miss right. One more club and a start line adjustment attack both.",
+      "text": "Short-right is your dominant mid-iron miss: across 861 6i\u20139i approaches, 80% finish short and 33% miss right. One more club and a start line adjustment attack both.",
       "confidence": "High confidence",
       "score": 115
+    },
+    {
+      "cat": "Scoring structure",
+      "text": "Doubles+ are down from 7.4 to 5.0 per 18 over your last 10 rounds \u2014 one of the cleanest floor-raisers there is.",
+      "confidence": "High confidence",
+      "score": 96
+    },
+    {
+      "cat": "Scoring structure",
+      "text": "Penalties are down from 5.0 to 3.2 per 18 over your last 10 rounds \u2014 one of the cleanest floor-raisers there is.",
+      "confidence": "High confidence",
+      "score": 95
     },
     {
       "cat": "Development",
@@ -992,75 +1017,63 @@
       "score": 84
     },
     {
-      "cat": "Development",
-      "text": "Your typical scoring level has declined -8 strokes per 18 since tracking began (18 over rating \u2192 26).",
-      "confidence": "High confidence",
-      "score": 71
+      "cat": "Approach ladder",
+      "text": "100\u2013110y is your best window: 80% of 10 approaches reach the Green Zone, against 51% across the whole 60\u2013170y band. Worth leaving yourself that number off the tee.",
+      "confidence": "Moderate confidence",
+      "score": 80
     },
     {
-      "cat": "Development",
-      "text": "Your ceiling has declined 6 strokes \u2014 your best golf now runs about +22 vs rating (was +16).",
+      "cat": "Approach ladder",
+      "text": "Your approach game falls off a cliff at 80 yards: 60\u201380y reaches the Green Zone 75% of the time (n=12) but 80\u2013100y only 60% (n=30), leaving a median 10 yards. Lay up to the range that still works.",
       "confidence": "High confidence",
-      "score": 71
-    },
-    {
-      "cat": "Scoring structure",
-      "text": "Penalties are down from 4.8 to 3.5 per 18 over your last 10 rounds \u2014 one of the cleanest floor-raisers there is.",
-      "confidence": "High confidence",
-      "score": 70
-    },
-    {
-      "cat": "Scoring structure",
-      "text": "Doubles+ are down from 7.0 to 5.3 per 18 over your last 10 rounds \u2014 one of the cleanest floor-raisers there is.",
-      "confidence": "High confidence",
-      "score": 68
+      "score": 72
     }
   ],
   "floorDrivers": [
     {
       "label": "Penalties /18",
-      "prev": 4.8,
-      "now": 3.5,
-      "delta": -1.4,
+      "prev": 5.0,
+      "now": 3.2,
+      "delta": -1.9,
       "verdict": "improving"
     },
     {
       "label": "Doubles+ /18",
-      "prev": 7.0,
-      "now": 5.3,
-      "delta": -1.7,
+      "prev": 7.4,
+      "now": 5.0,
+      "delta": -2.4,
       "verdict": "improving"
     },
     {
       "label": "3-putts /18",
-      "prev": 3.9,
-      "now": 3.4,
-      "delta": -0.6,
-      "verdict": "improving"
+      "prev": 3.4,
+      "now": 3.7,
+      "delta": 0.2,
+      "verdict": "flat"
     },
     {
       "label": "GIR %",
-      "prev": 27.0,
-      "now": 25.2,
-      "delta": -1.7,
+      "prev": 25.3,
+      "now": 25.8,
+      "delta": 0.5,
       "verdict": "flat"
     },
     {
       "label": "Bogey-or-better %",
-      "prev": 53.3,
-      "now": 58.3,
-      "delta": 5.0,
+      "prev": 56.1,
+      "now": 60.0,
+      "delta": 3.9,
       "verdict": "improving"
     }
   ],
   "priorities": [
     {
       "text": "Approach distance + start line: take one more club and start it left of target on mid-irons.",
-      "evidence": "80% of 843 mid-iron approaches finish short, 33% miss right; GIR is 25.2%."
+      "evidence": "80% of 861 mid-iron approaches finish short, 33% miss right; GIR is 25.8%."
     },
     {
-      "text": "Biggest strokes leak right now: Long approach (150+).",
-      "evidence": "-6.7 strokes per 18 vs scratch over your last 10 clean rounds \u2014 the worst of your five SG buckets."
+      "text": "Biggest strokes leak right now: Mid approach (50\u2013150).",
+      "evidence": "-6.7 strokes per 18 vs scratch over your last 10 clean rounds \u2014 the worst of your 4 SG buckets."
     },
     {
       "text": "Annotate more rounds \u2014 the process layer is your differentiator and it's running on minimal context.",

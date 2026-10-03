@@ -2,9 +2,7 @@
 -- derivable from Garmin data alone (annotation-dependent metrics arrive with annot
 -- loading). progress.py windows these per-round rows into This/L5/L10/L20/All.
 
--- Per-round SG by bucket. Tee-to-green from per-shot grades; putting is count-based:
--- expected putts (from first-putt distance) minus authoritative putts. Matches the
--- legacy strokes_gained.compute summary (categories rounded to 2 at read time).
+-- Per-round SG by bucket, tee-to-green only (putting is tracked as counts, not SG).
 CREATE OR REPLACE VIEW derived.round_sg AS
 WITH tee_to_green AS (
   SELECT s.round_id,
@@ -21,7 +19,6 @@ WITH tee_to_green AS (
   GROUP BY s.round_id
 ), putting AS (
   SELECT hp.round_id,
-         sum(hp.expected_putts - h.putts) AS putting_sg,
          count(*)                         AS putt_holes_measured,
          sum(h.putts)                     AS putts_covered
   FROM derived.hole_putting hp
@@ -33,7 +30,6 @@ SELECT r.round_id, r.round_date,
        coalesce(t.long_approach, 0)  AS sg_long_approach,
        coalesce(t.mid_approach, 0)   AS sg_mid_approach,
        coalesce(t.inside50, 0)       AS sg_inside50,
-       CAST(0.0 AS DOUBLE)           AS sg_putting,
        coalesce(t.sg_0_100, 0)       AS sg_0_100,
        coalesce(t.categorized_shots, 0)    AS categorized_shots,
        coalesce(p.putt_holes_measured, 0)  AS putt_holes_measured,

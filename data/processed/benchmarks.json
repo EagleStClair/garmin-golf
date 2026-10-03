@@ -5,9 +5,9 @@
     "retrieved": "2026-09-06",
     "note": "Groups are SCORE-RANGE groups, not exact handicaps: Pro1 64-71, Pro2 72-79, Am1 70-83 (low-handicap ams), Am2 84-97 (middle), Am3 98-120 (high). ~40,000 shots, 500 rounds, 130+ golfers, 2005-2007. Values transcribed verbatim from Tables 1-4 and Eq. 2."
   },
-  "generated": "2026-10-01",
-  "avgScore18": 96.5,
-  "adjScore18": 98.2,
+  "generated": "2026-10-03",
+  "avgScore18": 95.8,
+  "adjScore18": 97.5,
   "standardCourseRating": 72.0,
   "nScoreRounds": 10,
   "yourGroup": "Am3",
@@ -46,7 +46,7 @@
       "key": "green100to150Fwy",
       "label": "Approach 100-150y (fairway lie): green hit %",
       "yours": 43,
-      "n": 237,
+      "n": 239,
       "unit": "%",
       "groups": {
         "Am1": 63,
@@ -60,7 +60,7 @@
       "key": "prox100to150Fwy",
       "label": "Approach 100-150y (fairway): median leave, % of start",
       "yours": 12.5,
-      "n": 237,
+      "n": 239,
       "unit": "% of start distance",
       "groups": {
         "Am1": 8.7,
@@ -75,7 +75,7 @@
       "key": "green100to150Rough",
       "label": "Approach 100-150y (rough lie): green hit %",
       "yours": 40,
-      "n": 238,
+      "n": 242,
       "unit": "%",
       "groups": {
         "Am1": 53,
@@ -89,7 +89,7 @@
       "key": "green20to60Fwy",
       "label": "Pitch 20-60y (fairway lie): on green %",
       "yours": 80,
-      "n": 163,
+      "n": 165,
       "unit": "%",
       "groups": {
         "Am1": 93,
@@ -102,8 +102,8 @@
     {
       "key": "prox20to60Fwy",
       "label": "Pitch 20-60y (fairway): median leave, % of start",
-      "yours": 14.1,
-      "n": 163,
+      "yours": 13.9,
+      "n": 165,
       "unit": "% of start distance",
       "groups": {
         "Am1": 13.8,
@@ -118,7 +118,7 @@
       "key": "green20to60Rough",
       "label": "Pitch 20-60y (rough lie): on green %",
       "yours": 79,
-      "n": 318,
+      "n": 322,
       "unit": "%",
       "groups": {
         "Am1": 86,
@@ -189,7 +189,7 @@
       "key": "awfulShots",
       "label": "Awful shots per 18 (shot value < -0.8, no putts)",
       "yours": 8.9,
-      "n": 84,
+      "n": 85,
       "unit": "/round",
       "groups": {
         "Am1": 1.9,
@@ -198,7 +198,7 @@
       },
       "betterIs": "lower",
       "placement": "between Am3 and Am2 (nearer Am3)",
-      "note": "clean rounds only; benchmark for your adjusted scoring level: A = 0.24*98.2 - 17.1 = 6.5"
+      "note": "clean rounds only; benchmark for your adjusted scoring level: A = 0.24*97.5 - 17.1 = 6.3"
     }
   ]
 }
